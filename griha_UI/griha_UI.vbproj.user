@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Form1_UI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form2_Secretary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form3_Expenses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form3_notices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form3_property.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form3_view_Residents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form3_workers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Resident.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form_Securityguard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="S_residents3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "76gg+YK7U6qCXDaiSYm9q3B0RfHg2DT1Ujz5SQEHatq/ZczF5zKwzhJ+HKQPjQJSO0zPMWi0onxE/HOr3wMY9Q==",
+  "success": true,
+  "projectFilePath": "C:\\local disk D\\forth semester\\project II\\griha_UI\\griha_UI\\griha_UI.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Acer nitro\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.4\\guna.ui2.winforms.2.0.4.4.nupkg.sha512",
+    "C:\\Users\\Acer nitro\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\Acer nitro\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
