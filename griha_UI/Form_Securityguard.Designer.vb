@@ -24,6 +24,7 @@ Partial Class Form_Securityguard
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form_Securityguard))
         Panel1 = New Panel()
+        Button_back = New Button()
         Button_notices = New Button()
         Button_Workers = New Button()
         Button_Expenses = New Button()
@@ -33,7 +34,6 @@ Partial Class Form_Securityguard
         Label_Welcome = New Label()
         Label1 = New Label()
         PictureBox1 = New PictureBox()
-        Button_back = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -53,6 +53,19 @@ Partial Class Form_Securityguard
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(500, 1080)
         Panel1.TabIndex = 7
+        ' 
+        ' Button_back
+        ' 
+        Button_back.BackColor = Color.Black
+        Button_back.BackgroundImageLayout = ImageLayout.None
+        Button_back.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button_back.ForeColor = Color.White
+        Button_back.Location = New Point(121, 848)
+        Button_back.Name = "Button_back"
+        Button_back.Size = New Size(248, 43)
+        Button_back.TabIndex = 14
+        Button_back.Text = "Back to Login"
+        Button_back.UseVisualStyleBackColor = False
         ' 
         ' Button_notices
         ' 
@@ -162,19 +175,6 @@ Partial Class Form_Securityguard
         PictureBox1.Size = New Size(201, 222)
         PictureBox1.TabIndex = 8
         PictureBox1.TabStop = False
-        ' 
-        ' Button_back
-        ' 
-        Button_back.BackColor = Color.Black
-        Button_back.BackgroundImageLayout = ImageLayout.None
-        Button_back.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button_back.ForeColor = Color.White
-        Button_back.Location = New Point(121, 848)
-        Button_back.Name = "Button_back"
-        Button_back.Size = New Size(248, 43)
-        Button_back.TabIndex = 14
-        Button_back.Text = "Back to Login"
-        Button_back.UseVisualStyleBackColor = False
         ' 
         ' Form_Securityguard
         ' 

@@ -12,4 +12,9 @@
         Form_UI.Show()
 
     End Sub
+
+    Private Sub button_resident_Click(sender As Object, e As EventArgs) Handles button_resident.Click
+        Me.Hide()
+        G_residents3.Show()
+    End Sub
 End Class

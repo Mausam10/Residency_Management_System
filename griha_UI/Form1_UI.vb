@@ -1,6 +1,11 @@
 ﻿Imports System.Drawing.Imaging
+Imports System.Data.SqlClient
+Imports Microsoft.Data.SqlClient
 
 Public Class Form_UI
+
+
+
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

@@ -35,24 +35,27 @@ Partial Class S_residents3
         Label1 = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
-        Panel3 = New Panel()
-        TextBox_firstname = New TextBox()
-        TextBox_middlename = New TextBox()
-        TextBox_lastname = New TextBox()
-        TextBox_username = New TextBox()
-        TextBox_password = New TextBox()
-        TextBox_phoneno = New TextBox()
-        TextBox_phoneno2 = New TextBox()
-        TextBox_email = New TextBox()
-        TextBox_apartmentid = New TextBox()
-        Information_label = New Label()
-        Button_add = New Button()
-        Button_Update = New Button()
         Button_delete = New Button()
+        Button_Update = New Button()
+        Button_add = New Button()
+        Information_label = New Label()
+        TextBox_apartmentid = New TextBox()
+        TextBox_email = New TextBox()
+        TextBox_phoneno2 = New TextBox()
+        TextBox_phoneno = New TextBox()
+        TextBox_password = New TextBox()
+        TextBox_username = New TextBox()
+        TextBox_lastname = New TextBox()
+        TextBox_middlename = New TextBox()
+        TextBox_firstname = New TextBox()
+        Panel3 = New Panel()
+        DataDVG = New DataGridView()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
+        Panel3.SuspendLayout()
+        CType(DataDVG, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -201,117 +204,18 @@ Partial Class S_residents3
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 10
         ' 
-        ' Panel3
+        ' Button_delete
         ' 
-        Panel3.Location = New Point(997, 260)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(905, 768)
-        Panel3.TabIndex = 11
-        ' 
-        ' TextBox_firstname
-        ' 
-        TextBox_firstname.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_firstname.Location = New Point(11, 176)
-        TextBox_firstname.Name = "TextBox_firstname"
-        TextBox_firstname.PlaceholderText = "first name"
-        TextBox_firstname.Size = New Size(143, 30)
-        TextBox_firstname.TabIndex = 0
-        ' 
-        ' TextBox_middlename
-        ' 
-        TextBox_middlename.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_middlename.Location = New Point(160, 177)
-        TextBox_middlename.Name = "TextBox_middlename"
-        TextBox_middlename.PlaceholderText = "middle name"
-        TextBox_middlename.Size = New Size(143, 30)
-        TextBox_middlename.TabIndex = 1
-        ' 
-        ' TextBox_lastname
-        ' 
-        TextBox_lastname.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_lastname.Location = New Point(309, 177)
-        TextBox_lastname.Name = "TextBox_lastname"
-        TextBox_lastname.PlaceholderText = "last name"
-        TextBox_lastname.Size = New Size(143, 30)
-        TextBox_lastname.TabIndex = 2
-        ' 
-        ' TextBox_username
-        ' 
-        TextBox_username.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_username.Location = New Point(11, 62)
-        TextBox_username.Name = "TextBox_username"
-        TextBox_username.PlaceholderText = "username"
-        TextBox_username.Size = New Size(441, 30)
-        TextBox_username.TabIndex = 3
-        ' 
-        ' TextBox_password
-        ' 
-        TextBox_password.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_password.Location = New Point(11, 120)
-        TextBox_password.Name = "TextBox_password"
-        TextBox_password.PlaceholderText = "password"
-        TextBox_password.Size = New Size(441, 30)
-        TextBox_password.TabIndex = 4
-        ' 
-        ' TextBox_phoneno
-        ' 
-        TextBox_phoneno.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_phoneno.Location = New Point(11, 235)
-        TextBox_phoneno.Name = "TextBox_phoneno"
-        TextBox_phoneno.PlaceholderText = "phone number"
-        TextBox_phoneno.Size = New Size(223, 30)
-        TextBox_phoneno.TabIndex = 5
-        ' 
-        ' TextBox_phoneno2
-        ' 
-        TextBox_phoneno2.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_phoneno2.Location = New Point(240, 235)
-        TextBox_phoneno2.Name = "TextBox_phoneno2"
-        TextBox_phoneno2.PlaceholderText = "phone number"
-        TextBox_phoneno2.Size = New Size(212, 30)
-        TextBox_phoneno2.TabIndex = 6
-        ' 
-        ' TextBox_email
-        ' 
-        TextBox_email.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_email.Location = New Point(11, 294)
-        TextBox_email.Name = "TextBox_email"
-        TextBox_email.PlaceholderText = "e-mail address"
-        TextBox_email.Size = New Size(441, 30)
-        TextBox_email.TabIndex = 7
-        ' 
-        ' TextBox_apartmentid
-        ' 
-        TextBox_apartmentid.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_apartmentid.Location = New Point(11, 354)
-        TextBox_apartmentid.Name = "TextBox_apartmentid"
-        TextBox_apartmentid.PlaceholderText = "apartment/property ID"
-        TextBox_apartmentid.Size = New Size(441, 30)
-        TextBox_apartmentid.TabIndex = 8
-        ' 
-        ' Information_label
-        ' 
-        Information_label.AutoSize = True
-        Information_label.Font = New Font("Nexa Heavy", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
-        Information_label.ForeColor = Color.Teal
-        Information_label.Location = New Point(11, 12)
-        Information_label.Name = "Information_label"
-        Information_label.Size = New Size(256, 36)
-        Information_label.TabIndex = 9
-        Information_label.Text = "Information Field"
-        ' 
-        ' Button_add
-        ' 
-        Button_add.BackColor = Color.Black
-        Button_add.BackgroundImageLayout = ImageLayout.None
-        Button_add.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button_add.ForeColor = Color.White
-        Button_add.Location = New Point(11, 429)
-        Button_add.Name = "Button_add"
-        Button_add.Size = New Size(143, 43)
-        Button_add.TabIndex = 15
-        Button_add.Text = "ADD"
-        Button_add.UseVisualStyleBackColor = False
+        Button_delete.BackColor = Color.Black
+        Button_delete.BackgroundImageLayout = ImageLayout.None
+        Button_delete.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button_delete.ForeColor = Color.White
+        Button_delete.Location = New Point(309, 429)
+        Button_delete.Name = "Button_delete"
+        Button_delete.Size = New Size(143, 43)
+        Button_delete.TabIndex = 17
+        Button_delete.Text = "DELETE"
+        Button_delete.UseVisualStyleBackColor = False
         ' 
         ' Button_Update
         ' 
@@ -326,18 +230,128 @@ Partial Class S_residents3
         Button_Update.Text = "UPDATE"
         Button_Update.UseVisualStyleBackColor = False
         ' 
-        ' Button_delete
+        ' Button_add
         ' 
-        Button_delete.BackColor = Color.Black
-        Button_delete.BackgroundImageLayout = ImageLayout.None
-        Button_delete.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button_delete.ForeColor = Color.White
-        Button_delete.Location = New Point(309, 429)
-        Button_delete.Name = "Button_delete"
-        Button_delete.Size = New Size(143, 43)
-        Button_delete.TabIndex = 17
-        Button_delete.Text = "DELETE"
-        Button_delete.UseVisualStyleBackColor = False
+        Button_add.BackColor = Color.Black
+        Button_add.BackgroundImageLayout = ImageLayout.None
+        Button_add.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button_add.ForeColor = Color.White
+        Button_add.Location = New Point(11, 429)
+        Button_add.Name = "Button_add"
+        Button_add.Size = New Size(143, 43)
+        Button_add.TabIndex = 15
+        Button_add.Text = "ADD"
+        Button_add.UseVisualStyleBackColor = False
+        ' 
+        ' Information_label
+        ' 
+        Information_label.AutoSize = True
+        Information_label.Font = New Font("Nexa Heavy", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Information_label.ForeColor = Color.Teal
+        Information_label.Location = New Point(11, 12)
+        Information_label.Name = "Information_label"
+        Information_label.Size = New Size(256, 36)
+        Information_label.TabIndex = 9
+        Information_label.Text = "Information Field"
+        ' 
+        ' TextBox_apartmentid
+        ' 
+        TextBox_apartmentid.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_apartmentid.Location = New Point(11, 354)
+        TextBox_apartmentid.Name = "TextBox_apartmentid"
+        TextBox_apartmentid.PlaceholderText = "apartment/property ID"
+        TextBox_apartmentid.Size = New Size(441, 30)
+        TextBox_apartmentid.TabIndex = 8
+        ' 
+        ' TextBox_email
+        ' 
+        TextBox_email.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_email.Location = New Point(11, 294)
+        TextBox_email.Name = "TextBox_email"
+        TextBox_email.PlaceholderText = "e-mail address"
+        TextBox_email.Size = New Size(441, 30)
+        TextBox_email.TabIndex = 7
+        ' 
+        ' TextBox_phoneno2
+        ' 
+        TextBox_phoneno2.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_phoneno2.Location = New Point(240, 235)
+        TextBox_phoneno2.Name = "TextBox_phoneno2"
+        TextBox_phoneno2.PlaceholderText = "phone number"
+        TextBox_phoneno2.Size = New Size(212, 30)
+        TextBox_phoneno2.TabIndex = 6
+        ' 
+        ' TextBox_phoneno
+        ' 
+        TextBox_phoneno.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_phoneno.Location = New Point(11, 235)
+        TextBox_phoneno.Name = "TextBox_phoneno"
+        TextBox_phoneno.PlaceholderText = "phone number"
+        TextBox_phoneno.Size = New Size(223, 30)
+        TextBox_phoneno.TabIndex = 5
+        ' 
+        ' TextBox_password
+        ' 
+        TextBox_password.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_password.Location = New Point(11, 120)
+        TextBox_password.Name = "TextBox_password"
+        TextBox_password.PlaceholderText = "password"
+        TextBox_password.Size = New Size(441, 30)
+        TextBox_password.TabIndex = 4
+        ' 
+        ' TextBox_username
+        ' 
+        TextBox_username.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_username.Location = New Point(11, 62)
+        TextBox_username.Name = "TextBox_username"
+        TextBox_username.PlaceholderText = "username"
+        TextBox_username.Size = New Size(441, 30)
+        TextBox_username.TabIndex = 3
+        ' 
+        ' TextBox_lastname
+        ' 
+        TextBox_lastname.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_lastname.Location = New Point(309, 177)
+        TextBox_lastname.Name = "TextBox_lastname"
+        TextBox_lastname.PlaceholderText = "last name"
+        TextBox_lastname.Size = New Size(143, 30)
+        TextBox_lastname.TabIndex = 2
+        ' 
+        ' TextBox_middlename
+        ' 
+        TextBox_middlename.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_middlename.Location = New Point(160, 177)
+        TextBox_middlename.Name = "TextBox_middlename"
+        TextBox_middlename.PlaceholderText = "middle name"
+        TextBox_middlename.Size = New Size(143, 30)
+        TextBox_middlename.TabIndex = 1
+        ' 
+        ' TextBox_firstname
+        ' 
+        TextBox_firstname.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_firstname.Location = New Point(11, 176)
+        TextBox_firstname.Name = "TextBox_firstname"
+        TextBox_firstname.PlaceholderText = "first name"
+        TextBox_firstname.Size = New Size(143, 30)
+        TextBox_firstname.TabIndex = 0
+        ' 
+        ' Panel3
+        ' 
+        Panel3.Controls.Add(DataDVG)
+        Panel3.Location = New Point(997, 260)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(905, 768)
+        Panel3.TabIndex = 11
+        ' 
+        ' DataDVG
+        ' 
+        DataDVG.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataDVG.Location = New Point(39, 44)
+        DataDVG.Name = "DataDVG"
+        DataDVG.RowHeadersWidth = 51
+        DataDVG.RowTemplate.Height = 29
+        DataDVG.Size = New Size(300, 188)
+        DataDVG.TabIndex = 0
         ' 
         ' S_residents3
         ' 
@@ -357,6 +371,8 @@ Partial Class S_residents3
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
+        Panel3.ResumeLayout(False)
+        CType(DataDVG, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -387,4 +403,5 @@ Partial Class S_residents3
     Friend WithEvents Button_Update As Button
     Friend WithEvents Button_add As Button
     Friend WithEvents Information_label As Label
+    Friend WithEvents DataDVG As DataGridView
 End Class

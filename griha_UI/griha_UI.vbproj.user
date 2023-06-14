@@ -28,7 +28,25 @@
     <Compile Update="Form_Securityguard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="G_residents3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G_visitors3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="S_events3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="S_expenses3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="S_notices3.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="S_residents3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="S_workers3.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
