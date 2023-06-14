@@ -207,17 +207,17 @@ Partial Class S_notices3
         ' Information_label
         ' 
         Information_label.AutoSize = True
-        Information_label.Font = New Font("Nexa Heavy", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Information_label.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
         Information_label.ForeColor = Color.Teal
         Information_label.Location = New Point(11, 12)
         Information_label.Name = "Information_label"
-        Information_label.Size = New Size(256, 36)
+        Information_label.Size = New Size(243, 32)
         Information_label.TabIndex = 9
         Information_label.Text = "Information Field"
         ' 
         ' TextBox_description
         ' 
-        TextBox_description.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_description.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_description.Location = New Point(11, 174)
         TextBox_description.Multiline = True
         TextBox_description.Name = "TextBox_description"
@@ -242,21 +242,21 @@ Partial Class S_notices3
         ' 
         ' TextBox_Name
         ' 
-        TextBox_Name.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_Name.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_Name.Location = New Point(11, 62)
         TextBox_Name.Name = "TextBox_Name"
         TextBox_Name.PlaceholderText = "Topic Name"
-        TextBox_Name.Size = New Size(446, 30)
+        TextBox_Name.Size = New Size(446, 34)
         TextBox_Name.TabIndex = 3
         ' 
         ' Label_notices
         ' 
         Label_notices.AutoSize = True
         Label_notices.BackColor = Color.Transparent
-        Label_notices.Font = New Font("Metropolis Extra Bold", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_notices.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_notices.Location = New Point(1058, 170)
         Label_notices.Name = "Label_notices"
-        Label_notices.Size = New Size(338, 40)
+        Label_notices.Size = New Size(323, 46)
         Label_notices.TabIndex = 15
         Label_notices.Text = "Manage Notices"
         ' 
@@ -283,6 +283,7 @@ Partial Class S_notices3
         Controls.Add(Panel2)
         Controls.Add(Label_notices)
         Controls.Add(PictureBox1)
+        DoubleBuffered = True
         Name = "S_notices3"
         Text = "S_notices3"
         Panel1.ResumeLayout(False)

@@ -80,11 +80,11 @@ Partial Class S_expenses3
         ' Label_types_of_expenses
         ' 
         Label_types_of_expenses.AutoSize = True
-        Label_types_of_expenses.Font = New Font("Metropolis Semi Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_types_of_expenses.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label_types_of_expenses.ForeColor = Color.Teal
         Label_types_of_expenses.Location = New Point(11, 184)
         Label_types_of_expenses.Name = "Label_types_of_expenses"
-        Label_types_of_expenses.Size = New Size(187, 23)
+        Label_types_of_expenses.Size = New Size(200, 29)
         Label_types_of_expenses.TabIndex = 20
         Label_types_of_expenses.Text = "Expenses Type:"
         ' 
@@ -97,12 +97,12 @@ Partial Class S_expenses3
         ' 
         ' ComboBox1
         ' 
-        ComboBox1.Font = New Font("Metropolis", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        ComboBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
         ComboBox1.FormattingEnabled = True
         ComboBox1.Items.AddRange(New Object() {"Utility Expenses", "Maintainence Expenses", "Other Expenses"})
         ComboBox1.Location = New Point(11, 210)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(441, 28)
+        ComboBox1.Size = New Size(441, 33)
         ComboBox1.TabIndex = 18
         ' 
         ' Button_delete
@@ -147,49 +147,49 @@ Partial Class S_expenses3
         ' Information_label
         ' 
         Information_label.AutoSize = True
-        Information_label.Font = New Font("Nexa Heavy", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Information_label.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
         Information_label.ForeColor = Color.Teal
         Information_label.Location = New Point(11, 12)
         Information_label.Name = "Information_label"
-        Information_label.Size = New Size(256, 36)
+        Information_label.Size = New Size(243, 32)
         Information_label.TabIndex = 9
         Information_label.Text = "Information Field"
         ' 
         ' TextBox_apartmentid
         ' 
-        TextBox_apartmentid.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_apartmentid.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_apartmentid.Location = New Point(11, 130)
         TextBox_apartmentid.Name = "TextBox_apartmentid"
         TextBox_apartmentid.PlaceholderText = "apartment/property ID"
-        TextBox_apartmentid.Size = New Size(441, 30)
+        TextBox_apartmentid.Size = New Size(441, 34)
         TextBox_apartmentid.TabIndex = 8
         ' 
         ' TextBox_Amount
         ' 
-        TextBox_Amount.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_Amount.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_Amount.Location = New Point(11, 264)
         TextBox_Amount.Name = "TextBox_Amount"
         TextBox_Amount.PlaceholderText = "Amount"
-        TextBox_Amount.Size = New Size(223, 30)
+        TextBox_Amount.Size = New Size(223, 34)
         TextBox_Amount.TabIndex = 5
         ' 
         ' TextBox_username
         ' 
-        TextBox_username.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_username.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_username.Location = New Point(11, 77)
         TextBox_username.Name = "TextBox_username"
         TextBox_username.PlaceholderText = "username"
-        TextBox_username.Size = New Size(441, 30)
+        TextBox_username.Size = New Size(441, 34)
         TextBox_username.TabIndex = 3
         ' 
         ' Label_expenses
         ' 
         Label_expenses.AutoSize = True
         Label_expenses.BackColor = Color.Transparent
-        Label_expenses.Font = New Font("Metropolis Extra Bold", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_expenses.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_expenses.Location = New Point(997, 170)
         Label_expenses.Name = "Label_expenses"
-        Label_expenses.Size = New Size(466, 40)
+        Label_expenses.Size = New Size(460, 46)
         Label_expenses.TabIndex = 14
         Label_expenses.Text = "Expenses of Residency"
         ' 
@@ -321,6 +321,7 @@ Partial Class S_expenses3
         Controls.Add(Label_expenses)
         Controls.Add(PictureBox1)
         Controls.Add(Panel1)
+        DoubleBuffered = True
         Name = "S_expenses3"
         Text = "S_expenses3"
         Panel2.ResumeLayout(False)

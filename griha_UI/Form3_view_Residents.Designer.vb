@@ -156,10 +156,10 @@ Partial Class Form3_view_Residents
         ' 
         Label_residents.AutoSize = True
         Label_residents.BackColor = Color.Transparent
-        Label_residents.Font = New Font("Metropolis Semi Bold", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_residents.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_residents.Location = New Point(1053, 197)
         Label_residents.Name = "Label_residents"
-        Label_residents.Size = New Size(399, 28)
+        Label_residents.Size = New Size(401, 32)
         Label_residents.TabIndex = 17
         Label_residents.Text = "Residents of your Residency"
         ' 
@@ -172,6 +172,7 @@ Partial Class Form3_view_Residents
         Controls.Add(Label_residents)
         Controls.Add(Panel1)
         Controls.Add(PictureBox1)
+        DoubleBuffered = True
         Name = "Form3_view_Residents"
         Text = "Form3_view_Residents"
         Panel1.ResumeLayout(False)

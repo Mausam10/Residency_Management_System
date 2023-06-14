@@ -145,11 +145,11 @@ Partial Class Form_Resident
         ' 
         Label_Welcome.AutoSize = True
         Label_Welcome.BackColor = Color.Transparent
-        Label_Welcome.Font = New Font("Metropolis Black", 48F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_Welcome.Font = New Font("Microsoft Sans Serif", 48F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_Welcome.ForeColor = Color.Azure
         Label_Welcome.Location = New Point(960, 540)
         Label_Welcome.Name = "Label_Welcome"
-        Label_Welcome.Size = New Size(427, 80)
+        Label_Welcome.Size = New Size(400, 91)
         Label_Welcome.TabIndex = 14
         Label_Welcome.Text = "Welcome "
         ' 
@@ -157,10 +157,10 @@ Partial Class Form_Resident
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Metropolis Extra Bold", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label1.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label1.Location = New Point(897, 189)
         Label1.Name = "Label1"
-        Label1.Size = New Size(189, 40)
+        Label1.Size = New Size(185, 46)
         Label1.TabIndex = 13
         Label1.Text = "Resident"
         ' 
@@ -186,6 +186,7 @@ Partial Class Form_Resident
         Controls.Add(Label_Welcome)
         Controls.Add(Label1)
         Controls.Add(PictureBox1)
+        DoubleBuffered = True
         Name = "Form_Resident"
         Text = "Form_Resident"
         Panel1.ResumeLayout(False)

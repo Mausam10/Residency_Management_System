@@ -156,10 +156,10 @@ Partial Class Form3_property
         ' 
         Label_property.AutoSize = True
         Label_property.BackColor = Color.Transparent
-        Label_property.Font = New Font("Metropolis Semi Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_property.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
         Label_property.Location = New Point(1053, 197)
         Label_property.Name = "Label_property"
-        Label_property.Size = New Size(304, 28)
+        Label_property.Size = New Size(290, 32)
         Label_property.TabIndex = 17
         Label_property.Text = "Property Information"
         ' 
@@ -172,6 +172,7 @@ Partial Class Form3_property
         Controls.Add(Label_property)
         Controls.Add(Panel1)
         Controls.Add(PictureBox1)
+        DoubleBuffered = True
         Name = "Form3_property"
         Text = "Form3_property"
         Panel1.ResumeLayout(False)

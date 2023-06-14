@@ -34,6 +34,11 @@ Partial Class G_visitors3
         Information_label = New Label()
         TextBox_description = New TextBox()
         Panel2 = New Panel()
+        TextBox_phoneno2 = New TextBox()
+        TextBox_phoneno = New TextBox()
+        TextBox_lastname = New TextBox()
+        TextBox_middlename = New TextBox()
+        TextBox_firstname = New TextBox()
         Label_record_visitors = New Label()
         PictureBox1 = New PictureBox()
         Button_back = New Button()
@@ -44,11 +49,6 @@ Partial Class G_visitors3
         button_resident = New Button()
         PictureBox2 = New PictureBox()
         Panel1 = New Panel()
-        TextBox_lastname = New TextBox()
-        TextBox_middlename = New TextBox()
-        TextBox_firstname = New TextBox()
-        TextBox_phoneno2 = New TextBox()
-        TextBox_phoneno = New TextBox()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -65,22 +65,22 @@ Partial Class G_visitors3
         ' Label_attending_back
         ' 
         Label_attending_back.AutoSize = True
-        Label_attending_back.Font = New Font("Metropolis Semi Bold", 13.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_attending_back.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_attending_back.ForeColor = Color.Teal
         Label_attending_back.Location = New Point(13, 235)
         Label_attending_back.Name = "Label_attending_back"
-        Label_attending_back.Size = New Size(218, 23)
+        Label_attending_back.Size = New Size(228, 29)
         Label_attending_back.TabIndex = 20
         Label_attending_back.Text = "Left Residency on:"
         ' 
         ' Label_leaving_residency
         ' 
         Label_leaving_residency.AutoSize = True
-        Label_leaving_residency.Font = New Font("Metropolis Semi Bold", 13.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_leaving_residency.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_leaving_residency.ForeColor = Color.Teal
         Label_leaving_residency.Location = New Point(13, 170)
         Label_leaving_residency.Name = "Label_leaving_residency"
-        Label_leaving_residency.Size = New Size(253, 23)
+        Label_leaving_residency.Size = New Size(265, 29)
         Label_leaving_residency.TabIndex = 19
         Label_leaving_residency.Text = "Visited Residency on:"
         ' 
@@ -140,17 +140,17 @@ Partial Class G_visitors3
         ' Information_label
         ' 
         Information_label.AutoSize = True
-        Information_label.Font = New Font("Nexa Heavy", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Information_label.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
         Information_label.ForeColor = Color.Teal
         Information_label.Location = New Point(7, 11)
         Information_label.Name = "Information_label"
-        Information_label.Size = New Size(256, 36)
+        Information_label.Size = New Size(243, 32)
         Information_label.TabIndex = 9
         Information_label.Text = "Information Field"
         ' 
         ' TextBox_description
         ' 
-        TextBox_description.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_description.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_description.Location = New Point(13, 297)
         TextBox_description.Multiline = True
         TextBox_description.Name = "TextBox_description"
@@ -180,14 +180,59 @@ Partial Class G_visitors3
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 22
         ' 
+        ' TextBox_phoneno2
+        ' 
+        TextBox_phoneno2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_phoneno2.Location = New Point(242, 125)
+        TextBox_phoneno2.Name = "TextBox_phoneno2"
+        TextBox_phoneno2.PlaceholderText = "phone number"
+        TextBox_phoneno2.Size = New Size(217, 34)
+        TextBox_phoneno2.TabIndex = 25
+        ' 
+        ' TextBox_phoneno
+        ' 
+        TextBox_phoneno.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_phoneno.Location = New Point(13, 125)
+        TextBox_phoneno.Name = "TextBox_phoneno"
+        TextBox_phoneno.PlaceholderText = "phone number"
+        TextBox_phoneno.Size = New Size(223, 34)
+        TextBox_phoneno.TabIndex = 24
+        ' 
+        ' TextBox_lastname
+        ' 
+        TextBox_lastname.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_lastname.Location = New Point(311, 71)
+        TextBox_lastname.Name = "TextBox_lastname"
+        TextBox_lastname.PlaceholderText = "last name"
+        TextBox_lastname.Size = New Size(148, 34)
+        TextBox_lastname.TabIndex = 23
+        ' 
+        ' TextBox_middlename
+        ' 
+        TextBox_middlename.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_middlename.Location = New Point(162, 71)
+        TextBox_middlename.Name = "TextBox_middlename"
+        TextBox_middlename.PlaceholderText = "middle name"
+        TextBox_middlename.Size = New Size(143, 34)
+        TextBox_middlename.TabIndex = 22
+        ' 
+        ' TextBox_firstname
+        ' 
+        TextBox_firstname.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_firstname.Location = New Point(13, 70)
+        TextBox_firstname.Name = "TextBox_firstname"
+        TextBox_firstname.PlaceholderText = "first name"
+        TextBox_firstname.Size = New Size(143, 34)
+        TextBox_firstname.TabIndex = 21
+        ' 
         ' Label_record_visitors
         ' 
         Label_record_visitors.AutoSize = True
         Label_record_visitors.BackColor = Color.Transparent
-        Label_record_visitors.Font = New Font("Metropolis Extra Bold", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_record_visitors.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_record_visitors.Location = New Point(1072, 189)
         Label_record_visitors.Name = "Label_record_visitors"
-        Label_record_visitors.Size = New Size(323, 40)
+        Label_record_visitors.Size = New Size(308, 46)
         Label_record_visitors.TabIndex = 21
         Label_record_visitors.Text = "Record Visitors"
         ' 
@@ -305,51 +350,6 @@ Partial Class G_visitors3
         Panel1.Size = New Size(500, 1080)
         Panel1.TabIndex = 19
         ' 
-        ' TextBox_lastname
-        ' 
-        TextBox_lastname.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_lastname.Location = New Point(311, 71)
-        TextBox_lastname.Name = "TextBox_lastname"
-        TextBox_lastname.PlaceholderText = "last name"
-        TextBox_lastname.Size = New Size(148, 30)
-        TextBox_lastname.TabIndex = 23
-        ' 
-        ' TextBox_middlename
-        ' 
-        TextBox_middlename.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_middlename.Location = New Point(162, 71)
-        TextBox_middlename.Name = "TextBox_middlename"
-        TextBox_middlename.PlaceholderText = "middle name"
-        TextBox_middlename.Size = New Size(143, 30)
-        TextBox_middlename.TabIndex = 22
-        ' 
-        ' TextBox_firstname
-        ' 
-        TextBox_firstname.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_firstname.Location = New Point(13, 70)
-        TextBox_firstname.Name = "TextBox_firstname"
-        TextBox_firstname.PlaceholderText = "first name"
-        TextBox_firstname.Size = New Size(143, 30)
-        TextBox_firstname.TabIndex = 21
-        ' 
-        ' TextBox_phoneno2
-        ' 
-        TextBox_phoneno2.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_phoneno2.Location = New Point(242, 125)
-        TextBox_phoneno2.Name = "TextBox_phoneno2"
-        TextBox_phoneno2.PlaceholderText = "phone number"
-        TextBox_phoneno2.Size = New Size(217, 30)
-        TextBox_phoneno2.TabIndex = 25
-        ' 
-        ' TextBox_phoneno
-        ' 
-        TextBox_phoneno.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_phoneno.Location = New Point(13, 125)
-        TextBox_phoneno.Name = "TextBox_phoneno"
-        TextBox_phoneno.PlaceholderText = "phone number"
-        TextBox_phoneno.Size = New Size(223, 30)
-        TextBox_phoneno.TabIndex = 24
-        ' 
         ' G_visitors3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -361,6 +361,7 @@ Partial Class G_visitors3
         Controls.Add(Label_record_visitors)
         Controls.Add(PictureBox1)
         Controls.Add(Panel1)
+        DoubleBuffered = True
         Name = "G_visitors3"
         Text = "G_visitors3"
         Panel2.ResumeLayout(False)

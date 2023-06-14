@@ -83,12 +83,12 @@ Partial Class Form_UI
         ' Username_textbox
         ' 
         Username_textbox.BackColor = SystemColors.Menu
-        Username_textbox.Font = New Font("Metropolis Thin", 16.2F, FontStyle.Italic, GraphicsUnit.Point)
+        Username_textbox.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Italic, GraphicsUnit.Point)
         Username_textbox.ForeColor = SystemColors.WindowText
         Username_textbox.Location = New Point(367, 198)
         Username_textbox.Name = "Username_textbox"
         Username_textbox.PlaceholderText = "username@123"
-        Username_textbox.Size = New Size(268, 34)
+        Username_textbox.Size = New Size(268, 38)
         Username_textbox.TabIndex = 6
         ' 
         ' Login_secretary
@@ -107,23 +107,23 @@ Partial Class Form_UI
         ' Password_label
         ' 
         Password_label.AutoSize = True
-        Password_label.Font = New Font("Nexa Heavy", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Password_label.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
         Password_label.ForeColor = Color.Teal
         Password_label.Location = New Point(128, 269)
         Password_label.Name = "Password_label"
-        Password_label.Size = New Size(151, 36)
+        Password_label.Size = New Size(146, 32)
         Password_label.TabIndex = 4
         Password_label.Text = "Password"
         ' 
         ' Password_textbox
         ' 
         Password_textbox.BackColor = SystemColors.Menu
-        Password_textbox.Font = New Font("Metropolis Thin", 16.2F, FontStyle.Regular, GraphicsUnit.Point)
+        Password_textbox.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point)
         Password_textbox.ForeColor = SystemColors.WindowFrame
         Password_textbox.Location = New Point(366, 269)
         Password_textbox.Name = "Password_textbox"
         Password_textbox.PlaceholderText = "password"
-        Password_textbox.Size = New Size(268, 34)
+        Password_textbox.Size = New Size(268, 38)
         Password_textbox.TabIndex = 3
         Password_textbox.UseSystemPasswordChar = True
         ' 
@@ -141,23 +141,24 @@ Partial Class Form_UI
         ' Username_label
         ' 
         Username_label.AutoSize = True
-        Username_label.Font = New Font("Nexa Heavy", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Username_label.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
         Username_label.ForeColor = Color.Teal
         Username_label.Location = New Point(124, 195)
         Username_label.Name = "Username_label"
-        Username_label.Size = New Size(156, 36)
+        Username_label.Size = New Size(152, 32)
         Username_label.TabIndex = 0
         Username_label.Text = "Username"
         ' 
         ' Form_UI
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.PaleTurquoise
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         BackgroundImageLayout = ImageLayout.None
         ClientSize = New Size(1902, 1033)
         Controls.Add(login_panel)
+        DoubleBuffered = True
         Name = "Form_UI"
         Text = "Form_UI"
         login_panel.ResumeLayout(False)

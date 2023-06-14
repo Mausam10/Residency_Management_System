@@ -157,10 +157,10 @@ Partial Class G_residents3
         ' 
         Label_record_residents.AutoSize = True
         Label_record_residents.BackColor = Color.Transparent
-        Label_record_residents.Font = New Font("Metropolis Extra Bold", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_record_residents.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_record_residents.Location = New Point(1072, 188)
         Label_record_residents.Name = "Label_record_residents"
-        Label_record_residents.Size = New Size(362, 40)
+        Label_record_residents.Size = New Size(354, 46)
         Label_record_residents.TabIndex = 13
         Label_record_residents.Text = "Record Residents"
         ' 
@@ -197,22 +197,22 @@ Partial Class G_residents3
         ' Label_attending_back
         ' 
         Label_attending_back.AutoSize = True
-        Label_attending_back.Font = New Font("Metropolis Semi Bold", 13.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_attending_back.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_attending_back.ForeColor = Color.Teal
         Label_attending_back.Location = New Point(11, 207)
         Label_attending_back.Name = "Label_attending_back"
-        Label_attending_back.Size = New Size(345, 23)
+        Label_attending_back.Size = New Size(353, 29)
         Label_attending_back.TabIndex = 20
         Label_attending_back.Text = "Attended Back Residency on:"
         ' 
         ' Label_leaving_residency
         ' 
         Label_leaving_residency.AutoSize = True
-        Label_leaving_residency.Font = New Font("Metropolis Semi Bold", 13.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_leaving_residency.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_leaving_residency.ForeColor = Color.Teal
         Label_leaving_residency.Location = New Point(11, 126)
         Label_leaving_residency.Name = "Label_leaving_residency"
-        Label_leaving_residency.Size = New Size(218, 23)
+        Label_leaving_residency.Size = New Size(228, 29)
         Label_leaving_residency.TabIndex = 19
         Label_leaving_residency.Text = "Left Residency on:"
         ' 
@@ -272,17 +272,17 @@ Partial Class G_residents3
         ' Information_label
         ' 
         Information_label.AutoSize = True
-        Information_label.Font = New Font("Nexa Heavy", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Information_label.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
         Information_label.ForeColor = Color.Teal
         Information_label.Location = New Point(11, 12)
         Information_label.Name = "Information_label"
-        Information_label.Size = New Size(256, 36)
+        Information_label.Size = New Size(243, 32)
         Information_label.TabIndex = 9
         Information_label.Text = "Information Field"
         ' 
         ' TextBox_description
         ' 
-        TextBox_description.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_description.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_description.Location = New Point(11, 278)
         TextBox_description.Multiline = True
         TextBox_description.Name = "TextBox_description"
@@ -292,11 +292,11 @@ Partial Class G_residents3
         ' 
         ' TextBox_residents_username
         ' 
-        TextBox_residents_username.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_residents_username.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_residents_username.Location = New Point(11, 62)
         TextBox_residents_username.Name = "TextBox_residents_username"
         TextBox_residents_username.PlaceholderText = "username"
-        TextBox_residents_username.Size = New Size(446, 30)
+        TextBox_residents_username.Size = New Size(446, 34)
         TextBox_residents_username.TabIndex = 3
         ' 
         ' Panel3
@@ -317,6 +317,7 @@ Partial Class G_residents3
         Controls.Add(Panel1)
         Controls.Add(Label_record_residents)
         Controls.Add(PictureBox1)
+        DoubleBuffered = True
         Name = "G_residents3"
         Text = "G_residents3"
         Panel1.ResumeLayout(False)

@@ -35,13 +35,13 @@ Partial Class S_events3
         Label_events = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        DateTimePicker1 = New DateTimePicker()
         Button_delete = New Button()
         Button_Update = New Button()
         Button_add = New Button()
         Information_label = New Label()
         TextBox_description = New TextBox()
         TextBox_Name = New TextBox()
-        DateTimePicker1 = New DateTimePicker()
         Panel3 = New Panel()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -158,10 +158,10 @@ Partial Class S_events3
         ' 
         Label_events.AutoSize = True
         Label_events.BackColor = Color.Transparent
-        Label_events.Font = New Font("Metropolis Extra Bold", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_events.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_events.Location = New Point(1058, 169)
         Label_events.Name = "Label_events"
-        Label_events.Size = New Size(324, 40)
+        Label_events.Size = New Size(308, 46)
         Label_events.TabIndex = 9
         Label_events.Text = "Manage Events"
         ' 
@@ -191,6 +191,13 @@ Partial Class S_events3
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 11
+        ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.Location = New Point(11, 119)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(446, 27)
+        DateTimePicker1.TabIndex = 12
         ' 
         ' Button_delete
         ' 
@@ -234,17 +241,17 @@ Partial Class S_events3
         ' Information_label
         ' 
         Information_label.AutoSize = True
-        Information_label.Font = New Font("Nexa Heavy", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Information_label.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
         Information_label.ForeColor = Color.Teal
         Information_label.Location = New Point(11, 12)
         Information_label.Name = "Information_label"
-        Information_label.Size = New Size(256, 36)
+        Information_label.Size = New Size(243, 32)
         Information_label.TabIndex = 9
         Information_label.Text = "Information Field"
         ' 
         ' TextBox_description
         ' 
-        TextBox_description.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_description.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_description.Location = New Point(11, 174)
         TextBox_description.Multiline = True
         TextBox_description.Name = "TextBox_description"
@@ -254,19 +261,12 @@ Partial Class S_events3
         ' 
         ' TextBox_Name
         ' 
-        TextBox_Name.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_Name.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_Name.Location = New Point(11, 62)
         TextBox_Name.Name = "TextBox_Name"
         TextBox_Name.PlaceholderText = "Event Name"
-        TextBox_Name.Size = New Size(446, 30)
+        TextBox_Name.Size = New Size(446, 34)
         TextBox_Name.TabIndex = 3
-        ' 
-        ' DateTimePicker1
-        ' 
-        DateTimePicker1.Location = New Point(11, 119)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(446, 27)
-        DateTimePicker1.TabIndex = 12
         ' 
         ' Panel3
         ' 
@@ -286,6 +286,7 @@ Partial Class S_events3
         Controls.Add(Panel1)
         Controls.Add(Label_events)
         Controls.Add(PictureBox1)
+        DoubleBuffered = True
         Name = "S_events3"
         Text = "S_events3"
         Panel1.ResumeLayout(False)

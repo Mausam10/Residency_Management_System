@@ -195,11 +195,11 @@ Partial Class S_workers3
         ' Information_label
         ' 
         Information_label.AutoSize = True
-        Information_label.Font = New Font("Nexa Heavy", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Information_label.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
         Information_label.ForeColor = Color.Teal
         Information_label.Location = New Point(11, 12)
         Information_label.Name = "Information_label"
-        Information_label.Size = New Size(256, 36)
+        Information_label.Size = New Size(243, 32)
         Information_label.TabIndex = 9
         Information_label.Text = "Information Field"
         ' 
@@ -207,10 +207,10 @@ Partial Class S_workers3
         ' 
         Label_workers.AutoSize = True
         Label_workers.BackColor = Color.Transparent
-        Label_workers.Font = New Font("Metropolis Extra Bold", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_workers.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_workers.Location = New Point(997, 170)
         Label_workers.Name = "Label_workers"
-        Label_workers.Size = New Size(359, 40)
+        Label_workers.Size = New Size(337, 46)
         Label_workers.TabIndex = 19
         Label_workers.Text = "Manage Workers"
         ' 
@@ -240,47 +240,47 @@ Partial Class S_workers3
         ' 
         ' TextBox1
         ' 
-        TextBox1.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox1.Location = New Point(240, 134)
         TextBox1.Name = "TextBox1"
         TextBox1.PlaceholderText = "phone number"
-        TextBox1.Size = New Size(212, 30)
+        TextBox1.Size = New Size(212, 34)
         TextBox1.TabIndex = 25
         ' 
         ' TextBox_phoneno
         ' 
-        TextBox_phoneno.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_phoneno.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_phoneno.Location = New Point(11, 134)
         TextBox_phoneno.Name = "TextBox_phoneno"
         TextBox_phoneno.PlaceholderText = "phone number"
-        TextBox_phoneno.Size = New Size(212, 30)
+        TextBox_phoneno.Size = New Size(212, 34)
         TextBox_phoneno.TabIndex = 24
         ' 
         ' TextBox_lastname
         ' 
-        TextBox_lastname.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_lastname.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_lastname.Location = New Point(309, 76)
         TextBox_lastname.Name = "TextBox_lastname"
         TextBox_lastname.PlaceholderText = "last name"
-        TextBox_lastname.Size = New Size(143, 30)
+        TextBox_lastname.Size = New Size(143, 34)
         TextBox_lastname.TabIndex = 23
         ' 
         ' TextBox_middlename
         ' 
-        TextBox_middlename.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_middlename.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_middlename.Location = New Point(160, 76)
         TextBox_middlename.Name = "TextBox_middlename"
         TextBox_middlename.PlaceholderText = "middle name"
-        TextBox_middlename.Size = New Size(143, 30)
+        TextBox_middlename.Size = New Size(143, 34)
         TextBox_middlename.TabIndex = 22
         ' 
         ' TextBox_firstname
         ' 
-        TextBox_firstname.Font = New Font("Metropolis", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_firstname.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_firstname.Location = New Point(11, 75)
         TextBox_firstname.Name = "TextBox_firstname"
         TextBox_firstname.PlaceholderText = "first name"
-        TextBox_firstname.Size = New Size(143, 30)
+        TextBox_firstname.Size = New Size(143, 34)
         TextBox_firstname.TabIndex = 21
         ' 
         ' PictureBox1
@@ -306,6 +306,7 @@ Partial Class S_workers3
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(PictureBox1)
+        DoubleBuffered = True
         Name = "S_workers3"
         Text = "S_workers3"
         Panel1.ResumeLayout(False)

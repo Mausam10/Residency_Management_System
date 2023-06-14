@@ -158,10 +158,10 @@ Partial Class Form_secretary
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Metropolis Extra Bold", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label1.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label1.Location = New Point(715, 169)
         Label1.Name = "Label1"
-        Label1.Size = New Size(212, 40)
+        Label1.Size = New Size(200, 46)
         Label1.TabIndex = 5
         Label1.Text = "Secretary"
         ' 
@@ -169,11 +169,11 @@ Partial Class Form_secretary
         ' 
         Label_Welcome.AutoSize = True
         Label_Welcome.BackColor = Color.Transparent
-        Label_Welcome.Font = New Font("Metropolis Black", 48F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_Welcome.Font = New Font("Microsoft Sans Serif", 48F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_Welcome.ForeColor = Color.Azure
         Label_Welcome.Location = New Point(960, 540)
         Label_Welcome.Name = "Label_Welcome"
-        Label_Welcome.Size = New Size(427, 80)
+        Label_Welcome.Size = New Size(400, 91)
         Label_Welcome.TabIndex = 6
         Label_Welcome.Text = "Welcome "
         ' 
@@ -188,6 +188,7 @@ Partial Class Form_secretary
         Controls.Add(Label1)
         Controls.Add(PictureBox1)
         Controls.Add(Panel1)
+        DoubleBuffered = True
         Name = "Form_secretary"
         Text = "Form_secretary"
         Panel1.ResumeLayout(False)

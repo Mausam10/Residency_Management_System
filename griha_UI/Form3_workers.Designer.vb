@@ -144,10 +144,10 @@ Partial Class Form3_workers
         ' 
         Label_workers.AutoSize = True
         Label_workers.BackColor = Color.Transparent
-        Label_workers.Font = New Font("Metropolis Semi Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_workers.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
         Label_workers.Location = New Point(1053, 198)
         Label_workers.Name = "Label_workers"
-        Label_workers.Size = New Size(300, 28)
+        Label_workers.Size = New Size(286, 32)
         Label_workers.TabIndex = 20
         Label_workers.Text = "Workers Information"
         ' 
@@ -172,6 +172,7 @@ Partial Class Form3_workers
         Controls.Add(Panel1)
         Controls.Add(Label_workers)
         Controls.Add(PictureBox1)
+        DoubleBuffered = True
         Name = "Form3_workers"
         Text = "Form3_workers"
         Panel1.ResumeLayout(False)

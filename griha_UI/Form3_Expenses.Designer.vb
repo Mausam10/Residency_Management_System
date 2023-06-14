@@ -144,10 +144,10 @@ Partial Class Form3_Expenses
         ' 
         Label_expenses.AutoSize = True
         Label_expenses.BackColor = Color.Transparent
-        Label_expenses.Font = New Font("Metropolis Semi Bold", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_expenses.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_expenses.Location = New Point(1052, 200)
         Label_expenses.Name = "Label_expenses"
-        Label_expenses.Size = New Size(311, 28)
+        Label_expenses.Size = New Size(308, 32)
         Label_expenses.TabIndex = 20
         Label_expenses.Text = "Expenses Information"
         ' 
@@ -172,6 +172,7 @@ Partial Class Form3_Expenses
         Controls.Add(Panel1)
         Controls.Add(Label_expenses)
         Controls.Add(PictureBox1)
+        DoubleBuffered = True
         Name = "Form3_Expenses"
         Text = "Form3_Expenses"
         Panel1.ResumeLayout(False)

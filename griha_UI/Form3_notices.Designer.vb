@@ -144,10 +144,10 @@ Partial Class Form3_notices
         ' 
         Label_notices.AutoSize = True
         Label_notices.BackColor = Color.Transparent
-        Label_notices.Font = New Font("Metropolis Semi Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_notices.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
         Label_notices.Location = New Point(1090, 197)
         Label_notices.Name = "Label_notices"
-        Label_notices.Size = New Size(115, 28)
+        Label_notices.Size = New Size(116, 32)
         Label_notices.TabIndex = 20
         Label_notices.Text = "Notices"
         ' 
@@ -172,6 +172,7 @@ Partial Class Form3_notices
         Controls.Add(Panel1)
         Controls.Add(Label_notices)
         Controls.Add(PictureBox1)
+        DoubleBuffered = True
         Name = "Form3_notices"
         Text = "Form3_notices"
         Panel1.ResumeLayout(False)
