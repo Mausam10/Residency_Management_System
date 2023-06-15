@@ -27,7 +27,6 @@ Partial Class Form_Securityguard
         Button_back = New Button()
         Button_notices = New Button()
         Button_Workers = New Button()
-        Button_Expenses = New Button()
         Button_Visitors = New Button()
         button_resident = New Button()
         PictureBox2 = New PictureBox()
@@ -45,7 +44,6 @@ Partial Class Form_Securityguard
         Panel1.Controls.Add(Button_back)
         Panel1.Controls.Add(Button_notices)
         Panel1.Controls.Add(Button_Workers)
-        Panel1.Controls.Add(Button_Expenses)
         Panel1.Controls.Add(Button_Visitors)
         Panel1.Controls.Add(button_resident)
         Panel1.Controls.Add(PictureBox2)
@@ -60,7 +58,7 @@ Partial Class Form_Securityguard
         Button_back.BackgroundImageLayout = ImageLayout.None
         Button_back.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_back.ForeColor = Color.White
-        Button_back.Location = New Point(121, 848)
+        Button_back.Location = New Point(121, 771)
         Button_back.Name = "Button_back"
         Button_back.Size = New Size(248, 43)
         Button_back.TabIndex = 14
@@ -73,7 +71,7 @@ Partial Class Form_Securityguard
         Button_notices.BackgroundImageLayout = ImageLayout.None
         Button_notices.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_notices.ForeColor = Color.White
-        Button_notices.Location = New Point(121, 742)
+        Button_notices.Location = New Point(121, 648)
         Button_notices.Name = "Button_notices"
         Button_notices.Size = New Size(248, 43)
         Button_notices.TabIndex = 12
@@ -86,25 +84,12 @@ Partial Class Form_Securityguard
         Button_Workers.BackgroundImageLayout = ImageLayout.None
         Button_Workers.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_Workers.ForeColor = Color.White
-        Button_Workers.Location = New Point(121, 637)
+        Button_Workers.Location = New Point(121, 521)
         Button_Workers.Name = "Button_Workers"
         Button_Workers.Size = New Size(248, 43)
         Button_Workers.TabIndex = 11
         Button_Workers.Text = "Workers"
         Button_Workers.UseVisualStyleBackColor = False
-        ' 
-        ' Button_Expenses
-        ' 
-        Button_Expenses.BackColor = Color.Black
-        Button_Expenses.BackgroundImageLayout = ImageLayout.None
-        Button_Expenses.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button_Expenses.ForeColor = Color.White
-        Button_Expenses.Location = New Point(121, 522)
-        Button_Expenses.Name = "Button_Expenses"
-        Button_Expenses.Size = New Size(248, 43)
-        Button_Expenses.TabIndex = 10
-        Button_Expenses.Text = "Parking"
-        Button_Expenses.UseVisualStyleBackColor = False
         ' 
         ' Button_Visitors
         ' 
@@ -199,7 +184,6 @@ Partial Class Form_Securityguard
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button_notices As Button
     Friend WithEvents Button_Workers As Button
-    Friend WithEvents Button_Expenses As Button
     Friend WithEvents Button_Visitors As Button
     Friend WithEvents button_resident As Button
     Friend WithEvents PictureBox2 As PictureBox

@@ -27,7 +27,6 @@ Partial Class G_residents3
         Button_back = New Button()
         Button_notices = New Button()
         Button_Workers = New Button()
-        Button_Expenses = New Button()
         Button_Visitors = New Button()
         button_resident = New Button()
         PictureBox2 = New PictureBox()
@@ -57,7 +56,6 @@ Partial Class G_residents3
         Panel1.Controls.Add(Button_back)
         Panel1.Controls.Add(Button_notices)
         Panel1.Controls.Add(Button_Workers)
-        Panel1.Controls.Add(Button_Expenses)
         Panel1.Controls.Add(Button_Visitors)
         Panel1.Controls.Add(button_resident)
         Panel1.Controls.Add(PictureBox2)
@@ -72,7 +70,7 @@ Partial Class G_residents3
         Button_back.BackgroundImageLayout = ImageLayout.None
         Button_back.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_back.ForeColor = Color.White
-        Button_back.Location = New Point(108, 848)
+        Button_back.Location = New Point(121, 771)
         Button_back.Name = "Button_back"
         Button_back.Size = New Size(248, 43)
         Button_back.TabIndex = 14
@@ -85,7 +83,7 @@ Partial Class G_residents3
         Button_notices.BackgroundImageLayout = ImageLayout.None
         Button_notices.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_notices.ForeColor = Color.White
-        Button_notices.Location = New Point(108, 742)
+        Button_notices.Location = New Point(121, 648)
         Button_notices.Name = "Button_notices"
         Button_notices.Size = New Size(248, 43)
         Button_notices.TabIndex = 12
@@ -98,25 +96,12 @@ Partial Class G_residents3
         Button_Workers.BackgroundImageLayout = ImageLayout.None
         Button_Workers.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_Workers.ForeColor = Color.White
-        Button_Workers.Location = New Point(108, 637)
+        Button_Workers.Location = New Point(121, 521)
         Button_Workers.Name = "Button_Workers"
         Button_Workers.Size = New Size(248, 43)
         Button_Workers.TabIndex = 11
         Button_Workers.Text = "Workers"
         Button_Workers.UseVisualStyleBackColor = False
-        ' 
-        ' Button_Expenses
-        ' 
-        Button_Expenses.BackColor = Color.Black
-        Button_Expenses.BackgroundImageLayout = ImageLayout.None
-        Button_Expenses.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button_Expenses.ForeColor = Color.White
-        Button_Expenses.Location = New Point(108, 522)
-        Button_Expenses.Name = "Button_Expenses"
-        Button_Expenses.Size = New Size(248, 43)
-        Button_Expenses.TabIndex = 10
-        Button_Expenses.Text = "Parking"
-        Button_Expenses.UseVisualStyleBackColor = False
         ' 
         ' Button_Visitors
         ' 
@@ -124,7 +109,7 @@ Partial Class G_residents3
         Button_Visitors.BackgroundImageLayout = ImageLayout.None
         Button_Visitors.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_Visitors.ForeColor = Color.White
-        Button_Visitors.Location = New Point(108, 403)
+        Button_Visitors.Location = New Point(121, 403)
         Button_Visitors.Name = "Button_Visitors"
         Button_Visitors.Size = New Size(248, 43)
         Button_Visitors.TabIndex = 9
@@ -137,7 +122,7 @@ Partial Class G_residents3
         button_resident.BackgroundImageLayout = ImageLayout.None
         button_resident.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         button_resident.ForeColor = Color.White
-        button_resident.Location = New Point(108, 289)
+        button_resident.Location = New Point(121, 289)
         button_resident.Name = "button_resident"
         button_resident.Size = New Size(248, 43)
         button_resident.TabIndex = 8
@@ -197,22 +182,22 @@ Partial Class G_residents3
         ' Label_attending_back
         ' 
         Label_attending_back.AutoSize = True
-        Label_attending_back.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_attending_back.Font = New Font("Metropolis Light", 12F, FontStyle.Italic, GraphicsUnit.Point)
         Label_attending_back.ForeColor = Color.Teal
         Label_attending_back.Location = New Point(11, 207)
         Label_attending_back.Name = "Label_attending_back"
-        Label_attending_back.Size = New Size(353, 29)
+        Label_attending_back.Size = New Size(291, 20)
         Label_attending_back.TabIndex = 20
         Label_attending_back.Text = "Attended Back Residency on:"
         ' 
         ' Label_leaving_residency
         ' 
         Label_leaving_residency.AutoSize = True
-        Label_leaving_residency.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_leaving_residency.Font = New Font("Metropolis Light", 12F, FontStyle.Italic, GraphicsUnit.Point)
         Label_leaving_residency.ForeColor = Color.Teal
         Label_leaving_residency.Location = New Point(11, 126)
         Label_leaving_residency.Name = "Label_leaving_residency"
-        Label_leaving_residency.Size = New Size(228, 29)
+        Label_leaving_residency.Size = New Size(184, 20)
         Label_leaving_residency.TabIndex = 19
         Label_leaving_residency.Text = "Left Residency on:"
         ' 
@@ -333,7 +318,6 @@ Partial Class G_residents3
     Friend WithEvents Button_back As Button
     Friend WithEvents Button_notices As Button
     Friend WithEvents Button_Workers As Button
-    Friend WithEvents Button_Expenses As Button
     Friend WithEvents Button_Visitors As Button
     Friend WithEvents button_resident As Button
     Friend WithEvents PictureBox2 As PictureBox

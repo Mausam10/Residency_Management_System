@@ -1,5 +1,5 @@
 ﻿Imports Microsoft.Data.SqlClient
-Imports sytem.data
+Imports System.Data
 
 Public Class S_residents3
     Dim con As New SqlConnection("Data Source=LAPTOP-H5H6CH7L\PRASHANTSQL;Initial Catalog=griha;Integrated Security=True")
