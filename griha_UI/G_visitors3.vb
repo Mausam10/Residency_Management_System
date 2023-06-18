@@ -7,4 +7,9 @@
         Me.Hide()
         G_residents3.Show()
     End Sub
+
+    Private Sub Button_Workers_Click(sender As Object, e As EventArgs) Handles Button_Workers.Click
+        Me.Hide()
+        G_workers3.Show()
+    End Sub
 End Class
