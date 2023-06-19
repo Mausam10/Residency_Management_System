@@ -350,7 +350,7 @@ Partial Class S_residents3
         DataDVG.Name = "DataDVG"
         DataDVG.RowHeadersWidth = 51
         DataDVG.RowTemplate.Height = 29
-        DataDVG.Size = New Size(300, 188)
+        DataDVG.Size = New Size(854, 545)
         DataDVG.TabIndex = 0
         ' 
         ' S_residents3

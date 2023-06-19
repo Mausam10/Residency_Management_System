@@ -2,8 +2,6 @@
 Imports System.Data
 
 Public Class S_residents3
-    Dim con As New SqlConnection("Data Source=LAPTOP-H5H6CH7L\PRASHANTSQL;Initial Catalog=griha;Integrated Security=True")
-
     Private Sub Button_Events_Click(sender As Object, e As EventArgs) Handles Button_Events.Click
         Me.Hide()
         S_events3.Show()
@@ -30,28 +28,42 @@ Public Class S_residents3
     End Sub
 
     Private Sub Button_add_Click(sender As Object, e As EventArgs) Handles Button_add.Click
-        con.Open()
-        Dim query As String
-        query = "insert into residents values('" & TextBox_username.Text & "','" & TextBox_password.Text & "','" & TextBox_firstname.Text & "','" & TextBox_middlename.Text & "','" & TextBox_lastname.Text & "','" & TextBox_email.Text & "','" & TextBox_apartmentid.Text & "',)"
+        Dim con As SqlConnection
+        Dim cmd As SqlCommand = New SqlCommand
+        con = New SqlConnection("Data Source=LAPTOP-390QHVCB;Initial Catalog=griha;Integrated Security=True;TrustServerCertificate=True")
+        cmd.CommandType = System.Data.CommandType.Text
 
-        Dim cmd As SqlCommand = New SqlCommand(query, con)
+        Dim Username As String
+        Dim Password, First_Name, Middle_Name, Last_Name, Phone1, Phone2, Email, Apartment_id As String
+        Username = TextBox_username.Text
+        Password = TextBox_password.Text
+        First_Name = TextBox_firstname.Text
+        Middle_Name = TextBox_middlename.Text
+        Last_Name = TextBox_lastname.Text
+        Phone1 = TextBox_phoneno.Text
+        Phone2 = TextBox_phoneno2.Text
+        Email = TextBox_email.Text
+        Apartment_id = TextBox_apartmentid.Text
+        cmd.Connection = con
+        con.Open()
+        cmd.CommandText = "Insert into residents(Username,Password,First_Name,Middle_Name, Last_Name, Phone1, Phone2, Email, Apartment_id) values(@Username,@Password,@First_Name,@Middle_Name,@Last_Name,@phone1,@phone2,@email,@Apartment_id)"
+        cmd.Parameters.AddWithValue("@Username", Username)
+        cmd.Parameters.AddWithValue("@Password", Password)
+        cmd.Parameters.AddWithValue("@First_Name", First_Name)
+        cmd.Parameters.AddWithValue("@Middle_Name", Middle_Name)
+        cmd.Parameters.AddWithValue("@Last_Name", Last_Name)
+        cmd.Parameters.AddWithValue("@Phone1", Phone1)
+        cmd.Parameters.AddWithValue("@Phone2", Phone2)
+        cmd.Parameters.AddWithValue("@Email", Email)
+        cmd.Parameters.AddWithValue("@Apartment_id", Apartment_id)
         cmd.ExecuteNonQuery()
-        MsgBox("added")
-        '    cmd.CommandType = System.Data.CommandType.Text
-        '   Dim Username, Password As String
-        '  Dim Firstname, MiddleName, LastName As String
-        '  Dim PhoneNo1, PhoneNo2 As String
-        ' Dim Email As String
-        ''Dim apartmentID As Integer
-        ' Username = TextBox_username.Text
-        ' Password = TextBox_password.Text
-        ' Firstname = TextBox_firstname.Text
-        ' MiddleName = TextBox_middlename.Text
-        ' LastName = TextBox_lastname.Text
-        con.Close()
+        MsgBox("Successfully added")
+        populate()
     End Sub
 
     Private Sub populate()
+        Dim con As SqlConnection
+        con = New SqlConnection("Data Source=LAPTOP-390QHVCB;Initial Catalog=griha;Integrated Security=True;TrustServerCertificate=True")
         con.Open()
         Dim query = "select * from residents"
         Dim adapter As SqlDataAdapter
@@ -61,7 +73,7 @@ Public Class S_residents3
         Dim ds As DataSet
         ds = New DataSet
         adapter.Fill(ds)
-        DataDVG.DataSource = ds.Tables
+        DataDVG.DataSource = ds.Tables(0)
         con.Close()
     End Sub
 
