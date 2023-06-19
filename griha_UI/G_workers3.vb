@@ -16,4 +16,9 @@
         Me.Hide()
         G_residents3.Show()
     End Sub
+
+    Private Sub Button_back_Click(sender As Object, e As EventArgs) Handles Button_back.Click
+        Me.Hide()
+        Form_UI.Show()
+    End Sub
 End Class

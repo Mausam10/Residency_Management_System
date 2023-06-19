@@ -64,22 +64,22 @@ Partial Class G_visitors3
         ' Label_attending_back
         ' 
         Label_attending_back.AutoSize = True
-        Label_attending_back.Font = New Font("Metropolis Light", 12F, FontStyle.Italic, GraphicsUnit.Point)
+        Label_attending_back.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point)
         Label_attending_back.ForeColor = Color.Teal
         Label_attending_back.Location = New Point(13, 235)
         Label_attending_back.Name = "Label_attending_back"
-        Label_attending_back.Size = New Size(184, 20)
+        Label_attending_back.Size = New Size(173, 25)
         Label_attending_back.TabIndex = 20
         Label_attending_back.Text = "Left Residency on:"
         ' 
         ' Label_leaving_residency
         ' 
         Label_leaving_residency.AutoSize = True
-        Label_leaving_residency.Font = New Font("Metropolis Light", 12F, FontStyle.Italic, GraphicsUnit.Point)
+        Label_leaving_residency.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point)
         Label_leaving_residency.ForeColor = Color.Teal
         Label_leaving_residency.Location = New Point(13, 170)
         Label_leaving_residency.Name = "Label_leaving_residency"
-        Label_leaving_residency.Size = New Size(212, 20)
+        Label_leaving_residency.Size = New Size(200, 25)
         Label_leaving_residency.TabIndex = 19
         Label_leaving_residency.Text = "Visited Residency on:"
         ' 

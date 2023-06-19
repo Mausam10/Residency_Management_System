@@ -32,6 +32,7 @@ Partial Class Form_UI
         Password_textbox = New TextBox()
         griha_logo = New PictureBox()
         Username_label = New Label()
+        Button1 = New Button()
         login_panel.SuspendLayout()
         CType(griha_logo, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -40,6 +41,7 @@ Partial Class Form_UI
         ' 
         login_panel.BackColor = Color.Transparent
         login_panel.BorderStyle = BorderStyle.Fixed3D
+        login_panel.Controls.Add(Button1)
         login_panel.Controls.Add(Login_Guard)
         login_panel.Controls.Add(Login_resident)
         login_panel.Controls.Add(Username_textbox)
@@ -149,6 +151,15 @@ Partial Class Form_UI
         Username_label.TabIndex = 0
         Username_label.Text = "Username"
         ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(611, 279)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(13, 17)
+        Button1.TabIndex = 10
+        Button1.Text = "Button1"
+        Button1.UseVisualStyleBackColor = True
+        ' 
         ' Form_UI
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -176,4 +187,5 @@ Partial Class Form_UI
     Friend WithEvents Username_textbox As TextBox
     Friend WithEvents Login_resident As Button
     Friend WithEvents Login_Guard As Button
+    Friend WithEvents Button1 As Button
 End Class

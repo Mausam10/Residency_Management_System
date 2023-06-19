@@ -17,4 +17,18 @@
         Me.Hide()
         G_residents3.Show()
     End Sub
+
+    Private Sub Button_Visitors_Click(sender As Object, e As EventArgs) Handles Button_Visitors.Click
+        Me.Hide()
+        G_visitors3.Show()
+    End Sub
+
+    Private Sub Button_Workers_Click(sender As Object, e As EventArgs) Handles Button_Workers.Click
+        Me.Hide()
+        G_workers3.Show()
+    End Sub
+
+    Private Sub Button_notices_Click(sender As Object, e As EventArgs) Handles Button_notices.Click
+
+    End Sub
 End Class

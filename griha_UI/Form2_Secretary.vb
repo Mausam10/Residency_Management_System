@@ -38,4 +38,14 @@
         Me.Hide()
         S_workers3.Show()
     End Sub
+
+    Private Sub Button_Expenses_Click(sender As Object, e As EventArgs) Handles Button_Expenses.Click
+        Me.Hide()
+        S_expenses3.Show()
+    End Sub
+
+    Private Sub Button_notices_Click(sender As Object, e As EventArgs) Handles Button_notices.Click
+        Me.Hide()
+        S_notices3.Show()
+    End Sub
 End Class

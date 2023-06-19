@@ -50,4 +50,13 @@ Public Class Form_UI
         Me.Hide()
         Form_Resident.Show()
     End Sub
+
+    Protected Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Password_textbox.UseSystemPasswordChar = Not Password_textbox.UseSystemPasswordChar
+
+    End Sub
+
+    Protected Sub Password_textbox_TextChanged(sender As Object, e As EventArgs) Handles Password_textbox.TextChanged
+
+    End Sub
 End Class
