@@ -29,6 +29,7 @@
     End Sub
 
     Private Sub Button_notices_Click(sender As Object, e As EventArgs) Handles Button_notices.Click
-
+        Me.Hide()
+        G_notices3.Show()
     End Sub
 End Class

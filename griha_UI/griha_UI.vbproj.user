@@ -28,6 +28,9 @@
     <Compile Update="Form_Securityguard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="G_notices3.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="G_residents3.vb">
       <SubType>Form</SubType>
     </Compile>
