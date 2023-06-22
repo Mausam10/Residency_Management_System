@@ -6,7 +6,7 @@ Public Class S_residents3
     Dim query As String
     Dim tempDt As DataTable
     Dim tempString As String
-    Public Sub checkRadioButton(ByVal gen As String)
+    Private Sub checkRadioButton(ByVal gen As String)
         If gen = "Male" Then
             RadioButton1.Checked = True
         ElseIf gen = "Female" Then
@@ -14,7 +14,21 @@ Public Class S_residents3
         ElseIf gen = "Other" Then
             RadioButton3.Checked = True
         End If
+    End Sub
 
+    Private Sub reset()
+        TextBox_username.Text = Nothing
+        TextBox_password.Text = Nothing
+        TextBox_firstname.Text = Nothing
+        TextBox_middlename.Text = Nothing
+        TextBox_lastname.Text = Nothing
+        RadioButton1.Checked = False
+        RadioButton2.Checked = False
+        RadioButton3.Checked = False
+        TextBox_phoneno.Text = Nothing
+        TextBox_phoneno2.Text = Nothing
+        TextBox_email.Text = Nothing
+        TextBox_apartmentid.Text = Nothing
     End Sub
     Private Sub Button_Events_Click(sender As Object, e As EventArgs) Handles Button_Events.Click
         Me.Hide()
@@ -60,6 +74,7 @@ Public Class S_residents3
         query = "Insert into residents(Username,Password,First_Name,Middle_Name, Last_Name,Gender, Phone1, Phone2, Email, Apartment_id) values('" & Username & "', ' " & Password & " ' ,' " & First_Name & " ',' " & Middle_Name & " ',' " & Last_Name & " ',' " & Gender & " ',' " & Phone1 & " ' ,' " & Phone2 & " ',' " & Email & " ',' " & Apartment_id & " ')"
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Record Added")
+            reset()
         End If
         populate()
 
@@ -111,7 +126,11 @@ Public Class S_residents3
     End Sub
 
     Private Sub Button_Update_Click(sender As Object, e As EventArgs) Handles Button_Update.Click
+        ' query = " DELETE FROM Residents WHERE Username='" & TextBox_username.Text & "' "
+        ' grihaDb.executeMySql(query)
 
+        reset()
+        populate()
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
@@ -126,5 +145,12 @@ Public Class S_residents3
         tempString = RadioButton3.Text
     End Sub
 
-
+    Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
+        query = " DELETE FROM Residents WHERE Username='" & TextBox_username.Text & "' "
+        If (grihaDb.executeMySql(query)) Then
+            MsgBox("Record Deleted")
+            reset()
+            populate()
+        End If
+    End Sub
 End Class
