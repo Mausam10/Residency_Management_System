@@ -1,10 +1,21 @@
 ﻿Imports Microsoft.Data.SqlClient
 Imports System.Data
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class S_residents3
     Dim query As String
     Dim tempDt As DataTable
+    Dim tempString As String
+    Public Sub checkRadioButton(ByVal gen As String)
+        If gen = "Male" Then
+            RadioButton1.Checked = True
+        ElseIf gen = "Female" Then
+            RadioButton2.Checked = True
+        ElseIf gen = "Other" Then
+            RadioButton3.Checked = True
+        End If
 
+    End Sub
     Private Sub Button_Events_Click(sender As Object, e As EventArgs) Handles Button_Events.Click
         Me.Hide()
         S_events3.Show()
@@ -33,18 +44,20 @@ Public Class S_residents3
     Private Sub Button_add_Click(sender As Object, e As EventArgs) Handles Button_add.Click
 
         Dim Username As String
-        Dim Password, First_Name, Middle_Name, Last_Name, Phone1, Phone2, Email, Apartment_id As String
+        Dim Password, First_Name, Middle_Name, Last_Name, Gender, Phone1, Phone2, Email, Apartment_id As String
         Username = TextBox_username.Text
         Password = TextBox_password.Text
         First_Name = TextBox_firstname.Text
         Middle_Name = TextBox_middlename.Text
         Last_Name = TextBox_lastname.Text
+        Gender = tempString
         Phone1 = TextBox_phoneno.Text
         Phone2 = TextBox_phoneno2.Text
         Email = TextBox_email.Text
         Apartment_id = TextBox_apartmentid.Text
 
-        query = "Insert into residents(Username,Password,First_Name,Middle_Name, Last_Name, Phone1, Phone2, Email, Apartment_id) values('" & Username & "', ' " & Password & " ' ,' " & First_Name & " ',' " & Middle_Name & " ',' " & Last_Name & " ',' " & Phone1 & " ' ,' " & Phone2 & " ',' " & Email & " ',' " & Apartment_id & " ')"
+
+        query = "Insert into residents(Username,Password,First_Name,Middle_Name, Last_Name,Gender, Phone1, Phone2, Email, Apartment_id) values('" & Username & "', ' " & Password & " ' ,' " & First_Name & " ',' " & Middle_Name & " ',' " & Last_Name & " ',' " & Gender & " ',' " & Phone1 & " ' ,' " & Phone2 & " ',' " & Email & " ',' " & Apartment_id & " ')"
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Record Added")
         End If
@@ -70,6 +83,23 @@ Public Class S_residents3
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataDVG.CellContentClick
         populate()
     End Sub
+    Private Sub dataGridView1_CellMouseClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataDVG.CellMouseClick
+
+        If e.RowIndex >= 0 Then
+            Dim row As DataGridViewRow = DataDVG.Rows(e.RowIndex)
+            TextBox_username.Text = row.Cells(0).Value.ToString
+            TextBox_password.Text = row.Cells(1).Value.ToString
+            TextBox_firstname.Text = row.Cells(2).Value.ToString
+            TextBox_middlename.Text = row.Cells(3).Value.ToString
+            TextBox_lastname.Text = row.Cells(4).Value.ToString
+            checkRadioButton(row.Cells(5).Value.ToString)    'for gender
+            TextBox_phoneno.Text = row.Cells(6).Value.ToString
+            TextBox_phoneno2.Text = row.Cells(7).Value.ToString
+            TextBox_email.Text = row.Cells(8).Value.ToString
+            TextBox_apartmentid.Text = row.Cells(9).Value.ToString
+        End If
+
+    End Sub
 
     Private Sub button_resident_Click(sender As Object, e As EventArgs) Handles button_resident.Click
 
@@ -85,6 +115,16 @@ Public Class S_residents3
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
-
+        tempString = RadioButton1.Text
     End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        tempString = RadioButton2.Text
+    End Sub
+
+    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
+        tempString = RadioButton3.Text
+    End Sub
+
+
 End Class

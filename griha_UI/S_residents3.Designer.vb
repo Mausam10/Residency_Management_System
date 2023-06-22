@@ -35,6 +35,10 @@ Partial Class S_residents3
         Label1 = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        Label2 = New Label()
+        RadioButton3 = New RadioButton()
+        RadioButton2 = New RadioButton()
+        RadioButton1 = New RadioButton()
         Button_delete = New Button()
         Button_Update = New Button()
         Button_add = New Button()
@@ -50,10 +54,6 @@ Partial Class S_residents3
         TextBox_firstname = New TextBox()
         Panel3 = New Panel()
         DataDVG = New DataGridView()
-        RadioButton1 = New RadioButton()
-        RadioButton2 = New RadioButton()
-        RadioButton3 = New RadioButton()
-        Label2 = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -212,6 +212,56 @@ Partial Class S_residents3
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 10
         ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.ForeColor = Color.Teal
+        Label2.Location = New Point(11, 233)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(94, 29)
+        Label2.TabIndex = 21
+        Label2.Text = "Gender"
+        ' 
+        ' RadioButton3
+        ' 
+        RadioButton3.AutoSize = True
+        RadioButton3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        RadioButton3.ForeColor = Color.Teal
+        RadioButton3.Location = New Point(309, 270)
+        RadioButton3.Name = "RadioButton3"
+        RadioButton3.Size = New Size(82, 29)
+        RadioButton3.TabIndex = 20
+        RadioButton3.TabStop = True
+        RadioButton3.Text = "Other"
+        RadioButton3.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton2
+        ' 
+        RadioButton2.AutoSize = True
+        RadioButton2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        RadioButton2.ForeColor = Color.Teal
+        RadioButton2.Location = New Point(160, 270)
+        RadioButton2.Name = "RadioButton2"
+        RadioButton2.Size = New Size(98, 29)
+        RadioButton2.TabIndex = 19
+        RadioButton2.TabStop = True
+        RadioButton2.Text = "Female"
+        RadioButton2.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton1
+        ' 
+        RadioButton1.AutoSize = True
+        RadioButton1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        RadioButton1.ForeColor = Color.Teal
+        RadioButton1.Location = New Point(11, 270)
+        RadioButton1.Name = "RadioButton1"
+        RadioButton1.Size = New Size(76, 29)
+        RadioButton1.TabIndex = 18
+        RadioButton1.TabStop = True
+        RadioButton1.Text = "Male"
+        RadioButton1.UseVisualStyleBackColor = True
+        ' 
         ' Button_delete
         ' 
         Button_delete.BackColor = Color.Black
@@ -358,61 +408,12 @@ Partial Class S_residents3
         DataDVG.BorderStyle = BorderStyle.None
         DataDVG.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataDVG.Location = New Point(39, 44)
+        DataDVG.MultiSelect = False
         DataDVG.Name = "DataDVG"
         DataDVG.RowHeadersWidth = 51
         DataDVG.RowTemplate.Height = 29
         DataDVG.Size = New Size(854, 545)
         DataDVG.TabIndex = 0
-        ' 
-        ' RadioButton1
-        ' 
-        RadioButton1.AutoSize = True
-        RadioButton1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        RadioButton1.ForeColor = Color.Teal
-        RadioButton1.Location = New Point(11, 270)
-        RadioButton1.Name = "RadioButton1"
-        RadioButton1.Size = New Size(76, 29)
-        RadioButton1.TabIndex = 18
-        RadioButton1.TabStop = True
-        RadioButton1.Text = "Male"
-        RadioButton1.UseVisualStyleBackColor = True
-        ' 
-        ' RadioButton2
-        ' 
-        RadioButton2.AutoSize = True
-        RadioButton2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        RadioButton2.ForeColor = Color.Teal
-        RadioButton2.Location = New Point(160, 270)
-        RadioButton2.Name = "RadioButton2"
-        RadioButton2.Size = New Size(98, 29)
-        RadioButton2.TabIndex = 19
-        RadioButton2.TabStop = True
-        RadioButton2.Text = "Female"
-        RadioButton2.UseVisualStyleBackColor = True
-        ' 
-        ' RadioButton3
-        ' 
-        RadioButton3.AutoSize = True
-        RadioButton3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        RadioButton3.ForeColor = Color.Teal
-        RadioButton3.Location = New Point(309, 270)
-        RadioButton3.Name = "RadioButton3"
-        RadioButton3.Size = New Size(82, 29)
-        RadioButton3.TabIndex = 20
-        RadioButton3.TabStop = True
-        RadioButton3.Text = "Other"
-        RadioButton3.UseVisualStyleBackColor = True
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.ForeColor = Color.Teal
-        Label2.Location = New Point(11, 233)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(94, 29)
-        Label2.TabIndex = 21
-        Label2.Text = "Gender"
         ' 
         ' S_residents3
         ' 

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\local disk D\\forth semester\\project II\\griha_UI\\griha_UI\\griha_UI.vbproj": {}
+    "C:\\Users\\Sushan\\Desktop\\Project II\\ProjectCode\\griha_UI\\griha_UI.vbproj": {}
   },
   "projects": {
-    "C:\\local disk D\\forth semester\\project II\\griha_UI\\griha_UI\\griha_UI.vbproj": {
+    "C:\\Users\\Sushan\\Desktop\\Project II\\ProjectCode\\griha_UI\\griha_UI.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\local disk D\\forth semester\\project II\\griha_UI\\griha_UI\\griha_UI.vbproj",
+        "projectUniqueName": "C:\\Users\\Sushan\\Desktop\\Project II\\ProjectCode\\griha_UI\\griha_UI.vbproj",
         "projectName": "griha_UI",
-        "projectPath": "C:\\local disk D\\forth semester\\project II\\griha_UI\\griha_UI\\griha_UI.vbproj",
-        "packagesPath": "C:\\Users\\Acer nitro\\.nuget\\packages\\",
-        "outputPath": "C:\\local disk D\\forth semester\\project II\\griha_UI\\griha_UI\\obj\\",
+        "projectPath": "C:\\Users\\Sushan\\Desktop\\Project II\\ProjectCode\\griha_UI\\griha_UI.vbproj",
+        "packagesPath": "C:\\Users\\Sushan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sushan\\Desktop\\Project II\\ProjectCode\\griha_UI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Acer nitro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sushan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -25,8 +25,7 @@
           "net6.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
@@ -76,7 +75,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
