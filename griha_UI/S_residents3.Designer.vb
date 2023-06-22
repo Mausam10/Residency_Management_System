@@ -301,6 +301,7 @@ Partial Class S_residents3
         ' 
         ' TextBox_username
         ' 
+        TextBox_username.CharacterCasing = CharacterCasing.Lower
         TextBox_username.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_username.Location = New Point(11, 62)
         TextBox_username.Name = "TextBox_username"
@@ -345,6 +346,8 @@ Partial Class S_residents3
         ' 
         ' DataDVG
         ' 
+        DataDVG.BackgroundColor = SystemColors.ButtonFace
+        DataDVG.BorderStyle = BorderStyle.None
         DataDVG.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataDVG.Location = New Point(39, 44)
         DataDVG.Name = "DataDVG"

@@ -400,6 +400,9 @@
         xwPXfeH9hbLjp5/+Dy+h8RYZFIIxAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAB4AAAASwCAMAAAAt7qfEAAAABGdBTUEAALGPC/xhBQAAAwBQTFRF0KnS
