@@ -12,7 +12,11 @@
       }
     ],
     "additionalProbingPaths": [
+<<<<<<< HEAD
       "C:\\Users\\Acer nitro\\.dotnet\\store\\|arch|\\|tfm|",
+=======
+      "C:\\Users\\Sushan\\.dotnet\\store\\|arch|\\|tfm|",
+>>>>>>> main
       "C:\\Users\\Acer nitro\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
