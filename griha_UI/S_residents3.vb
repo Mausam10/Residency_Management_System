@@ -5,7 +5,8 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Public Class S_residents3
     Dim query As String
     Dim tempDt As DataTable
-    Dim tempString As String
+    Dim tempGen As String
+    Dim tempUsername As String
     Private Sub checkRadioButton(ByVal gen As String)
         If gen = "Male" Then
             RadioButton1.Checked = True
@@ -14,6 +15,26 @@ Public Class S_residents3
         ElseIf gen = "Other" Then
             RadioButton3.Checked = True
         End If
+    End Sub
+
+    Private Sub addToDatabase()
+        Dim Username As String
+        Dim Password, First_Name, Middle_Name, Last_Name, Gender, Phone1, Phone2, Email, Apartment_id As String
+        Username = TextBox_username.Text
+        Password = TextBox_password.Text
+        First_Name = TextBox_firstname.Text
+        Middle_Name = TextBox_middlename.Text
+        Last_Name = TextBox_lastname.Text
+        Gender = tempGen
+        Phone1 = TextBox_phoneno.Text
+        Phone2 = TextBox_phoneno2.Text
+        Email = TextBox_email.Text
+        Apartment_id = TextBox_apartmentid.Text
+
+        query = "Insert into residents(Username,Password,First_Name,Middle_Name, Last_Name,Gender, Phone1, Phone2, Email, Apartment_id) values('" & Username & "', ' " & Password & " ' ,' " & First_Name & " ',' " & Middle_Name & " ',' " & Last_Name & " ',' " & Gender & " ',' " & Phone1 & " ' ,' " & Phone2 & " ',' " & Email & " ',' " & Apartment_id & " ')"
+        If (grihaDb.executeMySql(query)) Then
+        End If
+
     End Sub
 
     Private Sub reset()
@@ -30,6 +51,8 @@ Public Class S_residents3
         TextBox_email.Text = Nothing
         TextBox_apartmentid.Text = Nothing
     End Sub
+
+
     Private Sub Button_Events_Click(sender As Object, e As EventArgs) Handles Button_Events.Click
         Me.Hide()
         S_events3.Show()
@@ -56,29 +79,10 @@ Public Class S_residents3
     End Sub
 
     Private Sub Button_add_Click(sender As Object, e As EventArgs) Handles Button_add.Click
-
-        Dim Username As String
-        Dim Password, First_Name, Middle_Name, Last_Name, Gender, Phone1, Phone2, Email, Apartment_id As String
-        Username = TextBox_username.Text
-        Password = TextBox_password.Text
-        First_Name = TextBox_firstname.Text
-        Middle_Name = TextBox_middlename.Text
-        Last_Name = TextBox_lastname.Text
-        Gender = tempString
-        Phone1 = TextBox_phoneno.Text
-        Phone2 = TextBox_phoneno2.Text
-        Email = TextBox_email.Text
-        Apartment_id = TextBox_apartmentid.Text
-
-
-        query = "Insert into residents(Username,Password,First_Name,Middle_Name, Last_Name,Gender, Phone1, Phone2, Email, Apartment_id) values('" & Username & "', ' " & Password & " ' ,' " & First_Name & " ',' " & Middle_Name & " ',' " & Last_Name & " ',' " & Gender & " ',' " & Phone1 & " ' ,' " & Phone2 & " ',' " & Email & " ',' " & Apartment_id & " ')"
-        If (grihaDb.executeMySql(query)) Then
-            MsgBox("Record Added")
-            reset()
-        End If
+        addToDatabase()
+        MsgBox("Record Added")
+        reset()
         populate()
-
-
     End Sub
 
     Private Sub populate()
@@ -112,6 +116,7 @@ Public Class S_residents3
             TextBox_phoneno2.Text = row.Cells(7).Value.ToString
             TextBox_email.Text = row.Cells(8).Value.ToString
             TextBox_apartmentid.Text = row.Cells(9).Value.ToString
+            tempUsername = TextBox_username.Text 'selected user's username 
         End If
 
     End Sub
@@ -126,23 +131,24 @@ Public Class S_residents3
     End Sub
 
     Private Sub Button_Update_Click(sender As Object, e As EventArgs) Handles Button_Update.Click
-        ' query = " DELETE FROM Residents WHERE Username='" & TextBox_username.Text & "' "
-        ' grihaDb.executeMySql(query)
-
+        query = " DELETE FROM Residents WHERE Username='" & tempUsername & "' "
+        grihaDb.executeMySql(query)
+        addToDatabase()
+        MsgBox("UserInfo successfully edited.")
         reset()
         populate()
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
-        tempString = RadioButton1.Text
+        tempGen = RadioButton1.Text
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
-        tempString = RadioButton2.Text
+        tempGen = RadioButton2.Text
     End Sub
 
     Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
-        tempString = RadioButton3.Text
+        tempGen = RadioButton3.Text
     End Sub
 
     Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
