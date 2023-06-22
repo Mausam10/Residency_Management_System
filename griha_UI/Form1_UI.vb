@@ -10,32 +10,42 @@ Public Class Form_UI
 
     Public Function authenticationCheck(ByVal username As String, ByVal password As String) As Integer
         Dim i As Integer = 3
-        While True
-            Dim singleUsername As String = tempdt.Rows(i).Item(0)
-            Dim singlePassword As String = tempdt.Rows(i).Item(1)
-            If (singleUsername = Nothing) Then
-                Return -2  'no resident with that username 
-            End If
-            If username = singleUsername Then
-                MsgBox(singleUsername)
-                MsgBox(password)
-                If password = singlePassword Then
-                    MsgBox(tempdt.Rows(i).Item(1))
-                    Return 1  'username and password matched
-                Else Return -1 'username matched, password didn't match
-                End If
-            End If
-            i = i + 1
-        End While
 
-        Return -1
+        Dim query As String = "select * from residents where Username = '" & username & "'and Password = ' " & password & " ' "
+        tempdt = grihaDb.generateTable(query)
+        Dim a As Integer
+        a = tempdt.Rows.Count
+        If a = 0 Then
+            MsgBox("incorrect password")
+            Return -1
+        End If
+
+        'While True
+        ' Dim singleUsername As String = tempdt.Rows(i).Item(0)
+        'Dim singlePassword As String = tempdt.Rows(i).Item(1)
+        'If (singleUsername = Nothing) Then
+        ' Return -2  'no resident with that username 
+        'End If
+        'If username = singleUsername Then
+        'MsgBox(singleUsername)
+        'MsgBox(singlePassword)
+        'If password = singlePassword Then
+        'MsgBox(singlePassword)
+
+        Return 1  'username and password matched
+        'Else Return -1 'username matched, password didn't match
+        'End If
+        ' End If
+        ' i = i + 1
+        'End While
+
+        'Return -1
     End Function
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         grihaDb.connect()
-        Dim query As String = "select Username, Password from residents"
-        tempdt = grihaDb.generateTable(query)
+
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs)

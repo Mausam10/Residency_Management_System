@@ -79,4 +79,12 @@ Public Class S_residents3
         grihaDb.connect()
         populate()
     End Sub
+
+    Private Sub Button_Update_Click(sender As Object, e As EventArgs) Handles Button_Update.Click
+
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+
+    End Sub
 End Class

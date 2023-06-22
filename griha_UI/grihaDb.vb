@@ -8,7 +8,7 @@ Public Class grihaDb
     Shared dt As DataTable
 
     Shared Sub connect()
-        con = New SqlConnection("Data Source=LAPTOP-390QHVCB;Initial Catalog=griha;Integrated Security=True;TrustServerCertificate=True")
+        con = New SqlConnection("Data Source=LAPTOP-H5H6CH7L\PRASHANTSQL;Initial Catalog=griha;Integrated Security=True;TrustServerCertificate=True")
     End Sub
 
     Shared Function executeMySql(ByVal sqlQuery As String) As Boolean

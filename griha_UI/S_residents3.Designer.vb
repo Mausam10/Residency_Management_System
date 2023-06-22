@@ -50,6 +50,10 @@ Partial Class S_residents3
         TextBox_firstname = New TextBox()
         Panel3 = New Panel()
         DataDVG = New DataGridView()
+        RadioButton1 = New RadioButton()
+        RadioButton2 = New RadioButton()
+        RadioButton3 = New RadioButton()
+        Label2 = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -186,6 +190,10 @@ Partial Class S_residents3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(Label2)
+        Panel2.Controls.Add(RadioButton3)
+        Panel2.Controls.Add(RadioButton2)
+        Panel2.Controls.Add(RadioButton1)
         Panel2.Controls.Add(Button_delete)
         Panel2.Controls.Add(Button_Update)
         Panel2.Controls.Add(Button_add)
@@ -210,7 +218,7 @@ Partial Class S_residents3
         Button_delete.BackgroundImageLayout = ImageLayout.None
         Button_delete.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_delete.ForeColor = Color.White
-        Button_delete.Location = New Point(309, 429)
+        Button_delete.Location = New Point(309, 490)
         Button_delete.Name = "Button_delete"
         Button_delete.Size = New Size(143, 43)
         Button_delete.TabIndex = 17
@@ -223,7 +231,7 @@ Partial Class S_residents3
         Button_Update.BackgroundImageLayout = ImageLayout.None
         Button_Update.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_Update.ForeColor = Color.White
-        Button_Update.Location = New Point(160, 429)
+        Button_Update.Location = New Point(160, 490)
         Button_Update.Name = "Button_Update"
         Button_Update.Size = New Size(143, 43)
         Button_Update.TabIndex = 16
@@ -236,7 +244,7 @@ Partial Class S_residents3
         Button_add.BackgroundImageLayout = ImageLayout.None
         Button_add.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_add.ForeColor = Color.White
-        Button_add.Location = New Point(11, 429)
+        Button_add.Location = New Point(11, 490)
         Button_add.Name = "Button_add"
         Button_add.Size = New Size(143, 43)
         Button_add.TabIndex = 15
@@ -257,7 +265,7 @@ Partial Class S_residents3
         ' TextBox_apartmentid
         ' 
         TextBox_apartmentid.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_apartmentid.Location = New Point(11, 354)
+        TextBox_apartmentid.Location = New Point(11, 436)
         TextBox_apartmentid.Name = "TextBox_apartmentid"
         TextBox_apartmentid.PlaceholderText = "apartment/property ID"
         TextBox_apartmentid.Size = New Size(441, 34)
@@ -266,7 +274,7 @@ Partial Class S_residents3
         ' TextBox_email
         ' 
         TextBox_email.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_email.Location = New Point(11, 294)
+        TextBox_email.Location = New Point(11, 376)
         TextBox_email.Name = "TextBox_email"
         TextBox_email.PlaceholderText = "e-mail address"
         TextBox_email.Size = New Size(441, 34)
@@ -275,7 +283,7 @@ Partial Class S_residents3
         ' TextBox_phoneno2
         ' 
         TextBox_phoneno2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_phoneno2.Location = New Point(240, 235)
+        TextBox_phoneno2.Location = New Point(240, 317)
         TextBox_phoneno2.Name = "TextBox_phoneno2"
         TextBox_phoneno2.PlaceholderText = "phone number"
         TextBox_phoneno2.Size = New Size(212, 34)
@@ -284,7 +292,7 @@ Partial Class S_residents3
         ' TextBox_phoneno
         ' 
         TextBox_phoneno.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_phoneno.Location = New Point(11, 235)
+        TextBox_phoneno.Location = New Point(11, 317)
         TextBox_phoneno.Name = "TextBox_phoneno"
         TextBox_phoneno.PlaceholderText = "phone number"
         TextBox_phoneno.Size = New Size(223, 34)
@@ -330,7 +338,7 @@ Partial Class S_residents3
         ' TextBox_firstname
         ' 
         TextBox_firstname.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_firstname.Location = New Point(11, 176)
+        TextBox_firstname.Location = New Point(11, 177)
         TextBox_firstname.Name = "TextBox_firstname"
         TextBox_firstname.PlaceholderText = "first name"
         TextBox_firstname.Size = New Size(143, 34)
@@ -355,6 +363,56 @@ Partial Class S_residents3
         DataDVG.RowTemplate.Height = 29
         DataDVG.Size = New Size(854, 545)
         DataDVG.TabIndex = 0
+        ' 
+        ' RadioButton1
+        ' 
+        RadioButton1.AutoSize = True
+        RadioButton1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        RadioButton1.ForeColor = Color.Teal
+        RadioButton1.Location = New Point(11, 270)
+        RadioButton1.Name = "RadioButton1"
+        RadioButton1.Size = New Size(76, 29)
+        RadioButton1.TabIndex = 18
+        RadioButton1.TabStop = True
+        RadioButton1.Text = "Male"
+        RadioButton1.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton2
+        ' 
+        RadioButton2.AutoSize = True
+        RadioButton2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        RadioButton2.ForeColor = Color.Teal
+        RadioButton2.Location = New Point(160, 270)
+        RadioButton2.Name = "RadioButton2"
+        RadioButton2.Size = New Size(98, 29)
+        RadioButton2.TabIndex = 19
+        RadioButton2.TabStop = True
+        RadioButton2.Text = "Female"
+        RadioButton2.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton3
+        ' 
+        RadioButton3.AutoSize = True
+        RadioButton3.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        RadioButton3.ForeColor = Color.Teal
+        RadioButton3.Location = New Point(309, 270)
+        RadioButton3.Name = "RadioButton3"
+        RadioButton3.Size = New Size(82, 29)
+        RadioButton3.TabIndex = 20
+        RadioButton3.TabStop = True
+        RadioButton3.Text = "Other"
+        RadioButton3.UseVisualStyleBackColor = True
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.ForeColor = Color.Teal
+        Label2.Location = New Point(11, 233)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(94, 29)
+        Label2.TabIndex = 21
+        Label2.Text = "Gender"
         ' 
         ' S_residents3
         ' 
@@ -408,4 +466,8 @@ Partial Class S_residents3
     Friend WithEvents Button_add As Button
     Friend WithEvents Information_label As Label
     Friend WithEvents DataDVG As DataGridView
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents Label2 As Label
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
 End Class
