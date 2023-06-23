@@ -8,9 +8,9 @@ Imports System.Data
 Public Class Form_UI
     Dim tempdt As DataTable
 
-    Public Function authenticationCheck(ByVal username As String, ByVal password As String) As Integer
+    Public Function authenticationCheck(ByVal username As String, ByVal password As String, ByVal user As String) As Integer
 
-        Dim query As String = "select * from Residents Where Username = '" & username & "'and Password = '" & password & "' "
+        Dim query As String = "select * from " & user & " Where Username = '" & username & "'and Password = '" & password & "' "
         tempdt = grihaDb.generateTable(query)
         Dim a As Integer
         a = tempdt.Rows.Count
@@ -36,8 +36,14 @@ Public Class Form_UI
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Login_secretary.Click
-        Me.Hide()
-        Form_secretary.Show()
+
+        If (authenticationCheck(Username_textbox.Text, Password_textbox.Text, "Secretary") = 1) Then
+            Me.Hide()
+            Form_secretary.Show()
+        Else
+            MsgBox("Incorrect username or password. Please try again.")
+        End If
+
     End Sub
 
     Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs)
@@ -65,7 +71,7 @@ Public Class Form_UI
 
     Private Sub Login_resident_Click(sender As Object, e As EventArgs) Handles Login_resident.Click
 
-        If (authenticationCheck(Username_textbox.Text, Password_textbox.Text) = 1) Then
+        If (authenticationCheck(Username_textbox.Text, Password_textbox.Text, "Residents") = 1) Then
             Me.Hide()
             Form_Resident.Show()
         Else

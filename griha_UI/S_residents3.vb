@@ -31,7 +31,7 @@ Public Class S_residents3
         Email = TextBox_email.Text
         Apartment_id = TextBox_apartmentid.Text
 
-        query = "Insert into residents(Username,Password,First_Name,Middle_Name, Last_Name,Gender, Phone1, Phone2, Email, Apartment_id) values('" & Username & "', ' " & Password & " ' ,' " & First_Name & " ',' " & Middle_Name & " ',' " & Last_Name & " ',' " & Gender & " ',' " & Phone1 & " ' ,' " & Phone2 & " ',' " & Email & " ',' " & Apartment_id & " ')"
+        query = "Insert into residents(Username,Password,First_Name,Middle_Name, Last_Name,Gender, Phone1, Phone2, Email, Apartment_id) values('" & Username & "', '" & Password & "' ,'" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Gender & "','" & Phone1 & "' ,'" & Phone2 & "','" & Email & "','" & Apartment_id & "')"
         If (grihaDb.executeMySql(query)) Then
         End If
 
