@@ -33,9 +33,11 @@ Partial Class Form3_view_Residents
         PictureBox2 = New PictureBox()
         PictureBox1 = New PictureBox()
         Label_residents = New Label()
+        DataGridResidents = New DataGridView()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DataGridResidents, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -163,12 +165,27 @@ Partial Class Form3_view_Residents
         Label_residents.TabIndex = 17
         Label_residents.Text = "Residents of your Residency"
         ' 
+        ' DataGridResidents
+        ' 
+        DataGridResidents.BackgroundColor = Color.DeepSkyBlue
+        DataGridResidents.BorderStyle = BorderStyle.None
+        DataGridResidents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridResidents.Location = New Point(917, 301)
+        DataGridResidents.MultiSelect = False
+        DataGridResidents.Name = "DataGridResidents"
+        DataGridResidents.ReadOnly = True
+        DataGridResidents.RowHeadersWidth = 51
+        DataGridResidents.RowTemplate.Height = 29
+        DataGridResidents.Size = New Size(662, 379)
+        DataGridResidents.TabIndex = 18
+        ' 
         ' Form3_view_Residents
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1902, 1033)
+        Controls.Add(DataGridResidents)
         Controls.Add(Label_residents)
         Controls.Add(Panel1)
         Controls.Add(PictureBox1)
@@ -178,6 +195,7 @@ Partial Class Form3_view_Residents
         Panel1.ResumeLayout(False)
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(DataGridResidents, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -192,4 +210,5 @@ Partial Class Form3_view_Residents
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label_residents As Label
+    Friend WithEvents DataGridResidents As DataGridView
 End Class

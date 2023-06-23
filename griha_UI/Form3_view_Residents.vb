@@ -1,4 +1,19 @@
 ﻿Public Class Form3_view_Residents
+    Dim tempdt As DataTable
+    Dim query As String
+    Private Sub populate()
+        query = "select First_Name + Middle_Name + Last_Name as 'Full Name' , Phone1, Phone2 , Apartment_id from Residents"
+        tempdt = grihaDb.generateTable(query)
+        If (tempDt Is Nothing) Then
+            MsgBox("No record")
+
+        Else
+            DataGridResidents.DataSource = tempdt
+        End If
+
+    End Sub
+
+
     Private Sub Button_back_Click(sender As Object, e As EventArgs) Handles Button_back.Click
         Me.Hide()
         Form_UI.Show()
@@ -29,6 +44,16 @@
     Private Sub Button_notices_Click(sender As Object, e As EventArgs) Handles Button_notices.Click
         Me.Hide()
         Form3_notices.Show()
+
+    End Sub
+
+
+    Private Sub Form3_view_Residents_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        grihaDb.connect()
+        populate()
+    End Sub
+
+    Private Sub DataGridResidents_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridResidents.CellContentClick
 
     End Sub
 End Class
