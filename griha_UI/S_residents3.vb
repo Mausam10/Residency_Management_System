@@ -17,7 +17,7 @@ Public Class S_residents3
         End If
     End Sub
 
-    Private Sub addToDatabase()
+    Private Function addToDatabase() As Integer
         Dim Username As String
         Dim Password, First_Name, Middle_Name, Last_Name, Gender, Phone1, Phone2, Email, Apartment_id As String
         Username = TextBox_username.Text
@@ -33,9 +33,11 @@ Public Class S_residents3
 
         query = "Insert into residents(Username,Password,First_Name,Middle_Name, Last_Name,Gender, Phone1, Phone2, Email, Apartment_id) values('" & Username & "', '" & Password & "' ,'" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Gender & "','" & Phone1 & "' ,'" & Phone2 & "','" & Email & "','" & Apartment_id & "')"
         If (grihaDb.executeMySql(query)) Then
+            Return 1 'success
         End If
+        Return -1 'insert operation failed
 
-    End Sub
+    End Function
 
     Private Sub reset()
         TextBox_username.Text = Nothing
@@ -79,10 +81,15 @@ Public Class S_residents3
     End Sub
 
     Private Sub Button_add_Click(sender As Object, e As EventArgs) Handles Button_add.Click
-        addToDatabase()
-        MsgBox("Record Added")
-        reset()
-        populate()
+
+        If (addToDatabase() = 1) Then
+            MsgBox("Record successfully Added")
+            reset()
+            populate()
+        Else
+            MsgBox("Error. Please check and try again.")
+        End If
+
     End Sub
 
     Private Sub populate()

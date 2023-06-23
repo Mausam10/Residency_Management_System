@@ -1,9 +1,11 @@
-﻿Public Class S_workers3
+﻿Imports System.Diagnostics.Eventing.Reader
+
+Public Class S_workers3
 
     Dim query As String
     Dim tempDt As DataTable
     Dim tempWorkerID As String
-    Private Sub addToDatabase()
+    Private Function addToDatabase() As Integer
         Dim Worker_Id As String
         Dim First_Name, Middle_Name, Last_Name, Phone1, Phone2 As String
         Worker_Id = TextBox_workerID.Text
@@ -15,9 +17,11 @@
 
         query = "Insert into workers(Worker_id, First_Name, Middle_Name, Last_Name, Phone1, Phone2) values('" & Worker_Id & "','" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Phone1 & "' ,'" & Phone2 & "')"
         If (grihaDb.executeMySql(query)) Then
+            Return 1
         End If
+        Return -1
 
-    End Sub
+    End Function
 
     Private Sub reset()
         TextBox_workerID.Text = Nothing
@@ -76,10 +80,14 @@
     End Sub
 
     Private Sub Button_add_Click(sender As Object, e As EventArgs) Handles Button_add.Click
-        addToDatabase()
-        MsgBox("Record Added")
-        reset()
-        populate()
+        If (addToDatabase() = 1) Then
+            MsgBox("Record successfully Added")
+            reset()
+            populate()
+        Else
+            MsgBox("Error. Please check and try again.")
+        End If
+
     End Sub
 
     Private Sub DGVWorkers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVWorkers.CellContentClick
@@ -114,7 +122,7 @@
         query = " DELETE FROM Workers WHERE worker_id='" & tempWorkerID & "' "
         grihaDb.executeMySql(query)
         addToDatabase()
-        MsgBox("UserInfo successfully edited.")
+        MsgBox("Workers Info successfully edited.")
         reset()
         populate()
     End Sub
