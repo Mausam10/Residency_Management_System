@@ -38,15 +38,19 @@ Partial Class S_workers3
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
         Label_workers = New Label()
         Panel3 = New Panel()
+        DGVWorkers = New DataGridView()
         Panel2 = New Panel()
-        TextBox1 = New TextBox()
-        TextBox_phoneno = New TextBox()
+        TextBox_workerID = New TextBox()
+        TextBox_phone2 = New TextBox()
+        TextBox_phone1 = New TextBox()
         TextBox_lastname = New TextBox()
         TextBox_middlename = New TextBox()
         TextBox_firstname = New TextBox()
         PictureBox1 = New PictureBox()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        Panel3.SuspendLayout()
+        CType(DGVWorkers, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -216,16 +220,33 @@ Partial Class S_workers3
         ' 
         ' Panel3
         ' 
+        Panel3.Controls.Add(DGVWorkers)
         Panel3.Location = New Point(997, 260)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(905, 768)
         Panel3.TabIndex = 21
         ' 
+        ' DGVWorkers
+        ' 
+        DGVWorkers.AllowUserToAddRows = False
+        DGVWorkers.AllowUserToDeleteRows = False
+        DGVWorkers.BackgroundColor = SystemColors.ButtonFace
+        DGVWorkers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGVWorkers.Location = New Point(199, 107)
+        DGVWorkers.MultiSelect = False
+        DGVWorkers.Name = "DGVWorkers"
+        DGVWorkers.ReadOnly = True
+        DGVWorkers.RowHeadersWidth = 51
+        DGVWorkers.RowTemplate.Height = 29
+        DGVWorkers.Size = New Size(609, 284)
+        DGVWorkers.TabIndex = 0
+        ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
-        Panel2.Controls.Add(TextBox1)
-        Panel2.Controls.Add(TextBox_phoneno)
+        Panel2.Controls.Add(TextBox_workerID)
+        Panel2.Controls.Add(TextBox_phone2)
+        Panel2.Controls.Add(TextBox_phone1)
         Panel2.Controls.Add(TextBox_lastname)
         Panel2.Controls.Add(TextBox_middlename)
         Panel2.Controls.Add(TextBox_firstname)
@@ -238,28 +259,37 @@ Partial Class S_workers3
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 20
         ' 
-        ' TextBox1
+        ' TextBox_workerID
         ' 
-        TextBox1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox1.Location = New Point(240, 134)
-        TextBox1.Name = "TextBox1"
-        TextBox1.PlaceholderText = "phone number"
-        TextBox1.Size = New Size(212, 34)
-        TextBox1.TabIndex = 25
+        TextBox_workerID.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_workerID.Location = New Point(11, 49)
+        TextBox_workerID.Name = "TextBox_workerID"
+        TextBox_workerID.PlaceholderText = "worker ID"
+        TextBox_workerID.Size = New Size(256, 34)
+        TextBox_workerID.TabIndex = 26
         ' 
-        ' TextBox_phoneno
+        ' TextBox_phone2
         ' 
-        TextBox_phoneno.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_phoneno.Location = New Point(11, 134)
-        TextBox_phoneno.Name = "TextBox_phoneno"
-        TextBox_phoneno.PlaceholderText = "phone number"
-        TextBox_phoneno.Size = New Size(212, 34)
-        TextBox_phoneno.TabIndex = 24
+        TextBox_phone2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_phone2.Location = New Point(240, 160)
+        TextBox_phone2.Name = "TextBox_phone2"
+        TextBox_phone2.PlaceholderText = "phone number"
+        TextBox_phone2.Size = New Size(212, 34)
+        TextBox_phone2.TabIndex = 25
+        ' 
+        ' TextBox_phone1
+        ' 
+        TextBox_phone1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_phone1.Location = New Point(11, 160)
+        TextBox_phone1.Name = "TextBox_phone1"
+        TextBox_phone1.PlaceholderText = "phone number"
+        TextBox_phone1.Size = New Size(212, 34)
+        TextBox_phone1.TabIndex = 24
         ' 
         ' TextBox_lastname
         ' 
         TextBox_lastname.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_lastname.Location = New Point(309, 76)
+        TextBox_lastname.Location = New Point(309, 102)
         TextBox_lastname.Name = "TextBox_lastname"
         TextBox_lastname.PlaceholderText = "last name"
         TextBox_lastname.Size = New Size(143, 34)
@@ -268,7 +298,7 @@ Partial Class S_workers3
         ' TextBox_middlename
         ' 
         TextBox_middlename.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_middlename.Location = New Point(160, 76)
+        TextBox_middlename.Location = New Point(160, 102)
         TextBox_middlename.Name = "TextBox_middlename"
         TextBox_middlename.PlaceholderText = "middle name"
         TextBox_middlename.Size = New Size(143, 34)
@@ -277,7 +307,7 @@ Partial Class S_workers3
         ' TextBox_firstname
         ' 
         TextBox_firstname.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_firstname.Location = New Point(11, 75)
+        TextBox_firstname.Location = New Point(11, 101)
         TextBox_firstname.Name = "TextBox_firstname"
         TextBox_firstname.PlaceholderText = "first name"
         TextBox_firstname.Size = New Size(143, 34)
@@ -311,6 +341,8 @@ Partial Class S_workers3
         Text = "S_workers3"
         Panel1.ResumeLayout(False)
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        Panel3.ResumeLayout(False)
+        CType(DGVWorkers, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
@@ -338,6 +370,8 @@ Partial Class S_workers3
     Friend WithEvents TextBox_lastname As TextBox
     Friend WithEvents TextBox_middlename As TextBox
     Friend WithEvents TextBox_firstname As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox_phoneno As TextBox
+    Friend WithEvents TextBox_phone2 As TextBox
+    Friend WithEvents TextBox_phone1 As TextBox
+    Friend WithEvents TextBox_workerID As TextBox
+    Friend WithEvents DGVWorkers As DataGridView
 End Class
