@@ -2,6 +2,7 @@
 
     Dim query As String
     Dim tempDt As DataTable
+    Dim tempWorkerID As String
     Private Sub addToDatabase()
         Dim Worker_Id As String
         Dim First_Name, Middle_Name, Last_Name, Phone1, Phone2 As String
@@ -95,7 +96,7 @@
             TextBox_lastname.Text = row.Cells(3).Value.ToString
             TextBox_phone1.Text = row.Cells(4).Value.ToString
             TextBox_phone2.Text = row.Cells(5).Value.ToString
-            ' tempUsername = TextBox_username.Text 'selected user's username 
+            tempWorkerID = TextBox_workerID.Text 'selected user's username 
         End If
 
     End Sub
@@ -107,5 +108,14 @@
             reset()
             populate()
         End If
+    End Sub
+
+    Private Sub Button_Update_Click(sender As Object, e As EventArgs) Handles Button_Update.Click
+        query = " DELETE FROM Workers WHERE worker_id='" & tempWorkerID & "' "
+        grihaDb.executeMySql(query)
+        addToDatabase()
+        MsgBox("UserInfo successfully edited.")
+        reset()
+        populate()
     End Sub
 End Class
