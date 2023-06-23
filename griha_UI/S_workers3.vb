@@ -89,7 +89,7 @@
 
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow = DGVWorkers.Rows(e.RowIndex)
-            TextBox_workerID = row.Cells(0).Value.ToString
+            TextBox_workerID.Text = row.Cells(0).Value.ToString
             TextBox_firstname.Text = row.Cells(1).Value.ToString
             TextBox_middlename.Text = row.Cells(2).Value.ToString
             TextBox_lastname.Text = row.Cells(3).Value.ToString
@@ -98,5 +98,14 @@
             ' tempUsername = TextBox_username.Text 'selected user's username 
         End If
 
+    End Sub
+
+    Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
+        query = " DELETE FROM Workers WHERE worker_id='" & TextBox_workerID.Text & "' "
+        If (grihaDb.executeMySql(query)) Then
+            MsgBox("Record Deleted")
+            reset()
+            populate()
+        End If
     End Sub
 End Class
