@@ -65,8 +65,13 @@ Public Class Form_UI
 
     End Sub
     Private Sub Login_Guard_Click(sender As Object, e As EventArgs) Handles Login_Guard.Click
-        Me.Hide()
-        Form_Securityguard.Show()
+        If (authenticationCheck(Username_textbox.Text, Password_textbox.Text, "Guards") = 1) Then
+            Me.Hide()
+            Form_Securityguard.Show()
+        Else
+            MsgBox("Incorrect username or password. Please try again.")
+        End If
+
     End Sub
 
     Private Sub Login_resident_Click(sender As Object, e As EventArgs) Handles Login_resident.Click
