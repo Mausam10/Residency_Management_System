@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sushan\\Desktop\\Project II\\ProjectCode\\griha_UI\\griha_UI.vbproj": {}
+    "C:\\Users\\Sushan\\Desktop\\temp\\mausam\\Residency_Management_System\\griha_UI\\griha_UI.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\Sushan\\Desktop\\Project II\\ProjectCode\\griha_UI\\griha_UI.vbproj": {
+    "C:\\Users\\Sushan\\Desktop\\temp\\mausam\\Residency_Management_System\\griha_UI\\griha_UI.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sushan\\Desktop\\Project II\\ProjectCode\\griha_UI\\griha_UI.vbproj",
+        "projectUniqueName": "C:\\Users\\Sushan\\Desktop\\temp\\mausam\\Residency_Management_System\\griha_UI\\griha_UI.vbproj",
         "projectName": "griha_UI",
-        "projectPath": "C:\\Users\\Sushan\\Desktop\\Project II\\ProjectCode\\griha_UI\\griha_UI.vbproj",
+        "projectPath": "C:\\Users\\Sushan\\Desktop\\temp\\mausam\\Residency_Management_System\\griha_UI\\griha_UI.vbproj",
         "packagesPath": "C:\\Users\\Sushan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sushan\\Desktop\\Project II\\ProjectCode\\griha_UI\\obj\\",
+        "outputPath": "C:\\Users\\Sushan\\Desktop\\temp\\mausam\\Residency_Management_System\\griha_UI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
