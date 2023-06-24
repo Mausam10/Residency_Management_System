@@ -1,7 +1,25 @@
 ﻿Public Class S_expenses3
-    Private Sub TextBox_Amount_TextChanged(sender As Object, e As EventArgs) Handles TextBox_Amount.TextChanged
 
-    End Sub
+    Dim query As String
+    Dim tempDt As DataTable
+    Dim tempGen As String
+    Dim tempUsername As String
+
+    Private Function addToDatabase() As Integer
+        Dim Username As String
+        Dim Apartment_id, Expenses_type, Amount As String
+        Username = TextBox_username.Text
+        Apartment_id = TextBox_apartmentid.Text
+        Expenses_type = ComboBox1.SelectedItem
+        Amount = TextBox_Amount.Text
+
+        query = "Insert into expenses(Username,Apartment_id, Expenses_type, Amount) values('" & Username & "', '" & Apartment_id & "' ,'" & Expenses_type & "','" & Amount & "')"
+        If (grihaDb.executeMySql(query)) Then
+            Return 1 'success
+        End If
+        Return -1 'insert operation failed
+
+    End Function
 
     Private Sub button_resident_Click(sender As Object, e As EventArgs) Handles button_resident.Click
         Me.Hide()
@@ -18,19 +36,6 @@
         Form_UI.Show()
     End Sub
 
-    Private Sub Button_Expenses_Click(sender As Object, e As EventArgs) Handles Button_Expenses.Click
-
-    End Sub
-
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-    End Sub
-
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
-    End Sub
 
     Private Sub Label_types_of_expenses_Click(sender As Object, e As EventArgs) Handles Label_types_of_expenses.Click
     End Sub
@@ -79,5 +84,10 @@
     Private Sub Button_notices_Click(sender As Object, e As EventArgs) Handles Button_notices.Click
         Me.Hide()
         S_notices3.Show()
+    End Sub
+
+    Private Sub S_expenses3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        grihaDb.connect()
+
     End Sub
 End Class

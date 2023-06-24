@@ -46,14 +46,18 @@ Partial Class S_expenses3
         Button_notices = New Button()
         Button_Workers = New Button()
         Button_Expenses = New Button()
+        DataGridView1 = New DataGridView()
+        Panel3.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel3
         ' 
+        Panel3.Controls.Add(DataGridView1)
         Panel3.Location = New Point(997, 260)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(905, 768)
@@ -310,6 +314,18 @@ Partial Class S_expenses3
         Button_Expenses.Text = "Expenses"
         Button_Expenses.UseVisualStyleBackColor = False
         ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.BackgroundColor = SystemColors.ButtonFace
+        DataGridView1.BorderStyle = BorderStyle.None
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Location = New Point(71, 77)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.RowHeadersWidth = 51
+        DataGridView1.RowTemplate.Height = 29
+        DataGridView1.Size = New Size(766, 494)
+        DataGridView1.TabIndex = 0
+        ' 
         ' S_expenses3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -324,11 +340,13 @@ Partial Class S_expenses3
         DoubleBuffered = True
         Name = "S_expenses3"
         Text = "S_expenses3"
+        Panel3.ResumeLayout(False)
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -356,4 +374,5 @@ Partial Class S_expenses3
     Friend WithEvents Button_Expenses As Button
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label_types_of_expenses As Label
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
