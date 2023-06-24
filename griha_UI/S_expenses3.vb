@@ -69,9 +69,21 @@ Public Class S_expenses3
     End Sub
 
     Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
+        query = " DELETE FROM expenses WHERE Username='" & TextBox_username.Text & "' "
+        If (grihaDb.executeMySql(query)) Then
+            MsgBox("Record Deleted")
+            reset()
+            populate()
+        End If
     End Sub
 
     Private Sub Button_Update_Click(sender As Object, e As EventArgs) Handles Button_Update.Click
+        query = " DELETE FROM expenses WHERE Username='" & tempUsername & "' "
+        grihaDb.executeMySql(query)
+        addToDatabase()
+        MsgBox("UserInfo successfully edited.")
+        reset()
+        populate()
     End Sub
 
     Private Sub Button_add_Click(sender As Object, e As EventArgs) Handles Button_add.Click
