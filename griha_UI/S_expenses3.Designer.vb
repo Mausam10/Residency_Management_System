@@ -65,6 +65,11 @@ Partial Class S_expenses3
         ' 
         ' DGV_Expenses
         ' 
+        DGV_Expenses.AllowUserToAddRows = False
+        DGV_Expenses.AllowUserToDeleteRows = False
+        DGV_Expenses.AllowUserToResizeColumns = False
+        DGV_Expenses.AllowUserToResizeRows = False
+        DGV_Expenses.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV_Expenses.BackgroundColor = SystemColors.ButtonFace
         DGV_Expenses.BorderStyle = BorderStyle.None
         DGV_Expenses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize

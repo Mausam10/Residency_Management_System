@@ -10,6 +10,7 @@ Public Class S_expenses3
     Private Function addToDatabase() As Integer
         Dim Username As String
         Dim Apartment_id, Expenses_type, Amount As String
+
         Username = TextBox_username.Text
         Apartment_id = TextBox_apartmentid.Text
         Expenses_type = ComboBox1.SelectedItem
@@ -27,7 +28,6 @@ Public Class S_expenses3
         TextBox_username.Text = Nothing
         TextBox_apartmentid.Text = Nothing
         ComboBox1.SelectedItem = Nothing
-        TextBox_apartmentid.Text = Nothing
         TextBox_Amount.Text = Nothing
     End Sub
 
@@ -75,6 +75,13 @@ Public Class S_expenses3
     End Sub
 
     Private Sub Button_add_Click(sender As Object, e As EventArgs) Handles Button_add.Click
+        If (addToDatabase() = 1) Then
+            MsgBox("Record successfully Added")
+            reset()
+            populate()
+        Else
+            MsgBox("Error. Please check and try again.")
+        End If
     End Sub
 
     Private Sub Information_label_Click(sender As Object, e As EventArgs) Handles Information_label.Click
@@ -112,5 +119,20 @@ Public Class S_expenses3
         grihaDb.connect()
         populate()
 
+    End Sub
+
+    Private Sub DGV_Expenses_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_Expenses.CellContentClick
+
+    End Sub
+
+    Private Sub DGV_Expenses_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV_Expenses.CellMouseClick
+        If e.RowIndex >= 0 Then
+            Dim row As DataGridViewRow = DGV_Expenses.Rows(e.RowIndex)
+            TextBox_username.Text = row.Cells(0).Value.ToString
+            TextBox_apartmentid.Text = row.Cells(1).Value.ToString
+            ComboBox1.SelectedItem = row.Cells(2).Value.ToString
+            TextBox_Amount.Text = row.Cells(3).Value.ToString
+            tempUsername = TextBox_username.Text 'selected user's username 
+        End If
     End Sub
 End Class
