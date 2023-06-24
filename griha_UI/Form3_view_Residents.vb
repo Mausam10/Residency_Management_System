@@ -2,7 +2,7 @@
     Dim tempdt As DataTable
     Dim query As String
     Private Sub populate()
-        query = "select First_Name + Middle_Name + Last_Name as 'Full Name' , Phone1, Phone2 , Apartment_id from Residents"
+        query = "SELECT ISNULL(First_Name,'') + ' ' + ISNULL(Middle_Name,'')  + ' ' + ISNULL(Last_Name,'') AS 'Full Name', Phone1, Phone2 , Apartment_id from Residents "
         tempdt = grihaDb.generateTable(query)
         If (tempDt Is Nothing) Then
             MsgBox("No record")

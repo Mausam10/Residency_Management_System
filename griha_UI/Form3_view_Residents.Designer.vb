@@ -167,6 +167,7 @@ Partial Class Form3_view_Residents
         ' 
         ' DataGridResidents
         ' 
+        DataGridResidents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DataGridResidents.BackgroundColor = Color.DeepSkyBlue
         DataGridResidents.BorderStyle = BorderStyle.None
         DataGridResidents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -176,7 +177,7 @@ Partial Class Form3_view_Residents
         DataGridResidents.ReadOnly = True
         DataGridResidents.RowHeadersWidth = 51
         DataGridResidents.RowTemplate.Height = 29
-        DataGridResidents.Size = New Size(662, 379)
+        DataGridResidents.Size = New Size(662, 128)
         DataGridResidents.TabIndex = 18
         ' 
         ' Form3_view_Residents
