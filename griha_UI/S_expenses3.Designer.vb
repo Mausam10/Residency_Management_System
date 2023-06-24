@@ -24,6 +24,7 @@ Partial Class S_expenses3
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(S_expenses3))
         Panel3 = New Panel()
+        DGV_Expenses = New DataGridView()
         Panel2 = New Panel()
         Label_types_of_expenses = New Label()
         DateTimePicker1 = New DateTimePicker()
@@ -46,22 +47,33 @@ Partial Class S_expenses3
         Button_notices = New Button()
         Button_Workers = New Button()
         Button_Expenses = New Button()
-        DataGridView1 = New DataGridView()
         Panel3.SuspendLayout()
+        CType(DGV_Expenses, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel3
         ' 
-        Panel3.Controls.Add(DataGridView1)
+        Panel3.Controls.Add(DGV_Expenses)
         Panel3.Location = New Point(997, 260)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(905, 768)
         Panel3.TabIndex = 16
+        ' 
+        ' DGV_Expenses
+        ' 
+        DGV_Expenses.BackgroundColor = SystemColors.ButtonFace
+        DGV_Expenses.BorderStyle = BorderStyle.None
+        DGV_Expenses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGV_Expenses.Location = New Point(71, 77)
+        DGV_Expenses.Name = "DGV_Expenses"
+        DGV_Expenses.RowHeadersWidth = 51
+        DGV_Expenses.RowTemplate.Height = 29
+        DGV_Expenses.Size = New Size(766, 494)
+        DGV_Expenses.TabIndex = 0
         ' 
         ' Panel2
         ' 
@@ -314,18 +326,6 @@ Partial Class S_expenses3
         Button_Expenses.Text = "Expenses"
         Button_Expenses.UseVisualStyleBackColor = False
         ' 
-        ' DataGridView1
-        ' 
-        DataGridView1.BackgroundColor = SystemColors.ButtonFace
-        DataGridView1.BorderStyle = BorderStyle.None
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(71, 77)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersWidth = 51
-        DataGridView1.RowTemplate.Height = 29
-        DataGridView1.Size = New Size(766, 494)
-        DataGridView1.TabIndex = 0
-        ' 
         ' S_expenses3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -341,12 +341,12 @@ Partial Class S_expenses3
         Name = "S_expenses3"
         Text = "S_expenses3"
         Panel3.ResumeLayout(False)
+        CType(DGV_Expenses, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -374,5 +374,5 @@ Partial Class S_expenses3
     Friend WithEvents Button_Expenses As Button
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label_types_of_expenses As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DGV_Expenses As DataGridView
 End Class

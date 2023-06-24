@@ -1,4 +1,6 @@
-﻿Public Class S_expenses3
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
+
+Public Class S_expenses3
 
     Dim query As String
     Dim tempDt As DataTable
@@ -20,6 +22,26 @@
         Return -1 'insert operation failed
 
     End Function
+
+    Private Sub reset()
+        TextBox_username.Text = Nothing
+        TextBox_apartmentid.Text = Nothing
+        ComboBox1.SelectedItem = Nothing
+        TextBox_apartmentid.Text = Nothing
+        TextBox_Amount.Text = Nothing
+    End Sub
+
+    Private Sub populate()
+        query = "select * from expenses"
+        tempDt = grihaDb.generateTable(query)
+        If (tempDt Is Nothing) Then
+            MsgBox("No record")
+
+        Else
+            DGV_Expenses.DataSource = tempDt
+        End If
+
+    End Sub
 
     Private Sub button_resident_Click(sender As Object, e As EventArgs) Handles button_resident.Click
         Me.Hide()
@@ -88,6 +110,7 @@
 
     Private Sub S_expenses3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         grihaDb.connect()
+        populate()
 
     End Sub
 End Class
