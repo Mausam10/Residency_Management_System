@@ -10,13 +10,13 @@ Public Class S_expenses3
     Private Function addToDatabase() As Integer
         Dim Username As String
         Dim Apartment_id, Expenses_type, Amount As String
-
+        Dim date1 As Date
         Username = TextBox_username.Text
         Apartment_id = TextBox_apartmentid.Text
         Expenses_type = ComboBox1.SelectedItem
         Amount = TextBox_Amount.Text
-
-        query = "Insert into expenses(Username,Apartment_id, Expenses_type, Amount) values('" & Username & "', '" & Apartment_id & "' ,'" & Expenses_type & "','" & Amount & "')"
+        date1 = DateTimePicker1.Text
+        query = "Insert into expenses(Username,Apartment_id, Expenses_type, Amount, Date) values('" & Username & "', '" & Apartment_id & "' ,'" & Expenses_type & "','" & Amount & "','" & date1 & "')"
         If (grihaDb.executeMySql(query)) Then
             Return 1 'success
         End If
@@ -29,6 +29,7 @@ Public Class S_expenses3
         TextBox_apartmentid.Text = Nothing
         ComboBox1.SelectedItem = Nothing
         TextBox_Amount.Text = Nothing
+        DateTimePicker1.Text = Nothing
     End Sub
 
     Private Sub populate()
@@ -78,12 +79,19 @@ Public Class S_expenses3
     End Sub
 
     Private Sub Button_Update_Click(sender As Object, e As EventArgs) Handles Button_Update.Click
-        query = " DELETE FROM expenses WHERE Username='" & tempUsername & "' "
-        grihaDb.executeMySql(query)
-        addToDatabase()
-        MsgBox("UserInfo successfully edited.")
-        reset()
-        populate()
+
+        Dim Expenses_type, Amount As String
+        Dim date1 As Date
+        Expenses_type = ComboBox1.SelectedItem
+        Amount = TextBox_Amount.Text
+        date1 = DateTimePicker1.Text
+        query = "update expenses set expenses_type ='" & Expenses_type & "', amount='" & Amount & "',date='" & date1 & "' where USERNAME = '" & tempUsername & "'"
+        If (grihaDb.executeMySql(query)) Then
+            MsgBox("UserInfo successfully edited.")
+            reset()
+            populate()
+        End If
+
     End Sub
 
     Private Sub Button_add_Click(sender As Object, e As EventArgs) Handles Button_add.Click
@@ -144,6 +152,7 @@ Public Class S_expenses3
             TextBox_apartmentid.Text = row.Cells(1).Value.ToString
             ComboBox1.SelectedItem = row.Cells(2).Value.ToString
             TextBox_Amount.Text = row.Cells(3).Value.ToString
+            DateTimePicker1.Text = row.Cells(4).Value
             tempUsername = TextBox_username.Text 'selected user's username 
         End If
     End Sub

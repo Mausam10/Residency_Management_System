@@ -39,8 +39,6 @@ Partial Class G_workers3
         TextBox_firstname = New TextBox()
         Label_attending_back = New Label()
         Label_leaving_residency = New Label()
-        DateTimePicker2 = New DateTimePicker()
-        DateTimePicker1 = New DateTimePicker()
         Button_delete = New Button()
         Button_Update = New Button()
         Button_add = New Button()
@@ -48,6 +46,8 @@ Partial Class G_workers3
         TextBox_description = New TextBox()
         Panel3 = New Panel()
         Panel2 = New Panel()
+        DateTimePicker1 = New DateTimePicker()
+        DateTimePicker2 = New DateTimePicker()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -232,20 +232,6 @@ Partial Class G_workers3
         Label_leaving_residency.TabIndex = 19
         Label_leaving_residency.Text = "Visited Residency on:"
         ' 
-        ' DateTimePicker2
-        ' 
-        DateTimePicker2.Location = New Point(13, 264)
-        DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New Size(446, 27)
-        DateTimePicker2.TabIndex = 18
-        ' 
-        ' DateTimePicker1
-        ' 
-        DateTimePicker1.Location = New Point(13, 196)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(446, 27)
-        DateTimePicker1.TabIndex = 12
-        ' 
         ' Button_delete
         ' 
         Button_delete.BackColor = Color.Black
@@ -316,6 +302,8 @@ Partial Class G_workers3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(DateTimePicker2)
+        Panel2.Controls.Add(DateTimePicker1)
         Panel2.Controls.Add(TextBox_phoneno2)
         Panel2.Controls.Add(TextBox_phoneno)
         Panel2.Controls.Add(TextBox_lastname)
@@ -323,8 +311,6 @@ Partial Class G_workers3
         Panel2.Controls.Add(TextBox_firstname)
         Panel2.Controls.Add(Label_attending_back)
         Panel2.Controls.Add(Label_leaving_residency)
-        Panel2.Controls.Add(DateTimePicker2)
-        Panel2.Controls.Add(DateTimePicker1)
         Panel2.Controls.Add(Button_delete)
         Panel2.Controls.Add(Button_Update)
         Panel2.Controls.Add(Button_add)
@@ -334,6 +320,26 @@ Partial Class G_workers3
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 27
+        ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+        DateTimePicker1.Format = DateTimePickerFormat.Custom
+        DateTimePicker1.Location = New Point(13, 198)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(446, 27)
+        DateTimePicker1.TabIndex = 26
+        ' 
+        ' DateTimePicker2
+        ' 
+        DateTimePicker2.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DateTimePicker2.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+        DateTimePicker2.Format = DateTimePickerFormat.Custom
+        DateTimePicker2.Location = New Point(13, 263)
+        DateTimePicker2.Name = "DateTimePicker2"
+        DateTimePicker2.Size = New Size(446, 27)
+        DateTimePicker2.TabIndex = 27
         ' 
         ' G_workers3
         ' 
@@ -373,8 +379,6 @@ Partial Class G_workers3
     Friend WithEvents TextBox_firstname As TextBox
     Friend WithEvents Label_attending_back As Label
     Friend WithEvents Label_leaving_residency As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Button_delete As Button
     Friend WithEvents Button_Update As Button
     Friend WithEvents Button_add As Button
@@ -382,4 +386,6 @@ Partial Class G_workers3
     Friend WithEvents TextBox_description As TextBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

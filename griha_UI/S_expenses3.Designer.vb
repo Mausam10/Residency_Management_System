@@ -103,7 +103,7 @@ Partial Class S_expenses3
         Label_types_of_expenses.AutoSize = True
         Label_types_of_expenses.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label_types_of_expenses.ForeColor = Color.Teal
-        Label_types_of_expenses.Location = New Point(11, 184)
+        Label_types_of_expenses.Location = New Point(11, 178)
         Label_types_of_expenses.Name = "Label_types_of_expenses"
         Label_types_of_expenses.Size = New Size(200, 29)
         Label_types_of_expenses.TabIndex = 20
@@ -111,9 +111,12 @@ Partial Class S_expenses3
         ' 
         ' DateTimePicker1
         ' 
-        DateTimePicker1.Location = New Point(11, 321)
+        DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+        DateTimePicker1.Format = DateTimePickerFormat.Custom
+        DateTimePicker1.Location = New Point(11, 319)
         DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(441, 27)
+        DateTimePicker1.Size = New Size(378, 27)
         DateTimePicker1.TabIndex = 19
         ' 
         ' ComboBox1

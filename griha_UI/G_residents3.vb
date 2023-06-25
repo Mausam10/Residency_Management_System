@@ -7,7 +7,7 @@
 
     End Sub
 
-    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
+    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -38,4 +38,5 @@
         Me.Hide()
         G_notices3.Show()
     End Sub
+
 End Class

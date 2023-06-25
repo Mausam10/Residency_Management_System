@@ -32,7 +32,6 @@ Partial Class S_notices3
         Button_Events = New Button()
         button_resident = New Button()
         PictureBox2 = New PictureBox()
-        DateTimePicker1 = New DateTimePicker()
         Button_delete = New Button()
         Button_Update = New Button()
         Button_add = New Button()
@@ -43,6 +42,7 @@ Partial Class S_notices3
         Label_notices = New Label()
         PictureBox1 = New PictureBox()
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
+        DateTimePicker1 = New DateTimePicker()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -158,13 +158,6 @@ Partial Class S_notices3
         PictureBox2.TabIndex = 0
         PictureBox2.TabStop = False
         ' 
-        ' DateTimePicker1
-        ' 
-        DateTimePicker1.Location = New Point(11, 119)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(446, 27)
-        DateTimePicker1.TabIndex = 12
-        ' 
         ' Button_delete
         ' 
         Button_delete.BackColor = Color.Black
@@ -272,6 +265,16 @@ Partial Class S_notices3
         PictureBox1.TabIndex = 14
         PictureBox1.TabStop = False
         ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+        DateTimePicker1.Format = DateTimePickerFormat.Custom
+        DateTimePicker1.Location = New Point(3, 121)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(446, 27)
+        DateTimePicker1.TabIndex = 22
+        ' 
         ' S_notices3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -304,7 +307,6 @@ Partial Class S_notices3
     Friend WithEvents Button_Events As Button
     Friend WithEvents button_resident As Button
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Button_delete As Button
     Friend WithEvents Button_Update As Button
     Friend WithEvents Button_add As Button
@@ -315,4 +317,5 @@ Partial Class S_notices3
     Friend WithEvents Label_notices As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

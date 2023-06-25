@@ -35,7 +35,6 @@ Partial Class S_events3
         Label_events = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
-        DateTimePicker1 = New DateTimePicker()
         Button_delete = New Button()
         Button_Update = New Button()
         Button_add = New Button()
@@ -43,6 +42,7 @@ Partial Class S_events3
         TextBox_description = New TextBox()
         TextBox_Name = New TextBox()
         Panel3 = New Panel()
+        DateTimePicker1 = New DateTimePicker()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -192,13 +192,6 @@ Partial Class S_events3
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 11
         ' 
-        ' DateTimePicker1
-        ' 
-        DateTimePicker1.Location = New Point(11, 119)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(446, 27)
-        DateTimePicker1.TabIndex = 12
-        ' 
         ' Button_delete
         ' 
         Button_delete.BackColor = Color.Black
@@ -275,6 +268,16 @@ Partial Class S_events3
         Panel3.Size = New Size(905, 768)
         Panel3.TabIndex = 12
         ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+        DateTimePicker1.Format = DateTimePickerFormat.Custom
+        DateTimePicker1.Location = New Point(11, 118)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(446, 27)
+        DateTimePicker1.TabIndex = 22
+        ' 
         ' S_events3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -316,6 +319,6 @@ Partial Class S_events3
     Friend WithEvents Information_label As Label
     Friend WithEvents TextBox_description As TextBox
     Friend WithEvents TextBox_Name As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

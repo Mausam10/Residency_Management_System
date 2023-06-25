@@ -24,18 +24,19 @@ Partial Class G_visitors3
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(G_visitors3))
         Panel3 = New Panel()
+        DGV_visitors = New DataGridView()
         Label_attending_back = New Label()
         Label_leaving_residency = New Label()
-        DateTimePicker2 = New DateTimePicker()
-        DateTimePicker1 = New DateTimePicker()
         Button_delete = New Button()
         Button_Update = New Button()
         Button_add = New Button()
         Information_label = New Label()
-        TextBox_description = New TextBox()
+        TextBox_purpose = New TextBox()
         Panel2 = New Panel()
-        TextBox_phoneno2 = New TextBox()
-        TextBox_phoneno = New TextBox()
+        DateTimePicker2 = New DateTimePicker()
+        DateTimePicker1 = New DateTimePicker()
+        TextBox_phone2 = New TextBox()
+        TextBox_phone1 = New TextBox()
         TextBox_lastname = New TextBox()
         TextBox_middlename = New TextBox()
         TextBox_firstname = New TextBox()
@@ -48,6 +49,8 @@ Partial Class G_visitors3
         button_resident = New Button()
         PictureBox2 = New PictureBox()
         Panel1 = New Panel()
+        Panel3.SuspendLayout()
+        CType(DGV_visitors, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -56,10 +59,25 @@ Partial Class G_visitors3
         ' 
         ' Panel3
         ' 
+        Panel3.Controls.Add(DGV_visitors)
         Panel3.Location = New Point(989, 254)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(905, 768)
         Panel3.TabIndex = 23
+        ' 
+        ' DGV_visitors
+        ' 
+        DGV_visitors.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DGV_visitors.BackgroundColor = SystemColors.ButtonFace
+        DGV_visitors.BorderStyle = BorderStyle.None
+        DGV_visitors.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGV_visitors.Dock = DockStyle.Fill
+        DGV_visitors.Location = New Point(0, 0)
+        DGV_visitors.Name = "DGV_visitors"
+        DGV_visitors.RowHeadersWidth = 51
+        DGV_visitors.RowTemplate.Height = 29
+        DGV_visitors.Size = New Size(905, 768)
+        DGV_visitors.TabIndex = 0
         ' 
         ' Label_attending_back
         ' 
@@ -82,20 +100,6 @@ Partial Class G_visitors3
         Label_leaving_residency.Size = New Size(200, 25)
         Label_leaving_residency.TabIndex = 19
         Label_leaving_residency.Text = "Visited Residency on:"
-        ' 
-        ' DateTimePicker2
-        ' 
-        DateTimePicker2.Location = New Point(13, 264)
-        DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New Size(446, 27)
-        DateTimePicker2.TabIndex = 18
-        ' 
-        ' DateTimePicker1
-        ' 
-        DateTimePicker1.Location = New Point(13, 196)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(446, 27)
-        DateTimePicker1.TabIndex = 12
         ' 
         ' Button_delete
         ' 
@@ -147,55 +151,75 @@ Partial Class G_visitors3
         Information_label.TabIndex = 9
         Information_label.Text = "Information Field"
         ' 
-        ' TextBox_description
+        ' TextBox_purpose
         ' 
-        TextBox_description.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_description.Location = New Point(13, 297)
-        TextBox_description.Multiline = True
-        TextBox_description.Name = "TextBox_description"
-        TextBox_description.PlaceholderText = "Purpose of Visit"
-        TextBox_description.Size = New Size(446, 202)
-        TextBox_description.TabIndex = 7
+        TextBox_purpose.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_purpose.Location = New Point(13, 297)
+        TextBox_purpose.Multiline = True
+        TextBox_purpose.Name = "TextBox_purpose"
+        TextBox_purpose.PlaceholderText = "Purpose of Visit"
+        TextBox_purpose.Size = New Size(446, 202)
+        TextBox_purpose.TabIndex = 7
         ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
-        Panel2.Controls.Add(TextBox_phoneno2)
-        Panel2.Controls.Add(TextBox_phoneno)
+        Panel2.Controls.Add(DateTimePicker2)
+        Panel2.Controls.Add(DateTimePicker1)
+        Panel2.Controls.Add(TextBox_phone2)
+        Panel2.Controls.Add(TextBox_phone1)
         Panel2.Controls.Add(TextBox_lastname)
         Panel2.Controls.Add(TextBox_middlename)
         Panel2.Controls.Add(TextBox_firstname)
         Panel2.Controls.Add(Label_attending_back)
         Panel2.Controls.Add(Label_leaving_residency)
-        Panel2.Controls.Add(DateTimePicker2)
-        Panel2.Controls.Add(DateTimePicker1)
         Panel2.Controls.Add(Button_delete)
         Panel2.Controls.Add(Button_Update)
         Panel2.Controls.Add(Button_add)
         Panel2.Controls.Add(Information_label)
-        Panel2.Controls.Add(TextBox_description)
+        Panel2.Controls.Add(TextBox_purpose)
         Panel2.Location = New Point(507, 254)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 22
         ' 
-        ' TextBox_phoneno2
+        ' DateTimePicker2
         ' 
-        TextBox_phoneno2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_phoneno2.Location = New Point(242, 125)
-        TextBox_phoneno2.Name = "TextBox_phoneno2"
-        TextBox_phoneno2.PlaceholderText = "phone number"
-        TextBox_phoneno2.Size = New Size(217, 34)
-        TextBox_phoneno2.TabIndex = 25
+        DateTimePicker2.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DateTimePicker2.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+        DateTimePicker2.Format = DateTimePickerFormat.Custom
+        DateTimePicker2.Location = New Point(13, 264)
+        DateTimePicker2.Name = "DateTimePicker2"
+        DateTimePicker2.Size = New Size(446, 27)
+        DateTimePicker2.TabIndex = 27
         ' 
-        ' TextBox_phoneno
+        ' DateTimePicker1
         ' 
-        TextBox_phoneno.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_phoneno.Location = New Point(13, 125)
-        TextBox_phoneno.Name = "TextBox_phoneno"
-        TextBox_phoneno.PlaceholderText = "phone number"
-        TextBox_phoneno.Size = New Size(223, 34)
-        TextBox_phoneno.TabIndex = 24
+        DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+        DateTimePicker1.Format = DateTimePickerFormat.Custom
+        DateTimePicker1.Location = New Point(13, 198)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(446, 27)
+        DateTimePicker1.TabIndex = 26
+        ' 
+        ' TextBox_phone2
+        ' 
+        TextBox_phone2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_phone2.Location = New Point(242, 125)
+        TextBox_phone2.Name = "TextBox_phone2"
+        TextBox_phone2.PlaceholderText = "phone number"
+        TextBox_phone2.Size = New Size(217, 34)
+        TextBox_phone2.TabIndex = 25
+        ' 
+        ' TextBox_phone1
+        ' 
+        TextBox_phone1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_phone1.Location = New Point(13, 125)
+        TextBox_phone1.Name = "TextBox_phone1"
+        TextBox_phone1.PlaceholderText = "phone number"
+        TextBox_phone1.Size = New Size(223, 34)
+        TextBox_phone1.TabIndex = 24
         ' 
         ' TextBox_lastname
         ' 
@@ -349,6 +373,8 @@ Partial Class G_visitors3
         DoubleBuffered = True
         Name = "G_visitors3"
         Text = "G_visitors3"
+        Panel3.ResumeLayout(False)
+        CType(DGV_visitors, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
@@ -361,13 +387,11 @@ Partial Class G_visitors3
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label_attending_back As Label
     Friend WithEvents Label_leaving_residency As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Button_delete As Button
     Friend WithEvents Button_Update As Button
     Friend WithEvents Button_add As Button
     Friend WithEvents Information_label As Label
-    Friend WithEvents TextBox_description As TextBox
+    Friend WithEvents TextBox_purpose As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label_record_visitors As Label
     Friend WithEvents PictureBox1 As PictureBox
@@ -381,6 +405,9 @@ Partial Class G_visitors3
     Friend WithEvents TextBox_lastname As TextBox
     Friend WithEvents TextBox_middlename As TextBox
     Friend WithEvents TextBox_firstname As TextBox
-    Friend WithEvents TextBox_phoneno2 As TextBox
-    Friend WithEvents TextBox_phoneno As TextBox
+    Friend WithEvents TextBox_phone2 As TextBox
+    Friend WithEvents TextBox_phone1 As TextBox
+    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DGV_visitors As DataGridView
 End Class

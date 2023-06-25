@@ -128,10 +128,6 @@ Public Class S_residents3
 
     End Sub
 
-    Private Sub button_resident_Click(sender As Object, e As EventArgs) Handles button_resident.Click
-
-    End Sub
-
     Private Sub S_residents3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         grihaDb.connect()
         populate()
