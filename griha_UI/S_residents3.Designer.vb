@@ -43,7 +43,6 @@ Partial Class S_residents3
         Button_Update = New Button()
         Button_add = New Button()
         Information_label = New Label()
-        TextBox_apartmentid = New TextBox()
         TextBox_email = New TextBox()
         TextBox_phoneno2 = New TextBox()
         TextBox_phoneno = New TextBox()
@@ -54,6 +53,7 @@ Partial Class S_residents3
         TextBox_firstname = New TextBox()
         Panel3 = New Panel()
         DataDVG = New DataGridView()
+        apartment_combobox = New ComboBox()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -190,6 +190,7 @@ Partial Class S_residents3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(apartment_combobox)
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(RadioButton3)
         Panel2.Controls.Add(RadioButton2)
@@ -198,7 +199,6 @@ Partial Class S_residents3
         Panel2.Controls.Add(Button_Update)
         Panel2.Controls.Add(Button_add)
         Panel2.Controls.Add(Information_label)
-        Panel2.Controls.Add(TextBox_apartmentid)
         Panel2.Controls.Add(TextBox_email)
         Panel2.Controls.Add(TextBox_phoneno2)
         Panel2.Controls.Add(TextBox_phoneno)
@@ -312,15 +312,6 @@ Partial Class S_residents3
         Information_label.TabIndex = 9
         Information_label.Text = "Information Field"
         ' 
-        ' TextBox_apartmentid
-        ' 
-        TextBox_apartmentid.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_apartmentid.Location = New Point(11, 436)
-        TextBox_apartmentid.Name = "TextBox_apartmentid"
-        TextBox_apartmentid.PlaceholderText = "apartment/property ID"
-        TextBox_apartmentid.Size = New Size(441, 34)
-        TextBox_apartmentid.TabIndex = 8
-        ' 
         ' TextBox_email
         ' 
         TextBox_email.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
@@ -415,6 +406,14 @@ Partial Class S_residents3
         DataDVG.Size = New Size(854, 545)
         DataDVG.TabIndex = 0
         ' 
+        ' apartment_combobox
+        ' 
+        apartment_combobox.FormattingEnabled = True
+        apartment_combobox.Location = New Point(11, 439)
+        apartment_combobox.Name = "apartment_combobox"
+        apartment_combobox.Size = New Size(441, 28)
+        apartment_combobox.TabIndex = 22
+        ' 
         ' S_residents3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -452,7 +451,6 @@ Partial Class S_residents3
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents TextBox_apartmentid As TextBox
     Friend WithEvents TextBox_email As TextBox
     Friend WithEvents TextBox_phoneno2 As TextBox
     Friend WithEvents TextBox_phoneno As TextBox
@@ -471,4 +469,5 @@ Partial Class S_residents3
     Friend WithEvents Label2 As Label
     Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents apartment_combobox As ComboBox
 End Class
