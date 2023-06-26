@@ -35,7 +35,6 @@ Partial Class G_visitors3
         Panel2 = New Panel()
         DateTimePicker2 = New DateTimePicker()
         DateTimePicker1 = New DateTimePicker()
-        TextBox_phone2 = New TextBox()
         TextBox_phone1 = New TextBox()
         TextBox_lastname = New TextBox()
         TextBox_middlename = New TextBox()
@@ -166,7 +165,6 @@ Partial Class G_visitors3
         Panel2.BackColor = Color.LightCyan
         Panel2.Controls.Add(DateTimePicker2)
         Panel2.Controls.Add(DateTimePicker1)
-        Panel2.Controls.Add(TextBox_phone2)
         Panel2.Controls.Add(TextBox_phone1)
         Panel2.Controls.Add(TextBox_lastname)
         Panel2.Controls.Add(TextBox_middlename)
@@ -203,22 +201,13 @@ Partial Class G_visitors3
         DateTimePicker1.Size = New Size(446, 27)
         DateTimePicker1.TabIndex = 26
         ' 
-        ' TextBox_phone2
-        ' 
-        TextBox_phone2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_phone2.Location = New Point(242, 125)
-        TextBox_phone2.Name = "TextBox_phone2"
-        TextBox_phone2.PlaceholderText = "phone number"
-        TextBox_phone2.Size = New Size(217, 34)
-        TextBox_phone2.TabIndex = 25
-        ' 
         ' TextBox_phone1
         ' 
         TextBox_phone1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
         TextBox_phone1.Location = New Point(13, 125)
         TextBox_phone1.Name = "TextBox_phone1"
         TextBox_phone1.PlaceholderText = "phone number"
-        TextBox_phone1.Size = New Size(223, 34)
+        TextBox_phone1.Size = New Size(446, 34)
         TextBox_phone1.TabIndex = 24
         ' 
         ' TextBox_lastname
@@ -405,7 +394,6 @@ Partial Class G_visitors3
     Friend WithEvents TextBox_lastname As TextBox
     Friend WithEvents TextBox_middlename As TextBox
     Friend WithEvents TextBox_firstname As TextBox
-    Friend WithEvents TextBox_phone2 As TextBox
     Friend WithEvents TextBox_phone1 As TextBox
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker
