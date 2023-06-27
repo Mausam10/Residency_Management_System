@@ -23,6 +23,8 @@ Partial Class S_workers3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(S_workers3))
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Button_back = New Button()
         Button_Workers = New Button()
         Panel1 = New Panel()
@@ -40,6 +42,7 @@ Partial Class S_workers3
         Panel3 = New Panel()
         DGVWorkers = New DataGridView()
         Panel2 = New Panel()
+        profession = New TextBox()
         TextBox_workerID = New TextBox()
         TextBox_phone2 = New TextBox()
         TextBox_phone1 = New TextBox()
@@ -231,7 +234,24 @@ Partial Class S_workers3
         DGVWorkers.AllowUserToAddRows = False
         DGVWorkers.AllowUserToDeleteRows = False
         DGVWorkers.BackgroundColor = SystemColors.ButtonFace
+        DGVWorkers.BorderStyle = BorderStyle.Fixed3D
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Metropolis Extra Bold", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = Color.PowderBlue
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        DGVWorkers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         DGVWorkers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = SystemColors.Window
+        DataGridViewCellStyle2.Font = New Font("Metropolis Medium", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        DGVWorkers.DefaultCellStyle = DataGridViewCellStyle2
         DGVWorkers.Location = New Point(199, 107)
         DGVWorkers.MultiSelect = False
         DGVWorkers.Name = "DGVWorkers"
@@ -244,6 +264,7 @@ Partial Class S_workers3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(profession)
         Panel2.Controls.Add(TextBox_workerID)
         Panel2.Controls.Add(TextBox_phone2)
         Panel2.Controls.Add(TextBox_phone1)
@@ -258,6 +279,15 @@ Partial Class S_workers3
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 20
+        ' 
+        ' profession
+        ' 
+        profession.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        profession.Location = New Point(11, 218)
+        profession.Name = "profession"
+        profession.PlaceholderText = "profession"
+        profession.Size = New Size(441, 34)
+        profession.TabIndex = 27
         ' 
         ' TextBox_workerID
         ' 
@@ -374,4 +404,5 @@ Partial Class S_workers3
     Friend WithEvents TextBox_phone1 As TextBox
     Friend WithEvents TextBox_workerID As TextBox
     Friend WithEvents DGVWorkers As DataGridView
+    Friend WithEvents profession As TextBox
 End Class

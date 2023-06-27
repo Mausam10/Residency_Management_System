@@ -29,7 +29,7 @@ Public Class S_residents3
         Phone1 = TextBox_phoneno.Text
         Phone2 = TextBox_phoneno2.Text
         Email = TextBox_email.Text
-        Apartment_id = TextBox_apartmentid.Text
+        '  Apartment_id = TextBox_apartmentid.Text
 
         query = "Insert into residents(Username,Password,First_Name,Middle_Name, Last_Name,Gender, Phone1, Phone2, Email, Apartment_id) values('" & Username & "', '" & Password & "' ,'" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Gender & "','" & Phone1 & "' ,'" & Phone2 & "','" & Email & "','" & Apartment_id & "')"
         If (grihaDb.executeMySql(query)) Then
@@ -51,7 +51,7 @@ Public Class S_residents3
         TextBox_phoneno.Text = Nothing
         TextBox_phoneno2.Text = Nothing
         TextBox_email.Text = Nothing
-        TextBox_apartmentid.Text = Nothing
+        'TextBox_apartmentid.Text = Nothing
     End Sub
 
 
@@ -122,7 +122,7 @@ Public Class S_residents3
             TextBox_phoneno.Text = row.Cells(6).Value.ToString
             TextBox_phoneno2.Text = row.Cells(7).Value.ToString
             TextBox_email.Text = row.Cells(8).Value.ToString
-            TextBox_apartmentid.Text = row.Cells(9).Value.ToString
+            ' TextBox_apartmentid.Text = row.Cells(9).Value.ToString
             tempUsername = TextBox_username.Text 'selected user's username 
         End If
 

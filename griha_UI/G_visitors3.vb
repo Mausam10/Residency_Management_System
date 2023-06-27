@@ -14,7 +14,7 @@ Public Class G_visitors3
         Middle_Name = TextBox_middlename.Text
         Last_Name = TextBox_lastname.Text
         Phone1 = TextBox_phone1.Text
-        Phone2 = TextBox_phone2.Text
+        ' Phone2 = TextBox_phone2.Text
         entry_time = DateTimePicker1.Text
         exit_time = DateTimePicker2.Text
         Purpose = TextBox_purpose.Text
@@ -43,7 +43,7 @@ Public Class G_visitors3
         TextBox_middlename.Text = Nothing
         TextBox_lastname.Text = Nothing
         TextBox_phone1.Text = Nothing
-        TextBox_phone2.Text = Nothing
+        'TextBox_phone2.Text = Nothing
         DateTimePicker1.Text = Date.Now
         DateTimePicker2.Text = Date.Now
         TextBox_purpose.Text = Nothing
@@ -109,7 +109,7 @@ Public Class G_visitors3
             TextBox_middlename.Text = row.Cells(1).Value.ToString
             TextBox_lastname.Text = row.Cells(2).Value.ToString
             TextBox_phone1.Text = row.Cells(3).Value.ToString
-            TextBox_phone2.Text = row.Cells(4).Value.ToString
+            'TextBox_phone2.Text = row.Cells(4).Value.ToString
             DateTimePicker1.Text = row.Cells(5).Value
             DateTimePicker2.Text = row.Cells(6).Value
             TextBox_purpose.Text = row.Cells(7).Value.ToString
@@ -130,7 +130,7 @@ Public Class G_visitors3
         Middle_Name = TextBox_middlename.Text
         Last_Name = TextBox_lastname.Text
         Phone1 = TextBox_phone1.Text
-        Phone2 = TextBox_phone2.Text
+        '  Phone2 = TextBox_phone2.Text
         entry_time = DateTimePicker1.Text
         exit_time = DateTimePicker2.Text
         Purpose = TextBox_purpose.Text
