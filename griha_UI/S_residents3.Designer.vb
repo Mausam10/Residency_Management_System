@@ -23,8 +23,8 @@ Partial Class S_residents3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(S_residents3))
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         Button_back = New Button()
         Button_notices = New Button()
@@ -37,7 +37,7 @@ Partial Class S_residents3
         Label1 = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
-        apartment_combobox = New ComboBox()
+        ComboBox_apartments = New ComboBox()
         Label2 = New Label()
         RadioButton3 = New RadioButton()
         RadioButton2 = New RadioButton()
@@ -192,7 +192,7 @@ Partial Class S_residents3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
-        Panel2.Controls.Add(apartment_combobox)
+        Panel2.Controls.Add(ComboBox_apartments)
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(RadioButton3)
         Panel2.Controls.Add(RadioButton2)
@@ -214,13 +214,13 @@ Partial Class S_residents3
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 10
         ' 
-        ' apartment_combobox
+        ' ComboBox_apartments
         ' 
-        apartment_combobox.FormattingEnabled = True
-        apartment_combobox.Location = New Point(11, 439)
-        apartment_combobox.Name = "apartment_combobox"
-        apartment_combobox.Size = New Size(441, 28)
-        apartment_combobox.TabIndex = 22
+        ComboBox_apartments.FormattingEnabled = True
+        ComboBox_apartments.Location = New Point(11, 439)
+        ComboBox_apartments.Name = "ComboBox_apartments"
+        ComboBox_apartments.Size = New Size(441, 28)
+        ComboBox_apartments.TabIndex = 22
         ' 
         ' Label2
         ' 
@@ -407,26 +407,26 @@ Partial Class S_residents3
         ' 
         DataDVG.BackgroundColor = SystemColors.ButtonFace
         DataDVG.BorderStyle = BorderStyle.Fixed3D
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Metropolis Semi Bold", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
-        DataGridViewCellStyle1.SelectionForeColor = Color.Black
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        DataDVG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = SystemColors.Control
+        DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        DataGridViewCellStyle3.ForeColor = Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = Color.AliceBlue
+        DataGridViewCellStyle3.SelectionForeColor = Color.Black
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
+        DataDVG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         DataDVG.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataDVG.Location = New Point(39, 44)
         DataDVG.MultiSelect = False
         DataDVG.Name = "DataDVG"
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = SystemColors.Control
-        DataGridViewCellStyle2.Font = New Font("Metropolis Medium", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
-        DataGridViewCellStyle2.SelectionForeColor = Color.Black
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        DataDVG.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = SystemColors.Control
+        DataGridViewCellStyle4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = Color.Transparent
+        DataGridViewCellStyle4.SelectionForeColor = Color.Black
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        DataDVG.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         DataDVG.RowHeadersWidth = 51
         DataDVG.RowTemplate.Height = 29
         DataDVG.Size = New Size(854, 545)
@@ -487,5 +487,5 @@ Partial Class S_residents3
     Friend WithEvents Label2 As Label
     Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents apartment_combobox As ComboBox
+    Friend WithEvents ComboBox_apartments As ComboBox
 End Class

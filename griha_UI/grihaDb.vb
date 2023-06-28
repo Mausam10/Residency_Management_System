@@ -6,9 +6,13 @@ Public Class grihaDb
     Shared cmd As SqlCommand
     Shared sda As SqlDataAdapter
     Shared dt As DataTable
+    Shared cb As ComboBox
+    Shared reader As SqlDataReader
+
+
 
     Shared Sub connect()
-        con = New SqlConnection("Data Source=LAPTOP-H5H6CH7L\SQLEXPRESS;Initial Catalog=griha;Integrated Security=True;TrustServerCertificate=True")
+        con = New SqlConnection("Data Source=LAPTOP-390QHVCB;Initial Catalog=griha;Integrated Security=True;TrustServerCertificate=True")
     End Sub
 
     Shared Function executeMySql(ByVal sqlQuery As String) As Boolean
@@ -42,6 +46,29 @@ Public Class grihaDb
             MsgBox(ex.Message)
             dt = Nothing
             Return dt
+        End Try
+
+    End Function
+
+
+    Shared Function generateComboBox(ByVal sqlQuery As String, ByVal columnName As String) As ComboBox
+        cb = New ComboBox
+
+        Try
+            cmd = New SqlCommand(sqlQuery, con)
+            con.Open()
+            reader = cmd.ExecuteReader
+            While reader.Read
+                Dim value = reader.GetString(columnName)
+                cb.Items.Add(value)
+            End While
+            con.Close()
+            Return cb
+        Catch ex As Exception
+            con.Close()
+            MsgBox(ex.Message)
+            cb = Nothing
+            Return cb
         End Try
 
     End Function

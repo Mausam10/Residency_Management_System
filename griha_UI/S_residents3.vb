@@ -131,6 +131,13 @@ Public Class S_residents3
     Private Sub S_residents3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         grihaDb.connect()
         populate()
+        query = "select * from apartments"
+        Dim items As ComboBox.ObjectCollection = grihaDb.generateComboBox(query, "Apartment_id").Items
+
+        For Each item In items
+            ComboBox_apartments.Items.Add(item)
+        Next
+
     End Sub
 
     Private Sub Button_Update_Click(sender As Object, e As EventArgs) Handles Button_Update.Click
@@ -162,4 +169,6 @@ Public Class S_residents3
             populate()
         End If
     End Sub
+
+
 End Class
