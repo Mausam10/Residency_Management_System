@@ -17,6 +17,17 @@ Public Class S_residents3
         End If
     End Sub
 
+    Private Sub populateComboBox()
+        ComboBox_apartments.Items.Clear()
+        'query = "select * from apartments"
+        query = "select apartments.* from apartments left join residents on apartments.apartment_id = residents.apartment_id where residents.apartment_id is null"
+        Dim items As ComboBox.ObjectCollection = grihaDb.generateComboBox(query, "Apartment_id").Items
+
+        For Each item In items
+            ComboBox_apartments.Items.Add(item)
+        Next
+    End Sub
+
     Private Function addToDatabase() As Integer
         Dim Username As String
         Dim Password, First_Name, Middle_Name, Last_Name, Gender, Phone1, Phone2, Email, Apartment_id As String
@@ -29,7 +40,7 @@ Public Class S_residents3
         Phone1 = TextBox_phoneno.Text
         Phone2 = TextBox_phoneno2.Text
         Email = TextBox_email.Text
-        '  Apartment_id = TextBox_apartmentid.Text
+        Apartment_id = ComboBox_apartments.SelectedItem
 
         query = "Insert into residents(Username,Password,First_Name,Middle_Name, Last_Name,Gender, Phone1, Phone2, Email, Apartment_id) values('" & Username & "', '" & Password & "' ,'" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Gender & "','" & Phone1 & "' ,'" & Phone2 & "','" & Email & "','" & Apartment_id & "')"
         If (grihaDb.executeMySql(query)) Then
@@ -51,7 +62,7 @@ Public Class S_residents3
         TextBox_phoneno.Text = Nothing
         TextBox_phoneno2.Text = Nothing
         TextBox_email.Text = Nothing
-        'TextBox_apartmentid.Text = Nothing
+        ComboBox_apartments.SelectedItem = Nothing
     End Sub
 
 
@@ -86,6 +97,7 @@ Public Class S_residents3
             MsgBox("Record successfully Added")
             reset()
             populate()
+            populateComboBox()
         Else
             MsgBox("Error. Please check and try again.")
         End If
@@ -122,7 +134,9 @@ Public Class S_residents3
             TextBox_phoneno.Text = row.Cells(6).Value.ToString
             TextBox_phoneno2.Text = row.Cells(7).Value.ToString
             TextBox_email.Text = row.Cells(8).Value.ToString
-            ' TextBox_apartmentid.Text = row.Cells(9).Value.ToString
+
+            ComboBox_apartments.Items.Add(row.Cells(9).Value.ToString)
+            ComboBox_apartments.SelectedItem = row.Cells(9).Value.ToString
             tempUsername = TextBox_username.Text 'selected user's username 
         End If
 
@@ -131,12 +145,7 @@ Public Class S_residents3
     Private Sub S_residents3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         grihaDb.connect()
         populate()
-        query = "select * from apartments"
-        Dim items As ComboBox.ObjectCollection = grihaDb.generateComboBox(query, "Apartment_id").Items
-
-        For Each item In items
-            ComboBox_apartments.Items.Add(item)
-        Next
+        populateComboBox()
 
     End Sub
 
@@ -147,6 +156,7 @@ Public Class S_residents3
         MsgBox("UserInfo successfully edited.")
         reset()
         populate()
+        populateComboBox()
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
@@ -167,6 +177,7 @@ Public Class S_residents3
             MsgBox("Record Deleted")
             reset()
             populate()
+            populateComboBox()
         End If
     End Sub
 
