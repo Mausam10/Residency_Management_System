@@ -1,4 +1,5 @@
-﻿Imports Microsoft.Data.SqlClient
+﻿Imports Microsoft
+Imports Microsoft.Data.SqlClient
 Imports System.Data
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
@@ -63,6 +64,7 @@ Public Class S_residents3
         TextBox_phoneno2.Text = Nothing
         TextBox_email.Text = Nothing
         ComboBox_apartments.SelectedItem = Nothing
+        populateComboBox()
     End Sub
 
 
@@ -150,7 +152,27 @@ Public Class S_residents3
     End Sub
 
     Private Sub Button_Update_Click(sender As Object, e As EventArgs) Handles Button_Update.Click
+
+
+        Dim Username As String
+        Dim Password, First_Name, Middle_Name, Last_Name, Gender, Phone1, Phone2, Email, Apartment_id As String
+        Username = TextBox_username.Text
+        Password = TextBox_password.Text
+        First_Name = TextBox_firstname.Text
+        Middle_Name = TextBox_middlename.Text
+        Last_Name = TextBox_lastname.Text
+        Gender = tempGen
+        Phone1 = TextBox_phoneno.Text
+        Phone2 = TextBox_phoneno2.Text
+        Email = TextBox_email.Text
+        Apartment_id = ComboBox_apartments.SelectedItem
+
         query = " DELETE FROM Residents WHERE Username='" & tempUsername & "' "
+
+
+        query = "update Residents set username ='" & Username & "', password='" & Password & "',First_Name='" & First_Name & "', Middle_Name ='" & Middle_Name & "', Last_Name='" & Last_Name & "',Gender='" & Gender & "', phone1 ='" & Phone1 & "', Phone2='" & Phone2 & "',Email='" & Email & "',Apartment_id='" & Apartment_id & "' where USERNAME = '" & tempUsername & "'"
+
+
         grihaDb.executeMySql(query)
         addToDatabase()
         MsgBox("UserInfo successfully edited.")
@@ -181,5 +203,8 @@ Public Class S_residents3
         End If
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        reset()
 
+    End Sub
 End Class

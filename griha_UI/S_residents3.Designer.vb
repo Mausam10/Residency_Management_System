@@ -23,8 +23,8 @@ Partial Class S_residents3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(S_residents3))
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         Button_back = New Button()
         Button_notices = New Button()
@@ -56,6 +56,7 @@ Partial Class S_residents3
         TextBox_firstname = New TextBox()
         Panel3 = New Panel()
         DataDVG = New DataGridView()
+        Button1 = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -192,6 +193,7 @@ Partial Class S_residents3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(Button1)
         Panel2.Controls.Add(ComboBox_apartments)
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(RadioButton3)
@@ -407,30 +409,43 @@ Partial Class S_residents3
         ' 
         DataDVG.BackgroundColor = SystemColors.ButtonFace
         DataDVG.BorderStyle = BorderStyle.Fixed3D
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = SystemColors.Control
-        DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        DataGridViewCellStyle3.ForeColor = Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = Color.AliceBlue
-        DataGridViewCellStyle3.SelectionForeColor = Color.Black
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
-        DataDVG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
+        DataGridViewCellStyle1.SelectionForeColor = Color.Black
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        DataDVG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         DataDVG.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataDVG.Location = New Point(39, 44)
         DataDVG.MultiSelect = False
         DataDVG.Name = "DataDVG"
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = SystemColors.Control
-        DataGridViewCellStyle4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = Color.Transparent
-        DataGridViewCellStyle4.SelectionForeColor = Color.Black
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        DataDVG.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = SystemColors.Control
+        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
+        DataGridViewCellStyle2.SelectionForeColor = Color.Black
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DataDVG.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         DataDVG.RowHeadersWidth = 51
         DataDVG.RowTemplate.Height = 29
         DataDVG.Size = New Size(854, 545)
         DataDVG.TabIndex = 0
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Black
+        Button1.BackgroundImageLayout = ImageLayout.None
+        Button1.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(11, 546)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(441, 43)
+        Button1.TabIndex = 23
+        Button1.Text = "RESET"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' S_residents3
         ' 
@@ -488,4 +503,5 @@ Partial Class S_residents3
     Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents ComboBox_apartments As ComboBox
+    Friend WithEvents Button1 As Button
 End Class
