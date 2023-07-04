@@ -43,10 +43,13 @@ Partial Class S_events3
         TextBox_description = New TextBox()
         TextBox_Name = New TextBox()
         Panel3 = New Panel()
+        DGV_Events = New DataGridView()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
+        Panel3.SuspendLayout()
+        CType(DGV_Events, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -273,10 +276,25 @@ Partial Class S_events3
         ' 
         ' Panel3
         ' 
+        Panel3.Controls.Add(DGV_Events)
         Panel3.Location = New Point(997, 260)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(905, 768)
         Panel3.TabIndex = 12
+        ' 
+        ' DGV_Events
+        ' 
+        DGV_Events.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DGV_Events.BackgroundColor = SystemColors.ButtonFace
+        DGV_Events.BorderStyle = BorderStyle.Fixed3D
+        DGV_Events.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGV_Events.Dock = DockStyle.Fill
+        DGV_Events.Location = New Point(0, 0)
+        DGV_Events.Name = "DGV_Events"
+        DGV_Events.RowHeadersWidth = 51
+        DGV_Events.RowTemplate.Height = 29
+        DGV_Events.Size = New Size(905, 768)
+        DGV_Events.TabIndex = 0
         ' 
         ' S_events3
         ' 
@@ -297,6 +315,8 @@ Partial Class S_events3
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
+        Panel3.ResumeLayout(False)
+        CType(DGV_Events, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -321,4 +341,5 @@ Partial Class S_events3
     Friend WithEvents TextBox_Name As TextBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DGV_Events As DataGridView
 End Class

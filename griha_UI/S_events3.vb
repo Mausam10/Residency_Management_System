@@ -34,7 +34,7 @@ Public Class S_events3
             MsgBox("No record")
 
         Else
-            'DGV_Expenses.DataSource = tempDt
+            DGV_Events.DataSource = tempDt
         End If
 
     End Sub
@@ -85,6 +85,8 @@ Public Class S_events3
 
     Private Sub S_events3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         grihaDb.connect()
+        populate()
+
     End Sub
 
     Private Sub Button_add_Click(sender As Object, e As EventArgs) Handles Button_add.Click
@@ -95,5 +97,13 @@ Public Class S_events3
         Else
             MsgBox("Error. Please check and try again.")
         End If
+    End Sub
+
+    Private Sub Button_Update_Click(sender As Object, e As EventArgs) Handles Button_Update.Click
+
+    End Sub
+
+    Private Sub DGV_events_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_Events.CellContentClick
+
     End Sub
 End Class
