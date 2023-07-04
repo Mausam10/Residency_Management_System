@@ -7,8 +7,8 @@ Public Class S_events3
 
     Dim query As String
     Dim tempDt As DataTable
-    Dim tempGen As String
-    Dim tempUsername As String
+    Dim tempEvent_name As String
+    Dim tempDate As Date
 
 
     Private Function addToDatabase() As Integer
@@ -37,6 +37,13 @@ Public Class S_events3
             DGV_Events.DataSource = tempDt
         End If
 
+    End Sub
+
+
+    Private Sub reset()
+        TextBox_Name.Text = Nothing
+        DateTimePicker1.Text = Nothing
+        TextBox_description.Text = Nothing
     End Sub
 
 
@@ -71,17 +78,7 @@ Public Class S_events3
         S_residents3.Show()
     End Sub
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-    End Sub
 
-    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label_events.Click
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-    End Sub
 
     Private Sub S_events3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         grihaDb.connect()
@@ -101,9 +98,45 @@ Public Class S_events3
 
     Private Sub Button_Update_Click(sender As Object, e As EventArgs) Handles Button_Update.Click
 
+        Dim event_name As String
+        Dim date1 As Date
+        Dim description As String
+        event_name = TextBox_Name.Text
+        date1 = DateTimePicker1.Text
+        description = TextBox_description.Text
+        query = "update events set Event_name ='" & event_name & "', Date='" & date1 & "', Description='" & description & "' where (Event_name = '" & tempEvent_name & "' and Date = '" & tempDate & "')"
+        If (grihaDb.executeMySql(query)) Then
+            MsgBox("UserInfo successfully edited.")
+            reset()
+            populate()
+        End If
+
+
     End Sub
+
+
 
     Private Sub DGV_events_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_Events.CellContentClick
 
+    End Sub
+
+    Private Sub DGV_Events_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV_Events.CellMouseClick
+        If e.RowIndex >= 0 Then
+            Dim row As DataGridViewRow = DGV_Events.Rows(e.RowIndex)
+            TextBox_Name.Text = row.Cells(0).Value.ToString
+            DateTimePicker1.Text = row.Cells(1).Value.ToString
+            TextBox_description.Text = row.Cells(2).Value.ToString
+            tempEvent_name = TextBox_Name.Text 'selected user's username 
+            tempDate = DateTimePicker1.Text
+        End If
+    End Sub
+
+    Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
+        query = " DELETE FROM events WHERE (Event_name = '" & TextBox_Name.Text & "' and Date = '" & DateTimePicker1.Text & "') "
+        If (grihaDb.executeMySql(query)) Then
+            MsgBox("Record Deleted")
+            reset()
+            populate()
+        End If
     End Sub
 End Class

@@ -167,11 +167,7 @@ Public Class S_residents3
         Email = TextBox_email.Text
         Apartment_id = ComboBox_apartments.SelectedItem
 
-        query = " DELETE FROM Residents WHERE Username='" & tempUsername & "' "
-
-
         query = "update Residents set username ='" & Username & "', password='" & Password & "',First_Name='" & First_Name & "', Middle_Name ='" & Middle_Name & "', Last_Name='" & Last_Name & "',Gender='" & Gender & "', phone1 ='" & Phone1 & "', Phone2='" & Phone2 & "',Email='" & Email & "',Apartment_id='" & Apartment_id & "' where USERNAME = '" & tempUsername & "'"
-
 
         grihaDb.executeMySql(query)
         addToDatabase()

@@ -6,6 +6,8 @@ Public Class S_expenses3
     Dim tempDt As DataTable
     Dim tempGen As String
     Dim tempUsername As String
+    Dim tempExpenses_type As String
+
 
     Private Function addToDatabase() As Integer
         Dim Username As String
@@ -70,7 +72,7 @@ Public Class S_expenses3
     End Sub
 
     Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
-        query = " DELETE FROM expenses WHERE Username='" & TextBox_username.Text & "' "
+        query = " DELETE FROM expenses WHERE (Username='" & TextBox_username.Text & "' and Expenses_type = '" & ComboBox1.SelectedItem & "') "
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Record Deleted")
             reset()
@@ -85,7 +87,7 @@ Public Class S_expenses3
         Expenses_type = ComboBox1.SelectedItem
         Amount = TextBox_Amount.Text
         date1 = DateTimePicker1.Text
-        query = "update expenses set expenses_type ='" & Expenses_type & "', amount='" & Amount & "',date='" & date1 & "' where USERNAME = '" & tempUsername & "'"
+        query = "update expenses set expenses_type ='" & Expenses_type & "', amount='" & Amount & "',date='" & date1 & "' where (Username='" & tempUsername & "' and Expenses_type = '" & tempExpenses_type & "')"
         If (grihaDb.executeMySql(query)) Then
             MsgBox("UserInfo successfully edited.")
             reset()
@@ -104,26 +106,6 @@ Public Class S_expenses3
         End If
     End Sub
 
-    Private Sub Information_label_Click(sender As Object, e As EventArgs) Handles Information_label.Click
-    End Sub
-
-    Private Sub TextBox_apartmentid_TextChanged(sender As Object, e As EventArgs) Handles TextBox_apartmentid.TextChanged
-    End Sub
-
-    Private Sub TextBox_username_TextChanged(sender As Object, e As EventArgs) Handles TextBox_username.TextChanged
-    End Sub
-
-    Private Sub Label_expenses_Click(sender As Object, e As EventArgs) Handles Label_expenses.Click
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-    End Sub
-
-    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-    End Sub
-
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-    End Sub
 
     Private Sub Button_Workers_Click(sender As Object, e As EventArgs) Handles Button_Workers.Click
         Me.Hide()
@@ -154,6 +136,7 @@ Public Class S_expenses3
             TextBox_Amount.Text = row.Cells(3).Value.ToString
             DateTimePicker1.Text = row.Cells(4).Value
             tempUsername = TextBox_username.Text 'selected user's username 
+            tempExpenses_type = ComboBox1.SelectedItem
         End If
     End Sub
 End Class
