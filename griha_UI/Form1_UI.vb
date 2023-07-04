@@ -75,7 +75,6 @@ Public Class Form_UI
     End Sub
 
     Private Sub Login_resident_Click(sender As Object, e As EventArgs) Handles Login_resident.Click
-
         If (authenticationCheck(Username_textbox.Text, Password_textbox.Text, "Residents") = 1) Then
             Me.Hide()
             Form_Resident.Show()

@@ -1,7 +1,47 @@
-﻿Public Class S_events3
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
+Public Class S_events3
+
+
+
+
+    Dim query As String
+    Dim tempDt As DataTable
+    Dim tempGen As String
+    Dim tempUsername As String
+
+
+    Private Function addToDatabase() As Integer
+        Dim event_name As String
+        Dim date1 As Date
+        Dim description As String
+        event_name = TextBox_Name.Text
+        date1 = DateTimePicker1.Text
+        description = TextBox_description.Text
+
+        query = "Insert into events(Event_name, Date, Description) values('" & event_name & "', '" & date1 & "' ,'" & description & "')"
+        If (grihaDb.executeMySql(query)) Then
+            Return 1 'success
+        End If
+        Return -1 'insert operation failed
+
+    End Function
+
+    Private Sub populate()
+        query = "select * from events"
+        tempDt = grihaDb.generateTable(query)
+        If (tempDt Is Nothing) Then
+            MsgBox("No record")
+
+        Else
+            'DGV_Expenses.DataSource = tempDt
+        End If
 
     End Sub
+
+
+
+
 
     Private Sub Button_back_Click(sender As Object, e As EventArgs) Handles Button_back.Click
         Me.Hide()
@@ -41,5 +81,19 @@
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    End Sub
+
+    Private Sub S_events3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        grihaDb.connect()
+    End Sub
+
+    Private Sub Button_add_Click(sender As Object, e As EventArgs) Handles Button_add.Click
+        If (addToDatabase() = 1) Then
+            MsgBox("Record successfully Added")
+            Reset()
+            populate()
+        Else
+            MsgBox("Error. Please check and try again.")
+        End If
     End Sub
 End Class
