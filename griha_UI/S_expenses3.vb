@@ -139,4 +139,8 @@ Public Class S_expenses3
             tempExpenses_type = ComboBox1.SelectedItem
         End If
     End Sub
+
+    Private Sub TextBox_apartmentid_TextChanged(sender As Object, e As EventArgs) Handles TextBox_apartmentid.TextChanged
+
+    End Sub
 End Class

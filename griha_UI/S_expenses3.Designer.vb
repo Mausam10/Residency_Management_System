@@ -33,7 +33,6 @@ Partial Class S_expenses3
         Button_Update = New Button()
         Button_add = New Button()
         Information_label = New Label()
-        TextBox_apartmentid = New TextBox()
         TextBox_Amount = New TextBox()
         TextBox_username = New TextBox()
         Label_expenses = New Label()
@@ -47,6 +46,7 @@ Partial Class S_expenses3
         Button_notices = New Button()
         Button_Workers = New Button()
         Button_Expenses = New Button()
+        ComboBox_apartment = New ComboBox()
         Panel3.SuspendLayout()
         CType(DGV_Expenses, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -83,6 +83,7 @@ Partial Class S_expenses3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(ComboBox_apartment)
         Panel2.Controls.Add(Label_types_of_expenses)
         Panel2.Controls.Add(DateTimePicker1)
         Panel2.Controls.Add(ComboBox1)
@@ -90,7 +91,6 @@ Partial Class S_expenses3
         Panel2.Controls.Add(Button_Update)
         Panel2.Controls.Add(Button_add)
         Panel2.Controls.Add(Information_label)
-        Panel2.Controls.Add(TextBox_apartmentid)
         Panel2.Controls.Add(TextBox_Amount)
         Panel2.Controls.Add(TextBox_username)
         Panel2.Location = New Point(515, 260)
@@ -179,15 +179,6 @@ Partial Class S_expenses3
         Information_label.TabIndex = 9
         Information_label.Text = "Information Field"
         ' 
-        ' TextBox_apartmentid
-        ' 
-        TextBox_apartmentid.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_apartmentid.Location = New Point(11, 130)
-        TextBox_apartmentid.Name = "TextBox_apartmentid"
-        TextBox_apartmentid.PlaceholderText = "apartment/property ID"
-        TextBox_apartmentid.Size = New Size(441, 34)
-        TextBox_apartmentid.TabIndex = 8
-        ' 
         ' TextBox_Amount
         ' 
         TextBox_Amount.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
@@ -200,7 +191,7 @@ Partial Class S_expenses3
         ' TextBox_username
         ' 
         TextBox_username.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_username.Location = New Point(11, 77)
+        TextBox_username.Location = New Point(11, 130)
         TextBox_username.Name = "TextBox_username"
         TextBox_username.PlaceholderText = "username"
         TextBox_username.Size = New Size(441, 34)
@@ -228,9 +219,6 @@ Partial Class S_expenses3
         PictureBox1.Size = New Size(208, 209)
         PictureBox1.TabIndex = 13
         PictureBox1.TabStop = False
-        ' 
-        ' BackgroundWorker1
-        ' 
         ' 
         ' PictureBox2
         ' 
@@ -334,6 +322,16 @@ Partial Class S_expenses3
         Button_Expenses.Text = "Expenses"
         Button_Expenses.UseVisualStyleBackColor = False
         ' 
+        ' ComboBox_apartment
+        ' 
+        ComboBox_apartment.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        ComboBox_apartment.FormattingEnabled = True
+        ComboBox_apartment.Items.AddRange(New Object() {"Utility Expenses", "Maintainence Expenses", "Other Expenses"})
+        ComboBox_apartment.Location = New Point(11, 77)
+        ComboBox_apartment.Name = "ComboBox_apartment"
+        ComboBox_apartment.Size = New Size(441, 33)
+        ComboBox_apartment.TabIndex = 21
+        ' 
         ' S_expenses3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -366,7 +364,6 @@ Partial Class S_expenses3
     Friend WithEvents Button_Update As Button
     Friend WithEvents Button_add As Button
     Friend WithEvents Information_label As Label
-    Friend WithEvents TextBox_apartmentid As TextBox
     Friend WithEvents TextBox_Amount As TextBox
     Friend WithEvents TextBox_username As TextBox
     Friend WithEvents Label_expenses As Label
@@ -383,4 +380,5 @@ Partial Class S_expenses3
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label_types_of_expenses As Label
     Friend WithEvents DGV_Expenses As DataGridView
+    Friend WithEvents ComboBox_apartment As ComboBox
 End Class
