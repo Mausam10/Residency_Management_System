@@ -32,11 +32,6 @@ Partial Class G_workers3
         PictureBox2 = New PictureBox()
         Label_record_visitors = New Label()
         PictureBox1 = New PictureBox()
-        TextBox_phoneno2 = New TextBox()
-        TextBox_phoneno = New TextBox()
-        TextBox_lastname = New TextBox()
-        TextBox_middlename = New TextBox()
-        TextBox_firstname = New TextBox()
         Label_attending_back = New Label()
         Label_leaving_residency = New Label()
         Button_delete = New Button()
@@ -46,8 +41,9 @@ Partial Class G_workers3
         TextBox_description = New TextBox()
         Panel3 = New Panel()
         Panel2 = New Panel()
-        DateTimePicker1 = New DateTimePicker()
         DateTimePicker2 = New DateTimePicker()
+        DateTimePicker1 = New DateTimePicker()
+        ComboBox1 = New ComboBox()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -165,57 +161,12 @@ Partial Class G_workers3
         PictureBox1.TabIndex = 25
         PictureBox1.TabStop = False
         ' 
-        ' TextBox_phoneno2
-        ' 
-        TextBox_phoneno2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_phoneno2.Location = New Point(242, 125)
-        TextBox_phoneno2.Name = "TextBox_phoneno2"
-        TextBox_phoneno2.PlaceholderText = "phone number"
-        TextBox_phoneno2.Size = New Size(217, 34)
-        TextBox_phoneno2.TabIndex = 25
-        ' 
-        ' TextBox_phoneno
-        ' 
-        TextBox_phoneno.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_phoneno.Location = New Point(13, 125)
-        TextBox_phoneno.Name = "TextBox_phoneno"
-        TextBox_phoneno.PlaceholderText = "phone number"
-        TextBox_phoneno.Size = New Size(223, 34)
-        TextBox_phoneno.TabIndex = 24
-        ' 
-        ' TextBox_lastname
-        ' 
-        TextBox_lastname.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_lastname.Location = New Point(311, 71)
-        TextBox_lastname.Name = "TextBox_lastname"
-        TextBox_lastname.PlaceholderText = "last name"
-        TextBox_lastname.Size = New Size(148, 34)
-        TextBox_lastname.TabIndex = 23
-        ' 
-        ' TextBox_middlename
-        ' 
-        TextBox_middlename.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_middlename.Location = New Point(162, 71)
-        TextBox_middlename.Name = "TextBox_middlename"
-        TextBox_middlename.PlaceholderText = "middle name"
-        TextBox_middlename.Size = New Size(143, 34)
-        TextBox_middlename.TabIndex = 22
-        ' 
-        ' TextBox_firstname
-        ' 
-        TextBox_firstname.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_firstname.Location = New Point(13, 70)
-        TextBox_firstname.Name = "TextBox_firstname"
-        TextBox_firstname.PlaceholderText = "first name"
-        TextBox_firstname.Size = New Size(143, 34)
-        TextBox_firstname.TabIndex = 21
-        ' 
         ' Label_attending_back
         ' 
         Label_attending_back.AutoSize = True
         Label_attending_back.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point)
         Label_attending_back.ForeColor = Color.Teal
-        Label_attending_back.Location = New Point(13, 235)
+        Label_attending_back.Location = New Point(13, 171)
         Label_attending_back.Name = "Label_attending_back"
         Label_attending_back.Size = New Size(173, 25)
         Label_attending_back.TabIndex = 20
@@ -226,7 +177,7 @@ Partial Class G_workers3
         Label_leaving_residency.AutoSize = True
         Label_leaving_residency.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point)
         Label_leaving_residency.ForeColor = Color.Teal
-        Label_leaving_residency.Location = New Point(13, 170)
+        Label_leaving_residency.Location = New Point(13, 106)
         Label_leaving_residency.Name = "Label_leaving_residency"
         Label_leaving_residency.Size = New Size(200, 25)
         Label_leaving_residency.TabIndex = 19
@@ -238,7 +189,7 @@ Partial Class G_workers3
         Button_delete.BackgroundImageLayout = ImageLayout.None
         Button_delete.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_delete.ForeColor = Color.White
-        Button_delete.Location = New Point(255, 564)
+        Button_delete.Location = New Point(255, 500)
         Button_delete.Name = "Button_delete"
         Button_delete.Size = New Size(204, 43)
         Button_delete.TabIndex = 17
@@ -251,7 +202,7 @@ Partial Class G_workers3
         Button_Update.BackgroundImageLayout = ImageLayout.None
         Button_Update.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_Update.ForeColor = Color.White
-        Button_Update.Location = New Point(13, 564)
+        Button_Update.Location = New Point(13, 500)
         Button_Update.Name = "Button_Update"
         Button_Update.Size = New Size(205, 43)
         Button_Update.TabIndex = 16
@@ -264,7 +215,7 @@ Partial Class G_workers3
         Button_add.BackgroundImageLayout = ImageLayout.None
         Button_add.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_add.ForeColor = Color.White
-        Button_add.Location = New Point(13, 505)
+        Button_add.Location = New Point(13, 441)
         Button_add.Name = "Button_add"
         Button_add.Size = New Size(446, 43)
         Button_add.TabIndex = 15
@@ -285,7 +236,7 @@ Partial Class G_workers3
         ' TextBox_description
         ' 
         TextBox_description.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_description.Location = New Point(13, 297)
+        TextBox_description.Location = New Point(13, 233)
         TextBox_description.Multiline = True
         TextBox_description.Name = "TextBox_description"
         TextBox_description.PlaceholderText = "Additional Information"
@@ -302,13 +253,9 @@ Partial Class G_workers3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(ComboBox1)
         Panel2.Controls.Add(DateTimePicker2)
         Panel2.Controls.Add(DateTimePicker1)
-        Panel2.Controls.Add(TextBox_phoneno2)
-        Panel2.Controls.Add(TextBox_phoneno)
-        Panel2.Controls.Add(TextBox_lastname)
-        Panel2.Controls.Add(TextBox_middlename)
-        Panel2.Controls.Add(TextBox_firstname)
         Panel2.Controls.Add(Label_attending_back)
         Panel2.Controls.Add(Label_leaving_residency)
         Panel2.Controls.Add(Button_delete)
@@ -321,25 +268,33 @@ Partial Class G_workers3
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 27
         ' 
-        ' DateTimePicker1
-        ' 
-        DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
-        DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.Location = New Point(13, 198)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(446, 27)
-        DateTimePicker1.TabIndex = 26
-        ' 
         ' DateTimePicker2
         ' 
         DateTimePicker2.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
         DateTimePicker2.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
         DateTimePicker2.Format = DateTimePickerFormat.Custom
-        DateTimePicker2.Location = New Point(13, 263)
+        DateTimePicker2.Location = New Point(13, 199)
         DateTimePicker2.Name = "DateTimePicker2"
         DateTimePicker2.Size = New Size(446, 27)
         DateTimePicker2.TabIndex = 27
+        ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+        DateTimePicker1.Format = DateTimePickerFormat.Custom
+        DateTimePicker1.Location = New Point(13, 134)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(446, 27)
+        DateTimePicker1.TabIndex = 26
+        ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Location = New Point(13, 66)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(446, 28)
+        ComboBox1.TabIndex = 28
         ' 
         ' G_workers3
         ' 
@@ -372,11 +327,6 @@ Partial Class G_workers3
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label_record_visitors As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox_phoneno2 As TextBox
-    Friend WithEvents TextBox_phoneno As TextBox
-    Friend WithEvents TextBox_lastname As TextBox
-    Friend WithEvents TextBox_middlename As TextBox
-    Friend WithEvents TextBox_firstname As TextBox
     Friend WithEvents Label_attending_back As Label
     Friend WithEvents Label_leaving_residency As Label
     Friend WithEvents Button_delete As Button
@@ -388,4 +338,5 @@ Partial Class G_workers3
     Friend WithEvents Panel2 As Panel
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
