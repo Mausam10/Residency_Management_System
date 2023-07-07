@@ -26,6 +26,8 @@ Partial Class S_expenses3
         Panel3 = New Panel()
         DGV_Expenses = New DataGridView()
         Panel2 = New Panel()
+        Label1 = New Label()
+        ComboBox_apartments = New ComboBox()
         Label_types_of_expenses = New Label()
         DateTimePicker1 = New DateTimePicker()
         ComboBox1 = New ComboBox()
@@ -34,7 +36,6 @@ Partial Class S_expenses3
         Button_add = New Button()
         Information_label = New Label()
         TextBox_Amount = New TextBox()
-        TextBox_username = New TextBox()
         Label_expenses = New Label()
         PictureBox1 = New PictureBox()
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
@@ -46,7 +47,6 @@ Partial Class S_expenses3
         Button_notices = New Button()
         Button_Workers = New Button()
         Button_Expenses = New Button()
-        ComboBox_apartment = New ComboBox()
         Panel3.SuspendLayout()
         CType(DGV_Expenses, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -83,7 +83,8 @@ Partial Class S_expenses3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
-        Panel2.Controls.Add(ComboBox_apartment)
+        Panel2.Controls.Add(Label1)
+        Panel2.Controls.Add(ComboBox_apartments)
         Panel2.Controls.Add(Label_types_of_expenses)
         Panel2.Controls.Add(DateTimePicker1)
         Panel2.Controls.Add(ComboBox1)
@@ -92,18 +93,38 @@ Partial Class S_expenses3
         Panel2.Controls.Add(Button_add)
         Panel2.Controls.Add(Information_label)
         Panel2.Controls.Add(TextBox_Amount)
-        Panel2.Controls.Add(TextBox_username)
-        Panel2.Location = New Point(515, 260)
+        Panel2.Location = New Point(515, 263)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 15
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.ForeColor = Color.Teal
+        Label1.Location = New Point(11, 63)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(177, 29)
+        Label1.TabIndex = 22
+        Label1.Text = "Apartment_ID:"
+        ' 
+        ' ComboBox_apartments
+        ' 
+        ComboBox_apartments.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        ComboBox_apartments.FormattingEnabled = True
+        ComboBox_apartments.Items.AddRange(New Object() {"Utility Expenses", "Maintainence Expenses", "Other Expenses"})
+        ComboBox_apartments.Location = New Point(11, 95)
+        ComboBox_apartments.Name = "ComboBox_apartments"
+        ComboBox_apartments.Size = New Size(441, 33)
+        ComboBox_apartments.TabIndex = 21
         ' 
         ' Label_types_of_expenses
         ' 
         Label_types_of_expenses.AutoSize = True
         Label_types_of_expenses.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label_types_of_expenses.ForeColor = Color.Teal
-        Label_types_of_expenses.Location = New Point(11, 178)
+        Label_types_of_expenses.Location = New Point(11, 155)
         Label_types_of_expenses.Name = "Label_types_of_expenses"
         Label_types_of_expenses.Size = New Size(200, 29)
         Label_types_of_expenses.TabIndex = 20
@@ -114,7 +135,7 @@ Partial Class S_expenses3
         DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
         DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
         DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.Location = New Point(11, 319)
+        DateTimePicker1.Location = New Point(11, 309)
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(378, 27)
         DateTimePicker1.TabIndex = 19
@@ -124,7 +145,7 @@ Partial Class S_expenses3
         ComboBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
         ComboBox1.FormattingEnabled = True
         ComboBox1.Items.AddRange(New Object() {"Utility Expenses", "Maintainence Expenses", "Other Expenses"})
-        ComboBox1.Location = New Point(11, 210)
+        ComboBox1.Location = New Point(11, 197)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(441, 33)
         ComboBox1.TabIndex = 18
@@ -182,20 +203,11 @@ Partial Class S_expenses3
         ' TextBox_Amount
         ' 
         TextBox_Amount.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_Amount.Location = New Point(11, 264)
+        TextBox_Amount.Location = New Point(11, 254)
         TextBox_Amount.Name = "TextBox_Amount"
         TextBox_Amount.PlaceholderText = "Amount"
         TextBox_Amount.Size = New Size(223, 34)
         TextBox_Amount.TabIndex = 5
-        ' 
-        ' TextBox_username
-        ' 
-        TextBox_username.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_username.Location = New Point(11, 130)
-        TextBox_username.Name = "TextBox_username"
-        TextBox_username.PlaceholderText = "username"
-        TextBox_username.Size = New Size(441, 34)
-        TextBox_username.TabIndex = 3
         ' 
         ' Label_expenses
         ' 
@@ -322,16 +334,6 @@ Partial Class S_expenses3
         Button_Expenses.Text = "Expenses"
         Button_Expenses.UseVisualStyleBackColor = False
         ' 
-        ' ComboBox_apartment
-        ' 
-        ComboBox_apartment.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        ComboBox_apartment.FormattingEnabled = True
-        ComboBox_apartment.Items.AddRange(New Object() {"Utility Expenses", "Maintainence Expenses", "Other Expenses"})
-        ComboBox_apartment.Location = New Point(11, 77)
-        ComboBox_apartment.Name = "ComboBox_apartment"
-        ComboBox_apartment.Size = New Size(441, 33)
-        ComboBox_apartment.TabIndex = 21
-        ' 
         ' S_expenses3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -365,7 +367,6 @@ Partial Class S_expenses3
     Friend WithEvents Button_add As Button
     Friend WithEvents Information_label As Label
     Friend WithEvents TextBox_Amount As TextBox
-    Friend WithEvents TextBox_username As TextBox
     Friend WithEvents Label_expenses As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
@@ -380,5 +381,6 @@ Partial Class S_expenses3
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label_types_of_expenses As Label
     Friend WithEvents DGV_Expenses As DataGridView
-    Friend WithEvents ComboBox_apartment As ComboBox
+    Friend WithEvents ComboBox_apartments As ComboBox
+    Friend WithEvents Label1 As Label
 End Class

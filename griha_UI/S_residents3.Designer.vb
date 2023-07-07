@@ -37,6 +37,7 @@ Partial Class S_residents3
         Label1 = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        Button1 = New Button()
         ComboBox_apartments = New ComboBox()
         Label2 = New Label()
         RadioButton3 = New RadioButton()
@@ -56,7 +57,6 @@ Partial Class S_residents3
         TextBox_firstname = New TextBox()
         Panel3 = New Panel()
         DataDVG = New DataGridView()
-        Button1 = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -215,6 +215,19 @@ Partial Class S_residents3
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 10
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Black
+        Button1.BackgroundImageLayout = ImageLayout.None
+        Button1.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(11, 546)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(441, 43)
+        Button1.TabIndex = 23
+        Button1.Text = "RESET"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' ComboBox_apartments
         ' 
@@ -433,19 +446,6 @@ Partial Class S_residents3
         DataDVG.RowTemplate.Height = 29
         DataDVG.Size = New Size(854, 545)
         DataDVG.TabIndex = 0
-        ' 
-        ' Button1
-        ' 
-        Button1.BackColor = Color.Black
-        Button1.BackgroundImageLayout = ImageLayout.None
-        Button1.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button1.ForeColor = Color.White
-        Button1.Location = New Point(11, 546)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(441, 43)
-        Button1.TabIndex = 23
-        Button1.Text = "RESET"
-        Button1.UseVisualStyleBackColor = False
         ' 
         ' S_residents3
         ' 
