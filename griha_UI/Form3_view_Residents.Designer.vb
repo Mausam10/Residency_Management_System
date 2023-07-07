@@ -174,7 +174,6 @@ Partial Class Form3_view_Residents
         DataGridResidents.BackgroundColor = SystemColors.ButtonFace
         DataGridResidents.BorderStyle = BorderStyle.None
         DataGridResidents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridResidents.Dock = DockStyle.Fill
         DataGridResidents.Location = New Point(0, 0)
         DataGridResidents.MultiSelect = False
         DataGridResidents.Name = "DataGridResidents"
