@@ -34,9 +34,13 @@ Partial Class Form3_notices
         Label_notices = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        PictureBox3 = New PictureBox()
+        PictureBox4 = New PictureBox()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -172,12 +176,36 @@ Partial Class Form3_notices
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 21
         ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.BackColor = SystemColors.ButtonHighlight
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(911, 587)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(67, 62)
+        PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox3.TabIndex = 23
+        PictureBox3.TabStop = False
+        ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.BackColor = SystemColors.ControlDark
+        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
+        PictureBox4.Location = New Point(1500, 587)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(67, 62)
+        PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox4.TabIndex = 24
+        PictureBox4.TabStop = False
+        ' 
         ' Form3_notices
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1902, 1033)
+        Controls.Add(PictureBox4)
+        Controls.Add(PictureBox3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
         Controls.Add(Label_notices)
@@ -188,6 +216,8 @@ Partial Class Form3_notices
         Panel1.ResumeLayout(False)
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -203,4 +233,6 @@ Partial Class Form3_notices
     Friend WithEvents Label_notices As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
 End Class
