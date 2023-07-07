@@ -14,7 +14,7 @@ Public Class S_expenses3
         Dim Apartment_id, Expenses_type, Amount As String
         Dim date1 As Date
         Username = TextBox_username.Text
-        Apartment_id = TextBox_apartmentid.Text
+        '  Apartment_id = TextBox_apartmentid.Text
         Expenses_type = ComboBox1.SelectedItem
         Amount = TextBox_Amount.Text
         date1 = DateTimePicker1.Text
@@ -28,7 +28,7 @@ Public Class S_expenses3
 
     Private Sub reset()
         TextBox_username.Text = Nothing
-        TextBox_apartmentid.Text = Nothing
+        'TextBox_apartmentid.Text = Nothing
         ComboBox1.SelectedItem = Nothing
         TextBox_Amount.Text = Nothing
         DateTimePicker1.Text = Nothing
@@ -131,7 +131,7 @@ Public Class S_expenses3
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow = DGV_Expenses.Rows(e.RowIndex)
             TextBox_username.Text = row.Cells(0).Value.ToString
-            TextBox_apartmentid.Text = row.Cells(1).Value.ToString
+            'TextBox_apartmentid.Text = row.Cells(1).Value.ToString
             ComboBox1.SelectedItem = row.Cells(2).Value.ToString
             TextBox_Amount.Text = row.Cells(3).Value.ToString
             DateTimePicker1.Text = row.Cells(4).Value
@@ -140,7 +140,7 @@ Public Class S_expenses3
         End If
     End Sub
 
-    Private Sub TextBox_apartmentid_TextChanged(sender As Object, e As EventArgs) Handles TextBox_apartmentid.TextChanged
+    ' Private Sub TextBox_apartmentid_TextChanged(sender As Object, e As EventArgs) Handles TextBox_apartmentid.TextChanged
 
-    End Sub
+    'End Sub
 End Class

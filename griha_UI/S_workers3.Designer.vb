@@ -252,13 +252,13 @@ Partial Class S_workers3
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
         DGVWorkers.DefaultCellStyle = DataGridViewCellStyle2
-        DGVWorkers.Location = New Point(199, 107)
+        DGVWorkers.Location = New Point(13, 12)
         DGVWorkers.MultiSelect = False
         DGVWorkers.Name = "DGVWorkers"
         DGVWorkers.ReadOnly = True
         DGVWorkers.RowHeadersWidth = 51
         DGVWorkers.RowTemplate.Height = 29
-        DGVWorkers.Size = New Size(609, 284)
+        DGVWorkers.Size = New Size(880, 749)
         DGVWorkers.TabIndex = 0
         ' 
         ' Panel2

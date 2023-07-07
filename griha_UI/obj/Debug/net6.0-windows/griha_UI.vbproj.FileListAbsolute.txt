@@ -274,3 +274,4 @@ C:\Users\Sushan\Desktop\temp\akriti\Residency_Management_System\griha_UI\obj\Deb
 C:\Users\Sushan\Desktop\temp\akriti\Residency_Management_System\griha_UI\obj\Debug\net6.0-windows\griha_UI.pdb
 C:\Users\Sushan\Desktop\temp\akriti\Residency_Management_System\griha_UI\obj\Debug\net6.0-windows\griha_UI.genruntimeconfig.cache
 C:\Users\Sushan\Desktop\temp\akriti\Residency_Management_System\griha_UI\obj\Debug\net6.0-windows\ref\griha_UI.dll
+C:\local disk D\forth semester\project II\griha_UI\griha_UI\obj\Debug\net6.0-windows\griha_UI.Form4events_notices.resources
