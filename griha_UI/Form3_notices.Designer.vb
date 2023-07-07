@@ -33,6 +33,7 @@ Partial Class Form3_notices
         PictureBox2 = New PictureBox()
         Label_notices = New Label()
         PictureBox1 = New PictureBox()
+        Panel2 = New Panel()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -144,10 +145,10 @@ Partial Class Form3_notices
         ' 
         Label_notices.AutoSize = True
         Label_notices.BackColor = Color.Transparent
-        Label_notices.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_notices.Location = New Point(1090, 197)
+        Label_notices.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_notices.Location = New Point(1156, 181)
         Label_notices.Name = "Label_notices"
-        Label_notices.Size = New Size(116, 32)
+        Label_notices.Size = New Size(162, 46)
         Label_notices.TabIndex = 20
         Label_notices.Text = "Notices"
         ' 
@@ -163,12 +164,21 @@ Partial Class Form3_notices
         PictureBox1.TabIndex = 19
         PictureBox1.TabStop = False
         ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.LightCyan
+        Panel2.Location = New Point(1001, 253)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(476, 768)
+        Panel2.TabIndex = 21
+        ' 
         ' Form3_notices
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1902, 1033)
+        Controls.Add(Panel2)
         Controls.Add(Panel1)
         Controls.Add(Label_notices)
         Controls.Add(PictureBox1)
@@ -192,4 +202,5 @@ Partial Class Form3_notices
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label_notices As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Panel2 As Panel
 End Class
