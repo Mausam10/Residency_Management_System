@@ -12,14 +12,26 @@ Public Class G_visitors3
         Dim First_Name, Middle_Name, Last_Name, Phone1 As String
         Dim entry_time, exit_time As Date
         Dim Purpose As String
+        Dim Inside As Integer
         First_Name = TextBox_firstname.Text
         Middle_Name = TextBox_middlename.Text
         Last_Name = TextBox_lastname.Text
         Phone1 = TextBox_phone1.Text
-        entry_time = DateTimePicker1.Text
-        exit_time = DateTimePicker2.Text
+        entry_time = DateTimePicker1.Value
+        'exit_time = Nothing
         Purpose = TextBox_purpose.Text
-        query = "Insert into Visitors (First_Name,Middle_Name, Last_Name, Phone1, Entry_time, Exit_time, Purpose) values('" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Phone1 & "','" & entry_time & "','" & exit_time & "','" & Purpose & "')"
+
+        If (CheckBox_visitor.Checked = True) Then
+            Inside = 0
+            exit_time = DateTimePicker2.Value
+            query = "Insert into Visitors (First_Name,Middle_Name, Last_Name, Phone1, Entry_time, Exit_time, Purpose, Inside) values('" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Phone1 & "','" & entry_time & "','" & exit_time & "','" & Purpose & "','" & Inside & "')"
+        Else
+            Inside = 1
+            query = "Insert into Visitors (First_Name,Middle_Name, Last_Name, Phone1, Entry_time, Exit_time, Purpose, Inside) values('" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Phone1 & "','" & entry_time & "',Null,'" & Purpose & "','" & Inside & "')"
+
+        End If
+
+        'query = "Insert into Visitors (First_Name,Middle_Name, Last_Name, Phone1, Entry_time, Exit_time, Purpose, Inside) values('" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Phone1 & "','" & entry_time & "','" & exit_time & "','" & Purpose & "','" & Inside & "')"
         If (grihaDb.executeMySql(query)) Then
             Return 1 'success
         End If
@@ -45,8 +57,9 @@ Public Class G_visitors3
         TextBox_lastname.Text = Nothing
         TextBox_phone1.Text = Nothing
         DateTimePicker1.Text = Date.Now
-        DateTimePicker2.Text = Date.Now
+        DateTimePicker2.CustomFormat = " "
         TextBox_purpose.Text = Nothing
+        CheckBox_visitor.Checked = False
     End Sub
 
 
@@ -108,9 +121,17 @@ Public Class G_visitors3
             TextBox_lastname.Text = row.Cells(2).Value.ToString
             TextBox_phone1.Text = row.Cells(3).Value.ToString
             'TextBox_phone2.Text = row.Cells(4).Value.ToString
-            DateTimePicker1.Text = row.Cells(5).Value
-            DateTimePicker2.Text = row.Cells(6).Value
-            TextBox_purpose.Text = row.Cells(7).Value.ToString
+            DateTimePicker1.Text = row.Cells(4).Value
+            ' DateTimePicker2.Text = row.Cells(5).Value
+            TextBox_purpose.Text = row.Cells(6).Value.ToString
+
+            If (row.Cells(7).Value = 0) Then
+                CheckBox_visitor.Checked = True
+                DateTimePicker2.Value = row.Cells(5).Value
+            Else
+                CheckBox_visitor.Checked = False
+                DateTimePicker2.Value = Date.Now()
+            End If
 
             temp_first = TextBox_firstname.Text 'selected visitor's username 
             temp_phone1 = TextBox_phone1.Text 'selcted visitor's phone1
@@ -124,18 +145,35 @@ Public Class G_visitors3
         Dim First_Name, Middle_Name, Last_Name, Phone1 As String
         Dim entry_time, exit_time As Date
         Dim Purpose As String
+        Dim Inside As Integer
         First_Name = TextBox_firstname.Text
         Middle_Name = TextBox_middlename.Text
         Last_Name = TextBox_lastname.Text
         Phone1 = TextBox_phone1.Text
-        entry_time = DateTimePicker1.Text
-        exit_time = DateTimePicker2.Text
+        entry_time = DateTimePicker1.Value
+        exit_time = DateTimePicker2.Value
         Purpose = TextBox_purpose.Text
-        query = "update visitors set First_name='" & First_Name & "', Middle_name='" & Middle_Name & "', Last_name='" & Last_Name & "', Phone1='" & Phone1 & "', Entry_time='" & entry_time & "', Exit_time='" & exit_time & "', purpose='" & Purpose & "'  WHERE (First_name='" & temp_first & "' and Phone1='" & temp_phone1 & "' and Entry_time='" & temp_timeEntry & "')"
+
+        If (CheckBox_visitor.Checked = True) Then
+            Inside = 0
+            exit_time = DateTimePicker2.Value
+            query = "update visitors set First_name='" & First_Name & "', Middle_name='" & Middle_Name & "', Last_name='" & Last_Name & "', Phone1='" & Phone1 & "', Entry_time='" & entry_time & "', Exit_time='" & exit_time & "', purpose='" & Purpose & "', Inside='" & Inside & "'  WHERE (First_name='" & temp_first & "' and Phone1='" & temp_phone1 & "' and Entry_time='" & temp_timeEntry & "')"
+
+        Else
+            Inside = 1
+            query = "update visitors set First_name='" & First_Name & "', Middle_name='" & Middle_Name & "', Last_name='" & Last_Name & "', Phone1='" & Phone1 & "', Entry_time='" & entry_time & "', Exit_time=Null, purpose='" & Purpose & "', Inside='" & Inside & "'  WHERE (First_name='" & temp_first & "' and Phone1='" & temp_phone1 & "' and Entry_time='" & temp_timeEntry & "')"
+        End If
+
+        'query = "update visitors set First_name='" & First_Name & "', Middle_name='" & Middle_Name & "', Last_name='" & Last_Name & "', Phone1='" & Phone1 & "', Entry_time='" & entry_time & "', Exit_time='" & exit_time & "', purpose='" & Purpose & "', Inside='" & Inside & "'  WHERE (First_name='" & temp_first & "' and Phone1='" & temp_phone1 & "' and Entry_time='" & temp_timeEntry & "')"
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Visitor's Info successfully edited.")
             reset()
             populate()
         End If
+    End Sub
+
+    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
+        DateTimePicker2.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+
     End Sub
 End Class

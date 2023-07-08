@@ -33,6 +33,8 @@ Partial Class G_visitors3
         Information_label = New Label()
         TextBox_purpose = New TextBox()
         Panel2 = New Panel()
+        CheckBox_visitor = New CheckBox()
+        Label2 = New Label()
         DateTimePicker2 = New DateTimePicker()
         DateTimePicker1 = New DateTimePicker()
         TextBox_phone1 = New TextBox()
@@ -82,7 +84,7 @@ Partial Class G_visitors3
         Label_attending_back.AutoSize = True
         Label_attending_back.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point)
         Label_attending_back.ForeColor = Color.Teal
-        Label_attending_back.Location = New Point(13, 235)
+        Label_attending_back.Location = New Point(13, 278)
         Label_attending_back.Name = "Label_attending_back"
         Label_attending_back.Size = New Size(173, 25)
         Label_attending_back.TabIndex = 20
@@ -105,7 +107,7 @@ Partial Class G_visitors3
         Button_delete.BackgroundImageLayout = ImageLayout.None
         Button_delete.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_delete.ForeColor = Color.White
-        Button_delete.Location = New Point(255, 564)
+        Button_delete.Location = New Point(255, 607)
         Button_delete.Name = "Button_delete"
         Button_delete.Size = New Size(204, 43)
         Button_delete.TabIndex = 17
@@ -118,7 +120,7 @@ Partial Class G_visitors3
         Button_Update.BackgroundImageLayout = ImageLayout.None
         Button_Update.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_Update.ForeColor = Color.White
-        Button_Update.Location = New Point(13, 564)
+        Button_Update.Location = New Point(13, 607)
         Button_Update.Name = "Button_Update"
         Button_Update.Size = New Size(205, 43)
         Button_Update.TabIndex = 16
@@ -131,7 +133,7 @@ Partial Class G_visitors3
         Button_add.BackgroundImageLayout = ImageLayout.None
         Button_add.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_add.ForeColor = Color.White
-        Button_add.Location = New Point(13, 505)
+        Button_add.Location = New Point(13, 548)
         Button_add.Name = "Button_add"
         Button_add.Size = New Size(446, 43)
         Button_add.TabIndex = 15
@@ -152,7 +154,7 @@ Partial Class G_visitors3
         ' TextBox_purpose
         ' 
         TextBox_purpose.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_purpose.Location = New Point(13, 297)
+        TextBox_purpose.Location = New Point(13, 340)
         TextBox_purpose.Multiline = True
         TextBox_purpose.Name = "TextBox_purpose"
         TextBox_purpose.PlaceholderText = "Purpose of Visit"
@@ -162,6 +164,8 @@ Partial Class G_visitors3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(CheckBox_visitor)
+        Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(DateTimePicker2)
         Panel2.Controls.Add(DateTimePicker1)
         Panel2.Controls.Add(TextBox_phone1)
@@ -180,12 +184,31 @@ Partial Class G_visitors3
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 22
         ' 
+        ' CheckBox_visitor
+        ' 
+        CheckBox_visitor.Location = New Point(196, 236)
+        CheckBox_visitor.Name = "CheckBox_visitor"
+        CheckBox_visitor.Size = New Size(45, 37)
+        CheckBox_visitor.TabIndex = 32
+        CheckBox_visitor.UseVisualStyleBackColor = True
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point)
+        Label2.ForeColor = Color.Teal
+        Label2.Location = New Point(13, 241)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(173, 25)
+        Label2.TabIndex = 31
+        Label2.Text = "Did the Visitor left?"
+        ' 
         ' DateTimePicker2
         ' 
         DateTimePicker2.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DateTimePicker2.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+        DateTimePicker2.CustomFormat = " "
         DateTimePicker2.Format = DateTimePickerFormat.Custom
-        DateTimePicker2.Location = New Point(13, 264)
+        DateTimePicker2.Location = New Point(13, 307)
         DateTimePicker2.Name = "DateTimePicker2"
         DateTimePicker2.Size = New Size(446, 27)
         DateTimePicker2.TabIndex = 27
@@ -397,4 +420,6 @@ Partial Class G_visitors3
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents DGV_visitors As DataGridView
+    Friend WithEvents Label2 As Label
+    Friend WithEvents CheckBox_visitor As CheckBox
 End Class
