@@ -24,6 +24,7 @@ Partial Class S_notices3
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(S_notices3))
         Panel3 = New Panel()
+        DGV_Notices = New DataGridView()
         Panel1 = New Panel()
         Button_back = New Button()
         Button_notices = New Button()
@@ -36,13 +37,15 @@ Partial Class S_notices3
         Button_Update = New Button()
         Button_add = New Button()
         Information_label = New Label()
-        TextBox_description = New TextBox()
+        TextBox_notice = New TextBox()
         Panel2 = New Panel()
+        DateTimePicker1 = New DateTimePicker()
         TextBox_Name = New TextBox()
         Label_notices = New Label()
         PictureBox1 = New PictureBox()
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
-        DateTimePicker1 = New DateTimePicker()
+        Panel3.SuspendLayout()
+        CType(DGV_Notices, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -51,10 +54,25 @@ Partial Class S_notices3
         ' 
         ' Panel3
         ' 
+        Panel3.Controls.Add(DGV_Notices)
         Panel3.Location = New Point(997, 261)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(905, 768)
         Panel3.TabIndex = 17
+        ' 
+        ' DGV_Notices
+        ' 
+        DGV_Notices.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DGV_Notices.BackgroundColor = SystemColors.ButtonFace
+        DGV_Notices.BorderStyle = BorderStyle.None
+        DGV_Notices.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGV_Notices.Dock = DockStyle.Fill
+        DGV_Notices.Location = New Point(0, 0)
+        DGV_Notices.Name = "DGV_Notices"
+        DGV_Notices.RowHeadersWidth = 51
+        DGV_Notices.RowTemplate.Height = 29
+        DGV_Notices.Size = New Size(905, 768)
+        DGV_Notices.TabIndex = 0
         ' 
         ' Panel1
         ' 
@@ -208,15 +226,15 @@ Partial Class S_notices3
         Information_label.TabIndex = 9
         Information_label.Text = "Information Field"
         ' 
-        ' TextBox_description
+        ' TextBox_notice
         ' 
-        TextBox_description.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_description.Location = New Point(11, 174)
-        TextBox_description.Multiline = True
-        TextBox_description.Name = "TextBox_description"
-        TextBox_description.PlaceholderText = "Notice"
-        TextBox_description.Size = New Size(446, 249)
-        TextBox_description.TabIndex = 7
+        TextBox_notice.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox_notice.Location = New Point(11, 174)
+        TextBox_notice.Multiline = True
+        TextBox_notice.Name = "TextBox_notice"
+        TextBox_notice.PlaceholderText = "Notice"
+        TextBox_notice.Size = New Size(446, 249)
+        TextBox_notice.TabIndex = 7
         ' 
         ' Panel2
         ' 
@@ -226,12 +244,22 @@ Partial Class S_notices3
         Panel2.Controls.Add(Button_Update)
         Panel2.Controls.Add(Button_add)
         Panel2.Controls.Add(Information_label)
-        Panel2.Controls.Add(TextBox_description)
+        Panel2.Controls.Add(TextBox_notice)
         Panel2.Controls.Add(TextBox_Name)
         Panel2.Location = New Point(515, 261)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 16
+        ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+        DateTimePicker1.Format = DateTimePickerFormat.Custom
+        DateTimePicker1.Location = New Point(3, 121)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(446, 27)
+        DateTimePicker1.TabIndex = 22
         ' 
         ' TextBox_Name
         ' 
@@ -265,16 +293,6 @@ Partial Class S_notices3
         PictureBox1.TabIndex = 14
         PictureBox1.TabStop = False
         ' 
-        ' DateTimePicker1
-        ' 
-        DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
-        DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.Location = New Point(3, 121)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(446, 27)
-        DateTimePicker1.TabIndex = 22
-        ' 
         ' S_notices3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -289,6 +307,8 @@ Partial Class S_notices3
         DoubleBuffered = True
         Name = "S_notices3"
         Text = "S_notices3"
+        Panel3.ResumeLayout(False)
+        CType(DGV_Notices, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
@@ -311,11 +331,12 @@ Partial Class S_notices3
     Friend WithEvents Button_Update As Button
     Friend WithEvents Button_add As Button
     Friend WithEvents Information_label As Label
-    Friend WithEvents TextBox_description As TextBox
+    Friend WithEvents TextBox_notice As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents TextBox_Name As TextBox
     Friend WithEvents Label_notices As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DGV_Notices As DataGridView
 End Class

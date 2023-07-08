@@ -115,11 +115,6 @@ Public Class S_events3
     End Sub
 
 
-
-    Private Sub DGV_events_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_Events.CellContentClick
-
-    End Sub
-
     Private Sub DGV_Events_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV_Events.CellMouseClick
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow = DGV_Events.Rows(e.RowIndex)
@@ -127,12 +122,12 @@ Public Class S_events3
             DateTimePicker1.Text = row.Cells(1).Value.ToString
             TextBox_description.Text = row.Cells(2).Value.ToString
             tempEvent_name = TextBox_Name.Text 'selected user's username 
-            tempDate = DateTimePicker1.Text
+            tempDate = DateTimePicker1.Value
         End If
     End Sub
 
     Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
-        query = " DELETE FROM events WHERE (Event_name = '" & TextBox_Name.Text & "' and Date = '" & DateTimePicker1.Text & "') "
+        query = " DELETE FROM events WHERE (Event_name = '" & TextBox_Name.Text & "' and Date = '" & DateTimePicker1.Value & "') "
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Record Deleted")
             reset()
