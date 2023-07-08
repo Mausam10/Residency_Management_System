@@ -3,19 +3,41 @@ Imports System.Data.SqlClient
 Imports Microsoft.Data.SqlClient
 Imports System.Diagnostics.Eventing.Reader
 Imports System.Data
-
+Imports Azure.Identity
+Imports Microsoft.Identity.Client
 
 Public Class Form_UI
     Dim tempdt As DataTable
+    Dim query As String
+    Shared loggedUsername As String
+    Shared loggedUserApartment_id As String
+    Public Shared Function getLoggedUsername() As String
+        Return loggedUsername
+    End Function
+
+    Public Shared Function getLoggedUserApartmentId() As String
+        Return loggedUserApartment_id
+    End Function
 
     Public Function authenticationCheck(ByVal username As String, ByVal password As String, ByVal user As String) As Integer
-
-        Dim query As String = "select * from " & user & " Where Username = '" & username & "'and Password = '" & password & "' "
+        If (user = "Residents") Then
+            query = "select Username, Apartment_id from " & user & " Where Username = '" & username & "'and Password = '" & password & "' "
+        Else
+            query = "select * from " & user & " Where Username = '" & username & "'and Password = '" & password & "' "
+        End If
+        'query = "select * from " & user & " Where Username = '" & username & "'and Password = '" & password & "' "
         tempdt = grihaDb.generateTable(query)
         Dim a As Integer
         a = tempdt.Rows.Count
         If a = 0 Then
             Return -1 'username/password not matched or no user exists
+        End If
+
+        If (user = "Residents") Then
+            loggedUsername = tempdt.Rows(0).Item(0)
+            loggedUserApartment_id = tempdt.Rows(0).Item(1)
+            'MsgBox(loggedUsername)
+            'MsgBox(loggedUserApartment_id)
         End If
         Return 1  'username and password matched
 

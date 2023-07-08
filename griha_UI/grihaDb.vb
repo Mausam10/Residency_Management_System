@@ -8,9 +8,6 @@ Public Class grihaDb
     Shared dt As DataTable
     Shared cb As ComboBox
     Shared reader As SqlDataReader
-
-
-
     Shared Sub connect()
         con = New SqlConnection("Data Source=LAPTOP-390QHVCB;Initial Catalog=Griha;Integrated Security=True;TrustServerCertificate=True")
     End Sub

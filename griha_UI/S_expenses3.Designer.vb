@@ -139,6 +139,7 @@ Partial Class S_expenses3
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(378, 27)
         DateTimePicker1.TabIndex = 19
+        DateTimePicker1.Value = New Date(2023, 7, 8, 10, 53, 0, 0)
         ' 
         ' ComboBox1
         ' 

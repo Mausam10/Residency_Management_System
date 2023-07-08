@@ -31,17 +31,20 @@ Partial Class Form3_Expenses
         Button_Property = New Button()
         button_resident = New Button()
         PictureBox2 = New PictureBox()
-        Label_expenses = New Label()
+        Label_expensesInformation = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
-        Label_types_of_expenses = New Label()
-        DateTimePicker1 = New DateTimePicker()
-        ComboBox1 = New ComboBox()
-        Button_delete = New Button()
-        Information_label = New Label()
-        TextBox_apartmentid = New TextBox()
-        TextBox_Amount = New TextBox()
-        TextBox_username = New TextBox()
+        Label_date = New Label()
+        Label14 = New Label()
+        Label_amount = New Label()
+        Label13 = New Label()
+        Label_expensesType = New Label()
+        Label_apartmentID = New Label()
+        Label3 = New Label()
+        Label2 = New Label()
+        Label11 = New Label()
+        Label1Label12 = New Label()
+        label10 = New Label()
         PictureBox3 = New PictureBox()
         PictureBox4 = New PictureBox()
         Panel1.SuspendLayout()
@@ -154,16 +157,16 @@ Partial Class Form3_Expenses
         PictureBox2.TabIndex = 0
         PictureBox2.TabStop = False
         ' 
-        ' Label_expenses
+        ' Label_expensesInformation
         ' 
-        Label_expenses.AutoSize = True
-        Label_expenses.BackColor = Color.Transparent
-        Label_expenses.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        Label_expenses.Location = New Point(1052, 200)
-        Label_expenses.Name = "Label_expenses"
-        Label_expenses.Size = New Size(308, 32)
-        Label_expenses.TabIndex = 20
-        Label_expenses.Text = "Expenses Information"
+        Label_expensesInformation.AutoSize = True
+        Label_expensesInformation.BackColor = Color.Transparent
+        Label_expensesInformation.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_expensesInformation.Location = New Point(1052, 200)
+        Label_expensesInformation.Name = "Label_expensesInformation"
+        Label_expensesInformation.Size = New Size(308, 32)
+        Label_expensesInformation.TabIndex = 20
+        Label_expensesInformation.Text = "Expenses Information"
         ' 
         ' PictureBox1
         ' 
@@ -180,100 +183,140 @@ Partial Class Form3_Expenses
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
-        Panel2.Controls.Add(Label_types_of_expenses)
-        Panel2.Controls.Add(DateTimePicker1)
-        Panel2.Controls.Add(ComboBox1)
-        Panel2.Controls.Add(Button_delete)
-        Panel2.Controls.Add(Information_label)
-        Panel2.Controls.Add(TextBox_apartmentid)
-        Panel2.Controls.Add(TextBox_Amount)
-        Panel2.Controls.Add(TextBox_username)
+        Panel2.Controls.Add(Label_date)
+        Panel2.Controls.Add(Label14)
+        Panel2.Controls.Add(Label_amount)
+        Panel2.Controls.Add(Label13)
+        Panel2.Controls.Add(Label_expensesType)
+        Panel2.Controls.Add(Label_apartmentID)
+        Panel2.Controls.Add(Label3)
+        Panel2.Controls.Add(Label2)
+        Panel2.Controls.Add(Label11)
+        Panel2.Controls.Add(Label1Label12)
+        Panel2.Controls.Add(label10)
         Panel2.Location = New Point(981, 253)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(476, 522)
         Panel2.TabIndex = 21
         ' 
-        ' Label_types_of_expenses
+        ' Label_date
         ' 
-        Label_types_of_expenses.AutoSize = True
-        Label_types_of_expenses.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_types_of_expenses.ForeColor = Color.Teal
-        Label_types_of_expenses.Location = New Point(11, 178)
-        Label_types_of_expenses.Name = "Label_types_of_expenses"
-        Label_types_of_expenses.Size = New Size(200, 29)
-        Label_types_of_expenses.TabIndex = 20
-        Label_types_of_expenses.Text = "Expenses Type:"
+        Label_date.AutoSize = True
+        Label_date.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_date.ForeColor = Color.Teal
+        Label_date.Location = New Point(246, 331)
+        Label_date.Name = "Label_date"
+        Label_date.Size = New Size(78, 29)
+        Label_date.TabIndex = 29
+        Label_date.Text = "NULL"
         ' 
-        ' DateTimePicker1
+        ' Label14
         ' 
-        DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
-        DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.Location = New Point(11, 319)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(378, 27)
-        DateTimePicker1.TabIndex = 19
+        Label14.AutoSize = True
+        Label14.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label14.ForeColor = Color.Teal
+        Label14.Location = New Point(21, 331)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(74, 29)
+        Label14.TabIndex = 28
+        Label14.Text = "Date:"
         ' 
-        ' ComboBox1
+        ' Label_amount
         ' 
-        ComboBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"Utility Expenses", "Maintainence Expenses", "Other Expenses"})
-        ComboBox1.Location = New Point(11, 210)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(441, 33)
-        ComboBox1.TabIndex = 18
+        Label_amount.AutoSize = True
+        Label_amount.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_amount.ForeColor = Color.Teal
+        Label_amount.Location = New Point(246, 243)
+        Label_amount.Name = "Label_amount"
+        Label_amount.Size = New Size(78, 29)
+        Label_amount.TabIndex = 27
+        Label_amount.Text = "NULL"
         ' 
-        ' Button_delete
+        ' Label13
         ' 
-        Button_delete.BackColor = Color.Black
-        Button_delete.BackgroundImageLayout = ImageLayout.None
-        Button_delete.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button_delete.ForeColor = Color.White
-        Button_delete.Location = New Point(309, 429)
-        Button_delete.Name = "Button_delete"
-        Button_delete.Size = New Size(143, 43)
-        Button_delete.TabIndex = 17
-        Button_delete.Text = "DELETE"
-        Button_delete.UseVisualStyleBackColor = False
+        Label13.AutoSize = True
+        Label13.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label13.ForeColor = Color.Teal
+        Label13.Location = New Point(21, 243)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(107, 29)
+        Label13.TabIndex = 26
+        Label13.Text = "Amount:"
         ' 
-        ' Information_label
+        ' Label_expensesType
         ' 
-        Information_label.AutoSize = True
-        Information_label.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
-        Information_label.ForeColor = Color.Teal
-        Information_label.Location = New Point(11, 12)
-        Information_label.Name = "Information_label"
-        Information_label.Size = New Size(219, 32)
-        Information_label.TabIndex = 9
-        Information_label.Text = "Your Expenses"
+        Label_expensesType.AutoSize = True
+        Label_expensesType.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_expensesType.ForeColor = Color.Teal
+        Label_expensesType.Location = New Point(246, 169)
+        Label_expensesType.Name = "Label_expensesType"
+        Label_expensesType.Size = New Size(78, 29)
+        Label_expensesType.TabIndex = 25
+        Label_expensesType.Text = "NULL"
         ' 
-        ' TextBox_apartmentid
+        ' Label_apartmentID
         ' 
-        TextBox_apartmentid.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_apartmentid.Location = New Point(11, 130)
-        TextBox_apartmentid.Name = "TextBox_apartmentid"
-        TextBox_apartmentid.PlaceholderText = "apartment/property ID"
-        TextBox_apartmentid.Size = New Size(441, 34)
-        TextBox_apartmentid.TabIndex = 8
+        Label_apartmentID.AutoSize = True
+        Label_apartmentID.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_apartmentID.ForeColor = Color.Teal
+        Label_apartmentID.Location = New Point(246, 90)
+        Label_apartmentID.Name = "Label_apartmentID"
+        Label_apartmentID.Size = New Size(78, 29)
+        Label_apartmentID.TabIndex = 24
+        Label_apartmentID.Text = "NULL"
         ' 
-        ' TextBox_Amount
+        ' Label3
         ' 
-        TextBox_Amount.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_Amount.Location = New Point(11, 264)
-        TextBox_Amount.Name = "TextBox_Amount"
-        TextBox_Amount.PlaceholderText = "Amount"
-        TextBox_Amount.Size = New Size(223, 34)
-        TextBox_Amount.TabIndex = 5
+        Label3.AutoSize = True
+        Label3.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.ForeColor = Color.Teal
+        Label3.Location = New Point(187, 90)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(0, 29)
+        Label3.TabIndex = 23
         ' 
-        ' TextBox_username
+        ' Label2
         ' 
-        TextBox_username.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_username.Location = New Point(11, 77)
-        TextBox_username.Name = "TextBox_username"
-        TextBox_username.PlaceholderText = "username"
-        TextBox_username.Size = New Size(441, 34)
-        TextBox_username.TabIndex = 3
+        Label2.AutoSize = True
+        Label2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.ForeColor = Color.Teal
+        Label2.Location = New Point(205, 90)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(0, 29)
+        Label2.TabIndex = 22
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label11.ForeColor = Color.Teal
+        Label11.Location = New Point(21, 90)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(170, 29)
+        Label11.TabIndex = 21
+        Label11.Text = "Apartment ID:"
+        ' 
+        ' Label1Label12
+        ' 
+        Label1Label12.AutoSize = True
+        Label1Label12.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1Label12.ForeColor = Color.Teal
+        Label1Label12.Location = New Point(21, 169)
+        Label1Label12.Name = "Label1Label12"
+        Label1Label12.Size = New Size(200, 29)
+        Label1Label12.TabIndex = 20
+        Label1Label12.Text = "Expenses Type:"
+        ' 
+        ' label10
+        ' 
+        label10.AutoSize = True
+        label10.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
+        label10.ForeColor = Color.Teal
+        label10.Location = New Point(129, 12)
+        label10.Name = "label10"
+        label10.Size = New Size(219, 32)
+        label10.TabIndex = 9
+        label10.Text = "Your Expenses"
         ' 
         ' PictureBox3
         ' 
@@ -307,7 +350,7 @@ Partial Class Form3_Expenses
         Controls.Add(PictureBox3)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
-        Controls.Add(Label_expenses)
+        Controls.Add(Label_expensesInformation)
         Controls.Add(PictureBox1)
         DoubleBuffered = True
         Name = "Form3_Expenses"
@@ -331,17 +374,22 @@ Partial Class Form3_Expenses
     Friend WithEvents Button_Property As Button
     Friend WithEvents button_resident As Button
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Label_expenses As Label
+    Friend WithEvents Label_expensesInformation As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label_types_of_expenses As Label
+    Friend WithEvents Label1Label12 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Button_delete As Button
-    Friend WithEvents Information_label As Label
-    Friend WithEvents TextBox_apartmentid As TextBox
-    Friend WithEvents TextBox_Amount As TextBox
-    Friend WithEvents TextBox_username As TextBox
+    Friend WithEvents label10 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents Label_expensesType As Label
+    Friend WithEvents Label_apartmentID As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label_amount As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label_date As Label
 End Class

@@ -6,6 +6,8 @@ Public Class S_expenses3
     Dim tempDt As DataTable
     Dim tempApartment As String
     Dim tempExpenses_type As String
+    Dim tempDate As Date
+    Dim tempAmount As String
 
 
     Private Function addToDatabase() As Integer
@@ -83,7 +85,7 @@ Public Class S_expenses3
     End Sub
 
     Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
-        query = " DELETE FROM expenses WHERE (Apartment_Id='" & ComboBox_apartments.SelectedItem & "' and Expenses_type = '" & ComboBox1.SelectedItem & "') "
+        query = " DELETE FROM expenses WHERE (Apartment_Id='" & ComboBox_apartments.SelectedItem & "' and Expenses_type = '" & ComboBox1.SelectedItem & "' and Amount = '" & TextBox_Amount.Text & "' and Date = '" & DateTimePicker1.Value & "') "
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Record Deleted")
             reset()
@@ -100,7 +102,7 @@ Public Class S_expenses3
         Expenses_type = ComboBox1.SelectedItem
         Amount = TextBox_Amount.Text
         date1 = DateTimePicker1.Text
-        query = "update expenses set Apartment_Id ='" & Apartment_id & "', expenses_type ='" & Expenses_type & "', amount='" & Amount & "',date='" & date1 & "' where (Apartment_id='" & tempApartment & "' and Expenses_type = '" & tempExpenses_type & "')"
+        query = "update expenses set Apartment_Id ='" & Apartment_id & "', expenses_type ='" & Expenses_type & "', amount='" & Amount & "',date='" & date1 & "' where (Apartment_id='" & tempApartment & "' and Expenses_type = '" & tempExpenses_type & "' and Amount = '" & tempAmount & "' and Date = '" & tempDate & "')"
         If (grihaDb.executeMySql(query)) Then
             MsgBox("UserInfo successfully edited.")
             reset()
@@ -152,6 +154,8 @@ Public Class S_expenses3
             DateTimePicker1.Text = row.Cells(3).Value
             tempApartment = ComboBox_apartments.SelectedItem 'selected user's username 
             tempExpenses_type = ComboBox1.SelectedItem
+            tempAmount = TextBox_Amount.Text
+            tempDate = DateTimePicker1.Value
         End If
     End Sub
 
