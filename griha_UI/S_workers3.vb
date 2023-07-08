@@ -1,21 +1,25 @@
 ﻿Imports System.Diagnostics.Eventing.Reader
+Imports System.Reflection
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class S_workers3
 
     Dim query As String
     Dim tempDt As DataTable
     Dim tempWorkerID As String
+    Dim tempProfession As String
     Private Function addToDatabase() As Integer
         Dim Worker_Id As String
-        Dim First_Name, Middle_Name, Last_Name, Phone1, Phone2 As String
+        Dim First_Name, Middle_Name, Last_Name, Phone1, Phone2, Profession As String
         Worker_Id = TextBox_workerID.Text
         First_Name = TextBox_firstname.Text
         Middle_Name = TextBox_middlename.Text
         Last_Name = TextBox_lastname.Text
         Phone1 = TextBox_phone1.Text
         Phone2 = TextBox_phone2.Text
+        Profession = Textbox_profession.Text
 
-        query = "Insert into workers(Worker_id, First_Name, Middle_Name, Last_Name, Phone1, Phone2) values('" & Worker_Id & "','" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Phone1 & "' ,'" & Phone2 & "')"
+        query = "Insert into workers(Worker_id, First_Name, Middle_Name, Last_Name, Phone1, Phone2, Profession) values('" & Worker_Id & "','" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Phone1 & "' ,'" & Phone2 & "' ,'" & Profession & "')"
         If (grihaDb.executeMySql(query)) Then
             Return 1
         End If
@@ -30,6 +34,7 @@ Public Class S_workers3
         TextBox_lastname.Text = Nothing
         TextBox_phone1.Text = Nothing
         TextBox_phone2.Text = Nothing
+        Textbox_profession.Text = Nothing
     End Sub
 
     Private Sub populate()
@@ -64,9 +69,6 @@ Public Class S_workers3
     Private Sub Button_back_Click(sender As Object, e As EventArgs) Handles Button_back.Click
         Me.Hide()
         Form_UI.Show()
-    End Sub
-
-    Private Sub Button_Workers_Click(sender As Object, e As EventArgs) Handles Button_Workers.Click
     End Sub
 
     Private Sub Button_notices_Click(sender As Object, e As EventArgs) Handles Button_notices.Click
@@ -104,7 +106,9 @@ Public Class S_workers3
             TextBox_lastname.Text = row.Cells(3).Value.ToString
             TextBox_phone1.Text = row.Cells(4).Value.ToString
             TextBox_phone2.Text = row.Cells(5).Value.ToString
-            tempWorkerID = TextBox_workerID.Text 'selected user's username 
+            Textbox_profession.Text = row.Cells(6).Value.ToString
+            tempWorkerID = TextBox_workerID.Text 'selected worker's workerID
+            tempProfession = Textbox_profession.Text
         End If
 
     End Sub
@@ -119,11 +123,24 @@ Public Class S_workers3
     End Sub
 
     Private Sub Button_Update_Click(sender As Object, e As EventArgs) Handles Button_Update.Click
-        query = " DELETE FROM Workers WHERE worker_id='" & tempWorkerID & "' "
-        grihaDb.executeMySql(query)
-        addToDatabase()
-        MsgBox("Workers Info successfully edited.")
-        reset()
-        populate()
+
+
+        Dim Worker_Id As String
+        Dim First_Name, Middle_Name, Last_Name, Phone1, Phone2, Profession As String
+        Worker_Id = TextBox_workerID.Text
+        First_Name = TextBox_firstname.Text
+        Middle_Name = TextBox_middlename.Text
+        Last_Name = TextBox_lastname.Text
+        Phone1 = TextBox_phone1.Text
+        Phone2 = TextBox_phone2.Text
+        Profession = Textbox_profession.Text
+
+        query = "update workers set Worker_Id ='" & Worker_Id & "', First_Name ='" & First_Name & "', Middle_Name ='" & Middle_Name & "', Last_Name='" & Last_Name & "', Phone1 ='" & Phone1 & "', Phone2='" & Phone2 & "', Profession='" & Profession & "' where (Worker_Id='" & tempWorkerID & "' and Profession = '" & tempProfession & "')"
+        If (grihaDb.executeMySql(query)) Then
+            MsgBox("Worker Info successfully edited.")
+            reset()
+            populate()
+        End If
+
     End Sub
 End Class

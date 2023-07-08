@@ -33,6 +33,8 @@ Partial Class G_residents3
         Label_record_residents = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        DateTimePicker2 = New DateTimePicker()
+        DateTimePicker1 = New DateTimePicker()
         Label_attending_back = New Label()
         Label_leaving_residency = New Label()
         Button_delete = New Button()
@@ -42,12 +44,13 @@ Partial Class G_residents3
         TextBox_description = New TextBox()
         TextBox_residents_username = New TextBox()
         Panel3 = New Panel()
-        DateTimePicker1 = New DateTimePicker()
-        DateTimePicker2 = New DateTimePicker()
+        DGV_residents = New DataGridView()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
+        Panel3.SuspendLayout()
+        CType(DGV_residents, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -179,6 +182,26 @@ Partial Class G_residents3
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 17
         ' 
+        ' DateTimePicker2
+        ' 
+        DateTimePicker2.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DateTimePicker2.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+        DateTimePicker2.Format = DateTimePickerFormat.Custom
+        DateTimePicker2.Location = New Point(11, 245)
+        DateTimePicker2.Name = "DateTimePicker2"
+        DateTimePicker2.Size = New Size(446, 27)
+        DateTimePicker2.TabIndex = 22
+        ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+        DateTimePicker1.Format = DateTimePickerFormat.Custom
+        DateTimePicker1.Location = New Point(11, 166)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(446, 27)
+        DateTimePicker1.TabIndex = 21
+        ' 
         ' Label_attending_back
         ' 
         Label_attending_back.AutoSize = True
@@ -272,30 +295,24 @@ Partial Class G_residents3
         ' 
         ' Panel3
         ' 
+        Panel3.Controls.Add(DGV_residents)
         Panel3.Location = New Point(989, 253)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(905, 768)
         Panel3.TabIndex = 18
         ' 
-        ' DateTimePicker1
+        ' DGV_residents
         ' 
-        DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
-        DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.Location = New Point(11, 166)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(446, 27)
-        DateTimePicker1.TabIndex = 21
-        ' 
-        ' DateTimePicker2
-        ' 
-        DateTimePicker2.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DateTimePicker2.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
-        DateTimePicker2.Format = DateTimePickerFormat.Custom
-        DateTimePicker2.Location = New Point(11, 245)
-        DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New Size(446, 27)
-        DateTimePicker2.TabIndex = 22
+        DGV_residents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DGV_residents.BackgroundColor = SystemColors.ButtonFace
+        DGV_residents.BorderStyle = BorderStyle.None
+        DGV_residents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGV_residents.Location = New Point(36, 62)
+        DGV_residents.Name = "DGV_residents"
+        DGV_residents.RowHeadersWidth = 51
+        DGV_residents.RowTemplate.Height = 29
+        DGV_residents.Size = New Size(839, 545)
+        DGV_residents.TabIndex = 1
         ' 
         ' G_residents3
         ' 
@@ -316,6 +333,8 @@ Partial Class G_residents3
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
+        Panel3.ResumeLayout(False)
+        CType(DGV_residents, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -341,4 +360,5 @@ Partial Class G_residents3
     Friend WithEvents Label_attending_back As Label
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DGV_residents As DataGridView
 End Class

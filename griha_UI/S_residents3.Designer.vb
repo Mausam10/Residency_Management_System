@@ -431,7 +431,7 @@ Partial Class S_residents3
         DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
         DataDVG.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         DataDVG.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataDVG.Location = New Point(39, 44)
+        DataDVG.Location = New Point(36, 62)
         DataDVG.MultiSelect = False
         DataDVG.Name = "DataDVG"
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
@@ -444,7 +444,7 @@ Partial Class S_residents3
         DataDVG.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         DataDVG.RowHeadersWidth = 51
         DataDVG.RowTemplate.Height = 29
-        DataDVG.Size = New Size(854, 545)
+        DataDVG.Size = New Size(839, 545)
         DataDVG.TabIndex = 0
         ' 
         ' S_residents3

@@ -161,7 +161,7 @@ Partial Class Form3_view_Residents
         Label_residents.AutoSize = True
         Label_residents.BackColor = Color.Transparent
         Label_residents.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        Label_residents.Location = New Point(1053, 197)
+        Label_residents.Location = New Point(1116, 197)
         Label_residents.Name = "Label_residents"
         Label_residents.Size = New Size(401, 32)
         Label_residents.TabIndex = 17
@@ -174,13 +174,13 @@ Partial Class Form3_view_Residents
         DataGridResidents.BackgroundColor = SystemColors.ButtonFace
         DataGridResidents.BorderStyle = BorderStyle.None
         DataGridResidents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridResidents.Location = New Point(0, 0)
+        DataGridResidents.Location = New Point(113, 36)
         DataGridResidents.MultiSelect = False
         DataGridResidents.Name = "DataGridResidents"
         DataGridResidents.ReadOnly = True
         DataGridResidents.RowHeadersWidth = 51
         DataGridResidents.RowTemplate.Height = 29
-        DataGridResidents.Size = New Size(905, 419)
+        DataGridResidents.Size = New Size(839, 545)
         DataGridResidents.TabIndex = 18
         ' 
         ' Panel3
@@ -188,7 +188,7 @@ Partial Class Form3_view_Residents
         Panel3.Controls.Add(DataGridResidents)
         Panel3.Location = New Point(802, 253)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(905, 419)
+        Panel3.Size = New Size(1005, 652)
         Panel3.TabIndex = 22
         ' 
         ' Form3_view_Residents

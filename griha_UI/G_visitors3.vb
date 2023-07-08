@@ -3,22 +3,23 @@
 Public Class G_visitors3
     Dim query As String
     Dim tempDt As DataTable
-    Dim temp_first, temp_phone1, temp_purpose As String
+    Dim temp_first, temp_phone1 As String
+    Dim temp_timeEntry As Date
+    Dim temp_timeExit As Date
 
     Private Function addToDatabase() As Integer
 
-        Dim First_Name, Middle_Name, Last_Name, Phone1, Phone2 As String
+        Dim First_Name, Middle_Name, Last_Name, Phone1 As String
         Dim entry_time, exit_time As Date
         Dim Purpose As String
         First_Name = TextBox_firstname.Text
         Middle_Name = TextBox_middlename.Text
         Last_Name = TextBox_lastname.Text
         Phone1 = TextBox_phone1.Text
-        ' Phone2 = TextBox_phone2.Text
         entry_time = DateTimePicker1.Text
         exit_time = DateTimePicker2.Text
         Purpose = TextBox_purpose.Text
-        query = "Insert into Visitors (First_Name,Middle_Name, Last_Name, Phone1, Phone2, Entry_time, Exit_time, Purpose) values('" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Phone1 & "' ,'" & Phone2 & "','" & entry_time & "','" & exit_time & "','" & Purpose & "')"
+        query = "Insert into Visitors (First_Name,Middle_Name, Last_Name, Phone1, Entry_time, Exit_time, Purpose) values('" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Phone1 & "','" & entry_time & "','" & exit_time & "','" & Purpose & "')"
         If (grihaDb.executeMySql(query)) Then
             Return 1 'success
         End If
@@ -43,7 +44,6 @@ Public Class G_visitors3
         TextBox_middlename.Text = Nothing
         TextBox_lastname.Text = Nothing
         TextBox_phone1.Text = Nothing
-        'TextBox_phone2.Text = Nothing
         DateTimePicker1.Text = Date.Now
         DateTimePicker2.Text = Date.Now
         TextBox_purpose.Text = Nothing
@@ -91,9 +91,7 @@ Public Class G_visitors3
 
     Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
 
-        'delete from visitors where (first_name = 'Rajesh' and phone1 = '9825123321' and purpose = 'friends meetup') 
-
-        query = " DELETE FROM visitors WHERE (First_name='" & TextBox_firstname.Text & "' and Phone1='" & TextBox_phone1.Text & "' and purpose='" & TextBox_purpose.Text & "')"
+        query = " DELETE FROM visitors WHERE (First_name='" & TextBox_firstname.Text & "' and Phone1='" & TextBox_phone1.Text & "' and Entry_time='" & DateTimePicker1.Value & "')"
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Record Deleted")
             reset()
@@ -116,25 +114,24 @@ Public Class G_visitors3
 
             temp_first = TextBox_firstname.Text 'selected visitor's username 
             temp_phone1 = TextBox_phone1.Text 'selcted visitor's phone1
-            temp_purpose = TextBox_purpose.Text 'selected visitor's purpose
+            temp_timeEntry = DateTimePicker1.Value 'selected visitor's entry date
         End If
 
     End Sub
 
     Private Sub Button_Update_Click(sender As Object, e As EventArgs) Handles Button_Update.Click
 
-        Dim First_Name, Middle_Name, Last_Name, Phone1, Phone2 As String
+        Dim First_Name, Middle_Name, Last_Name, Phone1 As String
         Dim entry_time, exit_time As Date
         Dim Purpose As String
         First_Name = TextBox_firstname.Text
         Middle_Name = TextBox_middlename.Text
         Last_Name = TextBox_lastname.Text
         Phone1 = TextBox_phone1.Text
-        '  Phone2 = TextBox_phone2.Text
         entry_time = DateTimePicker1.Text
         exit_time = DateTimePicker2.Text
         Purpose = TextBox_purpose.Text
-        query = "update visitors set First_name='" & First_Name & "', Middle_name='" & Middle_Name & "', Last_name='" & Last_Name & "', Phone1='" & Phone1 & "', Phone2='" & Phone2 & "', Entry_time='" & entry_time & "', Exit_time='" & exit_time & "', purpose='" & Purpose & "'  WHERE (First_name='" & temp_first & "' and Phone1='" & temp_phone1 & "' and purpose='" & temp_purpose & "')"
+        query = "update visitors set First_name='" & First_Name & "', Middle_name='" & Middle_Name & "', Last_name='" & Last_Name & "', Phone1='" & Phone1 & "', Entry_time='" & entry_time & "', Exit_time='" & exit_time & "', purpose='" & Purpose & "'  WHERE (First_name='" & temp_first & "' and Phone1='" & temp_phone1 & "' and Entry_time='" & temp_timeEntry & "')"
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Visitor's Info successfully edited.")
             reset()

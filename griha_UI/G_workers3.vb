@@ -26,4 +26,6 @@
         Me.Hide()
         G_notices3.Show()
     End Sub
+
+
 End Class

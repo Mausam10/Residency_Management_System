@@ -70,12 +70,11 @@ Partial Class G_visitors3
         DGV_visitors.BackgroundColor = SystemColors.ButtonFace
         DGV_visitors.BorderStyle = BorderStyle.None
         DGV_visitors.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV_visitors.Dock = DockStyle.Fill
-        DGV_visitors.Location = New Point(0, 0)
+        DGV_visitors.Location = New Point(36, 62)
         DGV_visitors.Name = "DGV_visitors"
         DGV_visitors.RowHeadersWidth = 51
         DGV_visitors.RowTemplate.Height = 29
-        DGV_visitors.Size = New Size(905, 768)
+        DGV_visitors.Size = New Size(839, 545)
         DGV_visitors.TabIndex = 0
         ' 
         ' Label_attending_back

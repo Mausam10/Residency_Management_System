@@ -154,9 +154,6 @@ Partial Class S_events3
         PictureBox2.TabIndex = 0
         PictureBox2.TabStop = False
         ' 
-        ' BackgroundWorker1
-        ' 
-        ' 
         ' Label_events
         ' 
         Label_events.AutoSize = True
@@ -288,12 +285,11 @@ Partial Class S_events3
         DGV_Events.BackgroundColor = SystemColors.ButtonFace
         DGV_Events.BorderStyle = BorderStyle.Fixed3D
         DGV_Events.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV_Events.Dock = DockStyle.Fill
-        DGV_Events.Location = New Point(0, 0)
+        DGV_Events.Location = New Point(36, 62)
         DGV_Events.Name = "DGV_Events"
         DGV_Events.RowHeadersWidth = 51
         DGV_Events.RowTemplate.Height = 29
-        DGV_Events.Size = New Size(905, 768)
+        DGV_Events.Size = New Size(839, 545)
         DGV_Events.TabIndex = 0
         ' 
         ' S_events3

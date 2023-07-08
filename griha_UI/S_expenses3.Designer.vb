@@ -73,11 +73,11 @@ Partial Class S_expenses3
         DGV_Expenses.BackgroundColor = SystemColors.ButtonFace
         DGV_Expenses.BorderStyle = BorderStyle.None
         DGV_Expenses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV_Expenses.Location = New Point(71, 77)
+        DGV_Expenses.Location = New Point(36, 62)
         DGV_Expenses.Name = "DGV_Expenses"
         DGV_Expenses.RowHeadersWidth = 51
         DGV_Expenses.RowTemplate.Height = 29
-        DGV_Expenses.Size = New Size(766, 494)
+        DGV_Expenses.Size = New Size(839, 545)
         DGV_Expenses.TabIndex = 0
         ' 
         ' Panel2

@@ -66,12 +66,11 @@ Partial Class S_notices3
         DGV_Notices.BackgroundColor = SystemColors.ButtonFace
         DGV_Notices.BorderStyle = BorderStyle.None
         DGV_Notices.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV_Notices.Dock = DockStyle.Fill
-        DGV_Notices.Location = New Point(0, 0)
+        DGV_Notices.Location = New Point(36, 62)
         DGV_Notices.Name = "DGV_Notices"
         DGV_Notices.RowHeadersWidth = 51
         DGV_Notices.RowTemplate.Height = 29
-        DGV_Notices.Size = New Size(905, 768)
+        DGV_Notices.Size = New Size(839, 545)
         DGV_Notices.TabIndex = 0
         ' 
         ' Panel1
