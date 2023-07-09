@@ -163,7 +163,7 @@ Partial Class Form3_property
         PictureBox1.BackgroundImageLayout = ImageLayout.None
         PictureBox1.BorderStyle = BorderStyle.Fixed3D
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(524, 2)
+        PictureBox1.Location = New Point(504, -1)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(390, 228)
         PictureBox1.TabIndex = 16

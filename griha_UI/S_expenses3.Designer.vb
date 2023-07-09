@@ -67,6 +67,7 @@ Partial Class S_expenses3
         ' 
         ' DGV_Expenses
         ' 
+        DGV_Expenses.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV_Expenses.BackgroundColor = SystemColors.ButtonFace
         DGV_Expenses.BorderStyle = BorderStyle.Fixed3D
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
@@ -153,7 +154,7 @@ Partial Class S_expenses3
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(378, 27)
         DateTimePicker1.TabIndex = 19
-        DateTimePicker1.Value = New Date(2023, 7, 8, 10, 53, 0, 0)
+        DateTimePicker1.Value = New DateTime(2023, 7, 8, 10, 53, 0, 0)
         ' 
         ' ComboBox1
         ' 

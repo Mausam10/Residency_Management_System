@@ -240,6 +240,7 @@ Partial Class G_residents3
         ' 
         ' DGV_residents
         ' 
+        DGV_residents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV_residents.BackgroundColor = SystemColors.ButtonFace
         DGV_residents.BorderStyle = BorderStyle.Fixed3D
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter

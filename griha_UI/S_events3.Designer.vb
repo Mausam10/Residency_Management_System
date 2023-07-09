@@ -23,8 +23,8 @@ Partial Class S_events3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(S_events3))
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         Button_back = New Button()
         Button_notices = New Button()
@@ -316,28 +316,29 @@ Partial Class S_events3
         ' 
         ' DGV_Events
         ' 
+        DGV_Events.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV_Events.BackgroundColor = SystemColors.ButtonFace
         DGV_Events.BorderStyle = BorderStyle.Fixed3D
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = SystemColors.Control
-        DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        DataGridViewCellStyle3.ForeColor = Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = Color.AliceBlue
-        DataGridViewCellStyle3.SelectionForeColor = Color.Black
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
-        DGV_Events.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
+        DataGridViewCellStyle1.SelectionForeColor = Color.Black
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        DGV_Events.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         DGV_Events.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DGV_Events.Location = New Point(36, 62)
         DGV_Events.MultiSelect = False
         DGV_Events.Name = "DGV_Events"
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = SystemColors.Control
-        DataGridViewCellStyle4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = Color.Transparent
-        DataGridViewCellStyle4.SelectionForeColor = Color.Black
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        DGV_Events.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = SystemColors.Control
+        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
+        DataGridViewCellStyle2.SelectionForeColor = Color.Black
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DGV_Events.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         DGV_Events.RowHeadersWidth = 51
         DGV_Events.RowTemplate.Height = 29
         DGV_Events.Size = New Size(839, 545)

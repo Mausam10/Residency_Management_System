@@ -42,6 +42,7 @@ Partial Class G_workers3
         Information_label = New Label()
         TextBox_description = New TextBox()
         Panel3 = New Panel()
+        DGV_workers = New DataGridView()
         Panel2 = New Panel()
         CheckBox_worker = New CheckBox()
         Label2 = New Label()
@@ -49,13 +50,12 @@ Partial Class G_workers3
         ComboBox_workerID = New ComboBox()
         DateTimePicker2 = New DateTimePicker()
         DateTimePicker1 = New DateTimePicker()
-        DGV_workers = New DataGridView()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
-        Panel2.SuspendLayout()
         CType(DGV_workers, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
@@ -259,6 +259,36 @@ Partial Class G_workers3
         Panel3.Size = New Size(905, 768)
         Panel3.TabIndex = 28
         ' 
+        ' DGV_workers
+        ' 
+        DGV_workers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DGV_workers.BackgroundColor = SystemColors.ButtonFace
+        DGV_workers.BorderStyle = BorderStyle.Fixed3D
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
+        DataGridViewCellStyle1.SelectionForeColor = Color.Black
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        DGV_workers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DGV_workers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGV_workers.Location = New Point(36, 62)
+        DGV_workers.MultiSelect = False
+        DGV_workers.Name = "DGV_workers"
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = SystemColors.Control
+        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
+        DataGridViewCellStyle2.SelectionForeColor = Color.Black
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DGV_workers.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DGV_workers.RowHeadersWidth = 51
+        DGV_workers.RowTemplate.Height = 29
+        DGV_workers.Size = New Size(839, 545)
+        DGV_workers.TabIndex = 3
+        ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
@@ -338,35 +368,6 @@ Partial Class G_workers3
         DateTimePicker1.Size = New Size(446, 27)
         DateTimePicker1.TabIndex = 26
         ' 
-        ' DGV_workers
-        ' 
-        DGV_workers.BackgroundColor = SystemColors.ButtonFace
-        DGV_workers.BorderStyle = BorderStyle.Fixed3D
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
-        DataGridViewCellStyle1.SelectionForeColor = Color.Black
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        DGV_workers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        DGV_workers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV_workers.Location = New Point(36, 62)
-        DGV_workers.MultiSelect = False
-        DGV_workers.Name = "DGV_workers"
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = SystemColors.Control
-        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
-        DataGridViewCellStyle2.SelectionForeColor = Color.Black
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        DGV_workers.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
-        DGV_workers.RowHeadersWidth = 51
-        DGV_workers.RowTemplate.Height = 29
-        DGV_workers.Size = New Size(839, 545)
-        DGV_workers.TabIndex = 3
-        ' 
         ' G_workers3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -384,9 +385,9 @@ Partial Class G_workers3
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel3.ResumeLayout(False)
+        CType(DGV_workers, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
-        CType(DGV_workers, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
