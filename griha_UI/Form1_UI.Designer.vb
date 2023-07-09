@@ -24,6 +24,7 @@ Partial Class Form_UI
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form_UI))
         login_panel = New Panel()
+        Button1 = New Button()
         Login_Guard = New Button()
         Login_resident = New Button()
         Username_textbox = New TextBox()
@@ -32,7 +33,6 @@ Partial Class Form_UI
         Password_textbox = New TextBox()
         griha_logo = New PictureBox()
         Username_label = New Label()
-        Button1 = New Button()
         login_panel.SuspendLayout()
         CType(griha_logo, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -56,13 +56,22 @@ Partial Class Form_UI
         login_panel.Size = New Size(661, 538)
         login_panel.TabIndex = 0
         ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(611, 279)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(13, 17)
+        Button1.TabIndex = 10
+        Button1.Text = "Button1"
+        Button1.UseVisualStyleBackColor = True
+        ' 
         ' Login_Guard
         ' 
         Login_Guard.BackColor = Color.Teal
         Login_Guard.BackgroundImageLayout = ImageLayout.None
         Login_Guard.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Login_Guard.ForeColor = Color.White
-        Login_Guard.Location = New Point(222, 444)
+        Login_Guard.Location = New Point(222, 467)
         Login_Guard.Name = "Login_Guard"
         Login_Guard.Size = New Size(248, 43)
         Login_Guard.TabIndex = 9
@@ -75,7 +84,7 @@ Partial Class Form_UI
         Login_resident.BackgroundImageLayout = ImageLayout.None
         Login_resident.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Login_resident.ForeColor = Color.White
-        Login_resident.Location = New Point(222, 316)
+        Login_resident.Location = New Point(222, 343)
         Login_resident.Name = "Login_resident"
         Login_resident.Size = New Size(248, 43)
         Login_resident.TabIndex = 7
@@ -99,7 +108,7 @@ Partial Class Form_UI
         Login_secretary.BackgroundImageLayout = ImageLayout.None
         Login_secretary.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Login_secretary.ForeColor = Color.White
-        Login_secretary.Location = New Point(222, 379)
+        Login_secretary.Location = New Point(222, 405)
         Login_secretary.Name = "Login_secretary"
         Login_secretary.Size = New Size(248, 43)
         Login_secretary.TabIndex = 5
@@ -150,15 +159,6 @@ Partial Class Form_UI
         Username_label.Size = New Size(152, 32)
         Username_label.TabIndex = 0
         Username_label.Text = "Username"
-        ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(611, 279)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(13, 17)
-        Button1.TabIndex = 10
-        Button1.Text = "Button1"
-        Button1.UseVisualStyleBackColor = True
         ' 
         ' Form_UI
         ' 

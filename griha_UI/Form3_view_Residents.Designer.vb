@@ -174,13 +174,13 @@ Partial Class Form3_view_Residents
         DataGridResidents.BackgroundColor = SystemColors.ButtonFace
         DataGridResidents.BorderStyle = BorderStyle.None
         DataGridResidents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridResidents.Location = New Point(113, 36)
+        DataGridResidents.Location = New Point(0, 0)
         DataGridResidents.MultiSelect = False
         DataGridResidents.Name = "DataGridResidents"
         DataGridResidents.ReadOnly = True
         DataGridResidents.RowHeadersWidth = 51
         DataGridResidents.RowTemplate.Height = 29
-        DataGridResidents.Size = New Size(839, 545)
+        DataGridResidents.Size = New Size(1005, 652)
         DataGridResidents.TabIndex = 18
         ' 
         ' Panel3
