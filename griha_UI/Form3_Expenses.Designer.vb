@@ -182,7 +182,8 @@ Partial Class Form3_Expenses
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.LightCyan
+        Panel2.BackColor = Color.Transparent
+        Panel2.BorderStyle = BorderStyle.Fixed3D
         Panel2.Controls.Add(Label_date)
         Panel2.Controls.Add(Label14)
         Panel2.Controls.Add(Label_amount)
@@ -194,9 +195,9 @@ Partial Class Form3_Expenses
         Panel2.Controls.Add(Label11)
         Panel2.Controls.Add(Label1Label12)
         Panel2.Controls.Add(label10)
-        Panel2.Location = New Point(981, 253)
+        Panel2.Location = New Point(861, 291)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(476, 522)
+        Panel2.Size = New Size(723, 522)
         Panel2.TabIndex = 21
         ' 
         ' Label_date
@@ -204,7 +205,7 @@ Partial Class Form3_Expenses
         Label_date.AutoSize = True
         Label_date.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label_date.ForeColor = Color.Teal
-        Label_date.Location = New Point(246, 331)
+        Label_date.Location = New Point(131, 129)
         Label_date.Name = "Label_date"
         Label_date.Size = New Size(78, 29)
         Label_date.TabIndex = 29
@@ -215,7 +216,7 @@ Partial Class Form3_Expenses
         Label14.AutoSize = True
         Label14.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label14.ForeColor = Color.Teal
-        Label14.Location = New Point(21, 331)
+        Label14.Location = New Point(51, 129)
         Label14.Name = "Label14"
         Label14.Size = New Size(74, 29)
         Label14.TabIndex = 28
@@ -226,7 +227,7 @@ Partial Class Form3_Expenses
         Label_amount.AutoSize = True
         Label_amount.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label_amount.ForeColor = Color.Teal
-        Label_amount.Location = New Point(246, 243)
+        Label_amount.Location = New Point(307, 370)
         Label_amount.Name = "Label_amount"
         Label_amount.Size = New Size(78, 29)
         Label_amount.TabIndex = 27
@@ -237,7 +238,7 @@ Partial Class Form3_Expenses
         Label13.AutoSize = True
         Label13.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label13.ForeColor = Color.Teal
-        Label13.Location = New Point(21, 243)
+        Label13.Location = New Point(51, 370)
         Label13.Name = "Label13"
         Label13.Size = New Size(107, 29)
         Label13.TabIndex = 26
@@ -248,7 +249,7 @@ Partial Class Form3_Expenses
         Label_expensesType.AutoSize = True
         Label_expensesType.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label_expensesType.ForeColor = Color.Teal
-        Label_expensesType.Location = New Point(246, 169)
+        Label_expensesType.Location = New Point(307, 251)
         Label_expensesType.Name = "Label_expensesType"
         Label_expensesType.Size = New Size(78, 29)
         Label_expensesType.TabIndex = 25
@@ -259,7 +260,7 @@ Partial Class Form3_Expenses
         Label_apartmentID.AutoSize = True
         Label_apartmentID.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label_apartmentID.ForeColor = Color.Teal
-        Label_apartmentID.Location = New Point(246, 90)
+        Label_apartmentID.Location = New Point(307, 191)
         Label_apartmentID.Name = "Label_apartmentID"
         Label_apartmentID.Size = New Size(78, 29)
         Label_apartmentID.TabIndex = 24
@@ -290,7 +291,7 @@ Partial Class Form3_Expenses
         Label11.AutoSize = True
         Label11.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label11.ForeColor = Color.Teal
-        Label11.Location = New Point(21, 90)
+        Label11.Location = New Point(51, 191)
         Label11.Name = "Label11"
         Label11.Size = New Size(170, 29)
         Label11.TabIndex = 21
@@ -301,7 +302,7 @@ Partial Class Form3_Expenses
         Label1Label12.AutoSize = True
         Label1Label12.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label1Label12.ForeColor = Color.Teal
-        Label1Label12.Location = New Point(21, 169)
+        Label1Label12.Location = New Point(51, 251)
         Label1Label12.Name = "Label1Label12"
         Label1Label12.Size = New Size(200, 29)
         Label1Label12.TabIndex = 20
@@ -310,19 +311,19 @@ Partial Class Form3_Expenses
         ' label10
         ' 
         label10.AutoSize = True
-        label10.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
-        label10.ForeColor = Color.Teal
-        label10.Location = New Point(129, 12)
+        label10.Font = New Font("MV Boli", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        label10.ForeColor = Color.Navy
+        label10.Location = New Point(205, 33)
         label10.Name = "label10"
-        label10.Size = New Size(219, 32)
+        label10.Size = New Size(304, 52)
         label10.TabIndex = 9
         label10.Text = "Your Expenses"
         ' 
         ' PictureBox3
         ' 
-        PictureBox3.BackColor = SystemColors.ButtonHighlight
+        PictureBox3.BackColor = Color.Transparent
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(883, 451)
+        PictureBox3.Location = New Point(752, 511)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(67, 62)
         PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
@@ -331,9 +332,9 @@ Partial Class Form3_Expenses
         ' 
         ' PictureBox4
         ' 
-        PictureBox4.BackColor = SystemColors.ControlDark
+        PictureBox4.BackColor = Color.Transparent
         PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(1486, 451)
+        PictureBox4.Location = New Point(1625, 511)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(67, 62)
         PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
