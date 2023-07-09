@@ -9,7 +9,8 @@ Public Class grihaDb
     Shared cb As ComboBox
     Shared reader As SqlDataReader
     Shared Sub connect()
-        con = New SqlConnection("Data Source=LAPTOP-H5H6CH7L\SQLEXPRESS;Initial Catalog=Griha;Integrated Security=True;TrustServerCertificate=True")
+        Dim connectionString As String = "Data Source=LAPTOP-390QHVCB;Initial Catalog=griha;Integrated Security=True;TrustServerCertificate=True"
+        con = New SqlConnection(connectionString)
     End Sub
 
     Shared Function executeMySql(ByVal sqlQuery As String) As Boolean

@@ -22,9 +22,6 @@
     <Compile Update="Form3_workers.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form4events_notices.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Form_Resident.vb">
       <SubType>Form</SubType>
     </Compile>

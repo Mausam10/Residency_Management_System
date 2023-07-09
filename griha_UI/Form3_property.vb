@@ -12,7 +12,6 @@
     Private Sub Button_Expenses_Click(sender As Object, e As EventArgs) Handles Button_Expenses.Click
         Me.Hide()
         Form3_Expenses.Show()
-
     End Sub
 
     Private Sub Button_Workers_Click(sender As Object, e As EventArgs) Handles Button_Workers.Click
@@ -29,6 +28,10 @@
     Private Sub Button_back_Click(sender As Object, e As EventArgs) Handles Button_back.Click
         Me.Hide()
         Form_UI.Show()
+
+    End Sub
+
+    Private Sub Form3_property_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 

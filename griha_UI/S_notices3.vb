@@ -111,10 +111,11 @@
 
     Private Sub DGV_Notices_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs)
         Dim rowCount As Integer = DGV_Notices.RowCount - 1
+
         If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then
             Dim row As DataGridViewRow = DGV_Notices.Rows(e.RowIndex)
             TextBox_Name.Text = row.Cells(0).Value.ToString
-            DateTimePicker1.Text = row.Cells(1).Value.ToString
+            DateTimePicker1.Value = row.Cells(1).Value
             TextBox_notice.Text = row.Cells(2).Value.ToString
             tempTopic_name = TextBox_Name.Text 'selected user's username 
             tempDate = DateTimePicker1.Value

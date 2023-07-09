@@ -25,13 +25,6 @@ Partial Class G_residents3
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(G_residents3))
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Panel1 = New Panel()
-        Button_back = New Button()
-        Button_notices = New Button()
-        Button_Workers = New Button()
-        Button_Visitors = New Button()
-        button_resident = New Button()
-        PictureBox2 = New PictureBox()
         Label_record_residents = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
@@ -49,101 +42,20 @@ Partial Class G_residents3
         TextBox_residents_username = New TextBox()
         Panel3 = New Panel()
         DGV_residents = New DataGridView()
-        Panel1.SuspendLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        PictureBox2 = New PictureBox()
+        button_resident = New Button()
+        Button_Visitors = New Button()
+        Button_Workers = New Button()
+        Button_notices = New Button()
+        Button_back = New Button()
+        Panel1 = New Panel()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
         CType(DGV_residents, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        Panel1.SuspendLayout()
         SuspendLayout()
-        ' 
-        ' Panel1
-        ' 
-        Panel1.BackColor = SystemColors.MenuText
-        Panel1.Controls.Add(Button_back)
-        Panel1.Controls.Add(Button_notices)
-        Panel1.Controls.Add(Button_Workers)
-        Panel1.Controls.Add(Button_Visitors)
-        Panel1.Controls.Add(button_resident)
-        Panel1.Controls.Add(PictureBox2)
-        Panel1.Location = New Point(1, 0)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(500, 1080)
-        Panel1.TabIndex = 11
-        ' 
-        ' Button_back
-        ' 
-        Button_back.BackColor = Color.Black
-        Button_back.BackgroundImageLayout = ImageLayout.None
-        Button_back.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button_back.ForeColor = Color.White
-        Button_back.Location = New Point(121, 771)
-        Button_back.Name = "Button_back"
-        Button_back.Size = New Size(248, 43)
-        Button_back.TabIndex = 14
-        Button_back.Text = "Back to Login"
-        Button_back.UseVisualStyleBackColor = False
-        ' 
-        ' Button_notices
-        ' 
-        Button_notices.BackColor = Color.Black
-        Button_notices.BackgroundImageLayout = ImageLayout.None
-        Button_notices.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button_notices.ForeColor = Color.White
-        Button_notices.Location = New Point(121, 648)
-        Button_notices.Name = "Button_notices"
-        Button_notices.Size = New Size(248, 43)
-        Button_notices.TabIndex = 12
-        Button_notices.Text = "Notices"
-        Button_notices.UseVisualStyleBackColor = False
-        ' 
-        ' Button_Workers
-        ' 
-        Button_Workers.BackColor = Color.Black
-        Button_Workers.BackgroundImageLayout = ImageLayout.None
-        Button_Workers.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button_Workers.ForeColor = Color.White
-        Button_Workers.Location = New Point(121, 521)
-        Button_Workers.Name = "Button_Workers"
-        Button_Workers.Size = New Size(248, 43)
-        Button_Workers.TabIndex = 11
-        Button_Workers.Text = "Workers"
-        Button_Workers.UseVisualStyleBackColor = False
-        ' 
-        ' Button_Visitors
-        ' 
-        Button_Visitors.BackColor = Color.Black
-        Button_Visitors.BackgroundImageLayout = ImageLayout.None
-        Button_Visitors.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button_Visitors.ForeColor = Color.White
-        Button_Visitors.Location = New Point(121, 403)
-        Button_Visitors.Name = "Button_Visitors"
-        Button_Visitors.Size = New Size(248, 43)
-        Button_Visitors.TabIndex = 9
-        Button_Visitors.Text = "Visitors"
-        Button_Visitors.UseVisualStyleBackColor = False
-        ' 
-        ' button_resident
-        ' 
-        button_resident.BackColor = Color.Black
-        button_resident.BackgroundImageLayout = ImageLayout.None
-        button_resident.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        button_resident.ForeColor = Color.White
-        button_resident.Location = New Point(121, 289)
-        button_resident.Name = "button_resident"
-        button_resident.Size = New Size(248, 43)
-        button_resident.TabIndex = 8
-        button_resident.Text = "Residents"
-        button_resident.UseVisualStyleBackColor = False
-        ' 
-        ' PictureBox2
-        ' 
-        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(-10, 3)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(420, 225)
-        PictureBox2.TabIndex = 0
-        PictureBox2.TabStop = False
         ' 
         ' Label_record_residents
         ' 
@@ -355,6 +267,94 @@ Partial Class G_residents3
         DGV_residents.Size = New Size(839, 545)
         DGV_residents.TabIndex = 2
         ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
+        PictureBox2.Location = New Point(-10, 3)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(420, 225)
+        PictureBox2.TabIndex = 0
+        PictureBox2.TabStop = False
+        ' 
+        ' button_resident
+        ' 
+        button_resident.BackColor = Color.Black
+        button_resident.BackgroundImageLayout = ImageLayout.None
+        button_resident.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        button_resident.ForeColor = Color.White
+        button_resident.Location = New Point(121, 289)
+        button_resident.Name = "button_resident"
+        button_resident.Size = New Size(248, 43)
+        button_resident.TabIndex = 8
+        button_resident.Text = "Residents"
+        button_resident.UseVisualStyleBackColor = False
+        ' 
+        ' Button_Visitors
+        ' 
+        Button_Visitors.BackColor = Color.Black
+        Button_Visitors.BackgroundImageLayout = ImageLayout.None
+        Button_Visitors.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button_Visitors.ForeColor = Color.White
+        Button_Visitors.Location = New Point(121, 403)
+        Button_Visitors.Name = "Button_Visitors"
+        Button_Visitors.Size = New Size(248, 43)
+        Button_Visitors.TabIndex = 9
+        Button_Visitors.Text = "Visitors"
+        Button_Visitors.UseVisualStyleBackColor = False
+        ' 
+        ' Button_Workers
+        ' 
+        Button_Workers.BackColor = Color.Black
+        Button_Workers.BackgroundImageLayout = ImageLayout.None
+        Button_Workers.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button_Workers.ForeColor = Color.White
+        Button_Workers.Location = New Point(121, 521)
+        Button_Workers.Name = "Button_Workers"
+        Button_Workers.Size = New Size(248, 43)
+        Button_Workers.TabIndex = 11
+        Button_Workers.Text = "Workers"
+        Button_Workers.UseVisualStyleBackColor = False
+        ' 
+        ' Button_notices
+        ' 
+        Button_notices.BackColor = Color.Black
+        Button_notices.BackgroundImageLayout = ImageLayout.None
+        Button_notices.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button_notices.ForeColor = Color.White
+        Button_notices.Location = New Point(121, 648)
+        Button_notices.Name = "Button_notices"
+        Button_notices.Size = New Size(248, 43)
+        Button_notices.TabIndex = 12
+        Button_notices.Text = "Notices"
+        Button_notices.UseVisualStyleBackColor = False
+        ' 
+        ' Button_back
+        ' 
+        Button_back.BackColor = Color.Black
+        Button_back.BackgroundImageLayout = ImageLayout.None
+        Button_back.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button_back.ForeColor = Color.White
+        Button_back.Location = New Point(121, 771)
+        Button_back.Name = "Button_back"
+        Button_back.Size = New Size(248, 43)
+        Button_back.TabIndex = 14
+        Button_back.Text = "Back to Login"
+        Button_back.UseVisualStyleBackColor = False
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = SystemColors.MenuText
+        Panel1.Controls.Add(Button_back)
+        Panel1.Controls.Add(Button_notices)
+        Panel1.Controls.Add(Button_Workers)
+        Panel1.Controls.Add(Button_Visitors)
+        Panel1.Controls.Add(button_resident)
+        Panel1.Controls.Add(PictureBox2)
+        Panel1.Location = New Point(1, 0)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(500, 1080)
+        Panel1.TabIndex = 11
+        ' 
         ' G_residents3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -369,24 +369,16 @@ Partial Class G_residents3
         DoubleBuffered = True
         Name = "G_residents3"
         Text = "G_residents3"
-        Panel1.ResumeLayout(False)
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
         CType(DGV_residents, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        Panel1.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button_back As Button
-    Friend WithEvents Button_notices As Button
-    Friend WithEvents Button_Workers As Button
-    Friend WithEvents Button_Visitors As Button
-    Friend WithEvents button_resident As Button
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label_record_residents As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
@@ -404,4 +396,11 @@ Partial Class G_residents3
     Friend WithEvents Label2 As Label
     Friend WithEvents CheckBox_resident As CheckBox
     Friend WithEvents DGV_residents As DataGridView
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents button_resident As Button
+    Friend WithEvents Button_Visitors As Button
+    Friend WithEvents Button_Workers As Button
+    Friend WithEvents Button_notices As Button
+    Friend WithEvents Button_back As Button
+    Friend WithEvents Panel1 As Panel
 End Class

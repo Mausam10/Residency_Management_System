@@ -20,26 +20,32 @@ Public Class Form_UI
     End Function
 
     Public Function authenticationCheck(ByVal username As String, ByVal password As String, ByVal user As String) As Integer
-        If (user = "Residents") Then
-            query = "select Username, Apartment_id from " & user & " Where Username = '" & username & "'and Password = '" & password & "' "
-        Else
-            query = "select * from " & user & " Where Username = '" & username & "'and Password = '" & password & "' "
-        End If
-        'query = "select * from " & user & " Where Username = '" & username & "'and Password = '" & password & "' "
-        tempdt = grihaDb.generateTable(query)
-        Dim a As Integer
-        a = tempdt.Rows.Count
-        If a = 0 Then
-            Return -1 'username/password not matched or no user exists
-        End If
+        Try
+            If (user = "Residents") Then
+                query = "select Username, Apartment_id from " & user & " Where (Username = '" & username & "' and Password = '" & password & "' )"
+            Else
+                query = "select * from " & user & " Where (Username = '" & username & "' and Password = '" & password & "' )"
+            End If
+            'query = "select * from " & user & " Where Username = '" & username & "'and Password = '" & password & "' "
+            tempdt = grihaDb.generateTable(query)
 
-        If (user = "Residents") Then
-            loggedUsername = tempdt.Rows(0).Item(0)
-            loggedUserApartment_id = tempdt.Rows(0).Item(1)
-            'MsgBox(loggedUsername)
-            'MsgBox(loggedUserApartment_id)
-        End If
-        Return 1  'username and password matched
+            If (tempdt Is Nothing) Then
+                Return -1 'username/password not matched or no user exists
+            End If
+
+            If (user = "Residents") Then
+                loggedUsername = tempdt.Rows(0).Item(0)
+                loggedUserApartment_id = tempdt.Rows(0).Item(1)
+                'MsgBox(loggedUsername)
+                'MsgBox(loggedUserApartment_id)
+            End If
+            Return 1  'username and password matched
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return -1
+        End Try
+
+
 
     End Function
 
@@ -49,13 +55,7 @@ Public Class Form_UI
 
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Login_secretary.Click
 

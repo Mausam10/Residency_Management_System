@@ -34,21 +34,21 @@ Partial Class Form3_workers
         Label_workers = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
-        griha_logo = New PictureBox()
-        Label_date = New Label()
+        Label_profession = New Label()
         Label14 = New Label()
-        Label_amount = New Label()
+        griha_logo = New PictureBox()
+        Label_WorkerId = New Label()
+        Label10 = New Label()
+        Label_address = New Label()
         Label13 = New Label()
-        Label_expensesType = New Label()
-        Label_apartmentID = New Label()
+        Label_phone = New Label()
+        Label_name = New Label()
         Label3 = New Label()
         Label2 = New Label()
         Label11 = New Label()
-        Label1Label12 = New Label()
+        Label12 = New Label()
         PictureBox3 = New PictureBox()
         PictureBox4 = New PictureBox()
-        Label1 = New Label()
-        Label4 = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -187,23 +187,45 @@ Partial Class Form3_workers
         ' 
         Panel2.BackColor = Color.Transparent
         Panel2.BorderStyle = BorderStyle.Fixed3D
-        Panel2.Controls.Add(Label1)
-        Panel2.Controls.Add(Label4)
-        Panel2.Controls.Add(griha_logo)
-        Panel2.Controls.Add(Label_date)
+        Panel2.Controls.Add(Label_profession)
         Panel2.Controls.Add(Label14)
-        Panel2.Controls.Add(Label_amount)
+        Panel2.Controls.Add(griha_logo)
+        Panel2.Controls.Add(Label_WorkerId)
+        Panel2.Controls.Add(Label10)
+        Panel2.Controls.Add(Label_address)
         Panel2.Controls.Add(Label13)
-        Panel2.Controls.Add(Label_expensesType)
-        Panel2.Controls.Add(Label_apartmentID)
+        Panel2.Controls.Add(Label_phone)
+        Panel2.Controls.Add(Label_name)
         Panel2.Controls.Add(Label3)
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(Label11)
-        Panel2.Controls.Add(Label1Label12)
+        Panel2.Controls.Add(Label12)
         Panel2.Location = New Point(861, 291)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(723, 522)
         Panel2.TabIndex = 22
+        ' 
+        ' Label_profession
+        ' 
+        Label_profession.AutoSize = True
+        Label_profession.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_profession.ForeColor = Color.Black
+        Label_profession.Location = New Point(325, 447)
+        Label_profession.Name = "Label_profession"
+        Label_profession.Size = New Size(78, 29)
+        Label_profession.TabIndex = 32
+        Label_profession.Text = "NULL"
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label14.ForeColor = Color.Black
+        Label14.Location = New Point(69, 447)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(145, 29)
+        Label14.TabIndex = 31
+        Label14.Text = "Profession:"
         ' 
         ' griha_logo
         ' 
@@ -216,38 +238,38 @@ Partial Class Form3_workers
         griha_logo.TabIndex = 30
         griha_logo.TabStop = False
         ' 
-        ' Label_date
+        ' Label_WorkerId
         ' 
-        Label_date.AutoSize = True
-        Label_date.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_date.ForeColor = Color.Black
-        Label_date.Location = New Point(325, 224)
-        Label_date.Name = "Label_date"
-        Label_date.Size = New Size(78, 29)
-        Label_date.TabIndex = 29
-        Label_date.Text = "NULL"
+        Label_WorkerId.AutoSize = True
+        Label_WorkerId.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_WorkerId.ForeColor = Color.Black
+        Label_WorkerId.Location = New Point(325, 224)
+        Label_WorkerId.Name = "Label_WorkerId"
+        Label_WorkerId.Size = New Size(78, 29)
+        Label_WorkerId.TabIndex = 29
+        Label_WorkerId.Text = "NULL"
         ' 
-        ' Label14
+        ' Label10
         ' 
-        Label14.AutoSize = True
-        Label14.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label14.ForeColor = Color.Black
-        Label14.Location = New Point(69, 225)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(136, 29)
-        Label14.TabIndex = 28
-        Label14.Text = "Worker ID:"
+        Label10.AutoSize = True
+        Label10.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label10.ForeColor = Color.Black
+        Label10.Location = New Point(69, 225)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(136, 29)
+        Label10.TabIndex = 28
+        Label10.Text = "Worker ID:"
         ' 
-        ' Label_amount
+        ' Label_address
         ' 
-        Label_amount.AutoSize = True
-        Label_amount.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_amount.ForeColor = Color.Black
-        Label_amount.Location = New Point(325, 396)
-        Label_amount.Name = "Label_amount"
-        Label_amount.Size = New Size(78, 29)
-        Label_amount.TabIndex = 27
-        Label_amount.Text = "NULL"
+        Label_address.AutoSize = True
+        Label_address.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_address.ForeColor = Color.Black
+        Label_address.Location = New Point(325, 396)
+        Label_address.Name = "Label_address"
+        Label_address.Size = New Size(78, 29)
+        Label_address.TabIndex = 27
+        Label_address.Text = "NULL"
         ' 
         ' Label13
         ' 
@@ -260,27 +282,27 @@ Partial Class Form3_workers
         Label13.TabIndex = 26
         Label13.Text = "Address:"
         ' 
-        ' Label_expensesType
+        ' Label_phone
         ' 
-        Label_expensesType.AutoSize = True
-        Label_expensesType.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_expensesType.ForeColor = Color.Black
-        Label_expensesType.Location = New Point(325, 341)
-        Label_expensesType.Name = "Label_expensesType"
-        Label_expensesType.Size = New Size(78, 29)
-        Label_expensesType.TabIndex = 25
-        Label_expensesType.Text = "NULL"
+        Label_phone.AutoSize = True
+        Label_phone.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_phone.ForeColor = Color.Black
+        Label_phone.Location = New Point(325, 341)
+        Label_phone.Name = "Label_phone"
+        Label_phone.Size = New Size(78, 29)
+        Label_phone.TabIndex = 25
+        Label_phone.Text = "NULL"
         ' 
-        ' Label_apartmentID
+        ' Label_name
         ' 
-        Label_apartmentID.AutoSize = True
-        Label_apartmentID.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_apartmentID.ForeColor = Color.Black
-        Label_apartmentID.Location = New Point(325, 286)
-        Label_apartmentID.Name = "Label_apartmentID"
-        Label_apartmentID.Size = New Size(78, 29)
-        Label_apartmentID.TabIndex = 24
-        Label_apartmentID.Text = "NULL"
+        Label_name.AutoSize = True
+        Label_name.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_name.ForeColor = Color.Black
+        Label_name.Location = New Point(325, 286)
+        Label_name.Name = "Label_name"
+        Label_name.Size = New Size(78, 29)
+        Label_name.TabIndex = 24
+        Label_name.Text = "NULL"
         ' 
         ' Label3
         ' 
@@ -313,16 +335,16 @@ Partial Class Form3_workers
         Label11.TabIndex = 21
         Label11.Text = "Name:"
         ' 
-        ' Label1Label12
+        ' Label12
         ' 
-        Label1Label12.AutoSize = True
-        Label1Label12.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1Label12.ForeColor = Color.Black
-        Label1Label12.Location = New Point(69, 341)
-        Label1Label12.Name = "Label1Label12"
-        Label1Label12.Size = New Size(136, 29)
-        Label1Label12.TabIndex = 20
-        Label1Label12.Text = "Phone No:"
+        Label12.AutoSize = True
+        Label12.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label12.ForeColor = Color.Black
+        Label12.Location = New Point(69, 341)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(136, 29)
+        Label12.TabIndex = 20
+        Label12.Text = "Phone No:"
         ' 
         ' PictureBox3
         ' 
@@ -345,28 +367,6 @@ Partial Class Form3_workers
         PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox4.TabIndex = 24
         PictureBox4.TabStop = False
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.ForeColor = Color.Black
-        Label1.Location = New Point(325, 447)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(78, 29)
-        Label1.TabIndex = 32
-        Label1.Text = "NULL"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label4.ForeColor = Color.Black
-        Label4.Location = New Point(69, 447)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(145, 29)
-        Label4.TabIndex = 31
-        Label4.Text = "Profession:"
         ' 
         ' Form3_workers
         ' 
@@ -407,18 +407,18 @@ Partial Class Form3_workers
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents griha_logo As PictureBox
-    Friend WithEvents Label_date As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label_amount As Label
+    Friend WithEvents Label_WorkerId As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label_address As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents Label_expensesType As Label
-    Friend WithEvents Label_apartmentID As Label
+    Friend WithEvents Label_phone As Label
+    Friend WithEvents Label_name As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents Label1Label12 As Label
+    Friend WithEvents Label12 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents Label_profession As Label
+    Friend WithEvents Label14 As Label
 End Class

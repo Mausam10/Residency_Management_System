@@ -34,35 +34,25 @@ Partial Class Form3_property
         PictureBox1 = New PictureBox()
         Label_property = New Label()
         Panel2 = New Panel()
+        Label_description = New Label()
+        Label9 = New Label()
+        Label10 = New Label()
+        Label7 = New Label()
+        Label8 = New Label()
+        Label5 = New Label()
+        Label6 = New Label()
+        Label1 = New Label()
+        Label4 = New Label()
         griha_logo = New PictureBox()
         Label_date = New Label()
         Label14 = New Label()
         Label3 = New Label()
         Label2 = New Label()
-        Panel3 = New Panel()
-        Button1 = New Button()
-        Button2 = New Button()
-        Button3 = New Button()
-        Button4 = New Button()
-        Button5 = New Button()
-        Button6 = New Button()
-        PictureBox5 = New PictureBox()
-        Label1 = New Label()
-        Label4 = New Label()
-        Label5 = New Label()
-        Label6 = New Label()
-        Label7 = New Label()
-        Label8 = New Label()
-        Label9 = New Label()
-        Label10 = New Label()
-        Labeldes = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(griha_logo, ComponentModel.ISupportInitialize).BeginInit()
-        Panel3.SuspendLayout()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -194,7 +184,7 @@ Partial Class Form3_property
         ' 
         Panel2.BackColor = Color.Transparent
         Panel2.BorderStyle = BorderStyle.Fixed3D
-        Panel2.Controls.Add(Labeldes)
+        Panel2.Controls.Add(Label_description)
         Panel2.Controls.Add(Label9)
         Panel2.Controls.Add(Label10)
         Panel2.Controls.Add(Label7)
@@ -212,6 +202,103 @@ Partial Class Form3_property
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(1008, 687)
         Panel2.TabIndex = 32
+        ' 
+        ' Label_description
+        ' 
+        Label_description.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_description.ForeColor = Color.Black
+        Label_description.Location = New Point(56, 488)
+        Label_description.Name = "Label_description"
+        Label_description.Size = New Size(923, 186)
+        Label_description.TabIndex = 39
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label9.ForeColor = Color.Black
+        Label9.Location = New Point(335, 271)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(78, 29)
+        Label9.TabIndex = 38
+        Label9.Text = "NULL"
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label10.ForeColor = Color.Black
+        Label10.Location = New Point(56, 271)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(74, 29)
+        Label10.TabIndex = 37
+        Label10.Text = "Area:"
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label7.ForeColor = Color.Black
+        Label7.Location = New Point(335, 327)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(78, 29)
+        Label7.TabIndex = 36
+        Label7.Text = "NULL"
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label8.ForeColor = Color.Black
+        Label8.Location = New Point(56, 327)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(82, 29)
+        Label8.TabIndex = 35
+        Label8.Text = "Floor:"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label5.ForeColor = Color.Black
+        Label5.Location = New Point(335, 381)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(78, 29)
+        Label5.TabIndex = 34
+        Label5.Text = "NULL"
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label6.ForeColor = Color.Black
+        Label6.Location = New Point(56, 381)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(72, 29)
+        Label6.TabIndex = 33
+        Label6.Text = "BHK:"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.ForeColor = Color.Black
+        Label1.Location = New Point(335, 437)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(78, 29)
+        Label1.TabIndex = 32
+        Label1.Text = "NULL"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.ForeColor = Color.Black
+        Label4.Location = New Point(56, 437)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(139, 29)
+        Label4.TabIndex = 31
+        Label4.Text = "Owned By:"
         ' 
         ' griha_logo
         ' 
@@ -266,205 +353,6 @@ Partial Class Form3_property
         Label2.Size = New Size(0, 29)
         Label2.TabIndex = 22
         ' 
-        ' Panel3
-        ' 
-        Panel3.BackColor = SystemColors.MenuText
-        Panel3.Controls.Add(Button1)
-        Panel3.Controls.Add(Button2)
-        Panel3.Controls.Add(Button3)
-        Panel3.Controls.Add(Button4)
-        Panel3.Controls.Add(Button5)
-        Panel3.Controls.Add(Button6)
-        Panel3.Controls.Add(PictureBox5)
-        Panel3.Location = New Point(22, -24)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(500, 1080)
-        Panel3.TabIndex = 31
-        ' 
-        ' Button1
-        ' 
-        Button1.BackColor = Color.Black
-        Button1.BackgroundImageLayout = ImageLayout.None
-        Button1.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button1.ForeColor = Color.White
-        Button1.Location = New Point(102, 883)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(248, 43)
-        Button1.TabIndex = 13
-        Button1.Text = "Back to Login"
-        Button1.UseVisualStyleBackColor = False
-        ' 
-        ' Button2
-        ' 
-        Button2.BackColor = Color.Black
-        Button2.BackgroundImageLayout = ImageLayout.None
-        Button2.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button2.ForeColor = Color.White
-        Button2.Location = New Point(102, 769)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(248, 43)
-        Button2.TabIndex = 12
-        Button2.Text = "Notices"
-        Button2.UseVisualStyleBackColor = False
-        ' 
-        ' Button3
-        ' 
-        Button3.BackColor = Color.Black
-        Button3.BackgroundImageLayout = ImageLayout.None
-        Button3.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button3.ForeColor = Color.White
-        Button3.Location = New Point(102, 655)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(248, 43)
-        Button3.TabIndex = 11
-        Button3.Text = "Workers"
-        Button3.UseVisualStyleBackColor = False
-        ' 
-        ' Button4
-        ' 
-        Button4.BackColor = Color.Black
-        Button4.BackgroundImageLayout = ImageLayout.None
-        Button4.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button4.ForeColor = Color.White
-        Button4.Location = New Point(102, 538)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(248, 43)
-        Button4.TabIndex = 10
-        Button4.Text = "Expenses"
-        Button4.UseVisualStyleBackColor = False
-        ' 
-        ' Button5
-        ' 
-        Button5.BackColor = Color.Black
-        Button5.BackgroundImageLayout = ImageLayout.None
-        Button5.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button5.ForeColor = Color.White
-        Button5.Location = New Point(102, 421)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(248, 43)
-        Button5.TabIndex = 9
-        Button5.Text = "Property"
-        Button5.UseVisualStyleBackColor = False
-        ' 
-        ' Button6
-        ' 
-        Button6.BackColor = Color.Black
-        Button6.BackgroundImageLayout = ImageLayout.None
-        Button6.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button6.ForeColor = Color.White
-        Button6.Location = New Point(102, 303)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(248, 43)
-        Button6.TabIndex = 8
-        Button6.Text = "Residents"
-        Button6.UseVisualStyleBackColor = False
-        ' 
-        ' PictureBox5
-        ' 
-        PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
-        PictureBox5.Location = New Point(-8, 2)
-        PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(420, 225)
-        PictureBox5.TabIndex = 0
-        PictureBox5.TabStop = False
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.ForeColor = Color.Black
-        Label1.Location = New Point(335, 437)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(78, 29)
-        Label1.TabIndex = 32
-        Label1.Text = "NULL"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label4.ForeColor = Color.Black
-        Label4.Location = New Point(56, 437)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(139, 29)
-        Label4.TabIndex = 31
-        Label4.Text = "Owned By:"
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label5.ForeColor = Color.Black
-        Label5.Location = New Point(335, 381)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(78, 29)
-        Label5.TabIndex = 34
-        Label5.Text = "NULL"
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label6.ForeColor = Color.Black
-        Label6.Location = New Point(56, 381)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(72, 29)
-        Label6.TabIndex = 33
-        Label6.Text = "BHK:"
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label7.ForeColor = Color.Black
-        Label7.Location = New Point(335, 327)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(78, 29)
-        Label7.TabIndex = 36
-        Label7.Text = "NULL"
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label8.ForeColor = Color.Black
-        Label8.Location = New Point(56, 327)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(82, 29)
-        Label8.TabIndex = 35
-        Label8.Text = "Floor:"
-        ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label9.ForeColor = Color.Black
-        Label9.Location = New Point(335, 271)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(78, 29)
-        Label9.TabIndex = 38
-        Label9.Text = "NULL"
-        ' 
-        ' Label10
-        ' 
-        Label10.AutoSize = True
-        Label10.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label10.ForeColor = Color.Black
-        Label10.Location = New Point(56, 271)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(74, 29)
-        Label10.TabIndex = 37
-        Label10.Text = "Area:"
-        ' 
-        ' Labeldes
-        ' 
-        Labeldes.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Labeldes.ForeColor = Color.Black
-        Labeldes.Location = New Point(56, 488)
-        Labeldes.Name = "Labeldes"
-        Labeldes.Size = New Size(923, 186)
-        Labeldes.TabIndex = 39
-        ' 
         ' Form3_property
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -472,7 +360,6 @@ Partial Class Form3_property
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1902, 1033)
         Controls.Add(Panel2)
-        Controls.Add(Panel3)
         Controls.Add(Label_property)
         Controls.Add(Panel1)
         Controls.Add(PictureBox1)
@@ -485,8 +372,6 @@ Partial Class Form3_property
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(griha_logo, ComponentModel.ISupportInitialize).EndInit()
-        Panel3.ResumeLayout(False)
-        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -507,14 +392,6 @@ Partial Class Form3_property
     Friend WithEvents Label14 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label7 As Label
@@ -523,5 +400,5 @@ Partial Class Form3_property
     Friend WithEvents Label6 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Labeldes As Label
+    Friend WithEvents Label_description As Label
 End Class

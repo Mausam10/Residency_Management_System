@@ -26,7 +26,7 @@ Public Class S_events3
         description = TextBox_description.Text
         Event_expenses = TextBox_amount.Text
 
-        query = "Insert into events(Event_name, Date, Organizer, Sponser, Description, Event_expenses) values('" & event_name & "', '" & date1 & "' , " & organizer & "','" & sponser & "' ,'" & description & "', '" & Event_expenses & "')"
+        query = "Insert into events(Event_name, Date, Organizer, Sponser, Description, Event_expenses) values('" & event_name & "', '" & date1 & "' ,'" & organizer & "', '" & sponser & "' ,'" & description & "', '" & Event_expenses & "')"
         If (grihaDb.executeMySql(query)) Then
             Return 1 'success
         End If
