@@ -33,13 +33,9 @@ Partial Class Form3_view_Residents
         PictureBox2 = New PictureBox()
         PictureBox1 = New PictureBox()
         Label_residents = New Label()
-        DataGridResidents = New DataGridView()
-        Panel3 = New Panel()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(DataGridResidents, ComponentModel.ISupportInitialize).BeginInit()
-        Panel3.SuspendLayout()
         SuspendLayout()
         ' 
         ' Panel1
@@ -167,37 +163,12 @@ Partial Class Form3_view_Residents
         Label_residents.TabIndex = 17
         Label_residents.Text = "Residents of your Residency"
         ' 
-        ' DataGridResidents
-        ' 
-        DataGridResidents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        DataGridResidents.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllHeaders
-        DataGridResidents.BackgroundColor = SystemColors.ButtonFace
-        DataGridResidents.BorderStyle = BorderStyle.None
-        DataGridResidents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridResidents.Location = New Point(0, 0)
-        DataGridResidents.MultiSelect = False
-        DataGridResidents.Name = "DataGridResidents"
-        DataGridResidents.ReadOnly = True
-        DataGridResidents.RowHeadersWidth = 51
-        DataGridResidents.RowTemplate.Height = 29
-        DataGridResidents.Size = New Size(1005, 652)
-        DataGridResidents.TabIndex = 18
-        ' 
-        ' Panel3
-        ' 
-        Panel3.Controls.Add(DataGridResidents)
-        Panel3.Location = New Point(802, 253)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(1005, 652)
-        Panel3.TabIndex = 22
-        ' 
         ' Form3_view_Residents
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1902, 1033)
-        Controls.Add(Panel3)
         Controls.Add(Label_residents)
         Controls.Add(Panel1)
         Controls.Add(PictureBox1)
@@ -207,8 +178,6 @@ Partial Class Form3_view_Residents
         Panel1.ResumeLayout(False)
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        CType(DataGridResidents, ComponentModel.ISupportInitialize).EndInit()
-        Panel3.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -223,6 +192,4 @@ Partial Class Form3_view_Residents
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label_residents As Label
-    Friend WithEvents DataGridResidents As DataGridView
-    Friend WithEvents Panel3 As Panel
 End Class

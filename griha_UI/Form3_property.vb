@@ -32,7 +32,7 @@
 
     End Sub
 
-    Private Sub TextBox_Name_TextChanged(sender As Object, e As EventArgs) Handles TextBox_Name.TextChanged
+    'Private Sub TextBox_Name_TextChanged(sender As Object, e As EventArgs) Handles TextBox_Name.TextChanged
 
-    End Sub
+    'End Sub
 End Class

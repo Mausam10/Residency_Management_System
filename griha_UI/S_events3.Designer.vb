@@ -23,6 +23,8 @@ Partial Class S_events3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(S_events3))
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         Button_back = New Button()
         Button_notices = New Button()
@@ -44,9 +46,9 @@ Partial Class S_events3
         TextBox_description = New TextBox()
         TextBox_Name = New TextBox()
         Panel3 = New Panel()
-        DGV_Events = New DataGridView()
         TextBox1 = New TextBox()
         TextBox2 = New TextBox()
+        DGV_Events = New DataGridView()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -294,19 +296,6 @@ Partial Class S_events3
         Panel3.Size = New Size(905, 768)
         Panel3.TabIndex = 12
         ' 
-        ' DGV_Events
-        ' 
-        DGV_Events.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        DGV_Events.BackgroundColor = SystemColors.ButtonFace
-        DGV_Events.BorderStyle = BorderStyle.Fixed3D
-        DGV_Events.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV_Events.Location = New Point(36, 62)
-        DGV_Events.Name = "DGV_Events"
-        DGV_Events.RowHeadersWidth = 51
-        DGV_Events.RowTemplate.Height = 29
-        DGV_Events.Size = New Size(839, 545)
-        DGV_Events.TabIndex = 0
-        ' 
         ' TextBox1
         ' 
         TextBox1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
@@ -324,6 +313,35 @@ Partial Class S_events3
         TextBox2.PlaceholderText = "Event Sponsers"
         TextBox2.Size = New Size(446, 34)
         TextBox2.TabIndex = 25
+        ' 
+        ' DGV_Events
+        ' 
+        DGV_Events.BackgroundColor = SystemColors.ButtonFace
+        DGV_Events.BorderStyle = BorderStyle.Fixed3D
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
+        DataGridViewCellStyle1.SelectionForeColor = Color.Black
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        DGV_Events.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DGV_Events.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGV_Events.Location = New Point(36, 62)
+        DGV_Events.MultiSelect = False
+        DGV_Events.Name = "DGV_Events"
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = SystemColors.Control
+        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
+        DataGridViewCellStyle2.SelectionForeColor = Color.Black
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DGV_Events.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DGV_Events.RowHeadersWidth = 51
+        DGV_Events.RowTemplate.Height = 29
+        DGV_Events.Size = New Size(839, 545)
+        DGV_Events.TabIndex = 1
         ' 
         ' S_events3
         ' 
@@ -370,8 +388,8 @@ Partial Class S_events3
     Friend WithEvents TextBox_Name As TextBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents DGV_Events As DataGridView
     Friend WithEvents TextBox_organizer As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents DGV_Events As DataGridView
 End Class

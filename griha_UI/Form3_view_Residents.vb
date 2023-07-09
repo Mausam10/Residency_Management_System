@@ -4,11 +4,11 @@
     Private Sub populate()
         query = "SELECT ISNULL(First_Name,'') + ' ' + ISNULL(Middle_Name,'')  + ' ' + ISNULL(Last_Name,'') AS 'Full Name', Phone1, Phone2 , Apartment_id from Residents "
         tempdt = grihaDb.generateTable(query)
-        If (tempDt Is Nothing) Then
+        If (tempdt Is Nothing) Then
             MsgBox("No record")
 
         Else
-            DataGridResidents.DataSource = tempdt
+            ' DataGridResidents.DataSource = tempdt
         End If
 
     End Sub
@@ -53,7 +53,4 @@
         populate()
     End Sub
 
-    Private Sub DataGridResidents_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridResidents.CellContentClick
-
-    End Sub
 End Class

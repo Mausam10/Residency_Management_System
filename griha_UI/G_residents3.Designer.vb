@@ -23,6 +23,8 @@ Partial Class G_residents3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(G_residents3))
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         Button_back = New Button()
         Button_notices = New Button()
@@ -326,16 +328,32 @@ Partial Class G_residents3
         ' 
         ' DGV_residents
         ' 
-        DGV_residents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV_residents.BackgroundColor = SystemColors.ButtonFace
-        DGV_residents.BorderStyle = BorderStyle.None
+        DGV_residents.BorderStyle = BorderStyle.Fixed3D
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
+        DataGridViewCellStyle1.SelectionForeColor = Color.Black
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        DGV_residents.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         DGV_residents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DGV_residents.Location = New Point(36, 62)
+        DGV_residents.MultiSelect = False
         DGV_residents.Name = "DGV_residents"
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = SystemColors.Control
+        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
+        DataGridViewCellStyle2.SelectionForeColor = Color.Black
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DGV_residents.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         DGV_residents.RowHeadersWidth = 51
         DGV_residents.RowTemplate.Height = 29
         DGV_residents.Size = New Size(839, 545)
-        DGV_residents.TabIndex = 1
+        DGV_residents.TabIndex = 2
         ' 
         ' G_residents3
         ' 
@@ -383,7 +401,7 @@ Partial Class G_residents3
     Friend WithEvents Label_attending_back As Label
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents DGV_residents As DataGridView
     Friend WithEvents Label2 As Label
     Friend WithEvents CheckBox_resident As CheckBox
+    Friend WithEvents DGV_residents As DataGridView
 End Class

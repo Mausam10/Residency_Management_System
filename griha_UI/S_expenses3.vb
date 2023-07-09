@@ -142,11 +142,11 @@ Public Class S_expenses3
         reset()
     End Sub
 
-    Private Sub DGV_Expenses_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_Expenses.CellContentClick
+    Private Sub DGV_Expenses_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
     End Sub
 
-    Private Sub DGV_Expenses_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV_Expenses.CellMouseClick
+    Private Sub DGV_Expenses_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs)
 
         Dim rowCount As Integer = DGV_Expenses.RowCount - 1
         If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then
@@ -164,4 +164,7 @@ Public Class S_expenses3
         End If
     End Sub
 
+    Private Sub DGV_Expenses_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_Expenses.CellContentClick
+
+    End Sub
 End Class

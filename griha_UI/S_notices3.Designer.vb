@@ -23,8 +23,9 @@ Partial Class S_notices3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(S_notices3))
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel3 = New Panel()
-        DGV_Notices = New DataGridView()
         Panel1 = New Panel()
         Button_back = New Button()
         Button_notices = New Button()
@@ -44,12 +45,13 @@ Partial Class S_notices3
         Label_notices = New Label()
         PictureBox1 = New PictureBox()
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
+        DGV_Notices = New DataGridView()
         Panel3.SuspendLayout()
-        CType(DGV_Notices, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(DGV_Notices, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel3
@@ -59,19 +61,6 @@ Partial Class S_notices3
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(905, 768)
         Panel3.TabIndex = 17
-        ' 
-        ' DGV_Notices
-        ' 
-        DGV_Notices.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        DGV_Notices.BackgroundColor = SystemColors.ButtonFace
-        DGV_Notices.BorderStyle = BorderStyle.None
-        DGV_Notices.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV_Notices.Location = New Point(36, 62)
-        DGV_Notices.Name = "DGV_Notices"
-        DGV_Notices.RowHeadersWidth = 51
-        DGV_Notices.RowTemplate.Height = 29
-        DGV_Notices.Size = New Size(839, 545)
-        DGV_Notices.TabIndex = 0
         ' 
         ' Panel1
         ' 
@@ -292,6 +281,35 @@ Partial Class S_notices3
         PictureBox1.TabIndex = 14
         PictureBox1.TabStop = False
         ' 
+        ' DGV_Notices
+        ' 
+        DGV_Notices.BackgroundColor = SystemColors.ButtonFace
+        DGV_Notices.BorderStyle = BorderStyle.Fixed3D
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
+        DataGridViewCellStyle1.SelectionForeColor = Color.Black
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        DGV_Notices.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DGV_Notices.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGV_Notices.Location = New Point(36, 62)
+        DGV_Notices.MultiSelect = False
+        DGV_Notices.Name = "DGV_Notices"
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = SystemColors.Control
+        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
+        DataGridViewCellStyle2.SelectionForeColor = Color.Black
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DGV_Notices.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DGV_Notices.RowHeadersWidth = 51
+        DGV_Notices.RowTemplate.Height = 29
+        DGV_Notices.Size = New Size(839, 545)
+        DGV_Notices.TabIndex = 1
+        ' 
         ' S_notices3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -307,12 +325,12 @@ Partial Class S_notices3
         Name = "S_notices3"
         Text = "S_notices3"
         Panel3.ResumeLayout(False)
-        CType(DGV_Notices, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(DGV_Notices, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub

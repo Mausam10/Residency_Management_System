@@ -121,7 +121,7 @@ Public Class S_events3
     End Sub
 
 
-    Private Sub DGV_Events_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV_Events.CellMouseClick
+    Private Sub DGV_Events_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs)
 
         Dim rowCount As Integer = DGV_Events.RowCount - 1
         If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then
@@ -145,5 +145,9 @@ Public Class S_events3
             reset()
             populate()
         End If
+    End Sub
+
+    Private Sub DGV_Events_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_Events.CellContentClick
+
     End Sub
 End Class
