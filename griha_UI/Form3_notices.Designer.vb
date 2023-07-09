@@ -34,11 +34,18 @@ Partial Class Form3_notices
         Label_notices = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        Label_date = New Label()
+        Label14 = New Label()
+        Label13 = New Label()
+        Label3 = New Label()
+        Label2 = New Label()
+        Label11 = New Label()
         PictureBox3 = New PictureBox()
         PictureBox4 = New PictureBox()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -170,28 +177,98 @@ Partial Class Form3_notices
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.LightCyan
-        Panel2.Location = New Point(1001, 253)
+        Panel2.BackColor = Color.Transparent
+        Panel2.BorderStyle = BorderStyle.Fixed3D
+        Panel2.Controls.Add(Label_date)
+        Panel2.Controls.Add(Label14)
+        Panel2.Controls.Add(Label13)
+        Panel2.Controls.Add(Label3)
+        Panel2.Controls.Add(Label2)
+        Panel2.Controls.Add(Label11)
+        Panel2.Location = New Point(733, 303)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(476, 768)
-        Panel2.TabIndex = 21
+        Panel2.Size = New Size(1008, 687)
+        Panel2.TabIndex = 22
+        ' 
+        ' Label_date
+        ' 
+        Label_date.AutoSize = True
+        Label_date.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_date.ForeColor = Color.Teal
+        Label_date.Location = New Point(131, 49)
+        Label_date.Name = "Label_date"
+        Label_date.Size = New Size(78, 29)
+        Label_date.TabIndex = 29
+        Label_date.Text = "NULL"
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label14.ForeColor = Color.Teal
+        Label14.Location = New Point(51, 49)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(74, 29)
+        Label14.TabIndex = 28
+        Label14.Text = "Date:"
+        ' 
+        ' Label13
+        ' 
+        Label13.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label13.ForeColor = Color.Teal
+        Label13.Location = New Point(51, 220)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(897, 434)
+        Label13.TabIndex = 26
+        Label13.Text = "Notice"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.ForeColor = Color.Teal
+        Label3.Location = New Point(187, 90)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(0, 29)
+        Label3.TabIndex = 23
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.ForeColor = Color.Teal
+        Label2.Location = New Point(205, 90)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(0, 29)
+        Label2.TabIndex = 22
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point)
+        Label11.ForeColor = Color.Teal
+        Label11.Location = New Point(387, 120)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(211, 39)
+        Label11.TabIndex = 21
+        Label11.Text = "Topic Name"
         ' 
         ' PictureBox3
         ' 
-        PictureBox3.BackColor = SystemColors.ButtonHighlight
+        PictureBox3.BackColor = Color.Transparent
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(911, 587)
+        PictureBox3.Location = New Point(611, 614)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(67, 62)
         PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox3.TabIndex = 23
+        PictureBox3.TabIndex = 30
         PictureBox3.TabStop = False
         ' 
         ' PictureBox4
         ' 
-        PictureBox4.BackColor = SystemColors.ControlDark
+        PictureBox4.BackColor = Color.Transparent
         PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(1500, 587)
+        PictureBox4.Location = New Point(1793, 614)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(67, 62)
         PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
@@ -216,6 +293,8 @@ Partial Class Form3_notices
         Panel1.ResumeLayout(False)
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
@@ -233,6 +312,12 @@ Partial Class Form3_notices
     Friend WithEvents Label_notices As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label_date As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label11 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
 End Class

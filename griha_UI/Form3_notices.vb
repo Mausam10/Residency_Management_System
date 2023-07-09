@@ -27,4 +27,12 @@
         Me.Hide()
         Form_UI.Show()
     End Sub
+
+    Private Sub Form3_notices_Load(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+
+    End Sub
 End Class
