@@ -42,12 +42,12 @@ Partial Class G_workers3
         Panel3 = New Panel()
         DGV_workers = New DataGridView()
         Panel2 = New Panel()
+        CheckBox_worker = New CheckBox()
         Label2 = New Label()
         Label1 = New Label()
-        ComboBox1 = New ComboBox()
+        ComboBox_workerID = New ComboBox()
         DateTimePicker2 = New DateTimePicker()
         DateTimePicker1 = New DateTimePicker()
-        CheckBox_worker = New CheckBox()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -276,7 +276,7 @@ Partial Class G_workers3
         Panel2.Controls.Add(CheckBox_worker)
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(Label1)
-        Panel2.Controls.Add(ComboBox1)
+        Panel2.Controls.Add(ComboBox_workerID)
         Panel2.Controls.Add(DateTimePicker2)
         Panel2.Controls.Add(DateTimePicker1)
         Panel2.Controls.Add(Label_attending_back)
@@ -291,6 +291,14 @@ Partial Class G_workers3
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 27
         ' 
+        ' CheckBox_worker
+        ' 
+        CheckBox_worker.Location = New Point(223, 193)
+        CheckBox_worker.Name = "CheckBox_worker"
+        CheckBox_worker.Size = New Size(45, 37)
+        CheckBox_worker.TabIndex = 31
+        CheckBox_worker.UseVisualStyleBackColor = True
+        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
@@ -298,9 +306,9 @@ Partial Class G_workers3
         Label2.ForeColor = Color.Teal
         Label2.Location = New Point(13, 198)
         Label2.Name = "Label2"
-        Label2.Size = New Size(204, 25)
+        Label2.Size = New Size(190, 25)
         Label2.TabIndex = 30
-        Label2.Text = "Is The Worker Inside?"
+        Label2.Text = "Did the Worker Left?"
         ' 
         ' Label1
         ' 
@@ -313,18 +321,18 @@ Partial Class G_workers3
         Label1.TabIndex = 29
         Label1.Text = "Worker ID:"
         ' 
-        ' ComboBox1
+        ' ComboBox_workerID
         ' 
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(13, 90)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(446, 28)
-        ComboBox1.TabIndex = 28
+        ComboBox_workerID.FormattingEnabled = True
+        ComboBox_workerID.Location = New Point(13, 90)
+        ComboBox_workerID.Name = "ComboBox_workerID"
+        ComboBox_workerID.Size = New Size(446, 28)
+        ComboBox_workerID.TabIndex = 28
         ' 
         ' DateTimePicker2
         ' 
         DateTimePicker2.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DateTimePicker2.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+        DateTimePicker2.CustomFormat = " "
         DateTimePicker2.Format = DateTimePickerFormat.Custom
         DateTimePicker2.Location = New Point(13, 262)
         DateTimePicker2.Name = "DateTimePicker2"
@@ -340,14 +348,6 @@ Partial Class G_workers3
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(446, 27)
         DateTimePicker1.TabIndex = 26
-        ' 
-        ' CheckBox_worker
-        ' 
-        CheckBox_worker.Location = New Point(223, 193)
-        CheckBox_worker.Name = "CheckBox_worker"
-        CheckBox_worker.Size = New Size(45, 37)
-        CheckBox_worker.TabIndex = 31
-        CheckBox_worker.UseVisualStyleBackColor = True
         ' 
         ' G_workers3
         ' 
@@ -393,7 +393,7 @@ Partial Class G_workers3
     Friend WithEvents Panel2 As Panel
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBox_workerID As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents DGV_workers As DataGridView
     Friend WithEvents Label2 As Label
