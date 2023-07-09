@@ -250,7 +250,7 @@ Partial Class Form3_Expenses
         Label_expensesType.AutoSize = True
         Label_expensesType.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label_expensesType.ForeColor = Color.Black
-        Label_expensesType.Location = New Point(326, 376)
+        Label_expensesType.Location = New Point(326, 370)
         Label_expensesType.Name = "Label_expensesType"
         Label_expensesType.Size = New Size(78, 29)
         Label_expensesType.TabIndex = 25
@@ -292,7 +292,7 @@ Partial Class Form3_Expenses
         Label11.AutoSize = True
         Label11.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label11.ForeColor = Color.Black
-        Label11.Location = New Point(70, 316)
+        Label11.Location = New Point(70, 315)
         Label11.Name = "Label11"
         Label11.Size = New Size(170, 29)
         Label11.TabIndex = 21
@@ -303,7 +303,7 @@ Partial Class Form3_Expenses
         Label1Label12.AutoSize = True
         Label1Label12.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label1Label12.ForeColor = Color.Black
-        Label1Label12.Location = New Point(70, 376)
+        Label1Label12.Location = New Point(70, 370)
         Label1Label12.Name = "Label1Label12"
         Label1Label12.Size = New Size(200, 29)
         Label1Label12.TabIndex = 20

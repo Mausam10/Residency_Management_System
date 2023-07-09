@@ -34,20 +34,34 @@ Partial Class Form3_property
         PictureBox1 = New PictureBox()
         Label_property = New Label()
         Panel2 = New Panel()
-        TextBox_ID = New TextBox()
-        Button_delete = New Button()
-        Button_Update = New Button()
-        Button_add = New Button()
-        Information_label = New Label()
-        TextBox_description = New TextBox()
-        TextBox_Name = New TextBox()
+        griha_logo = New PictureBox()
+        Label_date = New Label()
+        Label14 = New Label()
+        Label3 = New Label()
+        Label2 = New Label()
         Panel3 = New Panel()
+        Button1 = New Button()
+        Button2 = New Button()
+        Button3 = New Button()
+        Button4 = New Button()
+        Button5 = New Button()
+        Button6 = New Button()
+        PictureBox5 = New PictureBox()
         Label1 = New Label()
+        Label4 = New Label()
+        Label5 = New Label()
+        Label6 = New Label()
+        Label7 = New Label()
+        Label8 = New Label()
+        Label9 = New Label()
+        Label10 = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
+        CType(griha_logo, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -158,7 +172,7 @@ Partial Class Form3_property
         PictureBox1.BackgroundImageLayout = ImageLayout.None
         PictureBox1.BorderStyle = BorderStyle.Fixed3D
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(502, 0)
+        PictureBox1.Location = New Point(524, 2)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(390, 228)
         PictureBox1.TabIndex = 16
@@ -177,117 +191,268 @@ Partial Class Form3_property
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.LightCyan
-        Panel2.Controls.Add(TextBox_ID)
-        Panel2.Controls.Add(Button_delete)
-        Panel2.Controls.Add(Button_Update)
-        Panel2.Controls.Add(Button_add)
-        Panel2.Controls.Add(Information_label)
-        Panel2.Controls.Add(TextBox_description)
-        Panel2.Controls.Add(TextBox_Name)
-        Panel2.Location = New Point(515, 260)
+        Panel2.BackColor = Color.Transparent
+        Panel2.BorderStyle = BorderStyle.Fixed3D
+        Panel2.Controls.Add(Label9)
+        Panel2.Controls.Add(Label10)
+        Panel2.Controls.Add(Label7)
+        Panel2.Controls.Add(Label8)
+        Panel2.Controls.Add(Label5)
+        Panel2.Controls.Add(Label6)
+        Panel2.Controls.Add(Label1)
+        Panel2.Controls.Add(Label4)
+        Panel2.Controls.Add(griha_logo)
+        Panel2.Controls.Add(Label_date)
+        Panel2.Controls.Add(Label14)
+        Panel2.Controls.Add(Label3)
+        Panel2.Controls.Add(Label2)
+        Panel2.Location = New Point(754, 279)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(476, 768)
-        Panel2.TabIndex = 18
+        Panel2.Size = New Size(1008, 687)
+        Panel2.TabIndex = 32
         ' 
-        ' TextBox_ID
+        ' griha_logo
         ' 
-        TextBox_ID.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_ID.Location = New Point(11, 75)
-        TextBox_ID.Name = "TextBox_ID"
-        TextBox_ID.PlaceholderText = "Apartment ID"
-        TextBox_ID.Size = New Size(446, 34)
-        TextBox_ID.TabIndex = 18
+        griha_logo.BorderStyle = BorderStyle.Fixed3D
+        griha_logo.Image = CType(resources.GetObject("griha_logo.Image"), Image)
+        griha_logo.Location = New Point(3, 3)
+        griha_logo.Name = "griha_logo"
+        griha_logo.Size = New Size(345, 158)
+        griha_logo.SizeMode = PictureBoxSizeMode.CenterImage
+        griha_logo.TabIndex = 30
+        griha_logo.TabStop = False
         ' 
-        ' Button_delete
+        ' Label_date
         ' 
-        Button_delete.BackColor = Color.Black
-        Button_delete.BackgroundImageLayout = ImageLayout.None
-        Button_delete.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button_delete.ForeColor = Color.White
-        Button_delete.Location = New Point(253, 552)
-        Button_delete.Name = "Button_delete"
-        Button_delete.Size = New Size(204, 43)
-        Button_delete.TabIndex = 17
-        Button_delete.Text = "DELETE"
-        Button_delete.UseVisualStyleBackColor = False
+        Label_date.AutoSize = True
+        Label_date.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_date.ForeColor = Color.Black
+        Label_date.Location = New Point(335, 219)
+        Label_date.Name = "Label_date"
+        Label_date.Size = New Size(78, 29)
+        Label_date.TabIndex = 29
+        Label_date.Text = "NULL"
         ' 
-        ' Button_Update
+        ' Label14
         ' 
-        Button_Update.BackColor = Color.Black
-        Button_Update.BackgroundImageLayout = ImageLayout.None
-        Button_Update.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button_Update.ForeColor = Color.White
-        Button_Update.Location = New Point(11, 552)
-        Button_Update.Name = "Button_Update"
-        Button_Update.Size = New Size(205, 43)
-        Button_Update.TabIndex = 16
-        Button_Update.Text = "EDIT"
-        Button_Update.UseVisualStyleBackColor = False
+        Label14.AutoSize = True
+        Label14.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label14.ForeColor = Color.Black
+        Label14.Location = New Point(56, 219)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(170, 29)
+        Label14.TabIndex = 28
+        Label14.Text = "Apartment ID:"
         ' 
-        ' Button_add
+        ' Label3
         ' 
-        Button_add.BackColor = Color.Black
-        Button_add.BackgroundImageLayout = ImageLayout.None
-        Button_add.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Button_add.ForeColor = Color.White
-        Button_add.Location = New Point(11, 493)
-        Button_add.Name = "Button_add"
-        Button_add.Size = New Size(446, 43)
-        Button_add.TabIndex = 15
-        Button_add.Text = "ADD PROPERTY"
-        Button_add.UseVisualStyleBackColor = False
+        Label3.AutoSize = True
+        Label3.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.ForeColor = Color.Teal
+        Label3.Location = New Point(187, 90)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(0, 29)
+        Label3.TabIndex = 23
         ' 
-        ' Information_label
+        ' Label2
         ' 
-        Information_label.AutoSize = True
-        Information_label.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
-        Information_label.ForeColor = Color.Teal
-        Information_label.Location = New Point(11, 12)
-        Information_label.Name = "Information_label"
-        Information_label.Size = New Size(201, 32)
-        Information_label.TabIndex = 9
-        Information_label.Text = "Your Property"
-        ' 
-        ' TextBox_description
-        ' 
-        TextBox_description.BackColor = SystemColors.HighlightText
-        TextBox_description.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_description.ForeColor = SystemColors.ControlDarkDark
-        TextBox_description.Location = New Point(11, 198)
-        TextBox_description.Multiline = True
-        TextBox_description.Name = "TextBox_description"
-        TextBox_description.PlaceholderText = "Amenities of Apartment"
-        TextBox_description.Size = New Size(446, 249)
-        TextBox_description.TabIndex = 7
-        ' 
-        ' TextBox_Name
-        ' 
-        TextBox_Name.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_Name.Location = New Point(11, 137)
-        TextBox_Name.Name = "TextBox_Name"
-        TextBox_Name.PlaceholderText = "Owner Name"
-        TextBox_Name.Size = New Size(446, 34)
-        TextBox_Name.TabIndex = 3
+        Label2.AutoSize = True
+        Label2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.ForeColor = Color.Teal
+        Label2.Location = New Point(205, 90)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(0, 29)
+        Label2.TabIndex = 22
         ' 
         ' Panel3
         ' 
-        Panel3.Controls.Add(Label1)
-        Panel3.Location = New Point(997, 260)
+        Panel3.BackColor = SystemColors.MenuText
+        Panel3.Controls.Add(Button1)
+        Panel3.Controls.Add(Button2)
+        Panel3.Controls.Add(Button3)
+        Panel3.Controls.Add(Button4)
+        Panel3.Controls.Add(Button5)
+        Panel3.Controls.Add(Button6)
+        Panel3.Controls.Add(PictureBox5)
+        Panel3.Location = New Point(22, -24)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(907, 768)
-        Panel3.TabIndex = 19
+        Panel3.Size = New Size(500, 1080)
+        Panel3.TabIndex = 31
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Black
+        Button1.BackgroundImageLayout = ImageLayout.None
+        Button1.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(102, 883)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(248, 43)
+        Button1.TabIndex = 13
+        Button1.Text = "Back to Login"
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.Black
+        Button2.BackgroundImageLayout = ImageLayout.None
+        Button2.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button2.ForeColor = Color.White
+        Button2.Location = New Point(102, 769)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(248, 43)
+        Button2.TabIndex = 12
+        Button2.Text = "Notices"
+        Button2.UseVisualStyleBackColor = False
+        ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.Black
+        Button3.BackgroundImageLayout = ImageLayout.None
+        Button3.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button3.ForeColor = Color.White
+        Button3.Location = New Point(102, 655)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(248, 43)
+        Button3.TabIndex = 11
+        Button3.Text = "Workers"
+        Button3.UseVisualStyleBackColor = False
+        ' 
+        ' Button4
+        ' 
+        Button4.BackColor = Color.Black
+        Button4.BackgroundImageLayout = ImageLayout.None
+        Button4.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button4.ForeColor = Color.White
+        Button4.Location = New Point(102, 538)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(248, 43)
+        Button4.TabIndex = 10
+        Button4.Text = "Expenses"
+        Button4.UseVisualStyleBackColor = False
+        ' 
+        ' Button5
+        ' 
+        Button5.BackColor = Color.Black
+        Button5.BackgroundImageLayout = ImageLayout.None
+        Button5.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button5.ForeColor = Color.White
+        Button5.Location = New Point(102, 421)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(248, 43)
+        Button5.TabIndex = 9
+        Button5.Text = "Property"
+        Button5.UseVisualStyleBackColor = False
+        ' 
+        ' Button6
+        ' 
+        Button6.BackColor = Color.Black
+        Button6.BackgroundImageLayout = ImageLayout.None
+        Button6.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button6.ForeColor = Color.White
+        Button6.Location = New Point(102, 303)
+        Button6.Name = "Button6"
+        Button6.Size = New Size(248, 43)
+        Button6.TabIndex = 8
+        Button6.Text = "Residents"
+        Button6.UseVisualStyleBackColor = False
+        ' 
+        ' PictureBox5
+        ' 
+        PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
+        PictureBox5.Location = New Point(-8, 2)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(420, 225)
+        PictureBox5.TabIndex = 0
+        PictureBox5.TabStop = False
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.ForeColor = Color.Teal
-        Label1.Location = New Point(13, 12)
+        Label1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.ForeColor = Color.Black
+        Label1.Location = New Point(335, 437)
         Label1.Name = "Label1"
-        Label1.Size = New Size(372, 32)
-        Label1.TabIndex = 19
-        Label1.Text = "Residency Apartment Info:"
+        Label1.Size = New Size(78, 29)
+        Label1.TabIndex = 32
+        Label1.Text = "NULL"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.ForeColor = Color.Black
+        Label4.Location = New Point(56, 437)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(139, 29)
+        Label4.TabIndex = 31
+        Label4.Text = "Owned By:"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label5.ForeColor = Color.Black
+        Label5.Location = New Point(335, 381)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(78, 29)
+        Label5.TabIndex = 34
+        Label5.Text = "NULL"
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label6.ForeColor = Color.Black
+        Label6.Location = New Point(56, 381)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(222, 29)
+        Label6.TabIndex = 33
+        Label6.Text = "Number of rooms:"
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label7.ForeColor = Color.Black
+        Label7.Location = New Point(335, 327)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(78, 29)
+        Label7.TabIndex = 36
+        Label7.Text = "NULL"
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label8.ForeColor = Color.Black
+        Label8.Location = New Point(56, 327)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(82, 29)
+        Label8.TabIndex = 35
+        Label8.Text = "Floor:"
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label9.ForeColor = Color.Black
+        Label9.Location = New Point(335, 271)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(78, 29)
+        Label9.TabIndex = 38
+        Label9.Text = "NULL"
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label10.ForeColor = Color.Black
+        Label10.Location = New Point(56, 271)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(74, 29)
+        Label10.TabIndex = 37
+        Label10.Text = "Area:"
         ' 
         ' Form3_property
         ' 
@@ -295,8 +460,8 @@ Partial Class Form3_property
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1902, 1033)
-        Controls.Add(Panel3)
         Controls.Add(Panel2)
+        Controls.Add(Panel3)
         Controls.Add(Label_property)
         Controls.Add(Panel1)
         Controls.Add(PictureBox1)
@@ -308,8 +473,9 @@ Partial Class Form3_property
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
+        CType(griha_logo, ComponentModel.ISupportInitialize).EndInit()
         Panel3.ResumeLayout(False)
-        Panel3.PerformLayout()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -325,13 +491,25 @@ Partial Class Form3_property
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label_property As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button_delete As Button
-    Friend WithEvents Button_Update As Button
-    Friend WithEvents Button_add As Button
-    Friend WithEvents Information_label As Label
-    Friend WithEvents TextBox_description As TextBox
-    Friend WithEvents TextBox_Name As TextBox
-    Friend WithEvents TextBox_ID As TextBox
+    Friend WithEvents griha_logo As PictureBox
+    Friend WithEvents Label_date As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label4 As Label
 End Class
