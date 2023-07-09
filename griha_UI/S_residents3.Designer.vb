@@ -57,6 +57,7 @@ Partial Class S_residents3
         TextBox_firstname = New TextBox()
         Panel3 = New Panel()
         DataDVG = New DataGridView()
+        TextBox1 = New TextBox()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -193,6 +194,7 @@ Partial Class S_residents3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(TextBox1)
         Panel2.Controls.Add(Button1)
         Panel2.Controls.Add(ComboBox_apartments)
         Panel2.Controls.Add(Label2)
@@ -222,7 +224,7 @@ Partial Class S_residents3
         Button1.BackgroundImageLayout = ImageLayout.None
         Button1.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(11, 546)
+        Button1.Location = New Point(11, 590)
         Button1.Name = "Button1"
         Button1.Size = New Size(441, 43)
         Button1.TabIndex = 23
@@ -293,7 +295,7 @@ Partial Class S_residents3
         Button_delete.BackgroundImageLayout = ImageLayout.None
         Button_delete.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_delete.ForeColor = Color.White
-        Button_delete.Location = New Point(309, 490)
+        Button_delete.Location = New Point(309, 534)
         Button_delete.Name = "Button_delete"
         Button_delete.Size = New Size(143, 43)
         Button_delete.TabIndex = 17
@@ -306,7 +308,7 @@ Partial Class S_residents3
         Button_Update.BackgroundImageLayout = ImageLayout.None
         Button_Update.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_Update.ForeColor = Color.White
-        Button_Update.Location = New Point(160, 490)
+        Button_Update.Location = New Point(160, 534)
         Button_Update.Name = "Button_Update"
         Button_Update.Size = New Size(143, 43)
         Button_Update.TabIndex = 16
@@ -319,7 +321,7 @@ Partial Class S_residents3
         Button_add.BackgroundImageLayout = ImageLayout.None
         Button_add.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_add.ForeColor = Color.White
-        Button_add.Location = New Point(11, 490)
+        Button_add.Location = New Point(11, 534)
         Button_add.Name = "Button_add"
         Button_add.Size = New Size(143, 43)
         Button_add.TabIndex = 15
@@ -447,6 +449,15 @@ Partial Class S_residents3
         DataDVG.Size = New Size(839, 545)
         DataDVG.TabIndex = 0
         ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox1.Location = New Point(11, 484)
+        TextBox1.Name = "TextBox1"
+        TextBox1.PlaceholderText = "profession"
+        TextBox1.Size = New Size(441, 34)
+        TextBox1.TabIndex = 24
+        ' 
         ' S_residents3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -504,4 +515,5 @@ Partial Class S_residents3
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents ComboBox_apartments As ComboBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox1 As TextBox
 End Class
