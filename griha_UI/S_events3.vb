@@ -8,18 +8,21 @@ Public Class S_events3
     Dim query As String
     Dim tempDt As DataTable
     Dim tempEvent_name As String
+    Dim temp_organizer As String
     Dim tempDate As Date
 
 
     Private Function addToDatabase() As Integer
         Dim event_name As String
         Dim date1 As Date
+        Dim organizer_name As String
         Dim description As String
         event_name = TextBox_Name.Text
         date1 = DateTimePicker1.Text
+        organizer_name = TextBox_organizer.Text
         description = TextBox_description.Text
 
-        query = "Insert into events(Event_name, Date, Description) values('" & event_name & "', '" & date1 & "' ,'" & description & "')"
+        query = "Insert into events(Event_name, Date, Organizer_name, Description) values('" & event_name & "', '" & date1 & "' ,'" & organizer_name & "','" & description & "')"
         If (grihaDb.executeMySql(query)) Then
             Return 1 'success
         End If
@@ -43,6 +46,7 @@ Public Class S_events3
     Private Sub reset()
         TextBox_Name.Text = Nothing
         DateTimePicker1.Text = Nothing
+        TextBox_organizer.Text = Nothing
         TextBox_description.Text = Nothing
     End Sub
 
@@ -100,11 +104,13 @@ Public Class S_events3
 
         Dim event_name As String
         Dim date1 As Date
+        Dim organizer_name As String
         Dim description As String
         event_name = TextBox_Name.Text
         date1 = DateTimePicker1.Text
+        organizer_name = TextBox_organizer.Text
         description = TextBox_description.Text
-        query = "update events set Event_name ='" & event_name & "', Date='" & date1 & "', Description='" & description & "' where (Event_name = '" & tempEvent_name & "' and Date = '" & tempDate & "')"
+        query = "update events set Event_name ='" & event_name & "', Date='" & date1 & "', Organizer_name='" & organizer_name & "',Description='" & description & "' where (Event_name = '" & tempEvent_name & "' and Date = '" & tempDate & "' and Organizer_name = '" & temp_organizer & "' )"
         If (grihaDb.executeMySql(query)) Then
             MsgBox("UserInfo successfully edited.")
             reset()
@@ -122,16 +128,18 @@ Public Class S_events3
             Dim row As DataGridViewRow = DGV_Events.Rows(e.RowIndex)
             TextBox_Name.Text = row.Cells(0).Value.ToString
             DateTimePicker1.Text = row.Cells(1).Value.ToString
-            TextBox_description.Text = row.Cells(2).Value.ToString
+            TextBox_organizer.Text = row.Cells(2).Value.ToString
+            TextBox_description.Text = row.Cells(3).Value.ToString
             tempEvent_name = TextBox_Name.Text 'selected user's username 
             tempDate = DateTimePicker1.Value
+            temp_organizer = TextBox_organizer.Text
         Else
             reset()
         End If
     End Sub
 
     Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
-        query = " DELETE FROM events WHERE (Event_name = '" & TextBox_Name.Text & "' and Date = '" & DateTimePicker1.Value & "') "
+        query = " DELETE FROM events WHERE (Event_name = '" & TextBox_Name.Text & "' and Date = '" & DateTimePicker1.Value & "' and Organizer_name = '" & TextBox_organizer.Text & "' ) "
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Record Deleted")
             reset()
