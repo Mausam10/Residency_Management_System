@@ -42,12 +42,14 @@ Partial Class Form3_notices
         Label11 = New Label()
         PictureBox3 = New PictureBox()
         PictureBox4 = New PictureBox()
+        griha_logo = New PictureBox()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(griha_logo, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -179,6 +181,7 @@ Partial Class Form3_notices
         ' 
         Panel2.BackColor = Color.Transparent
         Panel2.BorderStyle = BorderStyle.Fixed3D
+        Panel2.Controls.Add(griha_logo)
         Panel2.Controls.Add(Label_date)
         Panel2.Controls.Add(Label14)
         Panel2.Controls.Add(Label13)
@@ -194,8 +197,8 @@ Partial Class Form3_notices
         ' 
         Label_date.AutoSize = True
         Label_date.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_date.ForeColor = Color.Teal
-        Label_date.Location = New Point(131, 49)
+        Label_date.ForeColor = Color.Black
+        Label_date.Location = New Point(143, 219)
         Label_date.Name = "Label_date"
         Label_date.Size = New Size(78, 29)
         Label_date.TabIndex = 29
@@ -205,8 +208,8 @@ Partial Class Form3_notices
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label14.ForeColor = Color.Teal
-        Label14.Location = New Point(51, 49)
+        Label14.ForeColor = Color.Black
+        Label14.Location = New Point(56, 219)
         Label14.Name = "Label14"
         Label14.Size = New Size(74, 29)
         Label14.TabIndex = 28
@@ -215,10 +218,10 @@ Partial Class Form3_notices
         ' Label13
         ' 
         Label13.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label13.ForeColor = Color.Teal
-        Label13.Location = New Point(51, 220)
+        Label13.ForeColor = Color.Black
+        Label13.Location = New Point(56, 273)
         Label13.Name = "Label13"
-        Label13.Size = New Size(897, 434)
+        Label13.Size = New Size(893, 381)
         Label13.TabIndex = 26
         Label13.Text = "Notice"
         ' 
@@ -245,9 +248,9 @@ Partial Class Form3_notices
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point)
-        Label11.ForeColor = Color.Teal
-        Label11.Location = New Point(387, 120)
+        Label11.Font = New Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label11.ForeColor = Color.Black
+        Label11.Location = New Point(407, 154)
         Label11.Name = "Label11"
         Label11.Size = New Size(211, 39)
         Label11.TabIndex = 21
@@ -275,6 +278,17 @@ Partial Class Form3_notices
         PictureBox4.TabIndex = 24
         PictureBox4.TabStop = False
         ' 
+        ' griha_logo
+        ' 
+        griha_logo.BorderStyle = BorderStyle.Fixed3D
+        griha_logo.Image = CType(resources.GetObject("griha_logo.Image"), Image)
+        griha_logo.Location = New Point(3, 3)
+        griha_logo.Name = "griha_logo"
+        griha_logo.Size = New Size(345, 158)
+        griha_logo.SizeMode = PictureBoxSizeMode.CenterImage
+        griha_logo.TabIndex = 30
+        griha_logo.TabStop = False
+        ' 
         ' Form3_notices
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -297,6 +311,7 @@ Partial Class Form3_notices
         Panel2.PerformLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        CType(griha_logo, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -320,4 +335,5 @@ Partial Class Form3_notices
     Friend WithEvents Label11 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents griha_logo As PictureBox
 End Class
