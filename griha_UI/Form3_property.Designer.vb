@@ -55,7 +55,7 @@ Partial Class Form3_property
         Label8 = New Label()
         Label9 = New Label()
         Label10 = New Label()
-        Label11 = New Label()
+        Labeldes = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -194,7 +194,7 @@ Partial Class Form3_property
         ' 
         Panel2.BackColor = Color.Transparent
         Panel2.BorderStyle = BorderStyle.Fixed3D
-        Panel2.Controls.Add(Label11)
+        Panel2.Controls.Add(Labeldes)
         Panel2.Controls.Add(Label9)
         Panel2.Controls.Add(Label10)
         Panel2.Controls.Add(Label7)
@@ -456,14 +456,14 @@ Partial Class Form3_property
         Label10.TabIndex = 37
         Label10.Text = "Area:"
         ' 
-        ' Label11
+        ' Labeldes
         ' 
-        Label11.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label11.ForeColor = Color.Black
-        Label11.Location = New Point(56, 488)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(923, 186)
-        Label11.TabIndex = 39
+        Labeldes.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Labeldes.ForeColor = Color.Black
+        Labeldes.Location = New Point(56, 488)
+        Labeldes.Name = "Labeldes"
+        Labeldes.Size = New Size(923, 186)
+        Labeldes.TabIndex = 39
         ' 
         ' Form3_property
         ' 
@@ -523,5 +523,5 @@ Partial Class Form3_property
     Friend WithEvents Label6 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label11 As Label
+    Friend WithEvents Labeldes As Label
 End Class
