@@ -44,15 +44,16 @@ Partial Class Form3_Expenses
         Label2 = New Label()
         Label11 = New Label()
         Label1Label12 = New Label()
-        label10 = New Label()
         PictureBox3 = New PictureBox()
         PictureBox4 = New PictureBox()
+        griha_logo = New PictureBox()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(griha_logo, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -164,9 +165,9 @@ Partial Class Form3_Expenses
         Label_expensesInformation.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_expensesInformation.Location = New Point(1052, 200)
         Label_expensesInformation.Name = "Label_expensesInformation"
-        Label_expensesInformation.Size = New Size(308, 32)
+        Label_expensesInformation.Size = New Size(380, 32)
         Label_expensesInformation.TabIndex = 20
-        Label_expensesInformation.Text = "Expenses Information"
+        Label_expensesInformation.Text = "Your Expenses Information"
         ' 
         ' PictureBox1
         ' 
@@ -184,6 +185,7 @@ Partial Class Form3_Expenses
         ' 
         Panel2.BackColor = Color.Transparent
         Panel2.BorderStyle = BorderStyle.Fixed3D
+        Panel2.Controls.Add(griha_logo)
         Panel2.Controls.Add(Label_date)
         Panel2.Controls.Add(Label14)
         Panel2.Controls.Add(Label_amount)
@@ -194,7 +196,6 @@ Partial Class Form3_Expenses
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(Label11)
         Panel2.Controls.Add(Label1Label12)
-        Panel2.Controls.Add(label10)
         Panel2.Location = New Point(861, 291)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(723, 522)
@@ -204,8 +205,8 @@ Partial Class Form3_Expenses
         ' 
         Label_date.AutoSize = True
         Label_date.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_date.ForeColor = Color.Teal
-        Label_date.Location = New Point(131, 129)
+        Label_date.ForeColor = Color.Black
+        Label_date.Location = New Point(156, 254)
         Label_date.Name = "Label_date"
         Label_date.Size = New Size(78, 29)
         Label_date.TabIndex = 29
@@ -215,8 +216,8 @@ Partial Class Form3_Expenses
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label14.ForeColor = Color.Teal
-        Label14.Location = New Point(51, 129)
+        Label14.ForeColor = Color.Black
+        Label14.Location = New Point(70, 254)
         Label14.Name = "Label14"
         Label14.Size = New Size(74, 29)
         Label14.TabIndex = 28
@@ -226,8 +227,8 @@ Partial Class Form3_Expenses
         ' 
         Label_amount.AutoSize = True
         Label_amount.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_amount.ForeColor = Color.Teal
-        Label_amount.Location = New Point(307, 370)
+        Label_amount.ForeColor = Color.Black
+        Label_amount.Location = New Point(326, 425)
         Label_amount.Name = "Label_amount"
         Label_amount.Size = New Size(78, 29)
         Label_amount.TabIndex = 27
@@ -237,8 +238,8 @@ Partial Class Form3_Expenses
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label13.ForeColor = Color.Teal
-        Label13.Location = New Point(51, 370)
+        Label13.ForeColor = Color.Black
+        Label13.Location = New Point(70, 425)
         Label13.Name = "Label13"
         Label13.Size = New Size(107, 29)
         Label13.TabIndex = 26
@@ -248,8 +249,8 @@ Partial Class Form3_Expenses
         ' 
         Label_expensesType.AutoSize = True
         Label_expensesType.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_expensesType.ForeColor = Color.Teal
-        Label_expensesType.Location = New Point(307, 251)
+        Label_expensesType.ForeColor = Color.Black
+        Label_expensesType.Location = New Point(326, 376)
         Label_expensesType.Name = "Label_expensesType"
         Label_expensesType.Size = New Size(78, 29)
         Label_expensesType.TabIndex = 25
@@ -259,8 +260,8 @@ Partial Class Form3_Expenses
         ' 
         Label_apartmentID.AutoSize = True
         Label_apartmentID.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_apartmentID.ForeColor = Color.Teal
-        Label_apartmentID.Location = New Point(307, 191)
+        Label_apartmentID.ForeColor = Color.Black
+        Label_apartmentID.Location = New Point(326, 315)
         Label_apartmentID.Name = "Label_apartmentID"
         Label_apartmentID.Size = New Size(78, 29)
         Label_apartmentID.TabIndex = 24
@@ -290,8 +291,8 @@ Partial Class Form3_Expenses
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label11.ForeColor = Color.Teal
-        Label11.Location = New Point(51, 191)
+        Label11.ForeColor = Color.Black
+        Label11.Location = New Point(70, 316)
         Label11.Name = "Label11"
         Label11.Size = New Size(170, 29)
         Label11.TabIndex = 21
@@ -301,23 +302,12 @@ Partial Class Form3_Expenses
         ' 
         Label1Label12.AutoSize = True
         Label1Label12.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1Label12.ForeColor = Color.Teal
-        Label1Label12.Location = New Point(51, 251)
+        Label1Label12.ForeColor = Color.Black
+        Label1Label12.Location = New Point(70, 376)
         Label1Label12.Name = "Label1Label12"
         Label1Label12.Size = New Size(200, 29)
         Label1Label12.TabIndex = 20
         Label1Label12.Text = "Expenses Type:"
-        ' 
-        ' label10
-        ' 
-        label10.AutoSize = True
-        label10.Font = New Font("MV Boli", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        label10.ForeColor = Color.Navy
-        label10.Location = New Point(205, 33)
-        label10.Name = "label10"
-        label10.Size = New Size(304, 52)
-        label10.TabIndex = 9
-        label10.Text = "Your Expenses"
         ' 
         ' PictureBox3
         ' 
@@ -341,6 +331,17 @@ Partial Class Form3_Expenses
         PictureBox4.TabIndex = 23
         PictureBox4.TabStop = False
         ' 
+        ' griha_logo
+        ' 
+        griha_logo.BorderStyle = BorderStyle.Fixed3D
+        griha_logo.Image = CType(resources.GetObject("griha_logo.Image"), Image)
+        griha_logo.Location = New Point(3, 3)
+        griha_logo.Name = "griha_logo"
+        griha_logo.Size = New Size(345, 158)
+        griha_logo.SizeMode = PictureBoxSizeMode.CenterImage
+        griha_logo.TabIndex = 30
+        griha_logo.TabStop = False
+        ' 
         ' Form3_Expenses
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -363,6 +364,7 @@ Partial Class Form3_Expenses
         Panel2.PerformLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        CType(griha_logo, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -381,7 +383,6 @@ Partial Class Form3_Expenses
     Friend WithEvents Label1Label12 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Button_delete As Button
-    Friend WithEvents label10 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Label_expensesType As Label
@@ -393,4 +394,5 @@ Partial Class Form3_Expenses
     Friend WithEvents Label_amount As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label_date As Label
+    Friend WithEvents griha_logo As PictureBox
 End Class
