@@ -227,7 +227,7 @@ Partial Class Form3_view_Residents
         Label_residents.AutoSize = True
         Label_residents.BackColor = Color.Transparent
         Label_residents.Font = New Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        Label_residents.Location = New Point(898, 193)
+        Label_residents.Location = New Point(997, 193)
         Label_residents.Name = "Label_residents"
         Label_residents.Size = New Size(401, 32)
         Label_residents.TabIndex = 17
