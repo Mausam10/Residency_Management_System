@@ -124,8 +124,8 @@ Public Class S_residents3
         populate()
     End Sub
     Private Sub dataGridView1_CellMouseClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DataDVG.CellMouseClick
-
-        If e.RowIndex >= 0 Then
+        Dim rowCount As Integer = DataDVG.RowCount - 1
+        If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then
             Dim row As DataGridViewRow = DataDVG.Rows(e.RowIndex)
             TextBox_username.Text = row.Cells(0).Value.ToString
             TextBox_password.Text = row.Cells(1).Value.ToString
@@ -140,6 +140,8 @@ Public Class S_residents3
             ComboBox_apartments.Items.Add(row.Cells(9).Value.ToString)
             ComboBox_apartments.SelectedItem = row.Cells(9).Value.ToString
             tempUsername = TextBox_username.Text 'selected user's username 
+        Else
+            reset()
         End If
 
     End Sub

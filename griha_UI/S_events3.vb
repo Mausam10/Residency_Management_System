@@ -116,13 +116,17 @@ Public Class S_events3
 
 
     Private Sub DGV_Events_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV_Events.CellMouseClick
-        If e.RowIndex >= 0 Then
+
+        Dim rowCount As Integer = DGV_Events.RowCount - 1
+        If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then
             Dim row As DataGridViewRow = DGV_Events.Rows(e.RowIndex)
             TextBox_Name.Text = row.Cells(0).Value.ToString
             DateTimePicker1.Text = row.Cells(1).Value.ToString
             TextBox_description.Text = row.Cells(2).Value.ToString
             tempEvent_name = TextBox_Name.Text 'selected user's username 
             tempDate = DateTimePicker1.Value
+        Else
+            reset()
         End If
     End Sub
 

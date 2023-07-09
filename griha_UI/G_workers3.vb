@@ -65,6 +65,7 @@
         DateTimePicker2.CustomFormat = " "
         TextBox_description.Text = Nothing
         CheckBox_worker.Checked = False
+        populateComboBox()
     End Sub
 
     Private Sub G_workers3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -150,7 +151,8 @@
 
     Private Sub DGV_workers_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV_workers.CellMouseClick
 
-        If e.RowIndex >= 0 Then
+        Dim rowCount As Integer = DGV_workers.RowCount - 1
+        If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then
             Dim row As DataGridViewRow = DGV_workers.Rows(e.RowIndex)
             ComboBox_workerID.SelectedItem = row.Cells(0).Value.ToString
             DateTimePicker1.Text = row.Cells(1).Value
@@ -167,7 +169,14 @@
 
             temp_WorkerId = ComboBox_workerID.SelectedItem 'selected visitor's username 
             temp_timeEntry = DateTimePicker1.Value 'selected visitor's entry date
+        Else
+            reset()
         End If
 
     End Sub
+
+    Private Sub DateTimePicker2_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker2.ValueChanged
+        DateTimePicker2.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+    End Sub
+
 End Class

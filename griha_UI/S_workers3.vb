@@ -35,6 +35,7 @@ Public Class S_workers3
         TextBox_phone1.Text = Nothing
         TextBox_phone2.Text = Nothing
         Textbox_profession.Text = Nothing
+
     End Sub
 
     Private Sub populate()
@@ -98,7 +99,8 @@ Public Class S_workers3
 
     Private Sub DGVWorkers_CellMouseClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DGVWorkers.CellMouseClick
 
-        If e.RowIndex >= 0 Then
+        Dim rowCount As Integer = DGVWorkers.RowCount - 1
+        If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then
             Dim row As DataGridViewRow = DGVWorkers.Rows(e.RowIndex)
             TextBox_workerID.Text = row.Cells(0).Value.ToString
             TextBox_firstname.Text = row.Cells(1).Value.ToString
@@ -109,6 +111,8 @@ Public Class S_workers3
             Textbox_profession.Text = row.Cells(6).Value.ToString
             tempWorkerID = TextBox_workerID.Text 'selected worker's workerID
             tempProfession = Textbox_profession.Text
+        Else
+            reset()
         End If
 
     End Sub
@@ -123,7 +127,6 @@ Public Class S_workers3
     End Sub
 
     Private Sub Button_Update_Click(sender As Object, e As EventArgs) Handles Button_Update.Click
-
 
         Dim Worker_Id As String
         Dim First_Name, Middle_Name, Last_Name, Phone1, Phone2, Profession As String

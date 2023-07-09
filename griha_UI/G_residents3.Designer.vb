@@ -33,6 +33,8 @@ Partial Class G_residents3
         Label_record_residents = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        CheckBox_resident = New CheckBox()
+        Label2 = New Label()
         DateTimePicker2 = New DateTimePicker()
         DateTimePicker1 = New DateTimePicker()
         Label_attending_back = New Label()
@@ -167,6 +169,8 @@ Partial Class G_residents3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(CheckBox_resident)
+        Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(DateTimePicker2)
         Panel2.Controls.Add(DateTimePicker1)
         Panel2.Controls.Add(Label_attending_back)
@@ -182,12 +186,31 @@ Partial Class G_residents3
         Panel2.Size = New Size(476, 768)
         Panel2.TabIndex = 17
         ' 
+        ' CheckBox_resident
+        ' 
+        CheckBox_resident.Location = New Point(225, 202)
+        CheckBox_resident.Name = "CheckBox_resident"
+        CheckBox_resident.Size = New Size(45, 37)
+        CheckBox_resident.TabIndex = 33
+        CheckBox_resident.UseVisualStyleBackColor = True
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point)
+        Label2.ForeColor = Color.Teal
+        Label2.Location = New Point(11, 207)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(200, 25)
+        Label2.TabIndex = 32
+        Label2.Text = "Is the Resident Back?"
+        ' 
         ' DateTimePicker2
         ' 
         DateTimePicker2.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DateTimePicker2.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
+        DateTimePicker2.CustomFormat = " "
         DateTimePicker2.Format = DateTimePickerFormat.Custom
-        DateTimePicker2.Location = New Point(11, 245)
+        DateTimePicker2.Location = New Point(11, 277)
         DateTimePicker2.Name = "DateTimePicker2"
         DateTimePicker2.Size = New Size(446, 27)
         DateTimePicker2.TabIndex = 22
@@ -197,7 +220,7 @@ Partial Class G_residents3
         DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
         DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
         DateTimePicker1.Format = DateTimePickerFormat.Custom
-        DateTimePicker1.Location = New Point(11, 166)
+        DateTimePicker1.Location = New Point(11, 159)
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(446, 27)
         DateTimePicker1.TabIndex = 21
@@ -207,7 +230,7 @@ Partial Class G_residents3
         Label_attending_back.AutoSize = True
         Label_attending_back.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point)
         Label_attending_back.ForeColor = Color.Teal
-        Label_attending_back.Location = New Point(11, 207)
+        Label_attending_back.Location = New Point(11, 245)
         Label_attending_back.Name = "Label_attending_back"
         Label_attending_back.Size = New Size(269, 25)
         Label_attending_back.TabIndex = 20
@@ -230,7 +253,7 @@ Partial Class G_residents3
         Button_delete.BackgroundImageLayout = ImageLayout.None
         Button_delete.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_delete.ForeColor = Color.White
-        Button_delete.Location = New Point(253, 556)
+        Button_delete.Location = New Point(253, 606)
         Button_delete.Name = "Button_delete"
         Button_delete.Size = New Size(204, 43)
         Button_delete.TabIndex = 17
@@ -243,7 +266,7 @@ Partial Class G_residents3
         Button_Update.BackgroundImageLayout = ImageLayout.None
         Button_Update.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_Update.ForeColor = Color.White
-        Button_Update.Location = New Point(11, 556)
+        Button_Update.Location = New Point(11, 606)
         Button_Update.Name = "Button_Update"
         Button_Update.Size = New Size(205, 43)
         Button_Update.TabIndex = 16
@@ -256,7 +279,7 @@ Partial Class G_residents3
         Button_add.BackgroundImageLayout = ImageLayout.None
         Button_add.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_add.ForeColor = Color.White
-        Button_add.Location = New Point(11, 497)
+        Button_add.Location = New Point(11, 547)
         Button_add.Name = "Button_add"
         Button_add.Size = New Size(446, 43)
         Button_add.TabIndex = 15
@@ -277,7 +300,7 @@ Partial Class G_residents3
         ' TextBox_description
         ' 
         TextBox_description.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_description.Location = New Point(11, 284)
+        TextBox_description.Location = New Point(11, 316)
         TextBox_description.Multiline = True
         TextBox_description.Name = "TextBox_description"
         TextBox_description.PlaceholderText = "Detail"
@@ -287,7 +310,7 @@ Partial Class G_residents3
         ' TextBox_residents_username
         ' 
         TextBox_residents_username.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_residents_username.Location = New Point(11, 62)
+        TextBox_residents_username.Location = New Point(11, 74)
         TextBox_residents_username.Name = "TextBox_residents_username"
         TextBox_residents_username.PlaceholderText = "username"
         TextBox_residents_username.Size = New Size(446, 34)
@@ -361,4 +384,6 @@ Partial Class G_residents3
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents DGV_residents As DataGridView
+    Friend WithEvents Label2 As Label
+    Friend WithEvents CheckBox_resident As CheckBox
 End Class

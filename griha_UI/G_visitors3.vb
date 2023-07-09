@@ -114,7 +114,8 @@ Public Class G_visitors3
 
     Private Sub DGV_visitors_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV_visitors.CellMouseClick
 
-        If e.RowIndex >= 0 Then
+        Dim rowCount As Integer = DGV_visitors.RowCount - 1
+        If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then
             Dim row As DataGridViewRow = DGV_visitors.Rows(e.RowIndex)
             TextBox_firstname.Text = row.Cells(0).Value.ToString
             TextBox_middlename.Text = row.Cells(1).Value.ToString
@@ -136,6 +137,8 @@ Public Class G_visitors3
             temp_first = TextBox_firstname.Text 'selected visitor's username 
             temp_phone1 = TextBox_phone1.Text 'selcted visitor's phone1
             temp_timeEntry = DateTimePicker1.Value 'selected visitor's entry date
+        Else
+            reset()
         End If
 
     End Sub

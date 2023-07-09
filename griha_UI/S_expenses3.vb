@@ -30,6 +30,7 @@ Public Class S_expenses3
         ComboBox1.SelectedItem = Nothing
         TextBox_Amount.Text = Nothing
         DateTimePicker1.Text = Nothing
+        populateComboBox()
     End Sub
 
     Private Sub populate()
@@ -138,7 +139,7 @@ Public Class S_expenses3
         grihaDb.connect()
         populate()
         populateComboBox()
-
+        reset()
     End Sub
 
     Private Sub DGV_Expenses_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_Expenses.CellContentClick
@@ -146,7 +147,9 @@ Public Class S_expenses3
     End Sub
 
     Private Sub DGV_Expenses_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV_Expenses.CellMouseClick
-        If e.RowIndex >= 0 Then
+
+        Dim rowCount As Integer = DGV_Expenses.RowCount - 1
+        If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then
             Dim row As DataGridViewRow = DGV_Expenses.Rows(e.RowIndex)
             ComboBox_apartments.SelectedItem = row.Cells(0).Value.ToString
             ComboBox1.SelectedItem = row.Cells(1).Value.ToString
@@ -156,6 +159,8 @@ Public Class S_expenses3
             tempExpenses_type = ComboBox1.SelectedItem
             tempAmount = TextBox_Amount.Text
             tempDate = DateTimePicker1.Value
+        Else
+            reset()
         End If
     End Sub
 
