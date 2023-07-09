@@ -14,7 +14,7 @@ Public Class S_expenses3
         Dim Apartment_id, Expenses_type, Amount As String
         Dim date1 As Date
         Apartment_id = ComboBox_apartments.SelectedItem
-        Expenses_type = ComboBox1.SelectedItem
+        Expenses_type = ComboBox_expenses.SelectedItem
         Amount = TextBox_Amount.Text
         date1 = DateTimePicker1.Text
         query = "Insert into expenses(Apartment_id, Expenses_type, Amount, Date) values('" & Apartment_id & "' ,'" & Expenses_type & "','" & Amount & "','" & date1 & "')"
@@ -27,7 +27,7 @@ Public Class S_expenses3
 
     Private Sub reset()
         ComboBox_apartments.SelectedItem = Nothing
-        ComboBox1.SelectedItem = Nothing
+        ComboBox_expenses.SelectedItem = Nothing
         TextBox_Amount.Text = Nothing
         DateTimePicker1.Text = Nothing
         populateComboBox()
@@ -82,11 +82,11 @@ Public Class S_expenses3
     Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox_expenses.SelectedIndexChanged
     End Sub
 
     Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
-        query = " DELETE FROM expenses WHERE (Apartment_Id='" & ComboBox_apartments.SelectedItem & "' and Expenses_type = '" & ComboBox1.SelectedItem & "' and Amount = '" & TextBox_Amount.Text & "' and Date = '" & DateTimePicker1.Value & "') "
+        query = " DELETE FROM expenses WHERE (Apartment_Id='" & ComboBox_apartments.SelectedItem & "' and Expenses_type = '" & ComboBox_expenses.SelectedItem & "' and Amount = '" & TextBox_Amount.Text & "' and Date = '" & DateTimePicker1.Value & "') "
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Record Deleted")
             reset()
@@ -100,7 +100,7 @@ Public Class S_expenses3
         Dim Apartment_id, Expenses_type, Amount As String
         Dim date1 As Date
         Apartment_id = ComboBox_apartments.SelectedItem
-        Expenses_type = ComboBox1.SelectedItem
+        Expenses_type = ComboBox_expenses.SelectedItem
         Amount = TextBox_Amount.Text
         date1 = DateTimePicker1.Text
         query = "update expenses set Apartment_Id ='" & Apartment_id & "', expenses_type ='" & Expenses_type & "', amount='" & Amount & "',date='" & date1 & "' where (Apartment_id='" & tempApartment & "' and Expenses_type = '" & tempExpenses_type & "' and Amount = '" & tempAmount & "' and Date = '" & tempDate & "')"
@@ -146,17 +146,17 @@ Public Class S_expenses3
 
     End Sub
 
-    Private Sub DGV_Expenses_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs)
+    Private Sub DGV_Expenses_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV_Expenses.CellMouseClick
 
         Dim rowCount As Integer = DGV_Expenses.RowCount - 1
         If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then
             Dim row As DataGridViewRow = DGV_Expenses.Rows(e.RowIndex)
             ComboBox_apartments.SelectedItem = row.Cells(0).Value.ToString
-            ComboBox1.SelectedItem = row.Cells(1).Value.ToString
+            ComboBox_expenses.SelectedItem = row.Cells(1).Value.ToString
             TextBox_Amount.Text = row.Cells(2).Value.ToString
             DateTimePicker1.Text = row.Cells(3).Value
             tempApartment = ComboBox_apartments.SelectedItem 'selected user's username 
-            tempExpenses_type = ComboBox1.SelectedItem
+            tempExpenses_type = ComboBox_expenses.SelectedItem
             tempAmount = TextBox_Amount.Text
             tempDate = DateTimePicker1.Value
         Else
@@ -164,7 +164,4 @@ Public Class S_expenses3
         End If
     End Sub
 
-    Private Sub DGV_Expenses_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_Expenses.CellContentClick
-
-    End Sub
 End Class

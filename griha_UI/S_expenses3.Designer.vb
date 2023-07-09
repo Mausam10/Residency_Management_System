@@ -22,8 +22,8 @@ Partial Class S_expenses3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(S_expenses3))
         Panel3 = New Panel()
         DGV_Expenses = New DataGridView()
@@ -32,7 +32,7 @@ Partial Class S_expenses3
         ComboBox_apartments = New ComboBox()
         Label_types_of_expenses = New Label()
         DateTimePicker1 = New DateTimePicker()
-        ComboBox1 = New ComboBox()
+        ComboBox_expenses = New ComboBox()
         Button_delete = New Button()
         Button_Update = New Button()
         Button_add = New Button()
@@ -70,26 +70,26 @@ Partial Class S_expenses3
         DGV_Expenses.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV_Expenses.BackgroundColor = SystemColors.ButtonFace
         DGV_Expenses.BorderStyle = BorderStyle.Fixed3D
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
-        DataGridViewCellStyle1.SelectionForeColor = Color.Black
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        DGV_Expenses.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = SystemColors.Control
+        DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        DataGridViewCellStyle3.ForeColor = Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = Color.AliceBlue
+        DataGridViewCellStyle3.SelectionForeColor = Color.Black
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
+        DGV_Expenses.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         DGV_Expenses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DGV_Expenses.Location = New Point(36, 62)
         DGV_Expenses.MultiSelect = False
         DGV_Expenses.Name = "DGV_Expenses"
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = SystemColors.Control
-        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
-        DataGridViewCellStyle2.SelectionForeColor = Color.Black
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        DGV_Expenses.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = SystemColors.Control
+        DataGridViewCellStyle4.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = Color.Transparent
+        DataGridViewCellStyle4.SelectionForeColor = Color.Black
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        DGV_Expenses.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         DGV_Expenses.RowHeadersWidth = 51
         DGV_Expenses.RowTemplate.Height = 29
         DGV_Expenses.Size = New Size(839, 545)
@@ -102,7 +102,7 @@ Partial Class S_expenses3
         Panel2.Controls.Add(ComboBox_apartments)
         Panel2.Controls.Add(Label_types_of_expenses)
         Panel2.Controls.Add(DateTimePicker1)
-        Panel2.Controls.Add(ComboBox1)
+        Panel2.Controls.Add(ComboBox_expenses)
         Panel2.Controls.Add(Button_delete)
         Panel2.Controls.Add(Button_Update)
         Panel2.Controls.Add(Button_add)
@@ -128,7 +128,6 @@ Partial Class S_expenses3
         ' 
         ComboBox_apartments.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
         ComboBox_apartments.FormattingEnabled = True
-        ComboBox_apartments.Items.AddRange(New Object() {"Utility Expenses", "Maintainence Expenses", "Other Expenses"})
         ComboBox_apartments.Location = New Point(11, 95)
         ComboBox_apartments.Name = "ComboBox_apartments"
         ComboBox_apartments.Size = New Size(441, 33)
@@ -154,17 +153,17 @@ Partial Class S_expenses3
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(378, 27)
         DateTimePicker1.TabIndex = 19
-        DateTimePicker1.Value = New DateTime(2023, 7, 8, 10, 53, 0, 0)
+        DateTimePicker1.Value = New Date(2023, 7, 8, 10, 53, 0, 0)
         ' 
-        ' ComboBox1
+        ' ComboBox_expenses
         ' 
-        ComboBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"Utility Expenses", "Maintainence Expenses", "Other Expenses", "Event Expenses"})
-        ComboBox1.Location = New Point(11, 197)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(441, 33)
-        ComboBox1.TabIndex = 18
+        ComboBox_expenses.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        ComboBox_expenses.FormattingEnabled = True
+        ComboBox_expenses.Items.AddRange(New Object() {"Utility Expenses", "Maintainence Expenses", "Event Expenses", "Other Expenses"})
+        ComboBox_expenses.Location = New Point(11, 197)
+        ComboBox_expenses.Name = "ComboBox_expenses"
+        ComboBox_expenses.Size = New Size(441, 33)
+        ComboBox_expenses.TabIndex = 18
         ' 
         ' Button_delete
         ' 
@@ -377,7 +376,7 @@ Partial Class S_expenses3
 
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBox_expenses As ComboBox
     Friend WithEvents Button_delete As Button
     Friend WithEvents Button_Update As Button
     Friend WithEvents Button_add As Button

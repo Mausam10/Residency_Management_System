@@ -149,7 +149,7 @@
         End If
     End Sub
 
-    Private Sub DGV_workers_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs)
+    Private Sub DGV_workers_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGV_workers.CellMouseClick
 
         Dim rowCount As Integer = DGV_workers.RowCount - 1
         If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then

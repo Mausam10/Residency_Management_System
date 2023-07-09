@@ -98,7 +98,7 @@ Public Class S_workers3
 
     End Sub
 
-    Private Sub DGVWorkers_CellMouseClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellMouseEventArgs)
+    Private Sub DGVWorkers_CellMouseClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DGV_Workers.CellMouseClick
 
         Dim rowCount As Integer = DGVWorkers.RowCount - 1
         If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then
@@ -121,7 +121,7 @@ Public Class S_workers3
     End Sub
 
     Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
-        query = " DELETE FROM Workers WHERE worker_id='" & TextBox_workerID.Text & "' "
+        query = " DELETE FROM Workers WHERE (worker_id='" & TextBox_workerID.Text & "' and Profession='" & Textbox_profession.Text & "' ) "
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Record Deleted")
             reset()
