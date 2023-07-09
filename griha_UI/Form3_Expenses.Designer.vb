@@ -34,6 +34,7 @@ Partial Class Form3_Expenses
         Label_expensesInformation = New Label()
         PictureBox1 = New PictureBox()
         Panel2 = New Panel()
+        griha_logo = New PictureBox()
         Label_date = New Label()
         Label14 = New Label()
         Label_amount = New Label()
@@ -46,14 +47,13 @@ Partial Class Form3_Expenses
         Label1Label12 = New Label()
         PictureBox3 = New PictureBox()
         PictureBox4 = New PictureBox()
-        griha_logo = New PictureBox()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
+        CType(griha_logo, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
-        CType(griha_logo, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -201,6 +201,17 @@ Partial Class Form3_Expenses
         Panel2.Size = New Size(723, 522)
         Panel2.TabIndex = 21
         ' 
+        ' griha_logo
+        ' 
+        griha_logo.BorderStyle = BorderStyle.Fixed3D
+        griha_logo.Image = CType(resources.GetObject("griha_logo.Image"), Image)
+        griha_logo.Location = New Point(3, 3)
+        griha_logo.Name = "griha_logo"
+        griha_logo.Size = New Size(345, 158)
+        griha_logo.SizeMode = PictureBoxSizeMode.CenterImage
+        griha_logo.TabIndex = 30
+        griha_logo.TabStop = False
+        ' 
         ' Label_date
         ' 
         Label_date.AutoSize = True
@@ -313,7 +324,7 @@ Partial Class Form3_Expenses
         ' 
         PictureBox3.BackColor = Color.Transparent
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(752, 511)
+        PictureBox3.Location = New Point(741, 539)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(67, 62)
         PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
@@ -324,23 +335,12 @@ Partial Class Form3_Expenses
         ' 
         PictureBox4.BackColor = Color.Transparent
         PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(1625, 511)
+        PictureBox4.Location = New Point(1629, 539)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(67, 62)
         PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox4.TabIndex = 23
         PictureBox4.TabStop = False
-        ' 
-        ' griha_logo
-        ' 
-        griha_logo.BorderStyle = BorderStyle.Fixed3D
-        griha_logo.Image = CType(resources.GetObject("griha_logo.Image"), Image)
-        griha_logo.Location = New Point(3, 3)
-        griha_logo.Name = "griha_logo"
-        griha_logo.Size = New Size(345, 158)
-        griha_logo.SizeMode = PictureBoxSizeMode.CenterImage
-        griha_logo.TabIndex = 30
-        griha_logo.TabStop = False
         ' 
         ' Form3_Expenses
         ' 
@@ -362,9 +362,9 @@ Partial Class Form3_Expenses
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
+        CType(griha_logo, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
-        CType(griha_logo, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub

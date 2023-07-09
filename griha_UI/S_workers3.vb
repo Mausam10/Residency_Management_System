@@ -93,11 +93,11 @@ Public Class S_workers3
 
     End Sub
 
-    Private Sub DGVWorkers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVWorkers.CellContentClick
+    Private Sub DGVWorkers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
     End Sub
 
-    Private Sub DGVWorkers_CellMouseClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DGVWorkers.CellMouseClick
+    Private Sub DGVWorkers_CellMouseClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellMouseEventArgs)
 
         Dim rowCount As Integer = DGVWorkers.RowCount - 1
         If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then

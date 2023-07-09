@@ -95,6 +95,12 @@ Partial Class Form3_view_Residents
         Label53 = New Label()
         PictureBox4 = New PictureBox()
         PictureBox3 = New PictureBox()
+        Label54 = New Label()
+        Label55 = New Label()
+        Label56 = New Label()
+        Label57 = New Label()
+        Label58 = New Label()
+        Label59 = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -407,9 +413,9 @@ Partial Class Form3_view_Residents
         Label10.ForeColor = Color.Black
         Label10.Location = New Point(17, 112)
         Label10.Name = "Label10"
-        Label10.Size = New Size(170, 29)
+        Label10.Size = New Size(72, 29)
         Label10.TabIndex = 30
-        Label10.Text = "Apartment ID:"
+        Label10.Text = "Shift:"
         ' 
         ' Label12
         ' 
@@ -523,9 +529,9 @@ Partial Class Form3_view_Residents
         Label21.ForeColor = Color.Black
         Label21.Location = New Point(17, 112)
         Label21.Name = "Label21"
-        Label21.Size = New Size(170, 29)
+        Label21.Size = New Size(72, 29)
         Label21.TabIndex = 30
-        Label21.Text = "Apartment ID:"
+        Label21.Text = "Shift:"
         ' 
         ' Label22
         ' 
@@ -585,6 +591,8 @@ Partial Class Form3_view_Residents
         ' 
         Panel5.BackColor = Color.Transparent
         Panel5.BorderStyle = BorderStyle.Fixed3D
+        Panel5.Controls.Add(Label54)
+        Panel5.Controls.Add(Label55)
         Panel5.Controls.Add(Label27)
         Panel5.Controls.Add(Label28)
         Panel5.Controls.Add(Label29)
@@ -604,7 +612,7 @@ Partial Class Form3_view_Residents
         Label27.AutoSize = True
         Label27.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label27.ForeColor = Color.Black
-        Label27.Location = New Point(205, 164)
+        Label27.Location = New Point(205, 133)
         Label27.Name = "Label27"
         Label27.Size = New Size(78, 29)
         Label27.TabIndex = 33
@@ -615,7 +623,7 @@ Partial Class Form3_view_Residents
         Label28.AutoSize = True
         Label28.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label28.ForeColor = Color.Black
-        Label28.Location = New Point(17, 164)
+        Label28.Location = New Point(17, 133)
         Label28.Name = "Label28"
         Label28.Size = New Size(136, 29)
         Label28.TabIndex = 32
@@ -626,7 +634,7 @@ Partial Class Form3_view_Residents
         Label29.AutoSize = True
         Label29.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label29.ForeColor = Color.Black
-        Label29.Location = New Point(205, 112)
+        Label29.Location = New Point(205, 98)
         Label29.Name = "Label29"
         Label29.Size = New Size(78, 29)
         Label29.TabIndex = 31
@@ -637,7 +645,7 @@ Partial Class Form3_view_Residents
         Label30.AutoSize = True
         Label30.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label30.ForeColor = Color.Black
-        Label30.Location = New Point(17, 112)
+        Label30.Location = New Point(17, 98)
         Label30.Name = "Label30"
         Label30.Size = New Size(170, 29)
         Label30.TabIndex = 30
@@ -701,6 +709,8 @@ Partial Class Form3_view_Residents
         ' 
         Panel6.BackColor = Color.Transparent
         Panel6.BorderStyle = BorderStyle.Fixed3D
+        Panel6.Controls.Add(Label56)
+        Panel6.Controls.Add(Label57)
         Panel6.Controls.Add(Label36)
         Panel6.Controls.Add(Label37)
         Panel6.Controls.Add(Label38)
@@ -720,7 +730,7 @@ Partial Class Form3_view_Residents
         Label36.AutoSize = True
         Label36.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label36.ForeColor = Color.Black
-        Label36.Location = New Point(205, 164)
+        Label36.Location = New Point(205, 133)
         Label36.Name = "Label36"
         Label36.Size = New Size(78, 29)
         Label36.TabIndex = 33
@@ -731,7 +741,7 @@ Partial Class Form3_view_Residents
         Label37.AutoSize = True
         Label37.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label37.ForeColor = Color.Black
-        Label37.Location = New Point(17, 164)
+        Label37.Location = New Point(17, 133)
         Label37.Name = "Label37"
         Label37.Size = New Size(136, 29)
         Label37.TabIndex = 32
@@ -742,7 +752,7 @@ Partial Class Form3_view_Residents
         Label38.AutoSize = True
         Label38.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label38.ForeColor = Color.Black
-        Label38.Location = New Point(205, 112)
+        Label38.Location = New Point(205, 98)
         Label38.Name = "Label38"
         Label38.Size = New Size(78, 29)
         Label38.TabIndex = 31
@@ -753,7 +763,7 @@ Partial Class Form3_view_Residents
         Label39.AutoSize = True
         Label39.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label39.ForeColor = Color.Black
-        Label39.Location = New Point(17, 112)
+        Label39.Location = New Point(20, 98)
         Label39.Name = "Label39"
         Label39.Size = New Size(170, 29)
         Label39.TabIndex = 30
@@ -817,6 +827,8 @@ Partial Class Form3_view_Residents
         ' 
         Panel7.BackColor = Color.Transparent
         Panel7.BorderStyle = BorderStyle.Fixed3D
+        Panel7.Controls.Add(Label58)
+        Panel7.Controls.Add(Label59)
         Panel7.Controls.Add(Label45)
         Panel7.Controls.Add(Label46)
         Panel7.Controls.Add(Label47)
@@ -836,7 +848,7 @@ Partial Class Form3_view_Residents
         Label45.AutoSize = True
         Label45.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label45.ForeColor = Color.Black
-        Label45.Location = New Point(205, 164)
+        Label45.Location = New Point(205, 133)
         Label45.Name = "Label45"
         Label45.Size = New Size(78, 29)
         Label45.TabIndex = 33
@@ -847,7 +859,7 @@ Partial Class Form3_view_Residents
         Label46.AutoSize = True
         Label46.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label46.ForeColor = Color.Black
-        Label46.Location = New Point(17, 164)
+        Label46.Location = New Point(17, 133)
         Label46.Name = "Label46"
         Label46.Size = New Size(136, 29)
         Label46.TabIndex = 32
@@ -858,7 +870,7 @@ Partial Class Form3_view_Residents
         Label47.AutoSize = True
         Label47.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label47.ForeColor = Color.Black
-        Label47.Location = New Point(205, 112)
+        Label47.Location = New Point(205, 98)
         Label47.Name = "Label47"
         Label47.Size = New Size(78, 29)
         Label47.TabIndex = 31
@@ -869,7 +881,7 @@ Partial Class Form3_view_Residents
         Label48.AutoSize = True
         Label48.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Label48.ForeColor = Color.Black
-        Label48.Location = New Point(17, 112)
+        Label48.Location = New Point(17, 98)
         Label48.Name = "Label48"
         Label48.Size = New Size(170, 29)
         Label48.TabIndex = 30
@@ -950,6 +962,72 @@ Partial Class Form3_view_Residents
         PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox3.TabIndex = 37
         PictureBox3.TabStop = False
+        ' 
+        ' Label54
+        ' 
+        Label54.AutoSize = True
+        Label54.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label54.ForeColor = Color.Black
+        Label54.Location = New Point(205, 167)
+        Label54.Name = "Label54"
+        Label54.Size = New Size(78, 29)
+        Label54.TabIndex = 35
+        Label54.Text = "NULL"
+        ' 
+        ' Label55
+        ' 
+        Label55.AutoSize = True
+        Label55.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label55.ForeColor = Color.Black
+        Label55.Location = New Point(17, 167)
+        Label55.Name = "Label55"
+        Label55.Size = New Size(145, 29)
+        Label55.TabIndex = 34
+        Label55.Text = "Profession:"
+        ' 
+        ' Label56
+        ' 
+        Label56.AutoSize = True
+        Label56.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label56.ForeColor = Color.Black
+        Label56.Location = New Point(205, 167)
+        Label56.Name = "Label56"
+        Label56.Size = New Size(78, 29)
+        Label56.TabIndex = 37
+        Label56.Text = "NULL"
+        ' 
+        ' Label57
+        ' 
+        Label57.AutoSize = True
+        Label57.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label57.ForeColor = Color.Black
+        Label57.Location = New Point(17, 167)
+        Label57.Name = "Label57"
+        Label57.Size = New Size(145, 29)
+        Label57.TabIndex = 36
+        Label57.Text = "Profession:"
+        ' 
+        ' Label58
+        ' 
+        Label58.AutoSize = True
+        Label58.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label58.ForeColor = Color.Black
+        Label58.Location = New Point(205, 167)
+        Label58.Name = "Label58"
+        Label58.Size = New Size(78, 29)
+        Label58.TabIndex = 37
+        Label58.Text = "NULL"
+        ' 
+        ' Label59
+        ' 
+        Label59.AutoSize = True
+        Label59.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label59.ForeColor = Color.Black
+        Label59.Location = New Point(17, 167)
+        Label59.Name = "Label59"
+        Label59.Size = New Size(145, 29)
+        Label59.TabIndex = 36
+        Label59.Text = "Profession:"
         ' 
         ' Form3_view_Residents
         ' 
@@ -1064,4 +1142,10 @@ Partial Class Form3_view_Residents
     Friend WithEvents Label53 As Label
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Label54 As Label
+    Friend WithEvents Label55 As Label
+    Friend WithEvents Label56 As Label
+    Friend WithEvents Label57 As Label
+    Friend WithEvents Label58 As Label
+    Friend WithEvents Label59 As Label
 End Class
