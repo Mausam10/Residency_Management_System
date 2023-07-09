@@ -10,7 +10,7 @@ Public Class S_workers3
     Dim tempProfession As String
     Private Function addToDatabase() As Integer
         Dim Worker_Id As String
-        Dim First_Name, Middle_Name, Last_Name, Phone1, Phone2, Profession As String
+        Dim First_Name, Middle_Name, Last_Name, Phone1, Phone2, Profession, Address As String
         Worker_Id = TextBox_workerID.Text
         First_Name = TextBox_firstname.Text
         Middle_Name = TextBox_middlename.Text
@@ -18,8 +18,9 @@ Public Class S_workers3
         Phone1 = TextBox_phone1.Text
         Phone2 = TextBox_phone2.Text
         Profession = Textbox_profession.Text
+        Address = TextBox_address.Text
 
-        query = "Insert into workers(Worker_id, First_Name, Middle_Name, Last_Name, Phone1, Phone2, Profession) values('" & Worker_Id & "','" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Phone1 & "' ,'" & Phone2 & "' ,'" & Profession & "')"
+        query = "Insert into workers(Worker_id, First_Name, Middle_Name, Last_Name, Phone1, Phone2, Profession, Address) values('" & Worker_Id & "','" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Phone1 & "' ,'" & Phone2 & "' ,'" & Profession & "','" & Address & "')"
         If (grihaDb.executeMySql(query)) Then
             Return 1
         End If
@@ -35,6 +36,7 @@ Public Class S_workers3
         TextBox_phone1.Text = Nothing
         TextBox_phone2.Text = Nothing
         Textbox_profession.Text = Nothing
+        TextBox_address.Text = Nothing
 
     End Sub
 
@@ -42,8 +44,7 @@ Public Class S_workers3
         query = "select * from workers"
         tempDt = grihaDb.generateTable(query)
         If (tempDt Is Nothing) Then
-            MsgBox("No record")
-
+            'do nothing
         Else
             DGVWorkers.DataSource = tempDt
         End If
@@ -109,6 +110,8 @@ Public Class S_workers3
             TextBox_phone1.Text = row.Cells(4).Value.ToString
             TextBox_phone2.Text = row.Cells(5).Value.ToString
             Textbox_profession.Text = row.Cells(6).Value.ToString
+            TextBox_address.Text = row.Cells(7).Value.ToString
+
             tempWorkerID = TextBox_workerID.Text 'selected worker's workerID
             tempProfession = Textbox_profession.Text
         Else
@@ -129,7 +132,7 @@ Public Class S_workers3
     Private Sub Button_Update_Click(sender As Object, e As EventArgs) Handles Button_Update.Click
 
         Dim Worker_Id As String
-        Dim First_Name, Middle_Name, Last_Name, Phone1, Phone2, Profession As String
+        Dim First_Name, Middle_Name, Last_Name, Phone1, Phone2, Profession, Address As String
         Worker_Id = TextBox_workerID.Text
         First_Name = TextBox_firstname.Text
         Middle_Name = TextBox_middlename.Text
@@ -137,8 +140,8 @@ Public Class S_workers3
         Phone1 = TextBox_phone1.Text
         Phone2 = TextBox_phone2.Text
         Profession = Textbox_profession.Text
-
-        query = "update workers set Worker_Id ='" & Worker_Id & "', First_Name ='" & First_Name & "', Middle_Name ='" & Middle_Name & "', Last_Name='" & Last_Name & "', Phone1 ='" & Phone1 & "', Phone2='" & Phone2 & "', Profession='" & Profession & "' where (Worker_Id='" & tempWorkerID & "' and Profession = '" & tempProfession & "')"
+        Address = TextBox_address.Text
+        query = "update workers set Worker_Id ='" & Worker_Id & "', First_Name ='" & First_Name & "', Middle_Name ='" & Middle_Name & "', Last_Name='" & Last_Name & "', Phone1 ='" & Phone1 & "', Phone2='" & Phone2 & "', Profession='" & Profession & "', Address='" & Address & "' where (Worker_Id='" & tempWorkerID & "' and Profession = '" & tempProfession & "')"
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Worker Info successfully edited.")
             reset()

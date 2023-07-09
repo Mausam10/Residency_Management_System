@@ -15,14 +15,18 @@ Public Class S_events3
     Private Function addToDatabase() As Integer
         Dim event_name As String
         Dim date1 As Date
-        Dim organizer_name As String
+        Dim organizer As String
+        Dim sponser As String
         Dim description As String
+        Dim Event_expenses As String
         event_name = TextBox_Name.Text
         date1 = DateTimePicker1.Text
-        organizer_name = TextBox_organizer.Text
+        organizer = TextBox_organizer.Text
+        sponser = TextBox_sponser.Text
         description = TextBox_description.Text
+        Event_expenses = TextBox_amount.Text
 
-        query = "Insert into events(Event_name, Date, Organizer_name, Description) values('" & event_name & "', '" & date1 & "' ,'" & organizer_name & "','" & description & "')"
+        query = "Insert into events(Event_name, Date, Organizer, Sponser, Description, Event_expenses) values('" & event_name & "', '" & date1 & "' , " & organizer & "','" & sponser & "' ,'" & description & "', '" & Event_expenses & "')"
         If (grihaDb.executeMySql(query)) Then
             Return 1 'success
         End If
@@ -47,7 +51,9 @@ Public Class S_events3
         TextBox_Name.Text = Nothing
         DateTimePicker1.Text = Nothing
         TextBox_organizer.Text = Nothing
+        TextBox_sponser.Text = Nothing
         TextBox_description.Text = Nothing
+        TextBox_amount.Text = Nothing
     End Sub
 
 
@@ -104,13 +110,18 @@ Public Class S_events3
 
         Dim event_name As String
         Dim date1 As Date
-        Dim organizer_name As String
+        Dim organizer As String
+        Dim sponser As String
         Dim description As String
+        Dim Event_expenses As String
         event_name = TextBox_Name.Text
         date1 = DateTimePicker1.Text
-        organizer_name = TextBox_organizer.Text
+        organizer = TextBox_organizer.Text
+        sponser = TextBox_sponser.Text
         description = TextBox_description.Text
-        query = "update events set Event_name ='" & event_name & "', Date='" & date1 & "', Organizer_name='" & organizer_name & "',Description='" & description & "' where (Event_name = '" & tempEvent_name & "' and Date = '" & tempDate & "' and Organizer_name = '" & temp_organizer & "' )"
+        Event_expenses = TextBox_amount.Text
+
+        query = "update events set Event_name ='" & event_name & "', Date='" & date1 & "', Organizer='" & organizer & "' , Sponser='" & organizer & "',Description='" & description & "' , Event_expenses='" & Event_expenses & "' where (Event_name = '" & tempEvent_name & "' and Date = '" & tempDate & "' and Organizer_name = '" & temp_organizer & "' )"
         If (grihaDb.executeMySql(query)) Then
             MsgBox("UserInfo successfully edited.")
             reset()
@@ -127,9 +138,11 @@ Public Class S_events3
         If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then
             Dim row As DataGridViewRow = DGV_Events.Rows(e.RowIndex)
             TextBox_Name.Text = row.Cells(0).Value.ToString
-            DateTimePicker1.Text = row.Cells(1).Value.ToString
+            DateTimePicker1.Value = row.Cells(1).Value.ToString
             TextBox_organizer.Text = row.Cells(2).Value.ToString
-            TextBox_description.Text = row.Cells(3).Value.ToString
+            TextBox_sponser.Text = row.Cells(3).Value.ToString
+            TextBox_description.Text = row.Cells(4).Value.ToString
+            TextBox_amount.Text = row.Cells(5).Value.ToString
             tempEvent_name = TextBox_Name.Text 'selected user's username 
             tempDate = DateTimePicker1.Value
             temp_organizer = TextBox_organizer.Text
@@ -147,7 +160,5 @@ Public Class S_events3
         End If
     End Sub
 
-    Private Sub DGV_Events_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGV_Events.CellContentClick
 
-    End Sub
 End Class

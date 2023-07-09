@@ -22,10 +22,11 @@ Partial Class S_expenses3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(S_expenses3))
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(S_expenses3))
         Panel3 = New Panel()
+        DGV_Expenses = New DataGridView()
         Panel2 = New Panel()
         Label1 = New Label()
         ComboBox_apartments = New ComboBox()
@@ -48,13 +49,12 @@ Partial Class S_expenses3
         Button_notices = New Button()
         Button_Workers = New Button()
         Button_Expenses = New Button()
-        DGV_Expenses = New DataGridView()
         Panel3.SuspendLayout()
+        CType(DGV_Expenses, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
-        CType(DGV_Expenses, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel3
@@ -64,6 +64,35 @@ Partial Class S_expenses3
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(905, 768)
         Panel3.TabIndex = 16
+        ' 
+        ' DGV_Expenses
+        ' 
+        DGV_Expenses.BackgroundColor = SystemColors.ButtonFace
+        DGV_Expenses.BorderStyle = BorderStyle.Fixed3D
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
+        DataGridViewCellStyle1.SelectionForeColor = Color.Black
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        DGV_Expenses.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DGV_Expenses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGV_Expenses.Location = New Point(36, 62)
+        DGV_Expenses.MultiSelect = False
+        DGV_Expenses.Name = "DGV_Expenses"
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = SystemColors.Control
+        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
+        DataGridViewCellStyle2.SelectionForeColor = Color.Black
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DGV_Expenses.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DGV_Expenses.RowHeadersWidth = 51
+        DGV_Expenses.RowTemplate.Height = 29
+        DGV_Expenses.Size = New Size(839, 545)
+        DGV_Expenses.TabIndex = 1
         ' 
         ' Panel2
         ' 
@@ -124,13 +153,13 @@ Partial Class S_expenses3
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(378, 27)
         DateTimePicker1.TabIndex = 19
-        DateTimePicker1.Value = New DateTime(2023, 7, 8, 10, 53, 0, 0)
+        DateTimePicker1.Value = New Date(2023, 7, 8, 10, 53, 0, 0)
         ' 
         ' ComboBox1
         ' 
         ComboBox1.Font = New Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point)
         ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"Utility Expenses", "Maintainence Expenses", "Other Expenses"})
+        ComboBox1.Items.AddRange(New Object() {"Utility Expenses", "Maintainence Expenses", "Other Expenses", "Event Expenses"})
         ComboBox1.Location = New Point(11, 197)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(441, 33)
@@ -320,35 +349,6 @@ Partial Class S_expenses3
         Button_Expenses.Text = "Expenses"
         Button_Expenses.UseVisualStyleBackColor = False
         ' 
-        ' DGV_Expenses
-        ' 
-        DGV_Expenses.BackgroundColor = SystemColors.ButtonFace
-        DGV_Expenses.BorderStyle = BorderStyle.Fixed3D
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
-        DataGridViewCellStyle1.SelectionForeColor = Color.Black
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        DGV_Expenses.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        DGV_Expenses.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV_Expenses.Location = New Point(36, 62)
-        DGV_Expenses.MultiSelect = False
-        DGV_Expenses.Name = "DGV_Expenses"
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = SystemColors.Control
-        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
-        DataGridViewCellStyle2.SelectionForeColor = Color.Black
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        DGV_Expenses.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
-        DGV_Expenses.RowHeadersWidth = 51
-        DGV_Expenses.RowTemplate.Height = 29
-        DGV_Expenses.Size = New Size(839, 545)
-        DGV_Expenses.TabIndex = 1
-        ' 
         ' S_expenses3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -364,12 +364,12 @@ Partial Class S_expenses3
         Name = "S_expenses3"
         Text = "S_expenses3"
         Panel3.ResumeLayout(False)
+        CType(DGV_Expenses, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
-        CType(DGV_Expenses, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
