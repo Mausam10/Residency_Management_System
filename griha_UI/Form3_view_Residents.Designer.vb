@@ -93,6 +93,8 @@ Partial Class Form3_view_Residents
         Label51 = New Label()
         Label52 = New Label()
         Label53 = New Label()
+        PictureBox4 = New PictureBox()
+        PictureBox3 = New PictureBox()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -102,6 +104,8 @@ Partial Class Form3_view_Residents
         Panel5.SuspendLayout()
         Panel6.SuspendLayout()
         Panel7.SuspendLayout()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -114,7 +118,7 @@ Partial Class Form3_view_Residents
         Panel1.Controls.Add(Button_Property)
         Panel1.Controls.Add(button_resident)
         Panel1.Controls.Add(PictureBox2)
-        Panel1.Location = New Point(1, -3)
+        Panel1.Location = New Point(1, 6)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(500, 1080)
         Panel1.TabIndex = 15
@@ -242,7 +246,7 @@ Partial Class Form3_view_Residents
         Panel2.Controls.Add(Label3)
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(Label11)
-        Panel2.Location = New Point(977, 323)
+        Panel2.Location = New Point(978, 246)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(454, 225)
         Panel2.TabIndex = 23
@@ -358,7 +362,7 @@ Partial Class Form3_view_Residents
         Panel3.Controls.Add(Label15)
         Panel3.Controls.Add(Label16)
         Panel3.Controls.Add(Label17)
-        Panel3.Location = New Point(727, 554)
+        Panel3.Location = New Point(728, 486)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(454, 225)
         Panel3.TabIndex = 34
@@ -474,7 +478,7 @@ Partial Class Form3_view_Residents
         Panel4.Controls.Add(Label24)
         Panel4.Controls.Add(Label25)
         Panel4.Controls.Add(Label26)
-        Panel4.Location = New Point(1224, 554)
+        Panel4.Location = New Point(1225, 486)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(454, 225)
         Panel4.TabIndex = 34
@@ -590,7 +594,7 @@ Partial Class Form3_view_Residents
         Panel5.Controls.Add(Label33)
         Panel5.Controls.Add(Label34)
         Panel5.Controls.Add(Label35)
-        Panel5.Location = New Point(507, 805)
+        Panel5.Location = New Point(508, 728)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(454, 225)
         Panel5.TabIndex = 35
@@ -706,7 +710,7 @@ Partial Class Form3_view_Residents
         Panel6.Controls.Add(Label42)
         Panel6.Controls.Add(Label43)
         Panel6.Controls.Add(Label44)
-        Panel6.Location = New Point(974, 805)
+        Panel6.Location = New Point(975, 728)
         Panel6.Name = "Panel6"
         Panel6.Size = New Size(454, 225)
         Panel6.TabIndex = 35
@@ -822,7 +826,7 @@ Partial Class Form3_view_Residents
         Panel7.Controls.Add(Label51)
         Panel7.Controls.Add(Label52)
         Panel7.Controls.Add(Label53)
-        Panel7.Location = New Point(1443, 805)
+        Panel7.Location = New Point(1444, 728)
         Panel7.Name = "Panel7"
         Panel7.Size = New Size(454, 225)
         Panel7.TabIndex = 35
@@ -925,12 +929,36 @@ Partial Class Form3_view_Residents
         Label53.TabIndex = 21
         Label53.Text = "Resident"
         ' 
+        ' PictureBox4
+        ' 
+        PictureBox4.BackColor = Color.Transparent
+        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
+        PictureBox4.Location = New Point(1831, 959)
+        PictureBox4.Name = "PictureBox4"
+        PictureBox4.Size = New Size(67, 62)
+        PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox4.TabIndex = 36
+        PictureBox4.TabStop = False
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.BackColor = Color.Transparent
+        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
+        PictureBox3.Location = New Point(508, 959)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(67, 62)
+        PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox3.TabIndex = 37
+        PictureBox3.TabStop = False
+        ' 
         ' Form3_view_Residents
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1902, 1033)
+        Controls.Add(PictureBox3)
+        Controls.Add(PictureBox4)
         Controls.Add(Panel7)
         Controls.Add(Panel6)
         Controls.Add(Panel5)
@@ -958,6 +986,8 @@ Partial Class Form3_view_Residents
         Panel6.PerformLayout()
         Panel7.ResumeLayout(False)
         Panel7.PerformLayout()
+        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -1032,4 +1062,6 @@ Partial Class Form3_view_Residents
     Friend WithEvents Label51 As Label
     Friend WithEvents Label52 As Label
     Friend WithEvents Label53 As Label
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
 End Class
