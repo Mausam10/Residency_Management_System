@@ -45,6 +45,8 @@ Partial Class S_events3
         TextBox_Name = New TextBox()
         Panel3 = New Panel()
         DGV_Events = New DataGridView()
+        TextBox1 = New TextBox()
+        TextBox2 = New TextBox()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -181,6 +183,8 @@ Partial Class S_events3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(TextBox2)
+        Panel2.Controls.Add(TextBox1)
         Panel2.Controls.Add(TextBox_organizer)
         Panel2.Controls.Add(DateTimePicker1)
         Panel2.Controls.Add(Button_delete)
@@ -219,7 +223,7 @@ Partial Class S_events3
         Button_delete.BackgroundImageLayout = ImageLayout.None
         Button_delete.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_delete.ForeColor = Color.White
-        Button_delete.Location = New Point(253, 552)
+        Button_delete.Location = New Point(253, 676)
         Button_delete.Name = "Button_delete"
         Button_delete.Size = New Size(204, 43)
         Button_delete.TabIndex = 17
@@ -232,7 +236,7 @@ Partial Class S_events3
         Button_Update.BackgroundImageLayout = ImageLayout.None
         Button_Update.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_Update.ForeColor = Color.White
-        Button_Update.Location = New Point(11, 552)
+        Button_Update.Location = New Point(11, 676)
         Button_Update.Name = "Button_Update"
         Button_Update.Size = New Size(205, 43)
         Button_Update.TabIndex = 16
@@ -245,7 +249,7 @@ Partial Class S_events3
         Button_add.BackgroundImageLayout = ImageLayout.None
         Button_add.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_add.ForeColor = Color.White
-        Button_add.Location = New Point(11, 500)
+        Button_add.Location = New Point(11, 624)
         Button_add.Name = "Button_add"
         Button_add.Size = New Size(446, 43)
         Button_add.TabIndex = 15
@@ -266,7 +270,7 @@ Partial Class S_events3
         ' TextBox_description
         ' 
         TextBox_description.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox_description.Location = New Point(11, 238)
+        TextBox_description.Location = New Point(11, 296)
         TextBox_description.Multiline = True
         TextBox_description.Name = "TextBox_description"
         TextBox_description.PlaceholderText = "Description about events"
@@ -302,6 +306,24 @@ Partial Class S_events3
         DGV_Events.RowTemplate.Height = 29
         DGV_Events.Size = New Size(839, 545)
         DGV_Events.TabIndex = 0
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox1.Location = New Point(11, 573)
+        TextBox1.Name = "TextBox1"
+        TextBox1.PlaceholderText = "Event Expenses"
+        TextBox1.Size = New Size(446, 34)
+        TextBox1.TabIndex = 24
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point)
+        TextBox2.Location = New Point(11, 237)
+        TextBox2.Name = "TextBox2"
+        TextBox2.PlaceholderText = "Event Sponsers"
+        TextBox2.Size = New Size(446, 34)
+        TextBox2.TabIndex = 25
         ' 
         ' S_events3
         ' 
@@ -350,4 +372,6 @@ Partial Class S_events3
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents DGV_Events As DataGridView
     Friend WithEvents TextBox_organizer As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
 End Class
