@@ -44,57 +44,57 @@ Partial Class Form3_view_Residents
         Label2 = New Label()
         Label11 = New Label()
         Panel3 = New Panel()
-        G1_phone = New Label()
+        G0_phone = New Label()
         Label8 = New Label()
-        G1_shift = New Label()
+        G0_shift = New Label()
         Label10 = New Label()
-        G1_name = New Label()
+        G0_name = New Label()
         Label13 = New Label()
         Label15 = New Label()
         Label16 = New Label()
         Label17 = New Label()
         Panel4 = New Panel()
-        G2_phone = New Label()
+        G1_phone = New Label()
         Label19 = New Label()
-        G2_shift = New Label()
+        G1_shift = New Label()
         Label21 = New Label()
-        G2_name = New Label()
+        G1_name = New Label()
         Label23 = New Label()
         Label24 = New Label()
         Label25 = New Label()
         Label26 = New Label()
         Panel5 = New Panel()
-        R1_profession = New Label()
+        R0_profession = New Label()
         Label55 = New Label()
-        R1_phone = New Label()
+        R0_phone = New Label()
         Label28 = New Label()
-        R1_apartment = New Label()
+        R0_apartment = New Label()
         Label30 = New Label()
-        R1_name = New Label()
+        R0_name = New Label()
         Label32 = New Label()
         Label33 = New Label()
         Label34 = New Label()
         Label35 = New Label()
         Panel6 = New Panel()
-        R2_profession = New Label()
+        R1_profession = New Label()
         Label57 = New Label()
-        R2_phone = New Label()
+        R1_phone = New Label()
         Label37 = New Label()
-        R2_apartment = New Label()
+        R1_apartment = New Label()
         Label39 = New Label()
-        R2_name = New Label()
+        R1_name = New Label()
         Label41 = New Label()
         Label42 = New Label()
         Label43 = New Label()
         Label44 = New Label()
         Panel7 = New Panel()
-        R3_profession = New Label()
+        R2_profession = New Label()
         Label59 = New Label()
-        R3_phone = New Label()
+        R2_phone = New Label()
         Label46 = New Label()
-        R3_apartment = New Label()
+        R2_apartment = New Label()
         Label48 = New Label()
-        R3_name = New Label()
+        R2_name = New Label()
         Label50 = New Label()
         Label51 = New Label()
         Label52 = New Label()
@@ -359,11 +359,11 @@ Partial Class Form3_view_Residents
         ' 
         Panel3.BackColor = Color.Transparent
         Panel3.BorderStyle = BorderStyle.Fixed3D
-        Panel3.Controls.Add(G1_phone)
+        Panel3.Controls.Add(G0_phone)
         Panel3.Controls.Add(Label8)
-        Panel3.Controls.Add(G1_shift)
+        Panel3.Controls.Add(G0_shift)
         Panel3.Controls.Add(Label10)
-        Panel3.Controls.Add(G1_name)
+        Panel3.Controls.Add(G0_name)
         Panel3.Controls.Add(Label13)
         Panel3.Controls.Add(Label15)
         Panel3.Controls.Add(Label16)
@@ -373,16 +373,16 @@ Partial Class Form3_view_Residents
         Panel3.Size = New Size(454, 225)
         Panel3.TabIndex = 34
         ' 
-        ' G1_phone
+        ' G0_phone
         ' 
-        G1_phone.AutoSize = True
-        G1_phone.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        G1_phone.ForeColor = Color.Black
-        G1_phone.Location = New Point(205, 164)
-        G1_phone.Name = "G1_phone"
-        G1_phone.Size = New Size(78, 29)
-        G1_phone.TabIndex = 33
-        G1_phone.Text = "NULL"
+        G0_phone.AutoSize = True
+        G0_phone.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        G0_phone.ForeColor = Color.Black
+        G0_phone.Location = New Point(205, 164)
+        G0_phone.Name = "G0_phone"
+        G0_phone.Size = New Size(78, 29)
+        G0_phone.TabIndex = 33
+        G0_phone.Text = "NULL"
         ' 
         ' Label8
         ' 
@@ -395,16 +395,16 @@ Partial Class Form3_view_Residents
         Label8.TabIndex = 32
         Label8.Text = "Phone No:"
         ' 
-        ' G1_shift
+        ' G0_shift
         ' 
-        G1_shift.AutoSize = True
-        G1_shift.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        G1_shift.ForeColor = Color.Black
-        G1_shift.Location = New Point(205, 112)
-        G1_shift.Name = "G1_shift"
-        G1_shift.Size = New Size(78, 29)
-        G1_shift.TabIndex = 31
-        G1_shift.Text = "NULL"
+        G0_shift.AutoSize = True
+        G0_shift.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        G0_shift.ForeColor = Color.Black
+        G0_shift.Location = New Point(205, 112)
+        G0_shift.Name = "G0_shift"
+        G0_shift.Size = New Size(78, 29)
+        G0_shift.TabIndex = 31
+        G0_shift.Text = "NULL"
         ' 
         ' Label10
         ' 
@@ -417,16 +417,16 @@ Partial Class Form3_view_Residents
         Label10.TabIndex = 30
         Label10.Text = "Shift:"
         ' 
-        ' G1_name
+        ' G0_name
         ' 
-        G1_name.AutoSize = True
-        G1_name.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        G1_name.ForeColor = Color.Black
-        G1_name.Location = New Point(205, 64)
-        G1_name.Name = "G1_name"
-        G1_name.Size = New Size(78, 29)
-        G1_name.TabIndex = 29
-        G1_name.Text = "NULL"
+        G0_name.AutoSize = True
+        G0_name.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        G0_name.ForeColor = Color.Black
+        G0_name.Location = New Point(205, 64)
+        G0_name.Name = "G0_name"
+        G0_name.Size = New Size(78, 29)
+        G0_name.TabIndex = 29
+        G0_name.Text = "NULL"
         ' 
         ' Label13
         ' 
@@ -475,11 +475,11 @@ Partial Class Form3_view_Residents
         ' 
         Panel4.BackColor = Color.Transparent
         Panel4.BorderStyle = BorderStyle.Fixed3D
-        Panel4.Controls.Add(G2_phone)
+        Panel4.Controls.Add(G1_phone)
         Panel4.Controls.Add(Label19)
-        Panel4.Controls.Add(G2_shift)
+        Panel4.Controls.Add(G1_shift)
         Panel4.Controls.Add(Label21)
-        Panel4.Controls.Add(G2_name)
+        Panel4.Controls.Add(G1_name)
         Panel4.Controls.Add(Label23)
         Panel4.Controls.Add(Label24)
         Panel4.Controls.Add(Label25)
@@ -489,16 +489,16 @@ Partial Class Form3_view_Residents
         Panel4.Size = New Size(454, 225)
         Panel4.TabIndex = 34
         ' 
-        ' G2_phone
+        ' G1_phone
         ' 
-        G2_phone.AutoSize = True
-        G2_phone.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        G2_phone.ForeColor = Color.Black
-        G2_phone.Location = New Point(205, 164)
-        G2_phone.Name = "G2_phone"
-        G2_phone.Size = New Size(78, 29)
-        G2_phone.TabIndex = 33
-        G2_phone.Text = "NULL"
+        G1_phone.AutoSize = True
+        G1_phone.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        G1_phone.ForeColor = Color.Black
+        G1_phone.Location = New Point(205, 164)
+        G1_phone.Name = "G1_phone"
+        G1_phone.Size = New Size(78, 29)
+        G1_phone.TabIndex = 33
+        G1_phone.Text = "NULL"
         ' 
         ' Label19
         ' 
@@ -511,16 +511,16 @@ Partial Class Form3_view_Residents
         Label19.TabIndex = 32
         Label19.Text = "Phone No:"
         ' 
-        ' G2_shift
+        ' G1_shift
         ' 
-        G2_shift.AutoSize = True
-        G2_shift.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        G2_shift.ForeColor = Color.Black
-        G2_shift.Location = New Point(205, 112)
-        G2_shift.Name = "G2_shift"
-        G2_shift.Size = New Size(78, 29)
-        G2_shift.TabIndex = 31
-        G2_shift.Text = "NULL"
+        G1_shift.AutoSize = True
+        G1_shift.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        G1_shift.ForeColor = Color.Black
+        G1_shift.Location = New Point(205, 112)
+        G1_shift.Name = "G1_shift"
+        G1_shift.Size = New Size(78, 29)
+        G1_shift.TabIndex = 31
+        G1_shift.Text = "NULL"
         ' 
         ' Label21
         ' 
@@ -533,16 +533,16 @@ Partial Class Form3_view_Residents
         Label21.TabIndex = 30
         Label21.Text = "Shift:"
         ' 
-        ' G2_name
+        ' G1_name
         ' 
-        G2_name.AutoSize = True
-        G2_name.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        G2_name.ForeColor = Color.Black
-        G2_name.Location = New Point(205, 64)
-        G2_name.Name = "G2_name"
-        G2_name.Size = New Size(78, 29)
-        G2_name.TabIndex = 29
-        G2_name.Text = "NULL"
+        G1_name.AutoSize = True
+        G1_name.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        G1_name.ForeColor = Color.Black
+        G1_name.Location = New Point(205, 64)
+        G1_name.Name = "G1_name"
+        G1_name.Size = New Size(78, 29)
+        G1_name.TabIndex = 29
+        G1_name.Text = "NULL"
         ' 
         ' Label23
         ' 
@@ -591,13 +591,13 @@ Partial Class Form3_view_Residents
         ' 
         Panel5.BackColor = Color.Transparent
         Panel5.BorderStyle = BorderStyle.Fixed3D
-        Panel5.Controls.Add(R1_profession)
+        Panel5.Controls.Add(R0_profession)
         Panel5.Controls.Add(Label55)
-        Panel5.Controls.Add(R1_phone)
+        Panel5.Controls.Add(R0_phone)
         Panel5.Controls.Add(Label28)
-        Panel5.Controls.Add(R1_apartment)
+        Panel5.Controls.Add(R0_apartment)
         Panel5.Controls.Add(Label30)
-        Panel5.Controls.Add(R1_name)
+        Panel5.Controls.Add(R0_name)
         Panel5.Controls.Add(Label32)
         Panel5.Controls.Add(Label33)
         Panel5.Controls.Add(Label34)
@@ -607,16 +607,16 @@ Partial Class Form3_view_Residents
         Panel5.Size = New Size(454, 225)
         Panel5.TabIndex = 35
         ' 
-        ' R1_profession
+        ' R0_profession
         ' 
-        R1_profession.AutoSize = True
-        R1_profession.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        R1_profession.ForeColor = Color.Black
-        R1_profession.Location = New Point(205, 167)
-        R1_profession.Name = "R1_profession"
-        R1_profession.Size = New Size(78, 29)
-        R1_profession.TabIndex = 35
-        R1_profession.Text = "NULL"
+        R0_profession.AutoSize = True
+        R0_profession.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        R0_profession.ForeColor = Color.Black
+        R0_profession.Location = New Point(205, 167)
+        R0_profession.Name = "R0_profession"
+        R0_profession.Size = New Size(78, 29)
+        R0_profession.TabIndex = 35
+        R0_profession.Text = "NULL"
         ' 
         ' Label55
         ' 
@@ -629,16 +629,16 @@ Partial Class Form3_view_Residents
         Label55.TabIndex = 34
         Label55.Text = "Profession:"
         ' 
-        ' R1_phone
+        ' R0_phone
         ' 
-        R1_phone.AutoSize = True
-        R1_phone.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        R1_phone.ForeColor = Color.Black
-        R1_phone.Location = New Point(205, 133)
-        R1_phone.Name = "R1_phone"
-        R1_phone.Size = New Size(78, 29)
-        R1_phone.TabIndex = 33
-        R1_phone.Text = "NULL"
+        R0_phone.AutoSize = True
+        R0_phone.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        R0_phone.ForeColor = Color.Black
+        R0_phone.Location = New Point(205, 133)
+        R0_phone.Name = "R0_phone"
+        R0_phone.Size = New Size(78, 29)
+        R0_phone.TabIndex = 33
+        R0_phone.Text = "NULL"
         ' 
         ' Label28
         ' 
@@ -651,16 +651,16 @@ Partial Class Form3_view_Residents
         Label28.TabIndex = 32
         Label28.Text = "Phone No:"
         ' 
-        ' R1_apartment
+        ' R0_apartment
         ' 
-        R1_apartment.AutoSize = True
-        R1_apartment.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        R1_apartment.ForeColor = Color.Black
-        R1_apartment.Location = New Point(205, 98)
-        R1_apartment.Name = "R1_apartment"
-        R1_apartment.Size = New Size(78, 29)
-        R1_apartment.TabIndex = 31
-        R1_apartment.Text = "NULL"
+        R0_apartment.AutoSize = True
+        R0_apartment.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        R0_apartment.ForeColor = Color.Black
+        R0_apartment.Location = New Point(205, 98)
+        R0_apartment.Name = "R0_apartment"
+        R0_apartment.Size = New Size(78, 29)
+        R0_apartment.TabIndex = 31
+        R0_apartment.Text = "NULL"
         ' 
         ' Label30
         ' 
@@ -673,16 +673,16 @@ Partial Class Form3_view_Residents
         Label30.TabIndex = 30
         Label30.Text = "Apartment ID:"
         ' 
-        ' R1_name
+        ' R0_name
         ' 
-        R1_name.AutoSize = True
-        R1_name.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        R1_name.ForeColor = Color.Black
-        R1_name.Location = New Point(205, 64)
-        R1_name.Name = "R1_name"
-        R1_name.Size = New Size(78, 29)
-        R1_name.TabIndex = 29
-        R1_name.Text = "NULL"
+        R0_name.AutoSize = True
+        R0_name.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        R0_name.ForeColor = Color.Black
+        R0_name.Location = New Point(205, 64)
+        R0_name.Name = "R0_name"
+        R0_name.Size = New Size(78, 29)
+        R0_name.TabIndex = 29
+        R0_name.Text = "NULL"
         ' 
         ' Label32
         ' 
@@ -731,13 +731,13 @@ Partial Class Form3_view_Residents
         ' 
         Panel6.BackColor = Color.Transparent
         Panel6.BorderStyle = BorderStyle.Fixed3D
-        Panel6.Controls.Add(R2_profession)
+        Panel6.Controls.Add(R1_profession)
         Panel6.Controls.Add(Label57)
-        Panel6.Controls.Add(R2_phone)
+        Panel6.Controls.Add(R1_phone)
         Panel6.Controls.Add(Label37)
-        Panel6.Controls.Add(R2_apartment)
+        Panel6.Controls.Add(R1_apartment)
         Panel6.Controls.Add(Label39)
-        Panel6.Controls.Add(R2_name)
+        Panel6.Controls.Add(R1_name)
         Panel6.Controls.Add(Label41)
         Panel6.Controls.Add(Label42)
         Panel6.Controls.Add(Label43)
@@ -747,16 +747,16 @@ Partial Class Form3_view_Residents
         Panel6.Size = New Size(454, 225)
         Panel6.TabIndex = 35
         ' 
-        ' R2_profession
+        ' R1_profession
         ' 
-        R2_profession.AutoSize = True
-        R2_profession.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        R2_profession.ForeColor = Color.Black
-        R2_profession.Location = New Point(205, 167)
-        R2_profession.Name = "R2_profession"
-        R2_profession.Size = New Size(78, 29)
-        R2_profession.TabIndex = 37
-        R2_profession.Text = "NULL"
+        R1_profession.AutoSize = True
+        R1_profession.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        R1_profession.ForeColor = Color.Black
+        R1_profession.Location = New Point(205, 167)
+        R1_profession.Name = "R1_profession"
+        R1_profession.Size = New Size(78, 29)
+        R1_profession.TabIndex = 37
+        R1_profession.Text = "NULL"
         ' 
         ' Label57
         ' 
@@ -769,16 +769,16 @@ Partial Class Form3_view_Residents
         Label57.TabIndex = 36
         Label57.Text = "Profession:"
         ' 
-        ' R2_phone
+        ' R1_phone
         ' 
-        R2_phone.AutoSize = True
-        R2_phone.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        R2_phone.ForeColor = Color.Black
-        R2_phone.Location = New Point(205, 133)
-        R2_phone.Name = "R2_phone"
-        R2_phone.Size = New Size(78, 29)
-        R2_phone.TabIndex = 33
-        R2_phone.Text = "NULL"
+        R1_phone.AutoSize = True
+        R1_phone.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        R1_phone.ForeColor = Color.Black
+        R1_phone.Location = New Point(205, 133)
+        R1_phone.Name = "R1_phone"
+        R1_phone.Size = New Size(78, 29)
+        R1_phone.TabIndex = 33
+        R1_phone.Text = "NULL"
         ' 
         ' Label37
         ' 
@@ -791,16 +791,16 @@ Partial Class Form3_view_Residents
         Label37.TabIndex = 32
         Label37.Text = "Phone No:"
         ' 
-        ' R2_apartment
+        ' R1_apartment
         ' 
-        R2_apartment.AutoSize = True
-        R2_apartment.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        R2_apartment.ForeColor = Color.Black
-        R2_apartment.Location = New Point(205, 98)
-        R2_apartment.Name = "R2_apartment"
-        R2_apartment.Size = New Size(78, 29)
-        R2_apartment.TabIndex = 31
-        R2_apartment.Text = "NULL"
+        R1_apartment.AutoSize = True
+        R1_apartment.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        R1_apartment.ForeColor = Color.Black
+        R1_apartment.Location = New Point(205, 98)
+        R1_apartment.Name = "R1_apartment"
+        R1_apartment.Size = New Size(78, 29)
+        R1_apartment.TabIndex = 31
+        R1_apartment.Text = "NULL"
         ' 
         ' Label39
         ' 
@@ -813,16 +813,16 @@ Partial Class Form3_view_Residents
         Label39.TabIndex = 30
         Label39.Text = "Apartment ID:"
         ' 
-        ' R2_name
+        ' R1_name
         ' 
-        R2_name.AutoSize = True
-        R2_name.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        R2_name.ForeColor = Color.Black
-        R2_name.Location = New Point(205, 64)
-        R2_name.Name = "R2_name"
-        R2_name.Size = New Size(78, 29)
-        R2_name.TabIndex = 29
-        R2_name.Text = "NULL"
+        R1_name.AutoSize = True
+        R1_name.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        R1_name.ForeColor = Color.Black
+        R1_name.Location = New Point(205, 64)
+        R1_name.Name = "R1_name"
+        R1_name.Size = New Size(78, 29)
+        R1_name.TabIndex = 29
+        R1_name.Text = "NULL"
         ' 
         ' Label41
         ' 
@@ -871,13 +871,13 @@ Partial Class Form3_view_Residents
         ' 
         Panel7.BackColor = Color.Transparent
         Panel7.BorderStyle = BorderStyle.Fixed3D
-        Panel7.Controls.Add(R3_profession)
+        Panel7.Controls.Add(R2_profession)
         Panel7.Controls.Add(Label59)
-        Panel7.Controls.Add(R3_phone)
+        Panel7.Controls.Add(R2_phone)
         Panel7.Controls.Add(Label46)
-        Panel7.Controls.Add(R3_apartment)
+        Panel7.Controls.Add(R2_apartment)
         Panel7.Controls.Add(Label48)
-        Panel7.Controls.Add(R3_name)
+        Panel7.Controls.Add(R2_name)
         Panel7.Controls.Add(Label50)
         Panel7.Controls.Add(Label51)
         Panel7.Controls.Add(Label52)
@@ -887,16 +887,16 @@ Partial Class Form3_view_Residents
         Panel7.Size = New Size(454, 225)
         Panel7.TabIndex = 35
         ' 
-        ' R3_profession
+        ' R2_profession
         ' 
-        R3_profession.AutoSize = True
-        R3_profession.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        R3_profession.ForeColor = Color.Black
-        R3_profession.Location = New Point(205, 167)
-        R3_profession.Name = "R3_profession"
-        R3_profession.Size = New Size(78, 29)
-        R3_profession.TabIndex = 37
-        R3_profession.Text = "NULL"
+        R2_profession.AutoSize = True
+        R2_profession.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        R2_profession.ForeColor = Color.Black
+        R2_profession.Location = New Point(205, 167)
+        R2_profession.Name = "R2_profession"
+        R2_profession.Size = New Size(78, 29)
+        R2_profession.TabIndex = 37
+        R2_profession.Text = "NULL"
         ' 
         ' Label59
         ' 
@@ -909,16 +909,16 @@ Partial Class Form3_view_Residents
         Label59.TabIndex = 36
         Label59.Text = "Profession:"
         ' 
-        ' R3_phone
+        ' R2_phone
         ' 
-        R3_phone.AutoSize = True
-        R3_phone.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        R3_phone.ForeColor = Color.Black
-        R3_phone.Location = New Point(205, 133)
-        R3_phone.Name = "R3_phone"
-        R3_phone.Size = New Size(78, 29)
-        R3_phone.TabIndex = 33
-        R3_phone.Text = "NULL"
+        R2_phone.AutoSize = True
+        R2_phone.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        R2_phone.ForeColor = Color.Black
+        R2_phone.Location = New Point(205, 133)
+        R2_phone.Name = "R2_phone"
+        R2_phone.Size = New Size(78, 29)
+        R2_phone.TabIndex = 33
+        R2_phone.Text = "NULL"
         ' 
         ' Label46
         ' 
@@ -931,16 +931,16 @@ Partial Class Form3_view_Residents
         Label46.TabIndex = 32
         Label46.Text = "Phone No:"
         ' 
-        ' R3_apartment
+        ' R2_apartment
         ' 
-        R3_apartment.AutoSize = True
-        R3_apartment.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        R3_apartment.ForeColor = Color.Black
-        R3_apartment.Location = New Point(205, 98)
-        R3_apartment.Name = "R3_apartment"
-        R3_apartment.Size = New Size(78, 29)
-        R3_apartment.TabIndex = 31
-        R3_apartment.Text = "NULL"
+        R2_apartment.AutoSize = True
+        R2_apartment.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        R2_apartment.ForeColor = Color.Black
+        R2_apartment.Location = New Point(205, 98)
+        R2_apartment.Name = "R2_apartment"
+        R2_apartment.Size = New Size(78, 29)
+        R2_apartment.TabIndex = 31
+        R2_apartment.Text = "NULL"
         ' 
         ' Label48
         ' 
@@ -953,16 +953,16 @@ Partial Class Form3_view_Residents
         Label48.TabIndex = 30
         Label48.Text = "Apartment ID:"
         ' 
-        ' R3_name
+        ' R2_name
         ' 
-        R3_name.AutoSize = True
-        R3_name.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        R3_name.ForeColor = Color.Black
-        R3_name.Location = New Point(205, 64)
-        R3_name.Name = "R3_name"
-        R3_name.Size = New Size(78, 29)
-        R3_name.TabIndex = 29
-        R3_name.Text = "NULL"
+        R2_name.AutoSize = True
+        R2_name.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        R2_name.ForeColor = Color.Black
+        R2_name.Location = New Point(205, 64)
+        R2_name.Name = "R2_name"
+        R2_name.Size = New Size(78, 29)
+        R2_name.TabIndex = 29
+        R2_name.Text = "NULL"
         ' 
         ' Label50
         ' 
@@ -1091,61 +1091,61 @@ Partial Class Form3_view_Residents
     Friend WithEvents Label2 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents G1_phone As Label
+    Friend WithEvents G0_phone As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents G1_shift As Label
+    Friend WithEvents G0_shift As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents G1_name As Label
+    Friend WithEvents G0_name As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents G2_phone As Label
+    Friend WithEvents G1_phone As Label
     Friend WithEvents Label19 As Label
-    Friend WithEvents G2_shift As Label
+    Friend WithEvents G1_shift As Label
     Friend WithEvents Label21 As Label
-    Friend WithEvents G2_name As Label
+    Friend WithEvents G1_name As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents R1_phone As Label
+    Friend WithEvents R0_phone As Label
     Friend WithEvents Label28 As Label
-    Friend WithEvents R1_apartment As Label
+    Friend WithEvents R0_apartment As Label
     Friend WithEvents Label30 As Label
-    Friend WithEvents R1_name As Label
+    Friend WithEvents R0_name As Label
     Friend WithEvents Label32 As Label
     Friend WithEvents Label33 As Label
     Friend WithEvents Label34 As Label
     Friend WithEvents Label35 As Label
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents R2_phone As Label
+    Friend WithEvents R1_phone As Label
     Friend WithEvents Label37 As Label
-    Friend WithEvents R2_apartment As Label
+    Friend WithEvents R1_apartment As Label
     Friend WithEvents Label39 As Label
-    Friend WithEvents R2_name As Label
+    Friend WithEvents R1_name As Label
     Friend WithEvents Label41 As Label
     Friend WithEvents Label42 As Label
     Friend WithEvents Label43 As Label
     Friend WithEvents Label44 As Label
     Friend WithEvents Panel7 As Panel
-    Friend WithEvents R3_phone As Label
+    Friend WithEvents R2_phone As Label
     Friend WithEvents Label46 As Label
-    Friend WithEvents R3_apartment As Label
+    Friend WithEvents R2_apartment As Label
     Friend WithEvents Label48 As Label
-    Friend WithEvents R3_name As Label
+    Friend WithEvents R2_name As Label
     Friend WithEvents Label50 As Label
     Friend WithEvents Label51 As Label
     Friend WithEvents Label52 As Label
     Friend WithEvents Label53 As Label
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents R1_profession As Label
+    Friend WithEvents R0_profession As Label
     Friend WithEvents Label55 As Label
-    Friend WithEvents R2_profession As Label
+    Friend WithEvents R1_profession As Label
     Friend WithEvents Label57 As Label
-    Friend WithEvents R3_profession As Label
+    Friend WithEvents R2_profession As Label
     Friend WithEvents Label59 As Label
 End Class

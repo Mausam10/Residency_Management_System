@@ -16,9 +16,12 @@ Public Class Form3_Expenses
 
         query = "select * from expenses where Apartment_id = '" & loggedUserApartmentId & "'"
         tempDt = grihaDb.generateTable(query)
-        expensesCount = tempDt.Rows.Count
-        If (expensesCount = 0) Then
+
+        If (tempDt Is Nothing) Then
             MsgBox("There are no expenses for your registered apartments")
+            expensesCount = 0
+        Else
+            expensesCount = tempDt.Rows.Count
         End If
 
     End Sub
@@ -89,4 +92,8 @@ Public Class Form3_Expenses
         generateValue(counter)
     End Sub
 
+    Private Sub Button_Expenses_Click(sender As Object, e As EventArgs) Handles Button_Expenses.Click
+        getExpenses()
+        generateValue(counter)
+    End Sub
 End Class

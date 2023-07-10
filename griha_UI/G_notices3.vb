@@ -14,6 +14,7 @@
         tempDt = grihaDb.generateTable(query)
         If (tempDt Is Nothing) Then
             MsgBox("There are no notices for your registered apartments")
+            noticesCount = 0
         End If
         noticesCount = tempDt.Rows.Count
 
