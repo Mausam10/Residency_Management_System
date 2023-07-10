@@ -5,19 +5,26 @@
     Dim counter As Integer = 0
     Dim ResidentCount As Integer
     Dim tempCount As Integer
-    Private Function getResidents() As Boolean
-        query = "SELECT ISNULL(First_Name,'') + ' ' + ISNULL(Last_Name,'') AS 'Full Name', Apartment_id, Phone1, Profession from Residents"
-        tempDt_residents = grihaDb.generateTable(query)
-        If (tempDt_residents Is Nothing) Then
-            MsgBox("No Residents Record Available")
-            ResidentCount = 0
-            tempCount = ResidentCount
-            Return False
-        Else
-            ResidentCount = tempDt_residents.Rows.Count
-            tempCount = ResidentCount
-            Return True
+
+    Dim tempDt_secretary As DataTable
+
+    Dim tempDt_guard As DataTable
+    Private Function getTable(ByVal post As String) As DataTable
+        Dim tempDt As DataTable
+        If (post = "Residents") Then
+            query = $"SELECT ISNULL(First_Name,'') + ' ' + ISNULL(Last_Name,'') AS 'Full Name', Apartment_id, Phone1, Profession from {post}"
         End If
+
+        If (post = "Secretary") Then
+            query = $"SELECT ISNULL(First_Name,'') + ' ' + ISNULL(Last_Name,'') AS 'Full Name', Apartment_id, Phone1 from {post}"
+        End If
+
+        If (post = "Guards") Then
+            query = $"SELECT ISNULL(First_Name,'') + ' ' + ISNULL(Last_Name,'') AS 'Full Name', Shift, Phone1 from {post}"
+        End If
+
+        tempDt = grihaDb.generateTable(query)
+        Return tempDt
 
     End Function
 
@@ -67,7 +74,9 @@
 
 
 
-    Private Sub generateValue(ByVal index As Integer)
+    Private Sub generateValue_Residents(ByVal index As Integer)
+
+
 
         indexCorrector(index)
         insert_R0(index)
@@ -82,6 +91,21 @@
 
     End Sub
 
+    Private Sub generateValue_Secretary()
+
+        If (tempDt_secretary Is Nothing) Then
+            MsgBox("No Secretary Record Available")
+        Else
+            Dim index As Integer = 0
+            S_name.Text = tempDt_secretary.Rows(index).Item(0)
+            S_apartment.Text = tempDt_secretary.Rows(index).Item(1)
+            S_phone.Text = tempDt_secretary.Rows(index).Item(2)
+
+        End If
+
+
+    End Sub
+
 
     Private Sub Button_back_Click(sender As Object, e As EventArgs) Handles Button_back.Click
         Me.Hide()
@@ -90,8 +114,14 @@
 
     Private Sub button_resident_Click(sender As Object, e As EventArgs) Handles button_resident.Click
         counter = 0
-        If (getResidents()) Then
-            generateValue(counter)
+        tempDt_residents = getTable("Residents")
+        If (tempDt_residents Is Nothing) Then
+            MsgBox("No Residents Record Available")
+        Else
+            ResidentCount = tempDt_residents.Rows.Count
+            tempCount = ResidentCount
+            generateValue_Residents(counter)
+
         End If
     End Sub
 
@@ -122,19 +152,30 @@
 
     Private Sub Form3_view_Residents_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         grihaDb.connect()
+
+        'for residents data
         counter = 0
-        If (getResidents()) Then
-            generateValue(counter)
+        tempDt_residents = getTable("Residents")
+        If (tempDt_residents Is Nothing) Then
+            MsgBox("No Residents Record Available")
+        Else
+            ResidentCount = tempDt_residents.Rows.Count
+            tempCount = ResidentCount
+            generateValue_Residents(counter)
         End If
+
+        'for secretary data
+        tempDt_secretary = getTable("Secretary")
+        generateValue_Secretary()
 
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        generateValue(counter)
+        generateValue_Residents(counter)
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
-        generateValue(counter)
+        generateValue_Residents(counter)
     End Sub
 
 

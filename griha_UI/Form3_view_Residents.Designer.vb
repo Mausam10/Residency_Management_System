@@ -101,6 +101,8 @@ Partial Class Form3_view_Residents
         Label53 = New Label()
         PictureBox4 = New PictureBox()
         PictureBox3 = New PictureBox()
+        PictureBox5 = New PictureBox()
+        PictureBox6 = New PictureBox()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -112,6 +114,8 @@ Partial Class Form3_view_Residents
         Panel7.SuspendLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -1029,12 +1033,36 @@ Partial Class Form3_view_Residents
         PictureBox3.TabIndex = 37
         PictureBox3.TabStop = False
         ' 
+        ' PictureBox5
+        ' 
+        PictureBox5.BackColor = Color.Transparent
+        PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), Image)
+        PictureBox5.Location = New Point(621, 554)
+        PictureBox5.Name = "PictureBox5"
+        PictureBox5.Size = New Size(67, 62)
+        PictureBox5.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox5.TabIndex = 38
+        PictureBox5.TabStop = False
+        ' 
+        ' PictureBox6
+        ' 
+        PictureBox6.BackColor = Color.Transparent
+        PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), Image)
+        PictureBox6.Location = New Point(1717, 554)
+        PictureBox6.Name = "PictureBox6"
+        PictureBox6.Size = New Size(67, 62)
+        PictureBox6.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox6.TabIndex = 39
+        PictureBox6.TabStop = False
+        ' 
         ' Form3_view_Residents
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1902, 1033)
+        Controls.Add(PictureBox6)
+        Controls.Add(PictureBox5)
         Controls.Add(PictureBox3)
         Controls.Add(PictureBox4)
         Controls.Add(Panel7)
@@ -1066,6 +1094,8 @@ Partial Class Form3_view_Residents
         Panel7.PerformLayout()
         CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -1148,4 +1178,6 @@ Partial Class Form3_view_Residents
     Friend WithEvents Label57 As Label
     Friend WithEvents R2_profession As Label
     Friend WithEvents Label59 As Label
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
 End Class
