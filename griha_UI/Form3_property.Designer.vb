@@ -35,16 +35,16 @@ Partial Class Form3_property
         Label_property = New Label()
         Panel2 = New Panel()
         Label_description = New Label()
-        Label9 = New Label()
+        Label_area = New Label()
         Label10 = New Label()
-        Label7 = New Label()
+        Label_floor = New Label()
         Label8 = New Label()
-        Label5 = New Label()
+        Label_bhk = New Label()
         Label6 = New Label()
-        Label1 = New Label()
+        Label_ownedBy = New Label()
         Label4 = New Label()
         griha_logo = New PictureBox()
-        Label_date = New Label()
+        Label_apartmentID = New Label()
         Label14 = New Label()
         Label3 = New Label()
         Label2 = New Label()
@@ -185,16 +185,16 @@ Partial Class Form3_property
         Panel2.BackColor = Color.Transparent
         Panel2.BorderStyle = BorderStyle.Fixed3D
         Panel2.Controls.Add(Label_description)
-        Panel2.Controls.Add(Label9)
+        Panel2.Controls.Add(Label_area)
         Panel2.Controls.Add(Label10)
-        Panel2.Controls.Add(Label7)
+        Panel2.Controls.Add(Label_floor)
         Panel2.Controls.Add(Label8)
-        Panel2.Controls.Add(Label5)
+        Panel2.Controls.Add(Label_bhk)
         Panel2.Controls.Add(Label6)
-        Panel2.Controls.Add(Label1)
+        Panel2.Controls.Add(Label_ownedBy)
         Panel2.Controls.Add(Label4)
         Panel2.Controls.Add(griha_logo)
-        Panel2.Controls.Add(Label_date)
+        Panel2.Controls.Add(Label_apartmentID)
         Panel2.Controls.Add(Label14)
         Panel2.Controls.Add(Label3)
         Panel2.Controls.Add(Label2)
@@ -212,16 +212,16 @@ Partial Class Form3_property
         Label_description.Size = New Size(923, 186)
         Label_description.TabIndex = 39
         ' 
-        ' Label9
+        ' Label_area
         ' 
-        Label9.AutoSize = True
-        Label9.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label9.ForeColor = Color.Black
-        Label9.Location = New Point(335, 271)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(78, 29)
-        Label9.TabIndex = 38
-        Label9.Text = "NULL"
+        Label_area.AutoSize = True
+        Label_area.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_area.ForeColor = Color.Black
+        Label_area.Location = New Point(335, 271)
+        Label_area.Name = "Label_area"
+        Label_area.Size = New Size(78, 29)
+        Label_area.TabIndex = 38
+        Label_area.Text = "NULL"
         ' 
         ' Label10
         ' 
@@ -234,16 +234,16 @@ Partial Class Form3_property
         Label10.TabIndex = 37
         Label10.Text = "Area:"
         ' 
-        ' Label7
+        ' Label_floor
         ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label7.ForeColor = Color.Black
-        Label7.Location = New Point(335, 327)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(78, 29)
-        Label7.TabIndex = 36
-        Label7.Text = "NULL"
+        Label_floor.AutoSize = True
+        Label_floor.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_floor.ForeColor = Color.Black
+        Label_floor.Location = New Point(335, 327)
+        Label_floor.Name = "Label_floor"
+        Label_floor.Size = New Size(78, 29)
+        Label_floor.TabIndex = 36
+        Label_floor.Text = "NULL"
         ' 
         ' Label8
         ' 
@@ -256,16 +256,16 @@ Partial Class Form3_property
         Label8.TabIndex = 35
         Label8.Text = "Floor:"
         ' 
-        ' Label5
+        ' Label_bhk
         ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label5.ForeColor = Color.Black
-        Label5.Location = New Point(335, 381)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(78, 29)
-        Label5.TabIndex = 34
-        Label5.Text = "NULL"
+        Label_bhk.AutoSize = True
+        Label_bhk.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_bhk.ForeColor = Color.Black
+        Label_bhk.Location = New Point(335, 381)
+        Label_bhk.Name = "Label_bhk"
+        Label_bhk.Size = New Size(78, 29)
+        Label_bhk.TabIndex = 34
+        Label_bhk.Text = "NULL"
         ' 
         ' Label6
         ' 
@@ -278,16 +278,16 @@ Partial Class Form3_property
         Label6.TabIndex = 33
         Label6.Text = "BHK:"
         ' 
-        ' Label1
+        ' Label_ownedBy
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.ForeColor = Color.Black
-        Label1.Location = New Point(335, 437)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(78, 29)
-        Label1.TabIndex = 32
-        Label1.Text = "NULL"
+        Label_ownedBy.AutoSize = True
+        Label_ownedBy.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_ownedBy.ForeColor = Color.Black
+        Label_ownedBy.Location = New Point(335, 437)
+        Label_ownedBy.Name = "Label_ownedBy"
+        Label_ownedBy.Size = New Size(78, 29)
+        Label_ownedBy.TabIndex = 32
+        Label_ownedBy.Text = "NULL"
         ' 
         ' Label4
         ' 
@@ -311,16 +311,16 @@ Partial Class Form3_property
         griha_logo.TabIndex = 30
         griha_logo.TabStop = False
         ' 
-        ' Label_date
+        ' Label_apartmentID
         ' 
-        Label_date.AutoSize = True
-        Label_date.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
-        Label_date.ForeColor = Color.Black
-        Label_date.Location = New Point(335, 219)
-        Label_date.Name = "Label_date"
-        Label_date.Size = New Size(78, 29)
-        Label_date.TabIndex = 29
-        Label_date.Text = "NULL"
+        Label_apartmentID.AutoSize = True
+        Label_apartmentID.Font = New Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Label_apartmentID.ForeColor = Color.Black
+        Label_apartmentID.Location = New Point(335, 219)
+        Label_apartmentID.Name = "Label_apartmentID"
+        Label_apartmentID.Size = New Size(78, 29)
+        Label_apartmentID.TabIndex = 29
+        Label_apartmentID.Text = "NULL"
         ' 
         ' Label14
         ' 
@@ -388,17 +388,17 @@ Partial Class Form3_property
     Friend WithEvents Label_property As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents griha_logo As PictureBox
-    Friend WithEvents Label_date As Label
+    Friend WithEvents Label_apartmentID As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label9 As Label
+    Friend WithEvents Label_area As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents Label_floor As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents Label_bhk As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents Label_ownedBy As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label_description As Label
 End Class

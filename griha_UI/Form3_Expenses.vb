@@ -79,6 +79,7 @@ Public Class Form3_Expenses
     Private Sub Form3_Expenses_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         grihaDb.connect()
         getExpenses()
+        counter = 0
         generateValue(counter)
     End Sub
 
@@ -94,6 +95,7 @@ Public Class Form3_Expenses
 
     Private Sub Button_Expenses_Click(sender As Object, e As EventArgs) Handles Button_Expenses.Click
         getExpenses()
+        counter = 0
         generateValue(counter)
     End Sub
 End Class
