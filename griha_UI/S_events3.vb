@@ -121,7 +121,7 @@ Public Class S_events3
         description = TextBox_description.Text
         Event_expenses = TextBox_amount.Text
 
-        query = "update events set Event_name ='" & event_name & "', Date='" & date1 & "', Organizer='" & organizer & "' , Sponser='" & organizer & "',Description='" & description & "' , Event_expenses='" & Event_expenses & "' where (Event_name = '" & tempEvent_name & "' and Date = '" & tempDate & "' and Organizer_name = '" & temp_organizer & "' )"
+        query = "update events set Event_name ='" & event_name & "', Date='" & date1 & "', Organizer='" & organizer & "' , Sponser='" & organizer & "',Description='" & description & "' , Event_expenses='" & Event_expenses & "' where (Event_name = '" & tempEvent_name & "' and Date = '" & tempDate & "' and Organizer = '" & temp_organizer & "' )"
         If (grihaDb.executeMySql(query)) Then
             MsgBox("UserInfo successfully edited.")
             reset()
@@ -152,7 +152,7 @@ Public Class S_events3
     End Sub
 
     Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
-        query = " DELETE FROM events WHERE (Event_name = '" & TextBox_Name.Text & "' and Date = '" & DateTimePicker1.Value & "' and Organizer_name = '" & TextBox_organizer.Text & "' ) "
+        query = " DELETE FROM events WHERE (Event_name = '" & TextBox_Name.Text & "' and Date = '" & DateTimePicker1.Value & "' and Organizer = '" & TextBox_organizer.Text & "' ) "
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Record Deleted")
             reset()
