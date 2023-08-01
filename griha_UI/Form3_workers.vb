@@ -1,20 +1,21 @@
 ﻿Public Class Form3_workers
 
     Dim query As String
-    Dim tempDt_availableWorkers As DataTable
+    Dim tempDt_Workers As DataTable
     Dim counter As Integer = 0
     Dim workerCount As Integer = 0
 
     Private Sub getWorkers()
 
-        query = "select distinct workers.Worker_id, ISNULL(First_Name,'') + ' ' + ISNULL(Last_Name,'') AS 'Full Name', Phone1, Address, Profession from workers left join workers_entries on workers.Worker_id = workers_entries.worker_id where Workers_entries.inside = 1"
-        tempDt_availableWorkers = grihaDb.generateTable(query)
+        query = "
+        select distinct workers.Worker_id, ISNULL(First_Name,'') + ' ' + ISNULL(Last_Name,'') AS 'Full Name', Phone1, Address, Profession, Workers_entries.inside from workers full outer join workers_entries on workers.Worker_id = workers_entries.worker_id"
+        tempDt_Workers = grihaDb.generateTable(query)
 
-        If (tempDt_availableWorkers Is Nothing) Then
+        If (tempDt_Workers Is Nothing) Then
             workerCount = 0
-            MsgBox("There are available workers inside the Residency")
+            MsgBox("There are no workers registered for the Residency")
         Else
-            workerCount = tempDt_availableWorkers.Rows.Count
+            workerCount = tempDt_Workers.Rows.Count
         End If
 
     End Sub
@@ -32,22 +33,32 @@
         End If
 
 
-
+        Dim label_color As Color
         If (workerCount <> 0) Then
 
-            Dim label_color As Color = Color.Green
-            Label_WorkerId.ForeColor = label_color
-            Label_WorkerId.Text = tempDt_availableWorkers.Rows(index).Item(0)
-            Label_name.ForeColor = label_color
-            Label_name.Text = tempDt_availableWorkers.Rows(index).Item(1)
-            Label_phone.ForeColor = label_color
-            Label_phone.Text = tempDt_availableWorkers.Rows(index).Item(2)
-            Label_address.ForeColor = label_color
-            Label_address.Text = tempDt_availableWorkers.Rows(index).Item(3)
-            Label_profession.ForeColor = label_color
-            Label_profession.Text = tempDt_availableWorkers.Rows(index).Item(4)
+            If Not IsDBNull(tempDt_Workers.Rows(index).Item(5)) Then
+                If (tempDt_Workers.Rows(index).Item(5) = 1) Then
+                    label_color = Color.Green
+                Else
+                    label_color = Color.Black
+                End If
+            Else
+                label_color = Color.Black
+                End If
 
-        End If
+
+                Label_WorkerId.ForeColor = label_color
+                Label_WorkerId.Text = tempDt_Workers.Rows(index).Item(0)
+                Label_name.ForeColor = label_color
+                Label_name.Text = tempDt_Workers.Rows(index).Item(1)
+                Label_phone.ForeColor = label_color
+                Label_phone.Text = tempDt_Workers.Rows(index).Item(2)
+                Label_address.ForeColor = label_color
+                Label_address.Text = tempDt_Workers.Rows(index).Item(3)
+                Label_profession.ForeColor = label_color
+                Label_profession.Text = tempDt_Workers.Rows(index).Item(4)
+
+            End If
 
 
     End Sub

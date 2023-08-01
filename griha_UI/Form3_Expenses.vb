@@ -23,7 +23,17 @@ Public Class Form3_Expenses
         Else
             expensesCount = tempDt.Rows.Count
         End If
-
+        If (expensesCount < 2) Then
+            PictureBox3.Visible = False
+            PictureBox3.Enabled = False
+            PictureBox4.Visible = False
+            PictureBox4.Enabled = False
+        Else
+            PictureBox3.Visible = True
+            PictureBox3.Enabled = True
+            PictureBox4.Visible = True
+            PictureBox4.Enabled = True
+        End If
     End Sub
 
     Private Sub generateValue(ByVal index As Integer)

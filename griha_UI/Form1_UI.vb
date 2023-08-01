@@ -26,10 +26,8 @@ Public Class Form_UI
             Else
                 query = "select * from " & user & " Where (Username = '" & username & "' and Password = '" & password & "' )"
             End If
-            'query = "select * from " & user & " Where Username = '" & username & "'and Password = '" & password & "' "
             tempdt = grihaDb.generateTable(query)
-
-            If (tempdt Is Nothing) Then
+            If (tempdt.Rows.Count <> 1) Then
                 Return -1 'username/password not matched or no user exists
             End If
 
@@ -41,11 +39,8 @@ Public Class Form_UI
             End If
             Return 1  'username and password matched
         Catch ex As Exception
-            MsgBox(ex.Message)
             Return -1
         End Try
-
-
 
     End Function
 
@@ -68,24 +63,6 @@ Public Class Form_UI
 
     End Sub
 
-    Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles griha_logo.Click
-
-    End Sub
-
-    Private Sub Username_textbox_TextChanged(sender As Object, e As EventArgs) Handles Username_textbox.TextChanged
-
-    End Sub
-
-    Private Sub Username_label_Click(sender As Object, e As EventArgs) Handles Username_label.Click
-
-    End Sub
     Private Sub Login_Guard_Click(sender As Object, e As EventArgs) Handles Login_Guard.Click
         If (authenticationCheck(Username_textbox.Text, Password_textbox.Text, "Guards") = 1) Then
             Me.Hide()
@@ -111,7 +88,4 @@ Public Class Form_UI
 
     End Sub
 
-    Protected Sub Password_textbox_TextChanged(sender As Object, e As EventArgs) Handles Password_textbox.TextChanged
-
-    End Sub
 End Class

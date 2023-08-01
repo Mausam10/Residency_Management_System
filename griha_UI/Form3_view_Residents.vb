@@ -5,10 +5,9 @@
     Dim counter As Integer = 0
     Dim ResidentCount As Integer
     Dim tempCount As Integer
-
     Dim tempDt_secretary As DataTable
-
     Dim tempDt_guard As DataTable
+
     Private Function getTable(ByVal post As String) As DataTable
         Dim tempDt As DataTable
         If (post = "Residents") Then
@@ -27,6 +26,28 @@
         Return tempDt
 
     End Function
+
+    Private Sub generateValue_Secretary()
+        If (tempDt_secretary.Rows.Count <> 0) Then
+            Dim index As Integer = 0
+            S_name.Text = tempDt_secretary.Rows(index).Item(0)
+            S_apartment.Text = tempDt_secretary.Rows(index).Item(1)
+            S_phone.Text = tempDt_secretary.Rows(index).Item(2)
+        End If
+    End Sub
+
+    Private Sub generateValue_Guards()
+        If (tempDt_guard.Rows.Count <> 0) Then
+            G0_name.Text = tempDt_guard.Rows(0).Item(0)
+            G0_shift.Text = tempDt_guard.Rows(0).Item(1)
+            G0_phone.Text = tempDt_guard.Rows(0).Item(2)
+            G1_name.Text = tempDt_guard.Rows(1).Item(0)
+            G1_shift.Text = tempDt_guard.Rows(1).Item(1)
+            G1_phone.Text = tempDt_guard.Rows(1).Item(2)
+        End If
+    End Sub
+
+
 
     Private Sub insert_R0(ByVal index As Integer)
 
@@ -91,20 +112,7 @@
 
     End Sub
 
-    Private Sub generateValue_Secretary()
 
-        If (tempDt_secretary Is Nothing) Then
-            MsgBox("No Secretary Record Available")
-        Else
-            Dim index As Integer = 0
-            S_name.Text = tempDt_secretary.Rows(index).Item(0)
-            S_apartment.Text = tempDt_secretary.Rows(index).Item(1)
-            S_phone.Text = tempDt_secretary.Rows(index).Item(2)
-
-        End If
-
-
-    End Sub
 
 
     Private Sub Button_back_Click(sender As Object, e As EventArgs) Handles Button_back.Click
@@ -168,6 +176,10 @@
         tempDt_secretary = getTable("Secretary")
         generateValue_Secretary()
 
+        'for guard data
+        tempDt_guard = getTable("Guards")
+        generateValue_Guards()
+
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
@@ -177,6 +189,5 @@
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
         generateValue_Residents(counter)
     End Sub
-
 
 End Class
