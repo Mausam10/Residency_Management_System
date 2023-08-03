@@ -9,7 +9,7 @@ Public Class grihaDb
     Shared cb As ComboBox
     Shared reader As SqlDataReader
     Shared Sub connect()
-        Dim connectionString As String = "Data Source=LAPTOP-390QHVCB;Initial Catalog=Griha;Integrated Security=True;TrustServerCertificate=True"
+        Dim connectionString As String = "Data Source=LAPTOP-H5H6CH7L\SQLEXPRESS;Initial Catalog=Griha;Integrated Security=True;TrustServerCertificate=True"
         con = New SqlConnection(connectionString)
     End Sub
 
