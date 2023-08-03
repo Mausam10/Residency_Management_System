@@ -46,6 +46,7 @@ Partial Class S_notices3
         Label_notices = New Label()
         PictureBox1 = New PictureBox()
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
+        Button1 = New Button()
         Panel3.SuspendLayout()
         CType(DGV_Notices, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
@@ -257,6 +258,7 @@ Partial Class S_notices3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(Button1)
         Panel2.Controls.Add(DateTimePicker1)
         Panel2.Controls.Add(Button_delete)
         Panel2.Controls.Add(Button_Update)
@@ -311,6 +313,19 @@ Partial Class S_notices3
         PictureBox1.TabIndex = 14
         PictureBox1.TabStop = False
         ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Black
+        Button1.BackgroundImageLayout = ImageLayout.None
+        Button1.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(11, 614)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(446, 43)
+        Button1.TabIndex = 24
+        Button1.Text = "RESET"
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' S_notices3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -357,4 +372,5 @@ Partial Class S_notices3
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents DGV_Notices As DataGridView
+    Friend WithEvents Button1 As Button
 End Class
