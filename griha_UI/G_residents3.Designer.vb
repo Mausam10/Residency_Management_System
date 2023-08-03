@@ -49,6 +49,7 @@ Partial Class G_residents3
         Button_notices = New Button()
         Button_back = New Button()
         Panel1 = New Panel()
+        Button1 = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
@@ -83,6 +84,7 @@ Partial Class G_residents3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(Button1)
         Panel2.Controls.Add(CheckBox_resident)
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(DateTimePicker2)
@@ -356,6 +358,19 @@ Partial Class G_residents3
         Panel1.Size = New Size(500, 1080)
         Panel1.TabIndex = 11
         ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Black
+        Button1.BackgroundImageLayout = ImageLayout.None
+        Button1.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(11, 665)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(446, 43)
+        Button1.TabIndex = 24
+        Button1.Text = "RESET"
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' G_residents3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -404,4 +419,5 @@ Partial Class G_residents3
     Friend WithEvents Button_notices As Button
     Friend WithEvents Button_back As Button
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button1 As Button
 End Class
