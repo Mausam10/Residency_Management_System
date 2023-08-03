@@ -1,4 +1,5 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class S_expenses3
 
@@ -10,6 +11,22 @@ Public Class S_expenses3
     Dim tempAmount As String
 
 
+    Private Function apartmentVerification(ByVal apartment As String) As Boolean
+        Dim count As Integer
+        count = ComboBox_apartments.Items.Count
+        If (count <> 0) Then
+            For i As Integer = 0 To count - 1
+                If (apartment = ComboBox_apartments.Items(i).ToString) Then
+                    Return True
+                End If
+            Next
+            Return False
+        Else
+            Return False
+        End If
+
+    End Function
+
     Private Function addToDatabase() As Integer
         Dim Apartment_id, Expenses_type, Amount As String
         Dim date1 As Date
@@ -17,6 +34,11 @@ Public Class S_expenses3
         Expenses_type = ComboBox_expenses.SelectedItem
         Amount = TextBox_Amount.Text
         date1 = DateTimePicker1.Text
+
+        If (apartmentVerification(Apartment_id) = False) Then
+            Return -2
+        End If
+
         query = "Insert into expenses(Apartment_id, Expenses_type, Amount, Date) values('" & Apartment_id & "' ,'" & Expenses_type & "','" & Amount & "','" & date1 & "')"
         If (grihaDb.executeMySql(query)) Then
             Return 1 'success
@@ -76,15 +98,6 @@ Public Class S_expenses3
     End Sub
 
 
-    Private Sub Label_types_of_expenses_Click(sender As Object, e As EventArgs) Handles Label_types_of_expenses.Click
-    End Sub
-
-    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles DateTimePicker1.ValueChanged
-    End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox_expenses.SelectedIndexChanged
-    End Sub
-
     Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
         query = " DELETE FROM expenses WHERE (Apartment_Id='" & ComboBox_apartments.SelectedItem & "' and Expenses_type = '" & ComboBox_expenses.SelectedItem & "' and Amount = '" & TextBox_Amount.Text & "' and Date = '" & DateTimePicker1.Value & "') "
         If (grihaDb.executeMySql(query)) Then
@@ -103,6 +116,12 @@ Public Class S_expenses3
         Expenses_type = ComboBox_expenses.SelectedItem
         Amount = TextBox_Amount.Text
         date1 = DateTimePicker1.Text
+
+        If (apartmentVerification(Apartment_id) = False) Then
+            MsgBox("The apartment is not registered or is invalid, Try Again!!")
+            Exit Sub
+        End If
+
         query = "update expenses set Apartment_Id ='" & Apartment_id & "', expenses_type ='" & Expenses_type & "', amount='" & Amount & "',date='" & date1 & "' where (Apartment_id='" & tempApartment & "' and Expenses_type = '" & tempExpenses_type & "' and Amount = '" & tempAmount & "' and Date = '" & tempDate & "')"
         If (grihaDb.executeMySql(query)) Then
             MsgBox("UserInfo successfully edited.")
@@ -114,14 +133,18 @@ Public Class S_expenses3
     End Sub
 
     Private Sub Button_add_Click(sender As Object, e As EventArgs) Handles Button_add.Click
+
         If (addToDatabase() = 1) Then
             MsgBox("Record successfully Added")
             reset()
             populate()
             populateComboBox()
-        Else
+        ElseIf (addToDatabase() = -1) Then
             MsgBox("Error. Please check and try again.")
+        ElseIf (addToDatabase() = -2) Then
+            MsgBox("The apartment is not registered or is invalid, Try Again!!")
         End If
+
     End Sub
 
 

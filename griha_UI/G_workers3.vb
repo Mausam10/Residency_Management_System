@@ -1,4 +1,6 @@
-﻿Public Class G_workers3
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+
+Public Class G_workers3
 
     Dim query As String
     Dim tempDt As DataTable
@@ -6,7 +8,21 @@
     Dim temp_timeEntry As Date
     Dim temp_timeExit As Date
 
+    Private Function workerVerification(ByVal workerId As String) As Boolean
+        Dim count As Integer
+        count = ComboBox_workerID.Items.Count
+        If (count <> 0) Then
+            For i As Integer = 0 To count - 1
+                If (workerId = ComboBox_workerID.Items(i).ToString) Then
+                    Return True
+                End If
+            Next
+            Return False
+        Else
+            Return False
+        End If
 
+    End Function
     Private Function addToDatabase() As Integer
 
         Dim Worker_id As String
@@ -18,9 +34,20 @@
         'exit_time = Nothing
         description = TextBox_description.Text
 
+        If (workerVerification(Worker_id) = False) Then
+            Return -2
+        End If
+
+        query = "delete from Workers_entries where worker_id = '" & Worker_id & "'"
+
+        If (grihaDb.executeMySql(query)) Then
+            'do nothing
+        End If
+
         If (CheckBox_worker.Checked = True) Then
             Inside = 0
             exit_time = DateTimePicker2.Value
+
             query = "Insert into Workers_entries (Worker_id, Entry_time, Exit_time, description, Inside) values('" & Worker_id & "','" & entry_time & "','" & exit_time & "','" & description & "','" & Inside & "')"
         Else
             Inside = 1
@@ -50,7 +77,7 @@
 
     Private Sub populateComboBox()
         ComboBox_workerID.Items.Clear()
-        query = "select Worker_id from Workers"
+        query = "select Worker_id from Workers order by Worker_id"
 
         Dim items As ComboBox.ObjectCollection = grihaDb.generateComboBox(query, "Worker_id").Items
 
@@ -102,8 +129,10 @@
             reset()
             populate()
             populateComboBox()
-        Else
+        ElseIf (addToDatabase() = -1) Then
             MsgBox("Error. Please check and try again.")
+        ElseIf (addToDatabase() = -2) Then
+            MsgBox("The Worker_Id doesn't exist or contains invalid characters, Try Again!!")
         End If
     End Sub
 
@@ -117,6 +146,11 @@
         entry_time = DateTimePicker1.Value
         'exit_time = Nothing
         description = TextBox_description.Text
+
+        If (workerVerification(Worker_id) = False) Then
+            MsgBox("The Worker_Id doesn't exist or contains invalid characters, Try Again!!")
+            Exit Sub
+        End If
 
 
         If (CheckBox_worker.Checked = True) Then

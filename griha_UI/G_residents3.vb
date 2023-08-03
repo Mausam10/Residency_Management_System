@@ -6,6 +6,23 @@
     Dim temp_DateExit As Date
     Dim temp_DateEntry As Date
 
+    Private Function usernameVerification(ByVal username As String) As Boolean
+        Dim count As Integer
+        query = "select Username from residents"
+        Dim temp As DataTable = grihaDb.generateTable(query)
+        count = temp.Rows.Count
+        If (count <> 0) Then
+            For i As Integer = 0 To count - 1
+                If (username = temp.Rows(i).Item(0).ToString) Then
+                    Return False
+                End If
+            Next
+            Return True
+        Else
+            Return True
+        End If
+
+    End Function
 
     Private Function addToDatabase() As Integer
 
@@ -17,6 +34,16 @@
         exit_date = DateTimePicker1.Value
         'entry_date = Nothing
         description = TextBox_description.Text
+
+        If (usernameVerification(username) = False) Then
+            Return -2
+        End If
+
+        query = "delete from Residents_entries where username = '" & username & "'"
+
+        If (grihaDb.executeMySql(query)) Then
+            'do nothing
+        End If
 
         If (CheckBox_resident.Checked = True) Then
             Outside = 0
@@ -90,8 +117,10 @@
             MsgBox("Record successfully Added")
             reset()
             populate()
-        Else
+        ElseIf (addtodatabase() = -1) Then
             MsgBox("Error. Please check and try again.")
+        ElseIf (addtoDatabase() = -2) Then
+            MsgBox("The username doesn't exist or contains invalid characters, Try Again!!")
         End If
 
     End Sub
@@ -106,6 +135,11 @@
         exit_date = DateTimePicker1.Value
         'entry_date = Nothing
         description = TextBox_description.Text
+
+        If (usernameVerification(username) = False) Then
+            MsgBox("The username doesn't exist or contains invalid characters, Try Again!!")
+            Exit Sub
+        End If
 
         If (CheckBox_resident.Checked = True) Then
             Outside = 0

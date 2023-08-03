@@ -18,6 +18,40 @@ Public Class S_residents3
         End If
     End Sub
 
+    Private Function usernameVerification(ByVal username As String) As Boolean
+        Dim count As Integer
+        query = "select Username from residents"
+        Dim temp As DataTable = grihaDb.generateTable(query)
+        count = temp.Rows.Count
+        If (count <> 0) Then
+            For i As Integer = 0 To count - 1
+                If (username = temp.Rows(i).Item(0).ToString) Then
+                    Return False
+                End If
+            Next
+            Return True
+        Else
+            Return True
+        End If
+
+    End Function
+
+    Private Function apartmentVerification(ByVal apartment As String) As Boolean
+        Dim count As Integer
+        count = ComboBox_apartments.Items.Count
+        If (count <> 0) Then
+            For i As Integer = 0 To count - 1
+                If (apartment = ComboBox_apartments.Items(i).ToString) Then
+                    Return True
+                End If
+            Next
+            Return False
+        Else
+            Return False
+        End If
+
+    End Function
+
     Private Sub populateComboBox()
         ComboBox_apartments.Items.Clear()
         'query = "select * from apartments"
@@ -43,6 +77,14 @@ Public Class S_residents3
         Email = TextBox_email.Text
         Profession = TextBox_profession.Text
         Apartment_id = ComboBox_apartments.SelectedItem
+
+        If (usernameVerification(Username) = False) Then
+            Return -2
+        End If
+
+        If (apartmentVerification(Apartment_id) = False) Then
+            Return -3
+        End If
 
         query = "Insert into residents(Username,Password,First_Name,Middle_Name, Last_Name,Gender, Phone1, Phone2, Email, Profession, Apartment_id) values('" & Username & "', '" & Password & "' ,'" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Gender & "','" & Phone1 & "' ,'" & Phone2 & "','" & Email & "','" & Profession & "','" & Apartment_id & "')"
         If (grihaDb.executeMySql(query)) Then
@@ -102,18 +144,21 @@ Public Class S_residents3
             reset()
             populate()
             populateComboBox()
-        Else
+        ElseIf (addtodatabase() = -1) Then
             MsgBox("Error. Please check and try again.")
+        ElseIf (addtoDatabase() = -2) Then
+            MsgBox("The username already exists or contains invalid characters, Try Again!!")
+        Else
+            MsgBox("The apartment is already registered to another user or is invalid, Try Again!!")
         End If
 
     End Sub
 
     Private Sub populate()
-        query = "select * from residents"
+        query = "select * from residents order by First_name"
         tempDt = grihaDb.generateTable(query)
         If (tempDt Is Nothing) Then
             MsgBox("No record")
-
         Else
             DataDVG.DataSource = tempDt
         End If
@@ -173,14 +218,25 @@ Public Class S_residents3
         Profession = TextBox_profession.Text
         Apartment_id = ComboBox_apartments.SelectedItem
 
+        If (usernameVerification(Username) = False) Then
+            MsgBox("The username already exists or contains invalid characters, Try Again!!")
+            Exit Sub
+        End If
+
+        If (apartmentVerification(Apartment_id) = False) Then
+            MsgBox("The apartment is already registered to another user or is invalid, Try Again!!")
+            Exit Sub
+        End If
+
         query = "update Residents set username ='" & Username & "', password='" & Password & "',First_Name='" & First_Name & "', Middle_Name ='" & Middle_Name & "', Last_Name='" & Last_Name & "',Gender='" & Gender & "', phone1 ='" & Phone1 & "', Phone2='" & Phone2 & "',Email='" & Email & "',Profession='" & Profession & "',Apartment_id='" & Apartment_id & "' where USERNAME = '" & tempUsername & "'"
 
-        grihaDb.executeMySql(query)
-        addToDatabase()
-        MsgBox("UserInfo successfully edited.")
-        reset()
-        populate()
-        populateComboBox()
+        If (grihaDb.executeMySql(query)) Then
+            MsgBox("UserInfo successfully edited.")
+            reset()
+            populate()
+            populateComboBox()
+        End If
+
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
@@ -197,6 +253,7 @@ Public Class S_residents3
 
     Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
         query = " DELETE FROM Residents WHERE Username='" & TextBox_username.Text & "' "
+
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Record Deleted")
             reset()

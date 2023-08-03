@@ -9,7 +9,7 @@ Public Class grihaDb
     Shared cb As ComboBox
     Shared reader As SqlDataReader
     Shared Sub connect()
-        Dim connectionString As String = "Data Source=LAPTOP-H5H6CH7L\SQLEXPRESS;Initial Catalog=Griha;Integrated Security=True;TrustServerCertificate=True"
+        Dim connectionString As String = "Data Source=LAPTOP-390QHVCB;Initial Catalog=griha;Integrated Security=True;TrustServerCertificate=True"
         con = New SqlConnection(connectionString)
     End Sub
 
@@ -23,12 +23,12 @@ Public Class grihaDb
 
         Catch ex As Exception
             con.Close()
-            MsgBox(ex.Message)
+            MsgBox("Server Connection Error!! Please try again or restart the Application.")
             Return False
         End Try
     End Function
 
-    Shared Function generateTable(ByVal sqlQuery As String) As DataTable
+    Shared Function generateTable(ByVal sqlQuery As String, Optional ByRef check As Integer = 1) As DataTable
         sda = New SqlDataAdapter
         dt = New DataTable
         Try
@@ -37,12 +37,14 @@ Public Class grihaDb
             sda.SelectCommand = cmd
             sda.Fill(dt)
             con.Close()
+            check = 1
             Return dt
 
         Catch ex As Exception
             con.Close()
-            MsgBox(ex.Message)
+            MsgBox("Database Server Error!! Please try again or restart the Application.")
             dt = Nothing
+            check = 0
             Return dt
         End Try
 
@@ -64,7 +66,7 @@ Public Class grihaDb
             Return cb
         Catch ex As Exception
             con.Close()
-            MsgBox(ex.Message)
+            MsgBox("Server Error!! Please try again or restart the Application.")
             cb = Nothing
             Return cb
         End Try

@@ -1,6 +1,7 @@
 ﻿Imports System.Diagnostics.Eventing.Reader
 Imports System.Reflection
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class S_workers3
 
@@ -8,6 +9,26 @@ Public Class S_workers3
     Dim tempDt As DataTable
     Dim tempWorkerID As String
     Dim tempProfession As String
+
+    Private Function usernameVerification(ByVal username As String) As Boolean
+        Dim count As Integer
+        query = "select Worker_id from workers"
+        Dim temp As DataTable = grihaDb.generateTable(query)
+        count = temp.Rows.Count
+        If (count <> 0) Then
+            For i As Integer = 0 To count - 1
+                If (username = temp.Rows(i).Item(0).ToString) Then
+                    Return False
+                End If
+            Next
+            Return True
+        Else
+            Return True
+        End If
+
+    End Function
+
+
     Private Function addToDatabase() As Integer
         Dim Worker_Id As String
         Dim First_Name, Middle_Name, Last_Name, Phone1, Phone2, Profession, Address As String
@@ -19,6 +40,10 @@ Public Class S_workers3
         Phone2 = TextBox_phone2.Text
         Profession = Textbox_profession.Text
         Address = TextBox_address.Text
+
+        If (usernameVerification(Worker_Id) = False) Then
+            Return -2
+        End If
 
         query = "Insert into workers(Worker_id, First_Name, Middle_Name, Last_Name, Phone1, Phone2, Profession, Address) values('" & Worker_Id & "','" & First_Name & "','" & Middle_Name & "','" & Last_Name & "','" & Phone1 & "' ,'" & Phone2 & "' ,'" & Profession & "','" & Address & "')"
         If (grihaDb.executeMySql(query)) Then
@@ -88,8 +113,10 @@ Public Class S_workers3
             MsgBox("Record successfully Added")
             reset()
             populate()
-        Else
+        ElseIf (addtoDatabase() = -1) Then
             MsgBox("Error. Please check and try again.")
+        ElseIf (addtoDatabase() = -2) Then
+            MsgBox("The Worker_Id already exists or contains invalid characters, Try Again!!")
         End If
 
     End Sub
@@ -118,6 +145,12 @@ Public Class S_workers3
         Phone2 = TextBox_phone2.Text
         Profession = Textbox_profession.Text
         Address = TextBox_address.Text
+
+        If (usernameVerification(Worker_Id) = False) Then
+            MsgBox("The Worker_Id already exists or contains invalid characters, Try Again!!")
+            Exit Sub
+        End If
+
         query = "update workers set Worker_Id ='" & Worker_Id & "', First_Name ='" & First_Name & "', Middle_Name ='" & Middle_Name & "', Last_Name='" & Last_Name & "', Phone1 ='" & Phone1 & "', Phone2='" & Phone2 & "', Profession='" & Profession & "', Address='" & Address & "' where (Worker_Id='" & tempWorkerID & "' and Profession = '" & tempProfession & "')"
         If (grihaDb.executeMySql(query)) Then
             MsgBox("Worker Info successfully edited.")

@@ -26,7 +26,14 @@ Public Class Form_UI
             Else
                 query = "select * from " & user & " Where (Username = '" & username & "' and Password = '" & password & "' )"
             End If
-            tempdt = grihaDb.generateTable(query)
+            Dim check As Integer = 1
+            tempdt = grihaDb.generateTable(query, check)
+            If (tempdt Is Nothing) Then
+                If (check = 0) Then
+                    Return -2 ' server connection error
+                End If
+                Return -1 'username/password not matched or no user exists
+            End If
             If (tempdt.Rows.Count <> 1) Then
                 Return -1 'username/password not matched or no user exists
             End If
@@ -57,7 +64,7 @@ Public Class Form_UI
         If (authenticationCheck(Username_textbox.Text, Password_textbox.Text, "Secretary") = 1) Then
             Me.Hide()
             Form_secretary.Show()
-        Else
+        ElseIf (authenticationCheck(Username_textbox.Text, Password_textbox.Text, "Guards") = -1) Then
             MsgBox("Incorrect username or password. Please try again.")
         End If
 
@@ -67,7 +74,7 @@ Public Class Form_UI
         If (authenticationCheck(Username_textbox.Text, Password_textbox.Text, "Guards") = 1) Then
             Me.Hide()
             Form_Securityguard.Show()
-        Else
+        ElseIf (authenticationCheck(Username_textbox.Text, Password_textbox.Text, "Guards") = -1) Then
             MsgBox("Incorrect username or password. Please try again.")
         End If
 
@@ -77,7 +84,8 @@ Public Class Form_UI
         If (authenticationCheck(Username_textbox.Text, Password_textbox.Text, "Residents") = 1) Then
             Me.Hide()
             Form_Resident.Show()
-        Else
+        ElseIf (authenticationCheck(Username_textbox.Text, Password_textbox.Text, "Guards") = -1) Then
+
             MsgBox("Incorrect username or password. Please try again.")
         End If
 

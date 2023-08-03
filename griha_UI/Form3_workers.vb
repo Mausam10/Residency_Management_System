@@ -7,8 +7,7 @@
 
     Private Sub getWorkers()
 
-        query = "
-        select distinct workers.Worker_id, ISNULL(First_Name,'') + ' ' + ISNULL(Last_Name,'') AS 'Full Name', Phone1, Address, Profession, Workers_entries.inside from workers full outer join workers_entries on workers.Worker_id = workers_entries.worker_id"
+        query = "select distinct workers.Worker_id, ISNULL(First_Name,'') + ' ' + ISNULL(Last_Name,'') AS 'Full Name', Phone1, Address, Profession, Workers_entries.inside from workers full outer join workers_entries on workers.Worker_id = workers_entries.worker_id order by workers_entries.inside desc"
         tempDt_Workers = grihaDb.generateTable(query)
 
         If (tempDt_Workers Is Nothing) Then
