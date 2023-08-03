@@ -56,7 +56,6 @@
             R0_apartment.Text = tempDt_residents.Rows(index).Item(1)
             R0_phone.Text = tempDt_residents.Rows(index).Item(2)
             R0_profession.Text = tempDt_residents.Rows(index).Item(3)
-            counter = counter + 1
         End If
     End Sub
 
@@ -66,7 +65,6 @@
             R1_apartment.Text = tempDt_residents.Rows(index).Item(1)
             R1_phone.Text = tempDt_residents.Rows(index).Item(2)
             R1_profession.Text = tempDt_residents.Rows(index).Item(3)
-            counter = counter + 1
         End If
     End Sub
 
@@ -76,7 +74,6 @@
             R2_apartment.Text = tempDt_residents.Rows(index).Item(1)
             R2_phone.Text = tempDt_residents.Rows(index).Item(2)
             R2_profession.Text = tempDt_residents.Rows(index).Item(3)
-            counter = counter + 1
         End If
     End Sub
 
@@ -95,20 +92,36 @@
 
 
 
-    Private Sub generateValue_Residents(ByVal index As Integer)
+    Private Sub generateValue_Residents(ByRef index As Integer, Optional ByVal operation As Integer = 1)
+
+        If (operation = 1) Then
+            indexCorrector(index)
+            insert_R0(index)
+            index = index + 1
+
+            indexCorrector(index)
+            insert_R1(index)
+            index = index + 1
+
+            indexCorrector(index)
+            insert_R2(index)
+            index = index + 1
+
+        ElseIf (operation = 0) Then
+            index = index - 1
+            indexCorrector(index)
+            insert_R2(index)
+
+            index = index - 1
+            indexCorrector(index)
+            insert_R1(index)
+
+            index = index - 1
+            indexCorrector(index)
+            insert_R0(index)
+        End If
 
 
-
-        indexCorrector(index)
-        insert_R0(index)
-
-        index = index + 1
-        indexCorrector(index)
-        insert_R1(index)
-
-        index = index + 1
-        indexCorrector(index)
-        insert_R2(index)
 
     End Sub
 
@@ -183,7 +196,9 @@
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        generateValue_Residents(counter)
+        counter = counter - 3
+        generateValue_Residents(counter, 0)
+
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
