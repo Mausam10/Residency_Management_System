@@ -22,10 +22,11 @@ Partial Class G_visitors3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(G_visitors3))
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(G_visitors3))
         Panel3 = New Panel()
+        DGV_visitors = New DataGridView()
         Label_attending_back = New Label()
         Label_leaving_residency = New Label()
         Button_delete = New Button()
@@ -51,13 +52,13 @@ Partial Class G_visitors3
         button_resident = New Button()
         PictureBox2 = New PictureBox()
         Panel1 = New Panel()
-        DGV_visitors = New DataGridView()
+        Button1 = New Button()
         Panel3.SuspendLayout()
+        CType(DGV_visitors, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
-        CType(DGV_visitors, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel3
@@ -67,6 +68,35 @@ Partial Class G_visitors3
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(905, 768)
         Panel3.TabIndex = 23
+        ' 
+        ' DGV_visitors
+        ' 
+        DGV_visitors.BackgroundColor = SystemColors.ButtonFace
+        DGV_visitors.BorderStyle = BorderStyle.Fixed3D
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
+        DataGridViewCellStyle1.SelectionForeColor = Color.Black
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        DGV_visitors.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DGV_visitors.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGV_visitors.Location = New Point(36, 62)
+        DGV_visitors.MultiSelect = False
+        DGV_visitors.Name = "DGV_visitors"
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = SystemColors.Control
+        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
+        DataGridViewCellStyle2.SelectionForeColor = Color.Black
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DGV_visitors.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DGV_visitors.RowHeadersWidth = 51
+        DGV_visitors.RowTemplate.Height = 29
+        DGV_visitors.Size = New Size(839, 545)
+        DGV_visitors.TabIndex = 3
         ' 
         ' Label_attending_back
         ' 
@@ -153,6 +183,7 @@ Partial Class G_visitors3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(Button1)
         Panel2.Controls.Add(CheckBox_visitor)
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(DateTimePicker2)
@@ -359,34 +390,18 @@ Partial Class G_visitors3
         Panel1.Size = New Size(500, 1080)
         Panel1.TabIndex = 19
         ' 
-        ' DGV_visitors
+        ' Button1
         ' 
-        DGV_visitors.BackgroundColor = SystemColors.ButtonFace
-        DGV_visitors.BorderStyle = BorderStyle.Fixed3D
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
-        DataGridViewCellStyle1.SelectionForeColor = Color.Black
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        DGV_visitors.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        DGV_visitors.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGV_visitors.Location = New Point(36, 62)
-        DGV_visitors.MultiSelect = False
-        DGV_visitors.Name = "DGV_visitors"
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = SystemColors.Control
-        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
-        DataGridViewCellStyle2.SelectionForeColor = Color.Black
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        DGV_visitors.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
-        DGV_visitors.RowHeadersWidth = 51
-        DGV_visitors.RowTemplate.Height = 29
-        DGV_visitors.Size = New Size(839, 545)
-        DGV_visitors.TabIndex = 3
+        Button1.BackColor = Color.Black
+        Button1.BackgroundImageLayout = ImageLayout.None
+        Button1.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(13, 666)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(446, 43)
+        Button1.TabIndex = 24
+        Button1.Text = "RESET"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' G_visitors3
         ' 
@@ -403,12 +418,12 @@ Partial Class G_visitors3
         Name = "G_visitors3"
         Text = "G_visitors3"
         Panel3.ResumeLayout(False)
+        CType(DGV_visitors, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
-        CType(DGV_visitors, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -440,4 +455,5 @@ Partial Class G_visitors3
     Friend WithEvents Label2 As Label
     Friend WithEvents CheckBox_visitor As CheckBox
     Friend WithEvents DGV_visitors As DataGridView
+    Friend WithEvents Button1 As Button
 End Class

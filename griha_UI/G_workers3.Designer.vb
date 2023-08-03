@@ -50,6 +50,7 @@ Partial Class G_workers3
         ComboBox_workerID = New ComboBox()
         DateTimePicker2 = New DateTimePicker()
         DateTimePicker1 = New DateTimePicker()
+        Button1 = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -292,6 +293,7 @@ Partial Class G_workers3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(Button1)
         Panel2.Controls.Add(CheckBox_worker)
         Panel2.Controls.Add(Label2)
         Panel2.Controls.Add(Label1)
@@ -368,6 +370,19 @@ Partial Class G_workers3
         DateTimePicker1.Size = New Size(446, 27)
         DateTimePicker1.TabIndex = 26
         ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Black
+        Button1.BackgroundImageLayout = ImageLayout.None
+        Button1.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(13, 651)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(446, 43)
+        Button1.TabIndex = 29
+        Button1.Text = "RESET"
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' G_workers3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -417,4 +432,5 @@ Partial Class G_workers3
     Friend WithEvents Label2 As Label
     Friend WithEvents CheckBox_worker As CheckBox
     Friend WithEvents DGV_workers As DataGridView
+    Friend WithEvents Button1 As Button
 End Class

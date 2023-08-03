@@ -40,6 +40,7 @@ Partial Class S_workers3
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
         Label_workers = New Label()
         Panel3 = New Panel()
+        DGVWorkers = New DataGridView()
         Panel2 = New Panel()
         TextBox_address = New TextBox()
         Textbox_profession = New TextBox()
@@ -50,13 +51,13 @@ Partial Class S_workers3
         TextBox_middlename = New TextBox()
         TextBox_firstname = New TextBox()
         PictureBox1 = New PictureBox()
-        DGVWorkers = New DataGridView()
+        Button1 = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
+        CType(DGVWorkers, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(DGVWorkers, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Button_back
@@ -230,9 +231,39 @@ Partial Class S_workers3
         Panel3.Size = New Size(905, 768)
         Panel3.TabIndex = 21
         ' 
+        ' DGVWorkers
+        ' 
+        DGVWorkers.BackgroundColor = SystemColors.ButtonFace
+        DGVWorkers.BorderStyle = BorderStyle.Fixed3D
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
+        DataGridViewCellStyle1.SelectionForeColor = Color.Black
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        DGVWorkers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DGVWorkers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DGVWorkers.Location = New Point(36, 62)
+        DGVWorkers.MultiSelect = False
+        DGVWorkers.Name = "DGVWorkers"
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = SystemColors.Control
+        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
+        DataGridViewCellStyle2.SelectionForeColor = Color.Black
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        DGVWorkers.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DGVWorkers.RowHeadersWidth = 51
+        DGVWorkers.RowTemplate.Height = 29
+        DGVWorkers.Size = New Size(839, 545)
+        DGVWorkers.TabIndex = 1
+        ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(Button1)
         Panel2.Controls.Add(TextBox_address)
         Panel2.Controls.Add(Textbox_profession)
         Panel2.Controls.Add(TextBox_workerID)
@@ -334,34 +365,18 @@ Partial Class S_workers3
         PictureBox1.TabIndex = 18
         PictureBox1.TabStop = False
         ' 
-        ' DGVWorkers
+        ' Button1
         ' 
-        DGVWorkers.BackgroundColor = SystemColors.ButtonFace
-        DGVWorkers.BorderStyle = BorderStyle.Fixed3D
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
-        DataGridViewCellStyle1.SelectionForeColor = Color.Black
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        DGVWorkers.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        DGVWorkers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DGVWorkers.Location = New Point(36, 62)
-        DGVWorkers.MultiSelect = False
-        DGVWorkers.Name = "DGVWorkers"
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = SystemColors.Control
-        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
-        DataGridViewCellStyle2.SelectionForeColor = Color.Black
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        DGVWorkers.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
-        DGVWorkers.RowHeadersWidth = 51
-        DGVWorkers.RowTemplate.Height = 29
-        DGVWorkers.Size = New Size(839, 545)
-        DGVWorkers.TabIndex = 1
+        Button1.BackColor = Color.Black
+        Button1.BackgroundImageLayout = ImageLayout.None
+        Button1.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(11, 487)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(441, 43)
+        Button1.TabIndex = 24
+        Button1.Text = "RESET"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' S_workers3
         ' 
@@ -380,10 +395,10 @@ Partial Class S_workers3
         Panel1.ResumeLayout(False)
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel3.ResumeLayout(False)
+        CType(DGVWorkers, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        CType(DGVWorkers, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -415,4 +430,5 @@ Partial Class S_workers3
     Friend WithEvents DGV_Workers As DataGridView
     Friend WithEvents TextBox_address As TextBox
     Friend WithEvents DGVWorkers As DataGridView
+    Friend WithEvents Button1 As Button
 End Class

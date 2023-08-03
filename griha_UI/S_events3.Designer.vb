@@ -23,8 +23,8 @@ Partial Class S_events3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(S_events3))
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         Button_back = New Button()
         Button_notices = New Button()
@@ -49,6 +49,7 @@ Partial Class S_events3
         TextBox_Name = New TextBox()
         Panel3 = New Panel()
         DGV_Events = New DataGridView()
+        Button1 = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -163,7 +164,7 @@ Partial Class S_events3
         ' 
         Label_events.AutoSize = True
         Label_events.BackColor = Color.Transparent
-        Label_events.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        Label_events.Font = New Font("Microsoft Sans Serif", 24.0F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
         Label_events.Location = New Point(1058, 169)
         Label_events.Name = "Label_events"
         Label_events.Size = New Size(308, 46)
@@ -185,6 +186,7 @@ Partial Class S_events3
         ' Panel2
         ' 
         Panel2.BackColor = Color.LightCyan
+        Panel2.Controls.Add(Button1)
         Panel2.Controls.Add(TextBox_sponser)
         Panel2.Controls.Add(TextBox_amount)
         Panel2.Controls.Add(TextBox_organizer)
@@ -229,7 +231,7 @@ Partial Class S_events3
         ' 
         ' DateTimePicker1
         ' 
-        DateTimePicker1.CalendarFont = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DateTimePicker1.CalendarFont = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
         DateTimePicker1.CustomFormat = "  hh:mm tt dddd dd MMMM yyyy"
         DateTimePicker1.Format = DateTimePickerFormat.Custom
         DateTimePicker1.Location = New Point(11, 126)
@@ -256,7 +258,7 @@ Partial Class S_events3
         Button_Update.BackgroundImageLayout = ImageLayout.None
         Button_Update.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
         Button_Update.ForeColor = Color.White
-        Button_Update.Location = New Point(11, 676)
+        Button_Update.Location = New Point(252, 624)
         Button_Update.Name = "Button_Update"
         Button_Update.Size = New Size(205, 43)
         Button_Update.TabIndex = 16
@@ -271,9 +273,9 @@ Partial Class S_events3
         Button_add.ForeColor = Color.White
         Button_add.Location = New Point(11, 624)
         Button_add.Name = "Button_add"
-        Button_add.Size = New Size(446, 43)
+        Button_add.Size = New Size(205, 43)
         Button_add.TabIndex = 15
-        Button_add.Text = "Organise New Event"
+        Button_add.Text = "Add Event"
         Button_add.UseVisualStyleBackColor = False
         ' 
         ' Information_label
@@ -319,34 +321,47 @@ Partial Class S_events3
         DGV_Events.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         DGV_Events.BackgroundColor = SystemColors.ButtonFace
         DGV_Events.BorderStyle = BorderStyle.Fixed3D
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = Color.AliceBlue
-        DataGridViewCellStyle1.SelectionForeColor = Color.Black
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        DGV_Events.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = SystemColors.Control
+        DataGridViewCellStyle3.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point)
+        DataGridViewCellStyle3.ForeColor = Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = Color.AliceBlue
+        DataGridViewCellStyle3.SelectionForeColor = Color.Black
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
+        DGV_Events.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         DGV_Events.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DGV_Events.Location = New Point(36, 62)
         DGV_Events.MultiSelect = False
         DGV_Events.Name = "DGV_Events"
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = SystemColors.Control
-        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = Color.Transparent
-        DataGridViewCellStyle2.SelectionForeColor = Color.Black
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        DGV_Events.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = SystemColors.Control
+        DataGridViewCellStyle4.Font = New Font("Microsoft Sans Serif", 9.0F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = Color.Transparent
+        DataGridViewCellStyle4.SelectionForeColor = Color.Black
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        DGV_Events.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         DGV_Events.RowHeadersWidth = 51
         DGV_Events.RowTemplate.Height = 29
         DGV_Events.Size = New Size(839, 545)
         DGV_Events.TabIndex = 1
         ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.Black
+        Button1.BackgroundImageLayout = ImageLayout.None
+        Button1.Font = New Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point)
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(11, 676)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(205, 43)
+        Button1.TabIndex = 26
+        Button1.Text = "RESET"
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' S_events3
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(1902, 1033)
@@ -393,4 +408,5 @@ Partial Class S_events3
     Friend WithEvents TextBox_sponser As TextBox
     Friend WithEvents TextBox_amount As TextBox
     Friend WithEvents DGV_Events As DataGridView
+    Friend WithEvents Button1 As Button
 End Class
