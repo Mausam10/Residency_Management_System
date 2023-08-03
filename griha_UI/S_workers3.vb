@@ -94,31 +94,8 @@ Public Class S_workers3
 
     End Sub
 
-    Private Sub DGVWorkers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
-    End Sub
 
-    Private Sub DGVWorkers_CellMouseClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles DGV_Workers.CellMouseClick
-
-        Dim rowCount As Integer = DGVWorkers.RowCount - 1
-        If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then
-            Dim row As DataGridViewRow = DGVWorkers.Rows(e.RowIndex)
-            TextBox_workerID.Text = row.Cells(0).Value.ToString
-            TextBox_firstname.Text = row.Cells(1).Value.ToString
-            TextBox_middlename.Text = row.Cells(2).Value.ToString
-            TextBox_lastname.Text = row.Cells(3).Value.ToString
-            TextBox_phone1.Text = row.Cells(4).Value.ToString
-            TextBox_phone2.Text = row.Cells(5).Value.ToString
-            Textbox_profession.Text = row.Cells(6).Value.ToString
-            TextBox_address.Text = row.Cells(7).Value.ToString
-
-            tempWorkerID = TextBox_workerID.Text 'selected worker's workerID
-            tempProfession = Textbox_profession.Text
-        Else
-            reset()
-        End If
-
-    End Sub
 
     Private Sub Button_delete_Click(sender As Object, e As EventArgs) Handles Button_delete.Click
         query = " DELETE FROM Workers WHERE (worker_id='" & TextBox_workerID.Text & "' and Profession='" & Textbox_profession.Text & "' ) "
@@ -148,5 +125,26 @@ Public Class S_workers3
             populate()
         End If
 
+    End Sub
+
+    Private Sub DGVWorkers_CellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles DGVWorkers.CellMouseClick
+
+        Dim rowCount As Integer = DGVWorkers.RowCount - 1
+        If (e.RowIndex >= 0 And e.RowIndex < rowCount) Then
+            Dim row As DataGridViewRow = DGVWorkers.Rows(e.RowIndex)
+            TextBox_workerID.Text = row.Cells(0).Value.ToString
+            TextBox_firstname.Text = row.Cells(1).Value.ToString
+            TextBox_middlename.Text = row.Cells(2).Value.ToString
+            TextBox_lastname.Text = row.Cells(3).Value.ToString
+            TextBox_phone1.Text = row.Cells(4).Value.ToString
+            TextBox_phone2.Text = row.Cells(5).Value.ToString
+            Textbox_profession.Text = row.Cells(6).Value.ToString
+            TextBox_address.Text = row.Cells(7).Value.ToString
+
+            tempWorkerID = TextBox_workerID.Text 'selected worker's workerID
+            tempProfession = Textbox_profession.Text
+        Else
+            reset()
+        End If
     End Sub
 End Class
