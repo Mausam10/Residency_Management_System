@@ -38,27 +38,31 @@
 
             If Not IsDBNull(tempDt_Workers.Rows(index).Item(5)) Then
                 If (tempDt_Workers.Rows(index).Item(5) = 1) Then
-                    label_color = Color.Green
+                    label_color = Color.Lime
                 Else
                     label_color = Color.Black
                 End If
             Else
                 label_color = Color.Black
-                End If
-
-
-                Label_WorkerId.ForeColor = label_color
-                Label_WorkerId.Text = tempDt_Workers.Rows(index).Item(0)
-                Label_name.ForeColor = label_color
-                Label_name.Text = tempDt_Workers.Rows(index).Item(1)
-                Label_phone.ForeColor = label_color
-                Label_phone.Text = tempDt_Workers.Rows(index).Item(2)
-                Label_address.ForeColor = label_color
-                Label_address.Text = tempDt_Workers.Rows(index).Item(3)
-                Label_profession.ForeColor = label_color
-                Label_profession.Text = tempDt_Workers.Rows(index).Item(4)
-
             End If
+
+            Label10.ForeColor = label_color
+            Label11.ForeColor = label_color
+            Label12.ForeColor = label_color
+            Label13.ForeColor = label_color
+            Label14.ForeColor = label_color
+            Label_WorkerId.ForeColor = label_color
+            Label_WorkerId.Text = tempDt_Workers.Rows(index).Item(0)
+            Label_name.ForeColor = label_color
+            Label_name.Text = tempDt_Workers.Rows(index).Item(1)
+            Label_phone.ForeColor = label_color
+            Label_phone.Text = tempDt_Workers.Rows(index).Item(2)
+            Label_address.ForeColor = label_color
+            Label_address.Text = tempDt_Workers.Rows(index).Item(3)
+            Label_profession.ForeColor = label_color
+            Label_profession.Text = tempDt_Workers.Rows(index).Item(4)
+
+        End If
 
 
     End Sub
@@ -111,5 +115,9 @@
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
         counter = counter + 1
         generateValue(counter)
+    End Sub
+
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+
     End Sub
 End Class
